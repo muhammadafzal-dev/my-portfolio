@@ -9,12 +9,19 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.13",
+    "cheerio": "^1.0.0-rc.12",
+    "clsx": "^1.2.1",
+    "fast-glob": "^3.2.11",
+    "feed": "^4.2.2",
     "next": "16.1.6",
+    "next-themes": "^0.2.1",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@tailwindcss/typography": "^0.5.4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
