@@ -19,12 +19,12 @@ const Hero = () => {
               <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary/30"></span>
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] opacity-0 animate-fade-in-delay-1">
-              Software <span className="gradient-text drop-shadow-sm">Engineer</span> <br />
-              Building Modern Solutions
+              Full-Stack <span className="gradient-text drop-shadow-sm">MERN</span> Developer <br />
+              React.js · Next.js · React Native
             </h1>
             <p className="text-lg text-muted-foreground max-w-lg opacity-0 animate-fade-in-delay-2 text-pretty">
-              I create efficient, scalable, and user-friendly applications using cutting-edge technologies.
-              Let's build something amazing together.
+              3.5+ years of experience building scalable web and cross-platform mobile apps with clean UX,
+              performance focus, and reliable delivery.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-4 opacity-0 animate-fade-in-delay-3">
               <Button size="lg" asChild className="rounded-full shadow-lg shadow-primary/25">
@@ -55,12 +55,12 @@ const Hero = () => {
                   <p className="text-white text-lg font-semibold">Software Engineer</p>
                   <p className="text-white/80">Full Stack Developer</p>
                   <p className="text-white/80 text-sm mt-3 max-w-xs mx-auto text-pretty">
-                    Building web and mobile products with clean UX, performance, and reliable delivery. All Android and iOS apps are built with React Native.
+                    Full-Stack MERN Developer specializing in React.js, Next.js, and React Native. All Android and iOS apps are built with React Native.
                   </p>
                   
                   <div className="grid grid-cols-3 gap-3 mt-6 text-white/90 text-sm">
                     <div className="rounded-lg bg-white/10 px-3 py-2 backdrop-blur-sm">
-                      <p className="font-semibold">2+ yrs</p>
+                      <p className="font-semibold">3.5+ yrs</p>
                       <p className="text-xs text-white/70">Experience</p>
                     </div>
                     <div className="rounded-lg bg-white/10 px-3 py-2 backdrop-blur-sm">

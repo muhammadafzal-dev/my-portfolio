@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav className="py-4 px-4 lg:px-8 fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md z-50 border-b">
       <div className="container mx-auto flex justify-between items-center">
-        <a href="#" className="text-xl font-bold gradient-text">DevPortfolio</a>
+        <a href="#" className="text-xl font-bold gradient-text">Muhammad Afzal</a>
         
         <div className="flex items-center gap-2">
           {/* Theme toggle button */}
