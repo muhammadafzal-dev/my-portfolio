@@ -4,9 +4,9 @@ const typographyStyles = require('./typography.cjs')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './app/**/*.{js,jsx,ts,tsx,mdx}',
-    './components/**/*.{js,jsx,ts,tsx,mdx}',
-    './lib/**/*.{js,jsx,ts,tsx,mdx}',
+    './src/app/**/*.{js,jsx,ts,tsx,mdx}',
+    './src/components/**/*.{js,jsx,ts,tsx,mdx}',
+    './src/lib/**/*.{js,jsx,ts,tsx,mdx}',
   ],
   darkMode: 'class',
   plugins: [typographyPlugin, require('tailwindcss-animate')],
