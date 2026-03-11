@@ -23,8 +23,8 @@ const Hero = () => {
               React.js · Next.js · React Native
             </h1>
             <p className="text-lg text-muted-foreground max-w-lg opacity-0 animate-fade-in-delay-2 text-pretty">
-              3.5+ years of experience building scalable web and cross-platform mobile apps with clean UX,
-              performance focus, and reliable delivery.
+              3.5+ years focused on frontend and mobile development, delivering scalable web and cross‑platform
+              apps with clean UX and performance. Also experienced on the backend.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 mt-4 opacity-0 animate-fade-in-delay-3">
               <Button size="lg" asChild className="rounded-full shadow-lg shadow-primary/25">
@@ -63,7 +63,8 @@ const Hero = () => {
                   <p className="text-white text-lg font-semibold">Software Engineer</p>
                   <p className="text-white/80">Full Stack Developer</p>
                   <p className="text-white/80 text-sm mt-3 max-w-xs mx-auto text-pretty">
-                    Full-Stack MERN Developer specializing in React.js, Next.js, and React Native. All Android and iOS apps are built with React Native.
+                    Frontend + mobile focused developer (React.js, Next.js, React Native) with solid backend experience.
+                    All Android and iOS apps are built with React Native.
                   </p>
                   
                   <div className="grid grid-cols-3 gap-3 mt-6 text-white/90 text-sm">

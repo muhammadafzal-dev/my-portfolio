@@ -45,7 +45,7 @@ const Experience = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">Work Experience</h2>
           <p className="text-muted-foreground">
-            Recent roles focused on full-stack SaaS delivery and cross-platform mobile development.
+            Recent roles focused on frontend‑heavy SaaS delivery and cross‑platform mobile development, with backend contributions.
           </p>
         </div>
         

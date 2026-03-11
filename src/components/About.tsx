@@ -18,9 +18,8 @@ const About = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">About Me</h2>
           <p className="text-muted-foreground">
-            Full-Stack MERN Developer with 3.5+ years of experience building scalable web and cross-platform
-            mobile applications using React.js, Next.js, and React Native. I focus on clean UX, performance,
-            and reliable delivery across production-grade products.
+            Frontend‑first developer with 3.5+ years building scalable web and cross‑platform mobile applications.
+            Strong focus on React.js, Next.js, and React Native, with hands‑on backend experience for end‑to‑end delivery.
           </p>
         </div>
         
@@ -30,10 +29,10 @@ const About = () => {
               <div className="bg-primary/10 p-3 rounded-lg mb-4">
                 <Code className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Full-Stack Focus</h3>
+              <h3 className="text-xl font-semibold mb-2">Frontend & Mobile</h3>
               <p className="text-muted-foreground">
-                MERN stack development with React.js, Next.js, Node.js, Express.js, and MongoDB plus modern frontend
-                architectures and performance optimization.
+                Deep focus on React.js, Next.js, and React Native with modern UI architecture, animations,
+                and performance optimization for web and mobile.
               </p>
             </CardContent>
           </Card>
@@ -56,10 +55,10 @@ const About = () => {
               <div className="bg-primary/10 p-3 rounded-lg mb-4">
                 <Briefcase className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Mobile Expertise</h3>
+              <h3 className="text-xl font-semibold mb-2">Backend Exposure</h3>
               <p className="text-muted-foreground">
-                Built cross-platform Android and iOS apps in React Native with API integrations, real-time features,
-                and app-store deployments.
+                Comfortable across Node.js, Express.js, MongoDB, and REST/GraphQL integrations to support
+                full‑stack delivery when needed.
               </p>
             </CardContent>
           </Card>
