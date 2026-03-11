@@ -1,150 +1,81 @@
 "use client";
 
 
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
+import { Github, Linkedin, Mail } from "lucide-react";
 import useInView from "@/hooks/useInView";
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
   const { ref, isInView } = useInView({ threshold: 0.1 });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thanks for reaching out. I'll get back to you soon."
-      });
-      
-      setName("");
-      setEmail("");
-      setMessage("");
-      setIsSubmitting(false);
-    }, 1500);
-  };
   
   return (
-    <section 
-      id="contact" 
-      className="py-20 bg-secondary/50"
+    <section
+      id="contact"
+      className="py-20 bg-secondary/40"
       ref={ref}
     >
       <div className={`container mx-auto px-4 section-animate ${isInView ? "in-view" : ""}`}>
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-muted-foreground">
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <p className="text-primary font-medium mb-2">Contact</p>
+          <h2 className="text-3xl font-bold">Get In Touch</h2>
+          <p className="text-muted-foreground mt-4">
             Interested in working together or have a question about my work? I’m always open to new opportunities.
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <Card className={`card-animate stagger-1 ${isInView ? "in-view" : ""}`}>
             <CardHeader>
               <CardTitle>Contact Information</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Mail className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-medium">Email</p>
-                  <a href="mailto:afzalj166@gmail.com" className="text-primary hover:underline">
-                    afzalj166@gmail.com
-                  </a>
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-4">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Linkedin className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-medium">LinkedIn</p>
-                  <a href="https://linkedin.com/in/muhammadafzal-dev" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                    linkedin.com/in/muhammadafzal-dev
-                  </a>
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-4">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Github className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-medium">GitHub</p>
-                  <a href="https://github.com/muhammadafzal-dev" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                    github.com/muhammadafzal-dev
-                  </a>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-          
-          <Card className={`card-animate stagger-2 ${isInView ? "in-view" : ""}`}>
-            <CardHeader>
-              <CardTitle>Send a Message</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block mb-2 text-sm font-medium">
-                    Name
-                  </label>
-                  <Input
-                    id="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    placeholder="Your name"
-                    required
-                  />
+              <div className="grid gap-5 sm:grid-cols-2">
+                <div className="flex items-center gap-4 rounded-lg border border-border/60 bg-background/50 p-4">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <Mail className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">Email</p>
+                    <a href="mailto:afzalj166@gmail.com" className="font-medium text-foreground hover:text-primary">
+                      afzalj166@gmail.com
+                    </a>
+                  </div>
                 </div>
                 
-                <div>
-                  <label htmlFor="email" className="block mb-2 text-sm font-medium">
-                    Email
-                  </label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="your.email@example.com"
-                    required
-                  />
+                <div className="flex items-center gap-4 rounded-lg border border-border/60 bg-background/50 p-4">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <Linkedin className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">LinkedIn</p>
+                    <a href="https://linkedin.com/in/muhammadafzal-dev" target="_blank" rel="noopener noreferrer" className="font-medium text-foreground hover:text-primary">
+                      linkedin.com/in/muhammadafzal-dev
+                    </a>
+                  </div>
                 </div>
                 
-                <div>
-                  <label htmlFor="message" className="block mb-2 text-sm font-medium">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    placeholder="How can I help you?"
-                    rows={5}
-                    required
-                  />
+                <div className="flex items-center gap-4 rounded-lg border border-border/60 bg-background/50 p-4">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <Github className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">GitHub</p>
+                    <a href="https://github.com/muhammadafzal-dev" target="_blank" rel="noopener noreferrer" className="font-medium text-foreground hover:text-primary">
+                      github.com/muhammadafzal-dev
+                    </a>
+                  </div>
                 </div>
                 
-                <Button type="submit" className="w-full" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending..." : "Send Message"}
-                </Button>
-              </form>
+                <div className="flex items-center gap-4 rounded-lg border border-border/60 bg-background/50 p-4">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <Mail className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">Location</p>
+                    <p className="font-medium text-foreground">Lahore, Pakistan</p>
+                  </div>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>
