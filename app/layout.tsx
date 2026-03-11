@@ -1,8 +1,7 @@
 import { type Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 
-import { Providers } from '@/app/providers'
-import { Layout } from '@/components/Layout'
+import Providers from '@/app/providers'
 
 import './globals.css'
 
@@ -106,13 +105,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex h-full bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-background text-foreground`}
       >
-        <Providers>
-          <div className="flex w-full">
-            <Layout>{children}</Layout>
-          </div>
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   )

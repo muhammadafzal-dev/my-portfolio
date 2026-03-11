@@ -1,65 +1,186 @@
+@config "../tailwind.config.js";
 @import "tailwindcss";
-@import "../styles/prism.css";
-
-:root {
-  /* Light theme based on the "portfolio" project palette */
-  --background: #fafafa; /* zinc-50 */
-  --surface: #ffffff; /* white */
-  --foreground: #27272a; /* zinc-800 */
-  --foreground-strong: #18181b; /* zinc-900 */
-  --muted: #52525b; /* zinc-600 */
-  --muted-foreground: #71717a; /* zinc-500 */
-  --border: #e4e4e7; /* zinc-200 */
-  --accent: #14b8a6; /* teal-500 */
-  --accent-strong: #0f766e; /* teal-700 */
-  --accent-soft: #ccfbf1; /* teal-100 */
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-surface: var(--surface);
-  --color-foreground: var(--foreground);
-  --color-foreground-strong: var(--foreground-strong);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-border: var(--border);
-  --color-accent: var(--accent);
-  --color-accent-strong: var(--accent-strong);
-  --color-accent-soft: var(--accent-soft);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-.dark {
-  --background: #000000;
-  --surface: #18181b; /* zinc-900 */
-  --foreground: #e4e4e7; /* zinc-200 */
-  --foreground-strong: #f4f4f5; /* zinc-100 */
-  --muted: #a1a1aa; /* zinc-400 */
-  --muted-foreground: #71717a; /* zinc-500 */
-  --border: #3f3f46; /* zinc-700 */
-  --accent: #2dd4bf; /* teal-400 */
-  --accent-strong: #5eead4; /* teal-300 */
-  --accent-soft: #134e4a; /* teal-900 */
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #000000;
-    --surface: #18181b; /* zinc-900 */
-    --foreground: #e4e4e7; /* zinc-200 */
-    --foreground-strong: #f4f4f5; /* zinc-100 */
-    --muted: #a1a1aa; /* zinc-400 */
-    --muted-foreground: #71717a; /* zinc-500 */
-    --border: #3f3f46; /* zinc-700 */
-    --accent: #2dd4bf; /* teal-400 */
-    --accent-strong: #5eead4; /* teal-300 */
-    --accent-soft: #134e4a; /* teal-900 */
+    /* Theme (zinc + teal) in HSL for shadcn-style tokens */
+    --background: 0 0% 98%;
+    --foreground: 240 3.7% 15.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 3.7% 15.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 3.7% 15.9%;
+
+    --primary: 173 80.4% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 3.7% 15.9%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 167 85.5% 89.2%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 173 80.4% 40%;
+
+    --radius: 0.5rem;
+
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 240 5.9% 90%;
+
+    --card: 240 5.9% 10%;
+    --card-foreground: 240 4.8% 95.9%;
+
+    --popover: 240 5.9% 10%;
+    --popover-foreground: 240 4.8% 95.9%;
+
+    --primary: 172 66% 50.4%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5.3% 26.1%;
+    --secondary-foreground: 240 4.8% 95.9%;
+
+    --muted: 240 5.3% 26.1%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 176 60.8% 19%;
+    --accent-foreground: 240 4.8% 95.9%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 5.3% 26.1%;
+    --input: 240 5.3% 26.1%;
+    --ring: 172 66% 50.4%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-teal-700 text-transparent bg-clip-text;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .section-animate {
+    @apply opacity-0 translate-y-8 transition-all duration-700;
+  }
+
+  .section-animate.in-view {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .card-animate {
+    @apply opacity-0 scale-95 transition-all duration-500;
+  }
+
+  .card-animate.in-view {
+    @apply opacity-100 scale-100;
+  }
+
+  .stagger-1 {
+    transition-delay: 100ms;
+  }
+  .stagger-2 {
+    transition-delay: 200ms;
+  }
+  .stagger-3 {
+    transition-delay: 300ms;
+  }
+  .stagger-4 {
+    transition-delay: 400ms;
+  }
+  .stagger-5 {
+    transition-delay: 500ms;
+  }
+
+  .glass-card {
+    @apply bg-white/70 dark:bg-black/40 backdrop-blur-lg border border-white/20 dark:border-white/10;
+  }
+
+  .gradient-border {
+    @apply relative rounded-lg p-[1px] bg-gradient-to-r from-primary/50 to-teal-500/50;
+  }
+
+  .gradient-border > * {
+    @apply rounded-[calc(theme(borderRadius.lg)-1px)];
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .shadow-soft {
+    @apply shadow-[0_4px_12px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_12px_rgba(0,0,0,0.2)];
+  }
+
+  .hero-gradient {
+    @apply bg-gradient-to-br from-background via-background to-accent/20;
+  }
+
+  .grid-pattern {
+    @apply bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2UyZThmMCIgb3BhY2l0eT0iMC40IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')];
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

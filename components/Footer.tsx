@@ -1,43 +1,55 @@
-import Link from 'next/link'
+"use client";
 
-import { ContainerInner, ContainerOuter } from '@/components/Container'
 
-function NavLink({
-  href,
-  children,
-}: {
-  href: string
-  children: React.ReactNode
-}) {
+import { Github, Linkedin, Mail } from "lucide-react";
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  
   return (
-    <Link
-      href={href}
-      className="transition hover:text-teal-500 dark:hover:text-teal-400"
-    >
-      {children}
-    </Link>
-  )
-}
-
-export function Footer() {
-  return (
-    <footer className="mt-32 flex-none">
-      <ContainerOuter>
-        <div className="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
-          <ContainerInner>
-            <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-              <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
-                <NavLink href="/about">About</NavLink>
-                <NavLink href="/projects">Projects</NavLink>
-              </div>
-              <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                &copy; {new Date().getFullYear()} Muhammad Afzal. All rights
-                reserved.
-              </p>
+    <footer className="bg-foreground text-primary-foreground py-12">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div>
+            <p className="text-2xl font-bold mb-2">DevPortfolio</p>
+            <p className="text-muted-foreground/80">Building modern web solutions</p>
+          </div>
+          
+          <div className="mt-6 md:mt-0">
+            <div className="flex gap-6">
+              <a href="#" className="hover:text-primary/80 transition-colors">
+                <Github className="h-5 w-5" />
+                <span className="sr-only">GitHub</span>
+              </a>
+              <a href="#" className="hover:text-primary/80 transition-colors">
+                <Linkedin className="h-5 w-5" />
+                <span className="sr-only">LinkedIn</span>
+              </a>
+              <a href="#" className="hover:text-primary/80 transition-colors">
+                <Mail className="h-5 w-5" />
+                <span className="sr-only">Email</span>
+              </a>
             </div>
-          </ContainerInner>
+          </div>
         </div>
-      </ContainerOuter>
+        
+        <div className="border-t border-background/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-sm text-muted-foreground/80">
+            © {currentYear} DevPortfolio. All rights reserved.
+          </p>
+          
+          <div className="mt-4 md:mt-0 flex gap-6">
+            <a href="#" className="text-sm text-muted-foreground/80 hover:text-primary-foreground transition-colors">
+              Privacy Policy
+            </a>
+            <a href="#" className="text-sm text-muted-foreground/80 hover:text-primary-foreground transition-colors">
+              Terms of Service
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
-  )
-}
+  );
+};
+
+export default Footer;
