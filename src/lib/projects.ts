@@ -19,7 +19,7 @@ export const projects: Project[] = [
       "Led full-stack development of the landing platform and contributed to the dashboard with scalable features, reusable UI components, and performance optimizations.",
     link: {
       href: "https://obenan.ai/",
-      label: "Website",
+      label: "Web",
     },
     image: "/placeholder.svg",
     technologies: ["Next.js", "React.js", "Node.js", "Strapi", "GraphQL"],
@@ -37,7 +37,7 @@ export const projects: Project[] = [
       label: "Android",
     },
     image: "/projects/companyneeds.png",
-    technologies: ["React", "Next.js", "E-commerce"],
+    technologies: ["React", "Next.js", "React Native", "E-commerce"],
   },
   {
     name: "uDress",

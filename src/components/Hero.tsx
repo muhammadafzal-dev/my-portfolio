@@ -35,6 +35,11 @@ const Hero = () => {
                   Contact Me <ArrowRight className="h-4 w-4" />
                 </a>
               </Button>
+              <Button size="lg" variant="outline" asChild className="rounded-full border-white/15 text-white/80 hover:text-white hover:border-white/40">
+                <a href="/muhammad_afzal_resume.pdf" target="_blank" rel="noopener noreferrer">
+                  Resume (PDF)
+                </a>
+              </Button>
             </div>
           </div>
           <div className="rounded-lg overflow-hidden shadow-[0_22px_70px_rgba(0,0,0,0.45)] opacity-0 animate-fade-in-delay-3 relative group [perspective:1000px]">

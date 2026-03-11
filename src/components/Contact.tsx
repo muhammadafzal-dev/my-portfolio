@@ -46,7 +46,7 @@ const Contact = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
           <p className="text-muted-foreground">
-            Interested in working together? Have a question about my work? Feel free to reach out!
+            Interested in working together or have a question about my work? I’m always open to new opportunities.
           </p>
         </div>
         
@@ -62,8 +62,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium">Email</p>
-                  <a href="mailto:hello@example.com" className="text-primary hover:underline">
-                    hello@example.com
+                  <a href="mailto:afzalj166@gmail.com" className="text-primary hover:underline">
+                    afzalj166@gmail.com
                   </a>
                 </div>
               </div>
@@ -74,8 +74,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium">Phone</p>
-                  <a href="tel:+1234567890" className="text-primary hover:underline">
-                    +1 (234) 567-890
+                  <a href="tel:+923052281739" className="text-primary hover:underline">
+                    +92 305 2281739
                   </a>
                 </div>
               </div>
@@ -86,8 +86,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium">LinkedIn</p>
-                  <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                    linkedin.com/in/yourprofile
+                  <a href="https://linkedin.com/in/muhammadafzal-dev" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    linkedin.com/in/muhammadafzal-dev
                   </a>
                 </div>
               </div>
@@ -98,8 +98,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium">GitHub</p>
-                  <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                    github.com/yourusername
+                  <a href="https://github.com/muhammadafzal-dev" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    github.com/muhammadafzal-dev
                   </a>
                 </div>
               </div>
