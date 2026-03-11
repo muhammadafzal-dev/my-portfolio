@@ -18,9 +18,9 @@ const About = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">About Me</h2>
           <p className="text-muted-foreground">
-            I'm a passionate software engineer with a strong foundation in building web applications
-            and solving complex problems. I love creating elegant solutions and working with teams
-            to deliver outstanding products.
+            Full-Stack MERN Developer with 3.5+ years of experience building scalable web and cross-platform
+            mobile applications using React.js, Next.js, and React Native. I focus on clean UX, performance,
+            and reliable delivery across production-grade products.
           </p>
         </div>
         
@@ -30,9 +30,10 @@ const About = () => {
               <div className="bg-primary/10 p-3 rounded-lg mb-4">
                 <Code className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Technical Expertise</h3>
+              <h3 className="text-xl font-semibold mb-2">Full-Stack Focus</h3>
               <p className="text-muted-foreground">
-                I specialize in full-stack development with expertise in modern frameworks and cloud technologies.
+                MERN stack development with React.js, Next.js, Node.js, Express.js, and MongoDB plus modern frontend
+                architectures and performance optimization.
               </p>
             </CardContent>
           </Card>
@@ -42,9 +43,10 @@ const About = () => {
               <div className="bg-primary/10 p-3 rounded-lg mb-4">
                 <Users className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Collaborative Approach</h3>
+              <h3 className="text-xl font-semibold mb-2">Product Delivery</h3>
               <p className="text-muted-foreground">
-                I believe in open communication and teamwork to create exceptional software solutions.
+                Contributed to large-scale production products through feature development, system enhancements,
+                and performance tuning with strong collaboration across teams.
               </p>
             </CardContent>
           </Card>
@@ -54,9 +56,10 @@ const About = () => {
               <div className="bg-primary/10 p-3 rounded-lg mb-4">
                 <Briefcase className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Professional Experience</h3>
+              <h3 className="text-xl font-semibold mb-2">Mobile Expertise</h3>
               <p className="text-muted-foreground">
-                I've worked on diverse projects across multiple industries, delivering high-quality software solutions.
+                Built cross-platform Android and iOS apps in React Native with API integrations, real-time features,
+                and app-store deployments.
               </p>
             </CardContent>
           </Card>

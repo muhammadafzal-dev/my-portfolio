@@ -14,6 +14,17 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "Obenan — AI Reputation Management Platform",
+    description:
+      "Led full-stack development of the landing platform and contributed to the dashboard with scalable features, reusable UI components, and performance optimizations.",
+    link: {
+      href: "#",
+      label: "Private",
+    },
+    image: "/placeholder.svg",
+    technologies: ["Next.js", "React.js", "Node.js", "Strapi", "GraphQL"],
+  },
+  {
     name: "Company Needs",
     description:
       "At CompanyNeeds, we know that a well-equipped office is the cornerstone of productivity and success. That's why we're committed to providing you with the highest quality office products and solutions to help you create a workspace that fosters innovation and efficiency.",
@@ -102,5 +113,5 @@ export const projects: Project[] = [
     },
     image: "/projects/lifeDesign.png",
     technologies: ["React Native", "Android", "iOS", "Lifestyle"],
-  },
+  }
 ]

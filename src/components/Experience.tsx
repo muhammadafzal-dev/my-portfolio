@@ -10,26 +10,29 @@ const Experience = () => {
   
   const experiences = [
     {
-      position: "Senior Software Engineer",
-      company: "Tech Innovations Inc.",
-      duration: "2021 - Present",
-      description: "Lead development of a microservices architecture, implemented CI/CD pipelines, and mentored junior developers.",
-      technologies: ["React", "Node.js", "AWS", "Kubernetes"]
+      position: "Software Engineer",
+      company: "Obenan",
+      duration: "Mar 2024 – Present",
+      description:
+        "Leading feature planning and product delivery for a SaaS platform. Building MERN-stack features, Next.js landing pages, and maintaining the core web dashboard for scalability and performance.",
+      technologies: ["React.js", "Next.js", "Node.js", "Express.js", "MongoDB", "REST APIs"],
     },
     {
-      position: "Full Stack Developer",
-      company: "Digital Solutions Ltd.",
-      duration: "2018 - 2021",
-      description: "Developed and maintained multiple web applications, optimized database performance, and implemented responsive designs.",
-      technologies: ["TypeScript", "React", "Express", "MongoDB"]
+      position: "React Native, React.js & Next.js Developer",
+      company: "Global Software Consulting",
+      duration: "Dec 2022 – Feb 2024",
+      description:
+        "Built cross-platform mobile apps and web experiences across real estate, e-commerce, news, and medical domains. Delivered responsive UI, REST API integrations, and performance optimizations.",
+      technologies: ["React Native", "React.js", "Next.js", "REST APIs"],
     },
     {
-      position: "Software Developer",
-      company: "Startup Ventures",
-      duration: "2016 - 2018",
-      description: "Built MVP products for startups, implemented agile methodologies, and collaborated with cross-functional teams.",
-      technologies: ["JavaScript", "Angular", "Python", "PostgreSQL"]
-    }
+      position: "React Native Intern",
+      company: "Global Software Consulting",
+      duration: "Sep 2022 – Nov 2022",
+      description:
+        "Contributed to React Native features and reusable UI components for iOS and Android apps, with hands-on experience in debugging and API integration.",
+      technologies: ["React Native", "Redux", "REST APIs"],
+    },
   ];
   
   return (
@@ -42,7 +45,7 @@ const Experience = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">Work Experience</h2>
           <p className="text-muted-foreground">
-            My professional journey in software engineering across different organizations and roles.
+            Recent roles focused on full-stack SaaS delivery and cross-platform mobile development.
           </p>
         </div>
         

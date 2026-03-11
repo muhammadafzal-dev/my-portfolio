@@ -7,10 +7,73 @@ import useInView from "@/hooks/useInView";
 
 const Skills = () => {
   const { ref, isInView } = useInView({ threshold: 0.1 });
-  const frontendSkills = ["React", "TypeScript", "Next.js", "Tailwind CSS", "Redux", "HTML/CSS"];
-  const backendSkills = ["Node.js", "Express", "Python", "Django", "Java", "Spring Boot"];
-  const databaseSkills = ["MongoDB", "PostgreSQL", "MySQL", "Redis", "Firebase"];
-  const devopsSkills = ["Docker", "Kubernetes", "AWS", "CI/CD", "Git", "GitHub Actions"];
+  const frontendSkills = [
+    "React.js",
+    "Next.js",
+    "TypeScript",
+    "JavaScript (ES6+)",
+    "Tailwind CSS",
+    "MUI",
+    "Framer Motion",
+    "GSAP",
+    "TanStack Query",
+  ];
+  const backendSkills = [
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "REST APIs",
+    "GraphQL (Apollo)",
+    "Socket.IO",
+    "Strapi",
+  ];
+  const mobileSkills = [
+    "React Native",
+    "Redux Toolkit",
+    "Reanimated",
+    "Firebase",
+    "App Center",
+    "App Store Deploy",
+    "Play Store Deploy",
+  ];
+  const apiSkills = [
+    "Axios",
+    "SWR",
+    "Google Maps API",
+    "Geolocation APIs",
+    "OAuth 2.0",
+    "Firebase Auth",
+    "Real-time Tracking",
+  ];
+  const testingSkills = [
+    "Playwright",
+    "Appium",
+    "Detox",
+    "E2E Testing",
+    "Browser Automation",
+  ];
+  const devopsSkills = [
+    "AWS Amplify",
+    "AWS Lambda",
+    "Docker",
+    "Vercel",
+    "GitHub Actions",
+    "CI/CD Pipelines",
+  ];
+  const observabilityAiSkills = [
+    "Sentry",
+    "Grafana",
+    "Microsoft Clarity",
+    "OpenAI",
+    "Hume AI",
+    "ElevenLabs",
+    "Pipecat",
+    "n8n Automation",
+    "Cursor",
+    "Claude Code",
+    "ChatGPT",
+    "MCP Workflows",
+  ];
   
   return (
     <section 
@@ -50,11 +113,11 @@ const Skills = () => {
           
           <Card className={`card-hover card-animate stagger-3 ${isInView ? "in-view" : ""}`}>
             <CardHeader>
-              <CardTitle>Database & Storage</CardTitle>
+              <CardTitle>Mobile Development</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-2">
-                {databaseSkills.map((skill) => (
+                {mobileSkills.map((skill) => (
                   <Badge key={skill} variant="secondary" className="px-3 py-1 text-sm">{skill}</Badge>
                 ))}
               </div>
@@ -63,11 +126,50 @@ const Skills = () => {
           
           <Card className={`card-hover card-animate stagger-4 ${isInView ? "in-view" : ""}`}>
             <CardHeader>
-              <CardTitle>DevOps & Tools</CardTitle>
+              <CardTitle>APIs & Integrations</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap gap-2">
+                {apiSkills.map((skill) => (
+                  <Badge key={skill} variant="secondary" className="px-3 py-1 text-sm">{skill}</Badge>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className={`card-hover card-animate stagger-5 ${isInView ? "in-view" : ""}`}>
+            <CardHeader>
+              <CardTitle>Testing & Automation</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap gap-2">
+                {testingSkills.map((skill) => (
+                  <Badge key={skill} variant="secondary" className="px-3 py-1 text-sm">{skill}</Badge>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className={`card-hover card-animate stagger-6 ${isInView ? "in-view" : ""}`}>
+            <CardHeader>
+              <CardTitle>Cloud, DevOps & Monitoring</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-2">
                 {devopsSkills.map((skill) => (
+                  <Badge key={skill} variant="secondary" className="px-3 py-1 text-sm">{skill}</Badge>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className={`card-hover card-animate stagger-7 ${isInView ? "in-view" : ""}`}>
+            <CardHeader>
+              <CardTitle>Observability & AI</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap gap-2">
+                {observabilityAiSkills.map((skill) => (
                   <Badge key={skill} variant="secondary" className="px-3 py-1 text-sm">{skill}</Badge>
                 ))}
               </div>
