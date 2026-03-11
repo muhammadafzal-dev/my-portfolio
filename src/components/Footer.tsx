@@ -9,14 +9,14 @@ const Footer = () => {
   return (
     <footer className="bg-card text-foreground py-12 border-t border-border/60">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           <div>
-            <p className="text-2xl font-bold mb-2">DevPortfolio</p>
+            <p className="text-2xl font-bold mb-2">Muhammad Afzal</p>
             <p className="text-muted-foreground">Building modern web solutions</p>
           </div>
           
           <div className="mt-6 md:mt-0">
-            <div className="flex gap-6">
+            <div className="flex justify-center md:justify-start gap-6">
               <a
                 href="https://github.com/muhammadafzal-dev"
                 target="_blank"
@@ -46,12 +46,12 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-border/60 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-border/60 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} DevPortfolio. All rights reserved.
+            © {currentYear} Muhammad Afzal. All rights reserved.
           </p>
           
-          <div className="mt-4 md:mt-0 flex gap-6">
+          <div className="mt-4 md:mt-0 flex justify-center md:justify-start gap-6">
             <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Privacy Policy
             </a>

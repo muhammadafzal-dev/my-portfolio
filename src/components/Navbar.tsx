@@ -16,17 +16,6 @@ const Navbar = () => {
         <a href="#" className="text-xl font-bold gradient-text">Muhammad Afzal</a>
         
         <div className="flex items-center gap-2">
-          {/* Theme toggle button */}
-          <Button 
-            variant="outline" 
-            size="icon" 
-            onClick={toggleTheme} 
-            className="rounded-full"
-            aria-label="Toggle theme"
-          >
-            {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
-          </Button>
-          
           {/* Mobile menu button */}
           <Button 
             variant="outline" 
@@ -39,12 +28,22 @@ const Navbar = () => {
         </div>
         
         {/* Desktop menu */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6">
           <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>
           <a href="#skills" className="text-foreground hover:text-primary transition-colors">Skills</a>
           <a href="#projects" className="text-foreground hover:text-primary transition-colors">Projects</a>
           <a href="#experience" className="text-foreground hover:text-primary transition-colors">Experience</a>
           <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
+          {/* Theme toggle button */}
+          <Button 
+            variant="outline" 
+            size="icon" 
+            onClick={toggleTheme} 
+            className="rounded-full"
+            aria-label="Toggle theme"
+          >
+            {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
+          </Button>
           <Button asChild>
             <a href="#contact">Hire Me</a>
           </Button>
