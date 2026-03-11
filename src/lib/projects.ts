@@ -18,8 +18,8 @@ export const projects: Project[] = [
     description:
       "Led full-stack development of the landing platform and contributed to the dashboard with scalable features, reusable UI components, and performance optimizations.",
     link: {
-      href: "#",
-      label: "Private",
+      href: "https://obenan.ai/",
+      label: "Website",
     },
     image: "/placeholder.svg",
     technologies: ["Next.js", "React.js", "Node.js", "Strapi", "GraphQL"],
