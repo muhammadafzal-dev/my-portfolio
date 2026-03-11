@@ -44,23 +44,45 @@ const Hero = () => {
                 <div className="absolute inset-0 grid-pattern opacity-20 rounded-lg"></div>
                 
                 <div className="text-center p-8 relative z-10">
-                  <div className="w-32 h-32 mx-auto rounded-full bg-white/20 flex items-center justify-center mb-4 shadow-xl backdrop-blur-sm border border-white/30 animate-float">
-                    <code className="text-white text-3xl font-bold">{'{ }'}</code>
+                  <div className="w-32 h-32 mx-auto rounded-full bg-white/20 flex items-center justify-center mb-4 shadow-xl backdrop-blur-sm border border-white/30 animate-float overflow-hidden">
+                    <img
+                      src="/avatar.png"
+                      alt="Profile avatar"
+                      className="h-full w-full object-cover"
+                    />
                   </div>
+                  <p className="text-white/90 text-sm tracking-wide uppercase">Muhammad Afzal</p>
                   <p className="text-white text-lg font-semibold">Software Engineer</p>
                   <p className="text-white/80">Full Stack Developer</p>
+                  <p className="text-white/80 text-sm mt-3 max-w-xs mx-auto text-pretty">
+                    Building web and mobile products with a focus on performance, clean UX, and reliable delivery. All Android and iOS apps are built with React Native.
+                  </p>
                   
-                  {/* Tech icons */}
-                  <div className="flex justify-center gap-4 mt-6">
-                    <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
-                      <div className="text-white text-xs">JS</div>
+                  <div className="grid grid-cols-3 gap-3 mt-6 text-white/90 text-sm">
+                    <div className="rounded-lg bg-white/10 px-3 py-2 backdrop-blur-sm">
+                      <p className="font-semibold">2+ yrs</p>
+                      <p className="text-xs text-white/70">Experience</p>
                     </div>
-                    <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
-                      <div className="text-white text-xs">TS</div>
+                    <div className="rounded-lg bg-white/10 px-3 py-2 backdrop-blur-sm">
+                      <p className="font-semibold">Web</p>
+                      <p className="text-xs text-white/70">Next.js</p>
                     </div>
-                    <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
-                      <div className="text-white text-xs">R</div>
+                    <div className="rounded-lg bg-white/10 px-3 py-2 backdrop-blur-sm">
+                      <p className="font-semibold">Mobile</p>
+                      <p className="text-xs text-white/70">React Native (Android/iOS)</p>
                     </div>
+                  </div>
+
+                  {/* Tech chips */}
+                  <div className="flex flex-wrap justify-center gap-2 mt-5">
+                    {["JS", "TS", "React", "Next", "RN"].map((label) => (
+                      <span
+                        key={label}
+                        className="rounded-full bg-white/10 px-3 py-1 text-xs text-white/90 backdrop-blur-sm"
+                      >
+                        {label}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
