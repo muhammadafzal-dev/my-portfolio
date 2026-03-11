@@ -18,8 +18,8 @@ const Hero = () => {
               Hello, I'm a
               <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary/30"></span>
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight opacity-0 animate-fade-in-delay-1">
-              Software <span className="gradient-text">Engineer</span> <br />
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] opacity-0 animate-fade-in-delay-1">
+              Software <span className="gradient-text drop-shadow-sm">Engineer</span> <br />
               Building Modern Solutions
             </h1>
             <p className="text-lg text-muted-foreground max-w-lg opacity-0 animate-fade-in-delay-2 text-pretty">
@@ -27,19 +27,19 @@ const Hero = () => {
               Let's build something amazing together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-4 opacity-0 animate-fade-in-delay-3">
-              <Button size="lg" asChild className="rounded-full shadow-md shadow-primary/20">
+              <Button size="lg" asChild className="rounded-full shadow-lg shadow-primary/25">
                 <a href="#projects">View My Work</a>
               </Button>
-              <Button size="lg" variant="outline" asChild className="rounded-full">
+              <Button size="lg" variant="outline" asChild className="rounded-full border-white/15 text-white/80 hover:text-white hover:border-white/40">
                 <a href="#contact" className="flex items-center gap-2">
                   Contact Me <ArrowRight className="h-4 w-4" />
                 </a>
               </Button>
             </div>
           </div>
-          <div className="rounded-lg overflow-hidden shadow-xl opacity-0 animate-fade-in-delay-3 relative group [perspective:1000px]">
-            <div className="gradient-border p-1 rounded-xl">
-              <div className="bg-gradient-to-br from-teal-500 via-teal-600 to-teal-800 aspect-square rounded-lg flex items-center justify-center transform transition-transform duration-700 group-hover:[transform:rotateY(12deg)] relative">
+          <div className="rounded-lg overflow-hidden shadow-[0_22px_70px_rgba(0,0,0,0.45)] opacity-0 animate-fade-in-delay-3 relative group [perspective:1000px]">
+            <div className="gradient-border p-1 rounded-xl ring-1 ring-white/10">
+              <div className="bg-gradient-to-br from-teal-500 via-teal-600 to-teal-800 aspect-square rounded-lg flex items-center justify-center transform transition-transform duration-700 group-hover:[transform:rotateY(10deg)_translateY(-4px)] relative">
                 {/* Grid pattern overlay */}
                 <div className="absolute inset-0 grid-pattern opacity-20 rounded-lg"></div>
                 
@@ -55,7 +55,7 @@ const Hero = () => {
                   <p className="text-white text-lg font-semibold">Software Engineer</p>
                   <p className="text-white/80">Full Stack Developer</p>
                   <p className="text-white/80 text-sm mt-3 max-w-xs mx-auto text-pretty">
-                    Building web and mobile products with a focus on performance, clean UX, and reliable delivery. All Android and iOS apps are built with React Native.
+                    Building web and mobile products with clean UX, performance, and reliable delivery. All Android and iOS apps are built with React Native.
                   </p>
                   
                   <div className="grid grid-cols-3 gap-3 mt-6 text-white/90 text-sm">
