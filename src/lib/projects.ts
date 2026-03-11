@@ -21,7 +21,7 @@ export const projects: Project[] = [
       href: "https://obenan.ai/",
       label: "Web",
     },
-    image: "/placeholder.svg",
+    image: "/logo_large.png",
     technologies: ["Next.js", "React.js", "Node.js", "Strapi", "GraphQL"],
   },
   {

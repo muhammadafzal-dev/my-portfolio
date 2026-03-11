@@ -26,7 +26,7 @@ const Hero = () => {
               3.5+ years of experience building scalable web and cross-platform mobile apps with clean UX,
               performance focus, and reliable delivery.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mt-4 opacity-0 animate-fade-in-delay-3">
+            <div className="flex flex-col sm:flex-row items-center gap-4 mt-4 opacity-0 animate-fade-in-delay-3">
               <Button size="lg" asChild className="rounded-full shadow-lg shadow-primary/25">
                 <a href="#projects">View My Work</a>
               </Button>
@@ -35,11 +35,14 @@ const Hero = () => {
                   Contact Me <ArrowRight className="h-4 w-4" />
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild className="rounded-full border-white/15 text-white/80 hover:text-white hover:border-white/40">
-                <a href="/muhammad_afzal_resume.pdf" target="_blank" rel="noopener noreferrer">
-                  Resume (PDF)
-                </a>
-              </Button>
+              <a
+                href="/muhammad_afzal_resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-white/70 hover:text-white transition"
+              >
+                Download Resume (PDF)
+              </a>
             </div>
           </div>
           <div className="rounded-lg overflow-hidden shadow-[0_22px_70px_rgba(0,0,0,0.45)] opacity-0 animate-fade-in-delay-3 relative group [perspective:1000px]">
