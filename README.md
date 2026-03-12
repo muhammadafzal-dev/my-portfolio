@@ -33,5 +33,3 @@ Deploy on Vercel. If you need to change the site URL, update:
 - `src/app/robots.ts`
 
 ## Notes
-
-- Contact form is deferred. See `EMAIL_INTEGRATION.md` for options.
