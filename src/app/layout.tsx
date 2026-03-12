@@ -15,6 +15,8 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 })
 
+const siteUrl = "https://muhammadafzal.vercel.app/";
+
 export const metadata: Metadata = {
   title: {
     default: 'Muhammad Afzal',
@@ -24,7 +26,7 @@ export const metadata: Metadata = {
   verification: {
     google: 'v17_mLrUxusKxX9glYv90NCPkZVDn6R4MPP8Vxdvo1U',
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL),
+  metadataBase: new URL(siteUrl),
   keywords: [
     'muhammad afzal',
     'full-stack mern developer',
@@ -49,7 +51,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: 'website',
-    url: `${process.env.NEXT_PUBLIC_SITE_URL}`,
+    url: `${siteUrl}`,
     title: 'Muhammad Afzal — Full-Stack MERN Developer',
     description:
       'Full-Stack MERN Developer with 3.5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
@@ -57,16 +59,16 @@ export const metadata: Metadata = {
     siteName: 'Muhammad Afzal',
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}avatar.png`,
+        url: `${siteUrl}avatar.png`,
       },
     ],
   },
   twitter: {
     card: 'summary',
-    site: `${process.env.NEXT_PUBLIC_SITE_URL}`,
+    site: `${siteUrl}`,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}avatar.png`,
+        url: `${siteUrl}avatar.png`,
       },
     ],
     description:
@@ -74,9 +76,9 @@ export const metadata: Metadata = {
     title: 'Muhammad Afzal — Full-Stack MERN Developer',
   },
   icons: [
-    { url: `${process.env.NEXT_PUBLIC_SITE_URL}avatar.png` },
+    { url: `${siteUrl}avatar.png` },
     {
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}favicon.ico`,
+      url: `${siteUrl}favicon.ico`,
     },
   ],
 
@@ -84,7 +86,7 @@ export const metadata: Metadata = {
     'Full-Stack MERN Developer with 3.5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
 
   alternates: {
-    canonical: process.env.NEXT_PUBLIC_SITE_URL,
+    canonical: siteUrl,
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}feed.xml`,
     },
