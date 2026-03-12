@@ -90,7 +90,7 @@ module.exports = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'fade-in': 'fade-in 0.5s ease-out',
+        'fade-in': 'fade-in 0.5s ease-out forwards',
         'fade-in-delay-1': 'fade-in 0.5s ease-out 0.1s forwards',
         'fade-in-delay-2': 'fade-in 0.5s ease-out 0.2s forwards',
         'fade-in-delay-3': 'fade-in 0.5s ease-out 0.3s forwards',
