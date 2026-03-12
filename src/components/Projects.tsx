@@ -56,13 +56,13 @@ const Projects = () => {
                 </CardContent>
                 <CardFooter className="flex gap-3">
                   {project.ios && (
-                    <Button variant="outline" size="sm" asChild>
+                    <Button variant="outline" size="sm" asChild className="rounded-full">
                       <a href={project.ios.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                         {project.ios.label} <ExternalLink className="h-4 w-4" />
                       </a>
                     </Button>
                   )}
-                  <Button size="sm" asChild>
+                  <Button variant="outline" size="sm" asChild className="rounded-full">
                     <a href={project.link.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                       {project.link.label} <ExternalLink className="h-4 w-4" />
                     </a>
