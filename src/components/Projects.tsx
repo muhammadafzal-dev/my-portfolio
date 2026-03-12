@@ -4,7 +4,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { FaAndroid, FaApple, FaGlobe } from "react-icons/fa";
 import useInView from "@/hooks/useInView";
 import { projects } from "@/lib/projects";
 
@@ -56,15 +57,38 @@ const Projects = () => {
                 </CardContent>
                 <CardFooter className="flex gap-3">
                   {project.ios && (
-                    <Button variant="outline" size="sm" asChild className="rounded-full">
-                      <a href={project.ios.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                        {project.ios.label} <ExternalLink className="h-4 w-4" />
+                    <Button variant="outline" size="sm" asChild className="rounded-full px-3">
+                      <a
+                        href={project.ios.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2"
+                        aria-label={project.ios.label}
+                      >
+                        <FaApple className="h-4 w-4" />
+                        <span className="text-xs">iOS</span>
                       </a>
                     </Button>
                   )}
-                  <Button variant="outline" size="sm" asChild className="rounded-full">
-                    <a href={project.link.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                      {project.link.label} <ExternalLink className="h-4 w-4" />
+                  <Button variant="outline" size="sm" asChild className="rounded-full px-3">
+                    <a
+                      href={project.link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                      aria-label={project.link.label}
+                    >
+                      {project.link.label.toLowerCase().includes("web") ? (
+                        <>
+                          <FaGlobe className="h-4 w-4" />
+                          <span className="text-xs">Web</span>
+                        </>
+                      ) : (
+                        <>
+                          <FaAndroid className="h-4 w-4" />
+                          <span className="text-xs">Android</span>
+                        </>
+                      )}
                     </a>
                   </Button>
                 </CardFooter>

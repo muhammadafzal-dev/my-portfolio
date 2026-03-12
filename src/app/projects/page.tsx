@@ -4,6 +4,7 @@ import { type Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { FaAndroid, FaApple, FaGlobe } from "react-icons/fa";
 import { projects } from "@/lib/projects";
 
 export default function ProjectsPage() {
@@ -45,15 +46,38 @@ export default function ProjectsPage() {
               </CardContent>
               <CardFooter className="flex flex-wrap gap-3">
                 {project.ios && (
-                  <Button variant="outline" size="sm" asChild>
-                    <a href={project.ios.href} target="_blank" rel="noopener noreferrer">
-                      {project.ios.label}
+                  <Button variant="outline" size="sm" asChild className="rounded-full px-3">
+                    <a
+                      href={project.ios.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={project.ios.label}
+                      className="flex items-center gap-2"
+                    >
+                      <FaApple className="h-4 w-4" />
+                      <span className="text-xs">iOS</span>
                     </a>
                   </Button>
                 )}
-                <Button size="sm" asChild>
-                  <a href={project.link.href} target="_blank" rel="noopener noreferrer">
-                    {project.link.label}
+                <Button variant="outline" size="sm" asChild className="rounded-full px-3">
+                  <a
+                    href={project.link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={project.link.label}
+                    className="flex items-center gap-2"
+                  >
+                    {project.link.label.toLowerCase().includes("web") ? (
+                      <>
+                        <FaGlobe className="h-4 w-4" />
+                        <span className="text-xs">Web</span>
+                      </>
+                    ) : (
+                      <>
+                        <FaAndroid className="h-4 w-4" />
+                        <span className="text-xs">Android</span>
+                      </>
+                    )}
                   </a>
                 </Button>
               </CardFooter>
