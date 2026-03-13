@@ -20,7 +20,7 @@ const Hero = () => {
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] opacity-0 animate-fade-in-delay-1">
               Full-Stack <span className="gradient-text drop-shadow-sm">MERN</span> Developer <br />
-              React.js · Next.js · React Native
+              React.js · Next.js · React Native · Node.js · NestJS
             </h1>
             <p className="text-lg text-muted-foreground max-w-lg opacity-0 animate-fade-in-delay-2 text-pretty">
               3.5+ years building full‑stack web and cross‑platform mobile applications with clean UX, solid architecture,
@@ -63,7 +63,7 @@ const Hero = () => {
                   <p className="text-white text-lg font-semibold">Software Engineer</p>
                   <p className="text-white/80">Full Stack Developer</p>
                   <p className="text-white/80 text-sm mt-3 max-w-xs mx-auto text-pretty">
-                    Full‑stack developer building modern web apps and React Native mobile products.
+                    Full‑stack developer building modern web apps and React Native mobile products with Node.js and NestJS.
                     All Android and iOS apps are built with React Native.
                   </p>
                   
@@ -84,7 +84,7 @@ const Hero = () => {
 
                   {/* Tech chips */}
                   <div className="flex flex-wrap justify-center gap-2 mt-5">
-                    {["JS", "TS", "React", "Next", "RN"].map((label) => (
+                    {["JS", "TS", "React", "Next", "RN", "Node", "Nest"].map((label) => (
                       <span
                         key={label}
                         className="rounded-full bg-white/10 px-3 py-1 text-xs text-white/90 backdrop-blur-sm"
