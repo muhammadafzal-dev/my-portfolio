@@ -4,6 +4,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { FaAndroid, FaApple, FaGlobe } from "react-icons/fa";
 import useInView from "@/hooks/useInView";
@@ -115,9 +116,9 @@ const Projects = () => {
         
         <div className="text-center mt-12">
           <Button variant="outline" size="lg" asChild className="rounded-full">
-            <a href="/projects" className="flex items-center gap-2">
+            <Link href="/projects" className="flex items-center gap-2">
               View All Projects <ArrowRight className="h-4 w-4" />
-            </a>
+            </Link>
           </Button>
         </div>
       </div>
