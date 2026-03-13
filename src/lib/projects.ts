@@ -22,7 +22,7 @@ export const projects: Project[] = [
       label: "Web",
     },
     image: "/logo_large.png",
-    technologies: ["Next.js", "React.js", "Node.js", "Strapi", "GraphQL"],
+    technologies: ["Next.js", "React.js", "Node.js", "NestJS", "Strapi", "GraphQL"],
   },
   {
     name: "Company Needs",

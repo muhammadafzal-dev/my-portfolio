@@ -15,7 +15,7 @@ const Experience = () => {
       duration: "Mar 2024 – Present",
       description:
         "Leading feature planning and product delivery for a SaaS platform. Building MERN-stack features, Next.js landing pages, and maintaining the core web dashboard for scalability and performance.",
-      technologies: ["React.js", "Next.js", "Node.js", "Express.js", "MongoDB", "REST APIs"],
+      technologies: ["React.js", "Next.js", "Node.js", "NestJS", "Express.js", "MongoDB", "REST APIs"],
     },
     {
       position: "React Native, React.js & Next.js Developer",
@@ -45,7 +45,7 @@ const Experience = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">Work Experience</h2>
           <p className="text-muted-foreground">
-            Recent roles focused on frontend‑heavy SaaS delivery and cross‑platform mobile development, with backend contributions.
+            Full‑stack experience across SaaS platforms and cross‑platform mobile apps, covering frontend, backend, and integrations.
           </p>
         </div>
         

@@ -57,7 +57,7 @@ const About = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2">Backend Exposure</h3>
               <p className="text-muted-foreground">
-                Comfortable across Node.js, Express.js, MongoDB, and REST/GraphQL integrations to support
+                Comfortable across Node.js, NestJS, Express.js, MongoDB, and REST/GraphQL integrations to support
                 full‑stack delivery when needed.
               </p>
             </CardContent>

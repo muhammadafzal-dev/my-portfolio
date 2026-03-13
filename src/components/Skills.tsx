@@ -20,6 +20,7 @@ const Skills = () => {
   ];
   const backendSkills = [
     "Node.js",
+    "NestJS",
     "Express.js",
     "MongoDB",
     "REST APIs",
