@@ -37,16 +37,25 @@ export default function ProjectsPage() {
                 {project.technologies && (
                   <div className="flex flex-wrap gap-2 mt-4">
                     {project.technologies.map((tech) => (
-                      <Badge key={tech} variant="outline" className="bg-background/50 backdrop-blur-sm">
+                      <Badge
+                        key={tech}
+                        variant="outline"
+                        className="rounded-full border-white/10 bg-white/5 text-[11px] uppercase tracking-wide text-white/70"
+                      >
                         {tech}
                       </Badge>
                     ))}
                   </div>
                 )}
               </CardContent>
-              <CardFooter className="flex flex-wrap gap-3">
+              <CardFooter className="flex flex-wrap gap-3 border-t border-white/5 pt-4">
                 {project.ios && (
-                  <Button variant="outline" size="sm" asChild className="rounded-full px-3">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    asChild
+                    className="rounded-full px-3 border-primary/40 bg-primary/10 text-primary-foreground hover:bg-primary/20 hover:border-primary/60"
+                  >
                     <a
                       href={project.ios.href}
                       target="_blank"
@@ -59,7 +68,12 @@ export default function ProjectsPage() {
                     </a>
                   </Button>
                 )}
-                <Button variant="outline" size="sm" asChild className="rounded-full px-3">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  asChild
+                  className="rounded-full px-3 border-white/15 bg-white/5 text-white hover:bg-white/10 hover:border-white/30"
+                >
                   <a
                     href={project.link.href}
                     target="_blank"

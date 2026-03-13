@@ -18,8 +18,8 @@ const About = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">About Me</h2>
           <p className="text-muted-foreground">
-            Frontend‑first developer with 3.5+ years building scalable web and cross‑platform mobile applications.
-            Strong focus on React.js, Next.js, and React Native, with hands‑on backend experience for end‑to‑end delivery.
+            Full‑stack developer with 3.5+ years building scalable web and cross‑platform mobile applications.
+            Strong experience across React.js, Next.js, React Native, and Node/NestJS with hands‑on backend delivery.
           </p>
         </div>
         
@@ -29,10 +29,10 @@ const About = () => {
               <div className="bg-primary/10 p-3 rounded-lg mb-4">
                 <Code className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Frontend & Mobile</h3>
+              <h3 className="text-xl font-semibold mb-2">Full‑Stack Products</h3>
               <p className="text-muted-foreground">
-                Deep focus on React.js, Next.js, and React Native with modern UI architecture, animations,
-                and performance optimization for web and mobile.
+                End‑to‑end ownership across frontend, mobile, and backend layers with modern UI architecture,
+                clean APIs, and performance optimization.
               </p>
             </CardContent>
           </Card>
@@ -55,10 +55,10 @@ const About = () => {
               <div className="bg-primary/10 p-3 rounded-lg mb-4">
                 <Briefcase className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Backend Exposure</h3>
+              <h3 className="text-xl font-semibold mb-2">Backend & Integrations</h3>
               <p className="text-muted-foreground">
                 Comfortable across Node.js, NestJS, Express.js, MongoDB, and REST/GraphQL integrations to support
-                full‑stack delivery when needed.
+                robust, production‑ready platforms.
               </p>
             </CardContent>
           </Card>
