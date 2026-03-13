@@ -1,5 +1,6 @@
 import { type Metadata } from "next";
 
+import Image from "next/image";
 import Link from "next/link";
 import ProjectsHeader from "@/components/ProjectsHeader";
 import { Badge } from "@/components/ui/badge";
@@ -25,9 +26,12 @@ export default function ProjectsPage() {
           {projects.map((project) => (
             <Card key={`${project.name}-${project.link.href}`} className="overflow-hidden border-0 h-full flex flex-col">
               <div className="h-40 bg-background/50 flex items-center justify-center">
-                <img
+                <Image
                   src={project.image}
                   alt={project.name}
+                  width={64}
+                  height={64}
+                  loading="lazy"
                   className="h-16 w-16 object-contain"
                 />
               </div>

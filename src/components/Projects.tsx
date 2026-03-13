@@ -4,6 +4,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { FaAndroid, FaApple, FaGlobe } from "react-icons/fa";
@@ -37,9 +38,12 @@ const Projects = () => {
                 className={`overflow-hidden border-0 h-full flex flex-col card-animate stagger-${index + 1} ${isInView ? "in-view" : ""}`}
               >
                 <div className="h-48 overflow-hidden bg-background/50 flex items-center justify-center">
-                  <img 
-                    src={project.image} 
-                    alt={project.name} 
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    width={80}
+                    height={80}
+                    loading="lazy"
                     className="h-20 w-20 object-contain transition-transform duration-700 hover:scale-110"
                   />
                 </div>

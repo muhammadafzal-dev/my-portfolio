@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -87,9 +88,12 @@ const Hero = () => {
                 
                 <div className="text-center p-8 relative z-10">
                   <div className="w-32 h-32 mx-auto rounded-full bg-white/20 flex items-center justify-center mb-4 shadow-xl backdrop-blur-sm border border-white/30 animate-float overflow-hidden">
-                    <img
+                    <Image
                       src="/avatar.png"
                       alt="Profile avatar"
+                      width={128}
+                      height={128}
+                      priority
                       className="h-full w-full object-cover"
                     />
                   </div>
