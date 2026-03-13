@@ -1,6 +1,7 @@
-import Link from "next/link";
 import { type Metadata } from "next";
 
+import Link from "next/link";
+import ProjectsHeader from "@/components/ProjectsHeader";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,6 +11,7 @@ import { projects } from "@/lib/projects";
 export default function ProjectsPage() {
   return (
     <div className="min-h-screen pt-28 pb-20">
+      <ProjectsHeader />
       <div className="container mx-auto px-4">
         <div className="max-w-3xl">
           <p className="text-primary font-medium">Projects</p>
