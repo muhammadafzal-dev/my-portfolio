@@ -61,11 +61,11 @@ const Hero = () => {
               3.5+ years building full‑stack web and cross‑platform mobile applications with clean UX, solid architecture,
               and performance in mind.
             </p>
-            <div className="flex flex-col sm:flex-row items-center gap-4 mt-4 opacity-0 animate-fade-in-delay-3">
-              <Button size="lg" asChild className="rounded-full shadow-lg shadow-primary/25">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-4 opacity-0 animate-fade-in-delay-3">
+              <Button size="lg" asChild className="rounded-full shadow-lg shadow-primary/25 w-full sm:w-auto">
                 <a href="#projects">View My Work</a>
               </Button>
-              <Button size="lg" variant="outline" asChild className="rounded-full border-border/60 text-foreground hover:border-border">
+              <Button size="lg" variant="outline" asChild className="rounded-full border-border/60 text-foreground hover:border-border w-full sm:w-auto">
                 <a href="#contact" className="flex items-center gap-2">
                   Contact Me <ArrowRight className="h-4 w-4" />
                 </a>
@@ -74,7 +74,7 @@ const Hero = () => {
                 href="/muhammad_afzal_resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-muted-foreground hover:text-foreground transition"
+                className="text-sm text-muted-foreground hover:text-foreground transition w-full sm:w-auto text-center"
               >
                 Download Resume (PDF)
               </a>
