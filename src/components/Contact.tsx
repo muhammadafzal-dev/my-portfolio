@@ -1,6 +1,7 @@
 "use client";
 
 
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Github, Linkedin, Mail } from "lucide-react";
 import useInView from "@/hooks/useInView";
@@ -75,6 +76,21 @@ const Contact = () => {
                     <p className="font-medium text-foreground">Lahore, Pakistan</p>
                   </div>
                 </div>
+              </div>
+              <div className="pt-2">
+                <Button
+                  asChild
+                  variant="outline"
+                  className="rounded-full w-full border-border/70 bg-muted/40 text-foreground hover:bg-muted/60"
+                >
+                  <a
+                    href="/muhammad_afzal_resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Download Resume (PDF)
+                  </a>
+                </Button>
               </div>
             </CardContent>
           </Card>

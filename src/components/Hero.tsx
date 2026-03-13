@@ -65,7 +65,7 @@ const Hero = () => {
               <Button size="lg" asChild className="rounded-full shadow-lg shadow-primary/25">
                 <a href="#projects">View My Work</a>
               </Button>
-              <Button size="lg" variant="outline" asChild className="rounded-full border-white/15 text-white/80 hover:text-white hover:border-white/40">
+              <Button size="lg" variant="outline" asChild className="rounded-full border-border/60 text-foreground hover:border-border">
                 <a href="#contact" className="flex items-center gap-2">
                   Contact Me <ArrowRight className="h-4 w-4" />
                 </a>
@@ -74,7 +74,7 @@ const Hero = () => {
                 href="/muhammad_afzal_resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-white/70 hover:text-white transition"
+                className="text-sm text-muted-foreground hover:text-foreground transition"
               >
                 Download Resume (PDF)
               </a>

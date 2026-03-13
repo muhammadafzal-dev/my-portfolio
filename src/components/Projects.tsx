@@ -58,7 +58,7 @@ const Projects = () => {
                         <Badge
                           key={tech}
                           variant="outline"
-                          className="rounded-full border-white/10 bg-white/5 text-[11px] uppercase tracking-wide text-white/70"
+                          className="rounded-full border-border/60 bg-muted/40 text-[11px] uppercase tracking-wide text-foreground/70"
                         >
                           {tech}
                         </Badge>
@@ -66,13 +66,13 @@ const Projects = () => {
                     </div>
                   )}
                 </CardContent>
-                <CardFooter className="flex gap-3 border-t border-white/5 pt-4">
+                <CardFooter className="flex gap-3 border-t border-border/40 pt-4">
                   {project.ios && (
                     <Button
                       variant="outline"
                       size="sm"
                       asChild
-                      className="rounded-full px-3 border-primary/40 bg-primary/10 text-primary-foreground hover:bg-primary/20 hover:border-primary/60"
+                      className="rounded-full px-3 border-primary/40 bg-primary/10 text-foreground hover:bg-primary/20 hover:border-primary/60"
                     >
                       <a
                         href={project.ios.href}
@@ -90,7 +90,7 @@ const Projects = () => {
                     variant="outline"
                     size="sm"
                     asChild
-                    className="rounded-full px-3 border-white/15 bg-white/5 text-white hover:bg-white/10 hover:border-white/30"
+                    className="rounded-full px-3 border-border/60 bg-muted/40 text-foreground hover:bg-muted/60 hover:border-border"
                   >
                     <a
                       href={project.link.href}
