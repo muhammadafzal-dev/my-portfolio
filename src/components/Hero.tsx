@@ -1,10 +1,41 @@
 "use client";
 
-
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
+  const roles = [
+    "React.js Developer",
+    "Next.js Engineer",
+    "React Native Developer",
+    "Node.js Developer",
+    "NestJS Developer",
+  ];
+  const [roleText, setRoleText] = useState("");
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const current = roles[roleIndex % roles.length];
+    const speed = isDeleting ? 40 : 80;
+    const nextText = isDeleting
+      ? current.slice(0, roleText.length - 1)
+      : current.slice(0, roleText.length + 1);
+
+    const timeout = setTimeout(() => {
+      setRoleText(nextText);
+      if (!isDeleting && nextText === current) {
+        setTimeout(() => setIsDeleting(true), 900);
+      } else if (isDeleting && nextText === "") {
+        setIsDeleting(false);
+        setRoleIndex((prev) => (prev + 1) % roles.length);
+      }
+    }, speed);
+
+    return () => clearTimeout(timeout);
+  }, [roleIndex, roleText, isDeleting, roles]);
+
   return (
     <section id="hero" className="min-h-screen pt-24 pb-16 flex items-center hero-gradient overflow-hidden relative">
       {/* Decorative circles */}
@@ -19,9 +50,12 @@ const Hero = () => {
               <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary/30"></span>
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] opacity-0 animate-fade-in-delay-1">
-              Full-Stack <span className="gradient-text drop-shadow-sm">MERN</span> Developer <br />
-              React.js · Next.js · React Native · Node.js · NestJS
+              Full-Stack <span className="gradient-text drop-shadow-sm">MERN</span> Developer
             </h1>
+            <p className="text-lg md:text-xl text-muted-foreground/80 tracking-wide opacity-0 animate-fade-in-delay-1 font-normal">
+              I am a <span className="text-primary/90 font-normal">{roleText}</span>
+              <span className="typing-caret" aria-hidden="true" />
+            </p>
             <p className="text-lg text-muted-foreground max-w-lg opacity-0 animate-fade-in-delay-2 text-pretty">
               3.5+ years building full‑stack web and cross‑platform mobile applications with clean UX, solid architecture,
               and performance in mind.
