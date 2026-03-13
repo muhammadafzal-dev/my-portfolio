@@ -1,7 +1,7 @@
 
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useLayoutEffect, useState } from "react";
 
 type Theme = "light" | "dark";
 
@@ -17,24 +17,19 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(() => {
-    // Check if we're in a browser environment
-    if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem("theme");
-      // Check if user has a theme preference saved in localStorage
-      if (savedTheme === "dark" || savedTheme === "light") {
-        return savedTheme;
-      }
-      // Check if user prefers dark mode via system settings
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        return "dark";
-      }
-    }
-    // Default to light mode
-    return "light";
-  });
+  const [theme, setTheme] = useState<Theme>("light");
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark" || savedTheme === "light") {
+      setTheme(savedTheme);
+      return;
+    }
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    setTheme(prefersDark ? "dark" : "light");
+  }, []);
+
+  useLayoutEffect(() => {
     const root = window.document.documentElement;
     root.classList.remove("light", "dark");
     root.classList.add(theme);
