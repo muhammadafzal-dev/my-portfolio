@@ -16,12 +16,23 @@ const Navbar = () => {
         <a href="#" className="text-xl font-bold gradient-text">Muhammad Afzal</a>
         
         <div className="flex items-center gap-2">
+          {/* Mobile theme toggle */}
+          <Button
+            variant="outline"
+            size="icon"
+            className="lg:hidden"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+          >
+            {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
+          </Button>
           {/* Mobile menu button */}
-          <Button 
-            variant="outline" 
-            size="icon" 
-            className="lg:hidden" 
+          <Button
+            variant="outline"
+            size="icon"
+            className="lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
             <Menu className="h-5 w-5" />
           </Button>
