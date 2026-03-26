@@ -100,6 +100,17 @@ export const projects: Project[] = [
     technologies: ["React Native", "Android", "iOS", "News"],
   },
   {
+    name: "ResumeGap — AI Resume Gap Analyzer",
+    description:
+      "AI-powered resume gap analyzer that compares your resume against any job description and returns missing skills, ATS keywords, priority actions, and resume rewrites. BYOK — users bring their own free Gemini API key, so hosting costs $0.",
+    link: {
+      href: "https://resume-gap-analyzer-dev.vercel.app/",
+      label: "Web",
+    },
+    image: "/projects/resumegap.svg",
+    technologies: ["Next.js", "TypeScript", "Supabase", "Gemini AI", "Tailwind CSS"],
+  },
+  {
     name: "Life Design",
     description:
       "Embark on a transformative journey towards your aspirations with LifeDesign, the ultimate life goal inspiration app. Crafted to ignite motivation and guide you towards success, this app is your go-to companion for setting, tracking, and achieving life goals.",
