@@ -100,6 +100,17 @@ export const projects: Project[] = [
     technologies: ["React Native", "Android", "iOS", "News"],
   },
   {
+    name: "TechPulse — AI Tech News Feed",
+    description:
+      "AI-powered tech news aggregator for Android. Fetches articles from 15 curated sources every 3 hours, summarizes them with Gemini 2.5 Flash (TL;DR, bullets, why it matters), and delivers a clean feed with bookmarks, source filters, NEW badge, dark/light/OLED themes, and push notifications for breaking news. Runs entirely on free tiers — $0/month.",
+    link: {
+      href: "https://drive.google.com/drive/folders/1JfZk8mZmWh-va5dQYMWx0IgQuFteanK2?usp=sharing",
+      label: "Android",
+    },
+    image: "/projects/techpulse.png",
+    technologies: ["React Native", "TypeScript", "Supabase", "Gemini AI", "GitHub Actions", "Firebase FCM"],
+  },
+  {
     name: "ResumeGap — AI Resume Gap Analyzer",
     description:
       "AI-powered resume gap analyzer that compares your resume against any job description and returns missing skills, ATS keywords, priority actions, and resume rewrites. BYOK — users bring their own free Gemini API key, so hosting costs $0.",
