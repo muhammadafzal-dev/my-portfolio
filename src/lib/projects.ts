@@ -1,16 +1,17 @@
 export type ProjectLink = {
-  href: string
-  label: string
-}
+  href: string;
+  label: string;
+};
 
 export type Project = {
-  name: string
-  description: string
-  link: ProjectLink
-  ios?: ProjectLink
-  image: string
-  technologies?: string[]
-}
+  name: string;
+  description: string;
+  link: ProjectLink;
+  ios?: ProjectLink;
+  website?: ProjectLink;
+  image: string;
+  technologies?: string[];
+};
 
 export const projects: Project[] = [
   {
@@ -22,7 +23,14 @@ export const projects: Project[] = [
       label: "Web",
     },
     image: "/logo_large.png",
-    technologies: ["Next.js", "React.js", "Node.js", "NestJS", "Strapi", "GraphQL"],
+    technologies: [
+      "Next.js",
+      "React.js",
+      "Node.js",
+      "NestJS",
+      "Strapi",
+      "GraphQL",
+    ],
   },
   {
     name: "Company Needs",
@@ -107,8 +115,19 @@ export const projects: Project[] = [
       href: "https://drive.google.com/drive/folders/1JfZk8mZmWh-va5dQYMWx0IgQuFteanK2?usp=sharing",
       label: "Android",
     },
+    website: {
+      href: "https://techpulse-web.vercel.app",
+      label: "Web",
+    },
     image: "/projects/techpulse.png",
-    technologies: ["React Native", "TypeScript", "Supabase", "Gemini AI", "GitHub Actions", "Firebase FCM"],
+    technologies: [
+      "React Native",
+      "TypeScript",
+      "Supabase",
+      "Gemini AI",
+      "GitHub Actions",
+      "Firebase FCM",
+    ],
   },
   {
     name: "ResumeGap — AI Resume Gap Analyzer",
@@ -119,7 +138,13 @@ export const projects: Project[] = [
       label: "Web",
     },
     image: "/projects/resumegap.svg",
-    technologies: ["Next.js", "TypeScript", "Supabase", "Gemini AI", "Tailwind CSS"],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "Gemini AI",
+      "Tailwind CSS",
+    ],
   },
   {
     name: "Life Design",
@@ -135,5 +160,5 @@ export const projects: Project[] = [
     },
     image: "/projects/lifeDesign.png",
     technologies: ["React Native", "Android", "iOS", "Lifestyle"],
-  }
-]
+  },
+];

@@ -112,6 +112,25 @@ const Projects = () => {
                       )}
                     </a>
                   </Button>
+                  {project.website && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      asChild
+                      className="rounded-full px-3 border-primary/40 bg-primary/10 text-foreground hover:bg-primary/20 hover:border-primary/60"
+                    >
+                      <a
+                        href={project.website.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2"
+                        aria-label={project.website.label}
+                      >
+                        <FaGlobe className="h-4 w-4" />
+                        <span className="text-xs">Web</span>
+                      </a>
+                    </Button>
+                  )}
                 </CardFooter>
               </Card>
             </div>
