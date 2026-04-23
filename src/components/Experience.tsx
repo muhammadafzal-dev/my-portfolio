@@ -51,8 +51,8 @@ const Experience = () => {
         
         <div className="space-y-8 max-w-4xl mx-auto">
           {experiences.map((exp, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={`${exp.company}-${exp.position}`}
               className={`card-hover card-animate stagger-${index + 1} ${isInView ? "in-view" : ""}`}
             >
               <CardHeader>

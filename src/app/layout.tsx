@@ -15,13 +15,12 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 })
 
-const siteUrl = "https://muhammadafzal.vercel.app/";
+const siteUrl = "https://muhammadafzal.vercel.app";
 
 export const metadata: Metadata = {
   title: {
-    default: 'Muhammad Afzal',
-    template: 'Muhammad Afzal — Full-Stack MERN Developer',
-    absolute: 'Muhammad Afzal — Full-Stack MERN Developer',
+    default: 'Muhammad Afzal — Full-Stack MERN Developer',
+    template: '%s — Muhammad Afzal',
   },
   verification: {
     google: 'v17_mLrUxusKxX9glYv90NCPkZVDn6R4MPP8Vxdvo1U',
@@ -46,12 +45,12 @@ export const metadata: Metadata = {
   creator: 'Muhammad Afzal',
   publisher: 'Muhammad Afzal',
   applicationName: 'Muhammad Afzal',
-  authors: [{ name: 'Muhammad Afzal', url: process.env.NEXT_PUBLIC_SITE_URL }],
+  authors: [{ name: 'Muhammad Afzal', url: siteUrl }],
   generator: 'Muhammad Afzal',
 
   openGraph: {
     type: 'website',
-    url: `${siteUrl}`,
+    url: siteUrl,
     title: 'Muhammad Afzal — Full-Stack MERN Developer',
     description:
       'Full-Stack MERN Developer with 3.5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
@@ -59,16 +58,16 @@ export const metadata: Metadata = {
     siteName: 'Muhammad Afzal',
     images: [
       {
-        url: `${siteUrl}avatar.png`,
+        url: `${siteUrl}/avatar.png`,
       },
     ],
   },
   twitter: {
     card: 'summary',
-    site: `${siteUrl}`,
+    site: siteUrl,
     images: [
       {
-        url: `${siteUrl}avatar.png`,
+        url: `${siteUrl}/avatar.png`,
       },
     ],
     description:
@@ -76,9 +75,9 @@ export const metadata: Metadata = {
     title: 'Muhammad Afzal — Full-Stack MERN Developer',
   },
   icons: [
-    { url: `${siteUrl}avatar.png` },
+    { url: `${siteUrl}/avatar.png` },
     {
-      url: `${siteUrl}favicon.ico`,
+      url: `${siteUrl}/favicon.ico`,
     },
   ],
 
@@ -87,9 +86,6 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical: siteUrl,
-    types: {
-      'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}feed.xml`,
-    },
   },
 }
 

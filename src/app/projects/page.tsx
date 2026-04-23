@@ -139,6 +139,6 @@ export const metadata: Metadata = {
   description:
     "Selected work by Muhammad Afzal — full‑stack web and cross‑platform mobile projects using React.js, Next.js, and React Native.",
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_SITE_URL}projects`,
+    canonical: "https://muhammadafzal.vercel.app/projects",
   },
 };

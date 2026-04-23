@@ -1,18 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
-  const roles = [
-    "React.js Developer",
-    "Next.js Engineer",
-    "React Native Developer",
-    "Node.js Developer",
-    "NestJS Developer",
-  ];
+  const roles = useMemo(
+    () => [
+      "React.js Developer",
+      "Next.js Engineer",
+      "React Native Developer",
+      "Node.js Developer",
+      "NestJS Developer",
+    ],
+    [],
+  );
   const [roleText, setRoleText] = useState("");
   const [roleIndex, setRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
