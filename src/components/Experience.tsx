@@ -10,28 +10,35 @@ const Experience = () => {
   
   const experiences = [
     {
-      position: "Software Engineer",
+      position: "Software Engineer — Frontend Lead",
       company: "Obenan",
       duration: "Mar 2024 – Present",
       description:
-        "Leading feature planning and product delivery for a SaaS platform. Building MERN-stack features, Next.js landing pages, and maintaining the core web dashboard for scalability and performance.",
-      technologies: ["React.js", "Next.js", "Node.js", "NestJS", "Express.js", "MongoDB", "REST APIs"],
+        "Led frontend development across Landing Platform (Next.js), SaaS Dashboard (React.js), and Omnipulse — guiding architecture and production releases. Architected the Landing Platform and built Omnipulse from scratch while contributing to backend features. Shipped a multi-language translation system and referral/affiliation tracking. Optimized with SSR, image strategy, and caching for 90–95+ Lighthouse scores. Integrated AI voice agent workflows (OpenAI, Hume AI, ElevenLabs, Pipecat) and Stripe payments. Established observability with Sentry, Grafana, and Microsoft Clarity; managed CI/CD, Docker, and AWS.",
+      technologies: [
+        "Next.js",
+        "React.js",
+        "Node.js",
+        "NestJS",
+        "MongoDB",
+        "GraphQL",
+        "Stripe",
+        "OpenAI",
+        "Hume AI",
+        "ElevenLabs",
+        "Pipecat",
+        "Sentry",
+        "AWS",
+        "Docker",
+      ],
     },
     {
       position: "React Native, React.js & Next.js Developer",
       company: "Global Software Consulting",
-      duration: "Dec 2022 – Feb 2024",
+      duration: "Sep 2022 – Feb 2024",
       description:
-        "Built cross-platform mobile apps and web experiences across real estate, e-commerce, news, and medical domains. Delivered responsive UI, REST API integrations, and performance optimizations.",
-      technologies: ["React Native", "React.js", "Next.js", "REST APIs"],
-    },
-    {
-      position: "React Native Intern",
-      company: "Global Software Consulting",
-      duration: "Sep 2022 – Nov 2022",
-      description:
-        "Contributed to React Native features and reusable UI components for iOS and Android apps, with hands-on experience in debugging and API integration.",
-      technologies: ["React Native", "Redux", "REST APIs"],
+        "Developed cross-platform mobile applications using React Native for iOS and Android across real estate, e-commerce, news, and healthcare domains. Built responsive, reusable UI components for scalable mobile architecture. Integrated REST APIs for authentication, data fetching, and user interactions. Contributed to feature development, bug fixing, and performance improvements in production applications.",
+      technologies: ["React Native", "React.js", "Next.js", "Redux Toolkit", "REST APIs"],
     },
   ];
   

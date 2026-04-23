@@ -17,7 +17,7 @@ export const projects: Project[] = [
   {
     name: "Obenan — AI Reputation Management Platform",
     description:
-      "Led full-stack development of the landing platform and contributed to the dashboard with scalable features, reusable UI components, and performance optimizations.",
+      "AI-powered SaaS for reputation management — helps businesses manage listings, reviews, and local SEO across 100+ directories and platforms. Led full-stack development of the Landing Platform and frontend of the Dashboard and Omnipulse. Integrated AI-driven features, Stripe payments, and third-party services; optimized performance for 90–95+ Lighthouse scores.",
     link: {
       href: "https://obenan.ai/",
       label: "Web",
@@ -27,9 +27,12 @@ export const projects: Project[] = [
       "Next.js",
       "React.js",
       "Node.js",
-      "NestJS",
+      "Stripe",
       "Strapi",
       "GraphQL",
+      "AWS",
+      "Docker",
+      "MongoDB",
     ],
   },
   {
