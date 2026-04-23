@@ -3,11 +3,23 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { Copy, Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { toast } from "sonner";
 import useInView from "@/hooks/useInView";
+
+const EMAIL = "afzalj166@gmail.com";
 
 const Contact = () => {
   const { ref, isInView } = useInView({ threshold: 0.1 });
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      toast.success("Email copied to clipboard");
+    } catch {
+      toast.error("Failed to copy");
+    }
+  };
   
   return (
     <section
@@ -35,12 +47,20 @@ const Contact = () => {
                   <div className="bg-primary/10 p-3 rounded-full">
                     <Mail className="h-5 w-5 text-primary" />
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <a href="mailto:afzalj166@gmail.com" className="font-medium text-foreground hover:text-primary">
-                      afzalj166@gmail.com
+                    <a href={`mailto:${EMAIL}`} className="font-medium text-foreground hover:text-primary truncate block">
+                      {EMAIL}
                     </a>
                   </div>
+                  <button
+                    type="button"
+                    onClick={copyEmail}
+                    aria-label="Copy email"
+                    className="rounded-md p-2 text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+                  >
+                    <Copy className="h-4 w-4" />
+                  </button>
                 </div>
                 
                 <div className="flex items-center gap-4 rounded-lg border border-border/60 bg-background/50 p-4">

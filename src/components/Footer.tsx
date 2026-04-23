@@ -46,19 +46,10 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-border/60 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+        <div className="border-t border-border/60 mt-8 pt-8 text-center md:text-left">
           <p className="text-sm text-muted-foreground">
             © {currentYear} Muhammad Afzal. All rights reserved.
           </p>
-          
-          <div className="mt-4 md:mt-0 flex justify-center md:justify-start gap-6">
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Terms of Service
-            </a>
-          </div>
         </div>
       </div>
     </footer>

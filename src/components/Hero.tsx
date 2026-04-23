@@ -40,6 +40,23 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, [roleIndex, roleText, isDeleting, roles]);
 
+  const banners = useMemo(
+    () => [
+      "Currently building TechPulse & ResumeGap",
+      "Open to new opportunities",
+      "Shipping with AI-assisted workflows",
+    ],
+    [],
+  );
+  const [bannerIndex, setBannerIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setBannerIndex((prev) => (prev + 1) % banners.length);
+    }, 4000);
+    return () => clearInterval(id);
+  }, [banners.length]);
+
   return (
     <section id="hero" className="min-h-screen pt-24 pb-16 flex items-center hero-gradient overflow-hidden relative">
       {/* Decorative circles */}
@@ -133,6 +150,17 @@ const Hero = () => {
                         {label}
                       </span>
                     ))}
+                  </div>
+
+                  {/* Rotating banner */}
+                  <div className="mt-5 h-6 flex items-center justify-center overflow-hidden">
+                    <p
+                      key={bannerIndex}
+                      className="text-xs text-white/90 tracking-wide animate-fade-in"
+                    >
+                      <span className="inline-block h-1.5 w-1.5 rounded-full bg-white/80 mr-2 animate-pulse" />
+                      {banners[bannerIndex]}
+                    </p>
                   </div>
                 </div>
               </div>

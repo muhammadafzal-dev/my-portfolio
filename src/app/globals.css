@@ -163,6 +163,29 @@
     transform: translateY(2px);
     animation: blink 0.9s step-end infinite;
   }
+
+  .nav-link {
+    @apply relative text-foreground transition-colors;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 100%;
+    background: hsl(var(--primary));
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 250ms ease-out;
+  }
+  .nav-link:hover {
+    @apply text-primary;
+  }
+  .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
 }
 
 @keyframes pulse {

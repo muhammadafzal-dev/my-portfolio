@@ -54,32 +54,15 @@ export const metadata: Metadata = {
     title: 'Muhammad Afzal — Full-Stack MERN Developer',
     description:
       'Full-Stack MERN Developer with 3.5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
-
     siteName: 'Muhammad Afzal',
-    images: [
-      {
-        url: `${siteUrl}/avatar.png`,
-      },
-    ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     site: siteUrl,
-    images: [
-      {
-        url: `${siteUrl}/avatar.png`,
-      },
-    ],
     description:
       'Full-Stack MERN Developer with 3.5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
     title: 'Muhammad Afzal — Full-Stack MERN Developer',
   },
-  icons: [
-    { url: `${siteUrl}/avatar.png` },
-    {
-      url: `${siteUrl}/favicon.ico`,
-    },
-  ],
 
   description:
     'Full-Stack MERN Developer with 3.5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
@@ -96,10 +79,45 @@ export default function RootLayout({
 }) {
   const themeInitScript = `(function(){try{var s=localStorage.getItem('theme');var t=(s==='dark'||s==='light')?s:(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.classList.add(t);}catch(e){}})();`;
 
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Muhammad Afzal",
+    url: siteUrl,
+    image: `${siteUrl}/avatar.png`,
+    jobTitle: "Full-Stack MERN Developer",
+    worksFor: { "@type": "Organization", name: "Obenan" },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Lahore",
+      addressCountry: "Pakistan",
+    },
+    email: "mailto:afzalj166@gmail.com",
+    sameAs: [
+      "https://github.com/muhammadafzal-dev",
+      "https://linkedin.com/in/muhammadafzal-dev",
+    ],
+    knowsAbout: [
+      "React.js",
+      "Next.js",
+      "React Native",
+      "Node.js",
+      "NestJS",
+      "TypeScript",
+      "MongoDB",
+      "GraphQL",
+      "AI-assisted development",
+    ],
+  };
+
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-background text-foreground`}
