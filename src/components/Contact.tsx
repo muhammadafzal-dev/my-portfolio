@@ -3,7 +3,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import useInView from "@/hooks/useInView";
 
 const Contact = () => {
@@ -69,7 +69,7 @@ const Contact = () => {
                 
                 <div className="flex items-center gap-4 rounded-lg border border-border/60 bg-background/50 p-4">
                   <div className="bg-primary/10 p-3 rounded-full">
-                    <Mail className="h-5 w-5 text-primary" />
+                    <MapPin className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>
