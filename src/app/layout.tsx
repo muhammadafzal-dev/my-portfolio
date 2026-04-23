@@ -55,13 +55,22 @@ export const metadata: Metadata = {
     description:
       'Full-Stack MERN Developer with 3.5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
     siteName: 'Muhammad Afzal',
+    images: [
+      {
+        url: `${siteUrl}/avatar.png`,
+        width: 400,
+        height: 400,
+        alt: 'Muhammad Afzal',
+      },
+    ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     site: siteUrl,
     description:
       'Full-Stack MERN Developer with 3.5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
     title: 'Muhammad Afzal — Full-Stack MERN Developer',
+    images: [`${siteUrl}/avatar.png`],
   },
 
   description:
