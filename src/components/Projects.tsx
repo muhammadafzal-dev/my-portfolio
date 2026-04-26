@@ -43,13 +43,14 @@ const Projects = () => {
                 </div>
 
                 <div className="lg:col-span-5">
-                  <div className="aspect-[4/3] bg-card border border-foreground/15 p-8 flex items-center justify-center">
+                  <div className="aspect-[4/3] bg-card border border-foreground/15 p-6 flex items-center justify-center relative overflow-hidden">
+                    <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, currentColor 0, currentColor 1px, transparent 1px, transparent 8px)' }} />
                     <Image
                       src={project.image}
                       alt={project.name}
-                      width={120}
-                      height={120}
-                      className="h-24 w-24 md:h-32 md:w-32 object-contain"
+                      width={240}
+                      height={240}
+                      className="h-40 w-40 md:h-56 md:w-56 object-contain relative z-10"
                     />
                   </div>
                 </div>

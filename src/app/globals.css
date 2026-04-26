@@ -116,15 +116,8 @@
     @apply border-t border-foreground/15;
   }
 
-  .drop-cap::first-letter {
-    font-family: var(--font-display), Georgia, serif;
-    font-style: italic;
-    float: left;
-    font-size: 5.5rem;
-    line-height: 0.85;
-    padding: 0.5rem 0.75rem 0 0;
-    color: hsl(var(--primary));
-    font-weight: 500;
+  .drop-cap {
+    /* container — initial-letter handled below */
   }
 
   .section-num {
@@ -219,6 +212,20 @@
     background-size: 100% 1px;
     padding-bottom: 2px;
   }
+}
+
+/* Drop cap — outside @layer for max specificity, applied to first-letter */
+.drop-cap::first-letter {
+  font-family: var(--font-fraunces), Georgia, "Times New Roman", serif !important;
+  font-style: italic;
+  font-weight: 500;
+  float: left;
+  font-size: 5.25rem;
+  line-height: 0.85;
+  padding: 0.5rem 0.75rem 0 0;
+  color: hsl(var(--primary));
+  -webkit-initial-letter: 3;
+  initial-letter: 3;
 }
 
 @keyframes blink {
