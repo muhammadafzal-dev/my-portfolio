@@ -1,55 +1,54 @@
 "use client";
 
-
 import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
-    <footer className="bg-card text-foreground py-12 border-t border-border/60">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-          <div>
-            <p className="text-2xl font-bold mb-2">Muhammad Afzal</p>
-            <p className="text-muted-foreground">Building modern web solutions</p>
+    <footer className="border-t border-foreground/15 bg-card/40">
+      <div className="container mx-auto px-4 lg:px-8 py-16">
+        <div className="grid md:grid-cols-12 gap-8 items-end">
+          <div className="md:col-span-7">
+            <p className="font-display text-5xl md:text-7xl italic leading-none">
+              Muhammad <span className="text-primary">Afzal</span>
+            </p>
+            <p className="font-display text-xl md:text-2xl mt-4 text-muted-foreground">
+              Engineering for the web — quietly, well.
+            </p>
           </div>
-          
-          <div className="mt-6 md:mt-0">
-            <div className="flex justify-center md:justify-start gap-6">
-              <a
-                href="https://github.com/muhammadafzal-dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-              >
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/muhammadafzal-dev/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </a>
-              <a
-                href="mailto:afzalj166@gmail.com"
-                className="hover:text-primary transition-colors"
-              >
-                <Mail className="h-5 w-5" />
-                <span className="sr-only">Email</span>
-              </a>
-            </div>
+          <div className="md:col-span-5 flex md:justify-end gap-6">
+            <a
+              href="https://github.com/muhammadafzal-dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-foreground/20 p-3 hover:border-primary hover:text-primary transition-colors"
+              aria-label="GitHub"
+            >
+              <Github className="h-4 w-4" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/muhammadafzal-dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-foreground/20 p-3 hover:border-primary hover:text-primary transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="h-4 w-4" />
+            </a>
+            <a
+              href="mailto:afzalj166@gmail.com"
+              className="rounded-full border border-foreground/20 p-3 hover:border-primary hover:text-primary transition-colors"
+              aria-label="Email"
+            >
+              <Mail className="h-4 w-4" />
+            </a>
           </div>
         </div>
-        
-        <div className="border-t border-border/60 mt-8 pt-8 text-center md:text-left">
-          <p className="text-sm text-muted-foreground">
-            © {currentYear} Muhammad Afzal. All rights reserved.
-          </p>
+
+        <div className="mt-16 pt-6 border-t border-foreground/15 flex flex-col md:flex-row justify-between gap-3">
+          <p className="eyebrow">© {currentYear} Muhammad Afzal — All rights reserved.</p>
+          <p className="eyebrow">Vol. 04 · Iss. 26 · Lahore</p>
         </div>
       </div>
     </footer>

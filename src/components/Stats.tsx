@@ -7,16 +7,17 @@ type Stat = {
   value: number;
   suffix?: string;
   label: string;
+  caption: string;
 };
 
 const stats: Stat[] = [
-  { value: 5, suffix: "+ yrs", label: "Experience" },
-  { value: 15, suffix: "+", label: "Projects Shipped" },
-  { value: 10, suffix: "+", label: "Mobile Apps" },
-  { value: 2, suffix: "", label: "Companies" },
+  { value: 5, suffix: "+", label: "Years", caption: "Of full-stack practice" },
+  { value: 15, suffix: "+", label: "Projects", caption: "Shipped to production" },
+  { value: 10, suffix: "+", label: "Apps", caption: "Native iOS & Android" },
+  { value: 2, suffix: "", label: "Companies", caption: "Obenan · GSC" },
 ];
 
-function useCountUp(target: number, trigger: boolean, duration = 1400) {
+function useCountUp(target: number, trigger: boolean, duration = 1600) {
   const [value, setValue] = useState(0);
   const startedRef = useRef(false);
 
@@ -41,31 +42,34 @@ function useCountUp(target: number, trigger: boolean, duration = 1400) {
   return value;
 }
 
-const StatCard = ({ stat, trigger, delay }: { stat: Stat; trigger: boolean; delay: number }) => {
+const StatCell = ({ stat, trigger, idx }: { stat: Stat; trigger: boolean; idx: number }) => {
   const value = useCountUp(stat.value, trigger);
   return (
-    <div
-      className="rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm p-6 text-center opacity-0 animate-fade-in"
-      style={{ animationDelay: `${delay}ms`, animationFillMode: "forwards" }}
-    >
-      <p className="text-4xl md:text-5xl font-bold text-primary tracking-tight">
+    <div className={`flex flex-col gap-2 py-6 md:py-8 px-4 md:px-6 card-animate stagger-${idx + 1} ${trigger ? "in-view" : ""}`}>
+      <span className="eyebrow">№ 0{idx + 1}</span>
+      <p className="font-display italic text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight text-foreground">
         {value}
-        <span className="text-3xl md:text-4xl">{stat.suffix}</span>
+        <span className="text-primary">{stat.suffix}</span>
       </p>
-      <p className="text-sm text-muted-foreground mt-2">{stat.label}</p>
+      <p className="font-display text-xl md:text-2xl text-foreground mt-1">{stat.label}</p>
+      <p className="text-sm text-muted-foreground">{stat.caption}</p>
     </div>
   );
 };
 
 const Stats = () => {
-  const { ref, isInView } = useInView({ threshold: 0.3 });
+  const { ref, isInView } = useInView({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-12 border-y border-border/40 bg-secondary/30">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
+    <section ref={ref} className="border-y border-foreground/15 bg-card/50">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="flex items-center justify-between py-3 border-b border-foreground/10">
+          <span className="eyebrow">Section II — By the Numbers</span>
+          <span className="eyebrow hidden md:inline">Verified, last revised 2026</span>
+        </div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-foreground/10">
           {stats.map((stat, i) => (
-            <StatCard key={stat.label} stat={stat} trigger={isInView} delay={i * 100} />
+            <StatCell key={stat.label} stat={stat} trigger={isInView} idx={i} />
           ))}
         </div>
       </div>

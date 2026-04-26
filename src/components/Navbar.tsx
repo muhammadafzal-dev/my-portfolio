@@ -1,76 +1,82 @@
 "use client";
 
+import { useState } from "react";
+import { Moon, Sun, Menu, X } from "lucide-react";
+import { useTheme } from "@/components/ThemeProvider";
 
-import { useState } from 'react';
-import { Button } from "@/components/ui/button";
-import { Menu, Moon, Sun } from "lucide-react";
-import { useTheme } from '@/components/ThemeProvider';
+const NAV = [
+  { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
+  { href: "#projects", label: "Projects" },
+  { href: "#experience", label: "Experience" },
+  { href: "#contact", label: "Contact" },
+] as const;
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
-  
+
   return (
-    <nav className="py-4 px-4 lg:px-8 fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md z-50 border-b">
-      <div className="container mx-auto flex justify-between items-center">
-        <a href="#" className="text-xl font-bold gradient-text">Muhammad Afzal</a>
-        
-        <div className="flex items-center gap-2">
-          {/* Mobile theme toggle */}
-          <Button
-            variant="outline"
-            size="icon"
-            className="lg:hidden"
-            onClick={toggleTheme}
-            aria-label="Toggle theme"
-          >
-            {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
-          </Button>
-          {/* Mobile menu button */}
-          <Button
-            variant="outline"
-            size="icon"
-            className="lg:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <Menu className="h-5 w-5" />
-          </Button>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/85 backdrop-blur-md border-b border-foreground/15">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="flex items-center justify-between py-3">
+          <a href="#" className="flex items-baseline gap-3">
+            <span className="font-display italic text-2xl leading-none tracking-tight">
+              Muhammad <span className="text-primary">Afzal</span>
+            </span>
+            <span className="hidden sm:inline-flex eyebrow border-l border-foreground/20 pl-3">
+              Vol. 04 / Iss. 26
+            </span>
+          </a>
+
+          <div className="hidden lg:flex items-center gap-7">
+            {NAV.map((item) => (
+              <a key={item.href} href={item.href} className="nav-link">
+                {item.label}
+              </a>
+            ))}
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+              className="rounded-full border border-foreground/20 p-2 hover:border-primary hover:text-primary transition-colors"
+            >
+              {theme === "light" ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
+            </button>
+          </div>
+
+          <div className="flex items-center gap-2 lg:hidden">
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+              className="rounded-full border border-foreground/20 p-2"
+            >
+              {theme === "light" ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
+            </button>
+            <button
+              type="button"
+              onClick={() => setIsOpen((v) => !v)}
+              aria-label="Toggle menu"
+              className="rounded-full border border-foreground/20 p-2"
+            >
+              {isOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+            </button>
+          </div>
         </div>
-        
-        {/* Desktop menu */}
-        <div className="hidden lg:flex items-center gap-6">
-          <a href="#about" className="nav-link">About</a>
-          <a href="#skills" className="nav-link">Skills</a>
-          <a href="#projects" className="nav-link">Projects</a>
-          <a href="#experience" className="nav-link">Experience</a>
-          <a href="#contact" className="nav-link">Contact</a>
-          {/* Theme toggle button */}
-          <Button 
-            variant="outline" 
-            size="icon" 
-            onClick={toggleTheme} 
-            className="rounded-full"
-            aria-label="Toggle theme"
-          >
-            {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
-          </Button>
-          <Button asChild>
-            <a href="#contact">Hire Me</a>
-          </Button>
-        </div>
-        
-        {/* Mobile menu */}
-        {isMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-background shadow-lg p-4 lg:hidden flex flex-col gap-4 border-b animate-fade-in">
-            <a href="#about" className="text-foreground hover:text-primary transition-colors p-2" onClick={() => setIsMenuOpen(false)}>About</a>
-            <a href="#skills" className="text-foreground hover:text-primary transition-colors p-2" onClick={() => setIsMenuOpen(false)}>Skills</a>
-            <a href="#projects" className="text-foreground hover:text-primary transition-colors p-2" onClick={() => setIsMenuOpen(false)}>Projects</a>
-            <a href="#experience" className="text-foreground hover:text-primary transition-colors p-2" onClick={() => setIsMenuOpen(false)}>Experience</a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors p-2" onClick={() => setIsMenuOpen(false)}>Contact</a>
-            <Button asChild className="w-full">
-              <a href="#contact" onClick={() => setIsMenuOpen(false)}>Hire Me</a>
-            </Button>
+
+        {isOpen && (
+          <div className="lg:hidden border-t border-foreground/15 py-4 flex flex-col gap-3">
+            {NAV.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="nav-link"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.label}
+              </a>
+            ))}
           </div>
         )}
       </div>

@@ -1,18 +1,28 @@
 import { type Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Fraunces, IBM_Plex_Sans, JetBrains_Mono } from 'next/font/google'
 
 import Providers from '@/app/providers'
 
 import './globals.css'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const fraunces = Fraunces({
+  variable: '--font-fraunces',
   subsets: ['latin'],
+  display: 'swap',
+  style: ['normal', 'italic'],
 })
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const plex = IBM_Plex_Sans({
+  variable: '--font-plex',
   subsets: ['latin'],
+  display: 'swap',
+  weight: ['300', '400', '500', '600', '700'],
+})
+
+const jetbrains = JetBrains_Mono({
+  variable: '--font-jetbrains',
+  subsets: ['latin'],
+  display: 'swap',
 })
 
 const siteUrl = "https://muhammadafzal.vercel.app";
@@ -53,7 +63,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     title: 'Muhammad Afzal — Full-Stack MERN Developer',
     description:
-      'Full-Stack MERN Developer with 3.5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
+      'Full-Stack MERN Developer with 5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
     siteName: 'Muhammad Afzal',
     images: [
       {
@@ -68,13 +78,13 @@ export const metadata: Metadata = {
     card: 'summary',
     site: siteUrl,
     description:
-      'Full-Stack MERN Developer with 3.5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
+      'Full-Stack MERN Developer with 5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
     title: 'Muhammad Afzal — Full-Stack MERN Developer',
     images: [`${siteUrl}/avatar.png`],
   },
 
   description:
-    'Full-Stack MERN Developer with 3.5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
+    'Full-Stack MERN Developer with 5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
 
   alternates: {
     canonical: siteUrl,
@@ -129,7 +139,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-background text-foreground`}
+        className={`${fraunces.variable} ${plex.variable} ${jetbrains.variable} bg-background text-foreground`}
       >
         <Providers>{children}</Providers>
       </body>

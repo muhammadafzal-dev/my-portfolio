@@ -2,10 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { FaAndroid, FaApple, FaGlobe } from "react-icons/fa";
+import { ArrowUpRight } from "lucide-react";
 import type { Project } from "@/lib/projects";
 
 type Filter = "all" | "web" | "mobile" | "ai";
@@ -40,16 +37,17 @@ const ProjectsList = ({ projects }: { projects: Project[] }) => {
 
   return (
     <>
-      <div className="mt-8 flex flex-wrap gap-2">
+      <div className="mt-10 flex flex-wrap items-center gap-1 border-b border-foreground/15 pb-4">
+        <span className="eyebrow mr-4">Filter</span>
         {FILTERS.map((f) => (
           <button
             key={f.key}
             type="button"
             onClick={() => setFilter(f.key)}
-            className={`rounded-full px-4 py-1.5 text-sm border transition-colors ${
+            className={`px-4 py-1.5 text-sm font-mono uppercase tracking-wider border-b-2 transition-colors ${
               filter === f.key
-                ? "border-primary bg-primary text-primary-foreground"
-                : "border-border/60 text-foreground hover:bg-muted/50"
+                ? "border-primary text-primary"
+                : "border-transparent text-muted-foreground hover:text-foreground"
             }`}
           >
             {f.label}
@@ -57,115 +55,77 @@ const ProjectsList = ({ projects }: { projects: Project[] }) => {
         ))}
       </div>
 
-      <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <ol className="mt-12 space-y-12">
         {filtered.length === 0 && (
-          <p className="col-span-full text-muted-foreground text-center py-12">
-            No projects match this filter.
+          <p className="text-muted-foreground text-center py-12 font-display italic text-2xl">
+            No issues match this filter.
           </p>
         )}
-        {filtered.map((project) => (
-          <Card
-            key={`${project.name}-${project.link.href}`}
-            className="overflow-hidden border-0 h-full flex flex-col"
-          >
-            <div className="h-40 bg-background/50 flex items-center justify-center">
-              <Image
-                src={project.image}
-                alt={project.name}
-                width={64}
-                height={64}
-                loading="lazy"
-                className="h-16 w-16 object-contain"
-              />
-            </div>
-            <CardHeader>
-              <CardTitle>{project.name}</CardTitle>
-            </CardHeader>
-            <CardContent className="flex-grow">
-              <p className="text-muted-foreground text-pretty">{project.description}</p>
-              {project.technologies && (
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {project.technologies.map((tech) => (
-                    <Badge
-                      key={tech}
-                      variant="outline"
-                      className="rounded-full border-border/60 bg-muted/40 text-[11px] uppercase tracking-wide text-foreground/70"
-                    >
-                      {tech}
-                    </Badge>
-                  ))}
+        {filtered.map((project, i) => {
+          const num = String(i + 1).padStart(2, "0");
+          const primaryHref = project.website?.href ?? project.link.href;
+          const primaryLabel = project.website?.label ?? project.link.label;
+          return (
+            <li
+              key={`${project.name}-${project.link.href}`}
+              className="grid lg:grid-cols-12 gap-6 lg:gap-10 border-b border-foreground/10 pb-12 group"
+            >
+              <div className="lg:col-span-1">
+                <span className="font-display italic text-5xl text-primary leading-none">
+                  {num}
+                </span>
+              </div>
+              <div className="lg:col-span-3">
+                <div className="aspect-square w-32 lg:w-full bg-card border border-foreground/15 p-6 flex items-center justify-center">
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    width={64}
+                    height={64}
+                    loading="lazy"
+                    className="h-16 w-16 object-contain"
+                  />
                 </div>
-              )}
-            </CardContent>
-            <CardFooter className="flex flex-wrap gap-3 border-t border-border/40 pt-4">
-              {project.ios && (
-                <Button
-                  variant="outline"
-                  size="sm"
-                  asChild
-                  className="rounded-full px-3 border-primary/40 bg-primary/10 text-foreground hover:bg-primary/20 hover:border-primary/60"
-                >
+              </div>
+              <div className="lg:col-span-8 flex flex-col gap-3">
+                <h3 className="font-display text-2xl md:text-3xl leading-tight">
+                  {project.name}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed text-pretty max-w-3xl">
+                  {project.description}
+                </p>
+                {project.technologies && (
+                  <p className="font-mono text-[11px] uppercase tracking-wider text-foreground/70 mt-1">
+                    {project.technologies.join(" / ")}
+                  </p>
+                )}
+                <div className="flex flex-wrap gap-x-6 gap-y-2 mt-2">
                   <a
-                    href={project.ios.href}
+                    href={primaryHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={project.ios.label}
-                    className="flex items-center gap-2"
+                    className="group/link inline-flex items-center gap-2 editorial-link text-sm"
                   >
-                    <FaApple className="h-4 w-4" />
-                    <span className="text-xs">iOS</span>
+                    {primaryLabel}
+                    <ArrowUpRight className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                   </a>
-                </Button>
-              )}
-              <Button
-                variant="outline"
-                size="sm"
-                asChild
-                className="rounded-full px-3 border-border/60 bg-muted/40 text-foreground hover:bg-muted/60 hover:border-border"
-              >
-                <a
-                  href={project.link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={project.link.label}
-                  className="flex items-center gap-2"
-                >
-                  {project.link.label.toLowerCase().includes("web") ? (
-                    <>
-                      <FaGlobe className="h-4 w-4" />
-                      <span className="text-xs">Web</span>
-                    </>
-                  ) : (
-                    <>
-                      <FaAndroid className="h-4 w-4" />
-                      <span className="text-xs">Android</span>
-                    </>
+                  {project.ios && (
+                    <a
+                      href={project.ios.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group/link inline-flex items-center gap-2 editorial-link text-sm"
+                    >
+                      {project.ios.label}
+                      <ArrowUpRight className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+                    </a>
                   )}
-                </a>
-              </Button>
-              {project.website && (
-                <Button
-                  variant="outline"
-                  size="sm"
-                  asChild
-                  className="rounded-full px-3 border-primary/40 bg-primary/10 text-foreground hover:bg-primary/20 hover:border-primary/60"
-                >
-                  <a
-                    href={project.website.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={project.website.label}
-                    className="flex items-center gap-2"
-                  >
-                    <FaGlobe className="h-4 w-4" />
-                    <span className="text-xs">Web</span>
-                  </a>
-                </Button>
-              )}
-            </CardFooter>
-          </Card>
-        ))}
-      </div>
+                </div>
+              </div>
+            </li>
+          );
+        })}
+      </ol>
     </>
   );
 };

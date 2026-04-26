@@ -1,148 +1,104 @@
 "use client";
 
-
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { FaAndroid, FaApple, FaGlobe } from "react-icons/fa";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
 import useInView from "@/hooks/useInView";
 import { projects } from "@/lib/projects";
 
 const Projects = () => {
-  const { ref, isInView } = useInView({ threshold: 0.1 });
-  
+  const { ref, isInView } = useInView({ threshold: 0.08 });
+  const featured = projects.slice(0, 3);
+
   return (
-    <section 
-      id="projects" 
-      className="py-20 bg-gradient-to-b from-secondary/50 to-background grid-pattern"
-      ref={ref}
-    >
-      <div className={`container mx-auto px-4 section-animate ${isInView ? "in-view" : ""}`}>
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4 relative inline-block">
-            <span className="bg-gradient-to-r from-primary to-teal-600 text-transparent bg-clip-text">Featured Projects</span>
-            <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary to-teal-600 rounded-full"></span>
-          </h2>
-          <p className="text-muted-foreground text-pretty mt-6">
-            Here are some of the projects I've worked on. Each project represents different skills and technologies.
+    <section id="projects" ref={ref} className="py-24 lg:py-32">
+      <div className={`container mx-auto px-4 lg:px-8 section-animate ${isInView ? "in-view" : ""}`}>
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 border-b border-foreground/15 pb-6 mb-12">
+          <div>
+            <span className="eyebrow">Section V — Selected Issues</span>
+            <h2 className="font-display text-5xl md:text-7xl mt-3 leading-none">
+              The <span className="italic text-primary">work</span>
+            </h2>
+          </div>
+          <p className="text-sm text-muted-foreground max-w-md md:text-right">
+            Three featured. Full archive lives in <Link href="/projects" className="editorial-link">the index</Link>.
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.slice(0, 3).map((project, index) => (
-            <div className="gradient-border" key={project.name}>
-              <Card
-                className={`overflow-hidden border-0 h-full flex flex-col card-animate stagger-${index + 1} ${isInView ? "in-view" : ""}`}
+
+        <div className="space-y-16 lg:space-y-24">
+          {featured.map((project, i) => {
+            const num = String(i + 1).padStart(2, "0");
+            const primaryHref = project.website?.href ?? project.link.href;
+            const primaryLabel = project.website?.label ?? project.link.label;
+            return (
+              <article
+                key={project.name}
+                className={`grid lg:grid-cols-12 gap-8 lg:gap-12 items-start card-animate stagger-${i + 1} ${isInView ? "in-view" : ""}`}
               >
-                <div className="h-48 overflow-hidden bg-background/50 flex items-center justify-center">
-                  <Image
-                    src={project.image}
-                    alt={project.name}
-                    width={80}
-                    height={80}
-                    loading="lazy"
-                    className="h-20 w-20 object-contain transition-transform duration-700 hover:scale-110"
-                  />
+                <div className="lg:col-span-2">
+                  <span className="font-display italic text-7xl md:text-8xl text-primary leading-none">
+                    {num}
+                  </span>
+                  <p className="eyebrow mt-2">Issue</p>
                 </div>
-                <CardHeader>
-                  <CardTitle>{project.name}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-muted-foreground mb-4 text-pretty">{project.description}</p>
+
+                <div className="lg:col-span-5">
+                  <div className="aspect-[4/3] bg-card border border-foreground/15 p-8 flex items-center justify-center">
+                    <Image
+                      src={project.image}
+                      alt={project.name}
+                      width={120}
+                      height={120}
+                      className="h-24 w-24 md:h-32 md:w-32 object-contain"
+                    />
+                  </div>
+                </div>
+
+                <div className="lg:col-span-5 flex flex-col gap-4">
+                  <h3 className="font-display text-3xl md:text-4xl leading-tight">
+                    {project.name}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed text-pretty">
+                    {project.description}
+                  </p>
                   {project.technologies && (
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.map((tech) => (
-                        <Badge
-                          key={tech}
-                          variant="outline"
-                          className="rounded-full border-border/60 bg-muted/40 text-[11px] uppercase tracking-wide text-foreground/70"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
+                    <p className="font-mono text-[11px] uppercase tracking-wider text-foreground/70 mt-1">
+                      {project.technologies.join(" / ")}
+                    </p>
                   )}
-                </CardContent>
-                <CardFooter className="flex gap-3 border-t border-border/40 pt-4">
-                  {project.ios && (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      asChild
-                      className="rounded-full px-3 border-primary/40 bg-primary/10 text-foreground hover:bg-primary/20 hover:border-primary/60"
+                  <div className="flex flex-wrap gap-x-6 gap-y-2 mt-2">
+                    <a
+                      href={primaryHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center gap-2 editorial-link text-sm"
                     >
+                      Visit {primaryLabel}
+                      <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    </a>
+                    {project.ios && (
                       <a
                         href={project.ios.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2"
-                        aria-label={project.ios.label}
+                        className="group inline-flex items-center gap-2 editorial-link text-sm"
                       >
-                        <FaApple className="h-4 w-4" />
-                        <span className="text-xs">iOS</span>
+                        {project.ios.label}
+                        <ArrowUpRight className="h-4 w-4" />
                       </a>
-                    </Button>
-                  )}
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    asChild
-                    className="rounded-full px-3 border-border/60 bg-muted/40 text-foreground hover:bg-muted/60 hover:border-border"
-                  >
-                    <a
-                      href={project.link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2"
-                      aria-label={project.link.label}
-                    >
-                      {project.link.label.toLowerCase().includes("web") ? (
-                        <>
-                          <FaGlobe className="h-4 w-4" />
-                          <span className="text-xs">Web</span>
-                        </>
-                      ) : (
-                        <>
-                          <FaAndroid className="h-4 w-4" />
-                          <span className="text-xs">Android</span>
-                        </>
-                      )}
-                    </a>
-                  </Button>
-                  {project.website && (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      asChild
-                      className="rounded-full px-3 border-primary/40 bg-primary/10 text-foreground hover:bg-primary/20 hover:border-primary/60"
-                    >
-                      <a
-                        href={project.website.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2"
-                        aria-label={project.website.label}
-                      >
-                        <FaGlobe className="h-4 w-4" />
-                        <span className="text-xs">Web</span>
-                      </a>
-                    </Button>
-                  )}
-                </CardFooter>
-              </Card>
-            </div>
-          ))}
+                    )}
+                  </div>
+                </div>
+              </article>
+            );
+          })}
         </div>
-        
-        <div className="text-center mt-12">
-          <Button variant="outline" size="lg" asChild className="rounded-full">
-            <Link href="/projects" className="flex items-center gap-2">
-              View All Projects <ArrowRight className="h-4 w-4" />
-            </Link>
-          </Button>
+
+        <div className="mt-20 flex justify-center border-t border-foreground/15 pt-8">
+          <Link href="/projects" className="group inline-flex items-center gap-3 font-display italic text-2xl">
+            Browse the full archive
+            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
       </div>
     </section>
