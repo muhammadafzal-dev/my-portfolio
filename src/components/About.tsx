@@ -18,7 +18,7 @@ const About = () => {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">About Me</h2>
           <p className="text-muted-foreground">
-            Full‑stack developer with 3.5+ years building scalable web and cross‑platform mobile applications.
+            Full‑stack developer with 5+ years building scalable web and cross‑platform mobile applications.
             Strong experience across React.js, Next.js, React Native, and Node/NestJS with hands‑on backend delivery.
           </p>
         </div>

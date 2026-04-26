@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     title: 'Muhammad Afzal — Full-Stack MERN Developer',
     description:
-      'Full-Stack MERN Developer with 3.5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
+      'Full-Stack MERN Developer with 5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
     siteName: 'Muhammad Afzal',
     images: [
       {
@@ -68,13 +68,13 @@ export const metadata: Metadata = {
     card: 'summary',
     site: siteUrl,
     description:
-      'Full-Stack MERN Developer with 3.5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
+      'Full-Stack MERN Developer with 5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
     title: 'Muhammad Afzal — Full-Stack MERN Developer',
     images: [`${siteUrl}/avatar.png`],
   },
 
   description:
-    'Full-Stack MERN Developer with 3.5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
+    'Full-Stack MERN Developer with 5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
 
   alternates: {
     canonical: siteUrl,

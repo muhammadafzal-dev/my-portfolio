@@ -78,7 +78,7 @@ const Hero = () => {
               <span className="typing-caret" aria-hidden="true" />
             </p>
             <p className="text-lg text-muted-foreground max-w-lg opacity-0 animate-fade-in-delay-2 text-pretty">
-              3.5+ years building full‑stack web and cross‑platform mobile applications with clean UX, solid architecture,
+              5+ years building full‑stack web and cross‑platform mobile applications with clean UX, solid architecture,
               and performance in mind.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-4 opacity-0 animate-fade-in-delay-3">
@@ -127,7 +127,7 @@ const Hero = () => {
                   
                   <div className="grid grid-cols-3 gap-3 mt-6 text-white/90 text-sm">
                     <div className="rounded-lg bg-white/10 px-3 py-2 backdrop-blur-sm">
-                      <p className="font-semibold">3.5+ yrs</p>
+                      <p className="font-semibold">5+ yrs</p>
                       <p className="text-xs text-white/70">Experience</p>
                     </div>
                     <div className="rounded-lg bg-white/10 px-3 py-2 backdrop-blur-sm">
