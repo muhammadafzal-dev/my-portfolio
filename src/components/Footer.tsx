@@ -27,7 +27,7 @@ const Footer = () => {
                 className="font-mono text-sm text-foreground hover:text-primary transition-colors w-fit"
               >
                 <span className="text-primary">{"<"}</span>
-                ma.dev
+                muhammadafzal-dev
                 <span className="text-primary">{" />"}</span>
               </Link>
               <p className="text-sm text-muted-foreground">
