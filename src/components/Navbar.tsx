@@ -1,17 +1,29 @@
 "use client";
 
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, Moon, Sun } from "lucide-react";
 import { useTheme } from '@/components/ThemeProvider';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <nav className="py-4 px-4 lg:px-8 fixed top-0 left-0 right-0 bg-background/60 backdrop-blur-xl z-50">
+    <nav
+      className={`py-4 px-4 lg:px-8 fixed top-0 left-0 right-0 bg-background/60 backdrop-blur-xl z-50 border-b transition-colors ${
+        scrolled ? "border-border/40" : "border-transparent"
+      }`}
+    >
       <div className="container mx-auto flex justify-between items-center">
         <a href="#" className="flex items-center gap-2.5 group" aria-label="Muhammad Afzal">
           <span className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 border border-primary/40 group-hover:bg-primary/20 transition-colors">

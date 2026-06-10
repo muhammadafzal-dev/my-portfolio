@@ -1,15 +1,28 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Moon, Sun } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
 
 const ProjectsHeader = () => {
   const { theme, toggleTheme } = useTheme();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <nav className="py-4 px-4 lg:px-8 fixed top-0 left-0 right-0 bg-background/60 backdrop-blur-xl z-50">
+    <nav
+      className={`py-4 px-4 lg:px-8 fixed top-0 left-0 right-0 bg-background/60 backdrop-blur-xl z-50 border-b transition-colors ${
+        scrolled ? "border-border/40" : "border-transparent"
+      }`}
+    >
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Button
