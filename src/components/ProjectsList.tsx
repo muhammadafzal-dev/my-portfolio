@@ -88,8 +88,8 @@ const ProjectsList = ({ projects }: { projects: Project[] }) => {
                   {project.technologies.map((tech) => (
                     <Badge
                       key={tech}
-                      variant="outline"
-                      className="rounded-full border-border/60 bg-muted/40 text-[11px] uppercase tracking-wide text-foreground/70"
+                      variant="secondary"
+                      className="rounded-full px-2.5 py-0.5 text-[11px] font-normal border-0 bg-muted/60 hover:bg-muted text-foreground/80"
                     >
                       {tech}
                     </Badge>

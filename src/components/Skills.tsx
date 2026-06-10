@@ -139,7 +139,7 @@ const Skills = () => {
                     <Badge
                       key={skill}
                       variant="secondary"
-                      className="px-3 py-1 text-sm font-normal border border-border/40"
+                      className="rounded-full px-2.5 py-0.5 text-[11px] font-normal border-0 bg-muted/60 hover:bg-muted text-foreground/80"
                     >
                       {skill}
                     </Badge>

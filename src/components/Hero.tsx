@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MapPin, CheckCircle2, Github, Linkedin, Mail } from "lucide-react";
 
 const Hero = () => {
   const roles = useMemo(
@@ -58,31 +58,45 @@ const Hero = () => {
   }, [banners.length]);
 
   return (
-    <section id="hero" className="min-h-screen pt-24 pb-16 flex items-center hero-gradient overflow-hidden relative">
+    <section id="hero" className="pt-32 pb-16 hero-gradient overflow-hidden relative">
       {/* Decorative circles */}
       <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-primary/10 blur-3xl"></div>
       <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-primary/10 blur-3xl"></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="flex flex-col gap-6">
-            <p className="font-mono text-xs tracking-[0.2em] text-primary/80 uppercase opacity-0 animate-fade-in flex items-center gap-2">
-              <span className="h-px w-6 bg-primary/40" aria-hidden />
+
+      <div className="container mx-auto px-4 relative z-10 max-w-6xl">
+        <div className="grid lg:grid-cols-[1fr_auto] gap-10 lg:gap-16 items-center">
+          <div className="flex flex-col gap-5">
+            <p className="font-mono text-xs tracking-[0.2em] text-primary uppercase opacity-0 animate-fade-in flex items-center gap-2">
+              <span className="text-primary">01</span>
+              <span className="text-primary/60">/</span>
               Hello, I'm a
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] opacity-0 animate-fade-in-delay-1">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] opacity-0 animate-fade-in-delay-1 tracking-tight">
               Full-Stack <span className="gradient-text drop-shadow-sm">MERN</span> Developer
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground/80 tracking-wide opacity-0 animate-fade-in-delay-1 font-normal font-mono">
+            <p className="text-base md:text-lg text-muted-foreground/80 tracking-wide opacity-0 animate-fade-in-delay-1 font-normal font-mono h-6">
               <span className="text-primary/70 mr-1">{">"}</span>
               <span className="text-primary/90 font-normal">{roleText}</span>
               <span className="typing-caret" aria-hidden="true" />
             </p>
-            <p className="text-lg text-muted-foreground max-w-lg opacity-0 animate-fade-in-delay-2 text-pretty">
+            <p className="text-base md:text-lg text-muted-foreground max-w-xl opacity-0 animate-fade-in-delay-2 text-pretty leading-relaxed">
               5+ years building full‑stack web and cross‑platform mobile applications with clean UX, solid architecture,
               and performance in mind.
             </p>
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-4 opacity-0 animate-fade-in-delay-3">
+
+            {/* Tech stack inline */}
+            <div className="flex flex-wrap gap-2 opacity-0 animate-fade-in-delay-2">
+              {["Next.js", "React", "TypeScript", "React Native", "Node.js", "NestJS", "AI"].map((t) => (
+                <span
+                  key={t}
+                  className="rounded-full px-2.5 py-0.5 text-[11px] font-normal bg-muted/60 text-foreground/80"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mt-2 opacity-0 animate-fade-in-delay-3">
               <Button size="lg" asChild className="rounded-full shadow-lg shadow-primary/25 w-full sm:w-auto">
                 <a href="#projects">View My Work</a>
               </Button>
@@ -95,81 +109,92 @@ const Hero = () => {
                 href="/muhammad_afzal_resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-muted-foreground hover:text-foreground transition w-full sm:w-auto text-center"
+                className="text-sm text-muted-foreground hover:text-foreground transition w-full sm:w-auto text-center sm:ml-2"
               >
                 Download Resume (PDF)
               </a>
             </div>
-          </div>
-          <div className="rounded-lg overflow-hidden shadow-[0_22px_70px_rgba(0,0,0,0.45)] opacity-0 animate-fade-in-delay-3 relative group [perspective:1000px]">
-            <div className="gradient-border p-1 rounded-xl ring-1 ring-white/10">
-              <div className="bg-gradient-to-br from-teal-500 via-teal-600 to-teal-800 aspect-square rounded-lg flex items-center justify-center transform transition-transform duration-700 group-hover:[transform:rotateY(10deg)_translateY(-4px)] relative">
-                {/* Grid pattern overlay */}
-                <div className="absolute inset-0 grid-pattern opacity-20 rounded-lg"></div>
-                
-                <div className="text-center p-8 relative z-10">
-                  <div className="w-32 h-32 mx-auto rounded-full bg-white/20 flex items-center justify-center mb-4 shadow-xl backdrop-blur-sm border border-white/30 animate-float overflow-hidden">
-                    <Image
-                      src="/avatar.png"
-                      alt="Profile avatar"
-                      width={128}
-                      height={128}
-                      priority
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <p className="text-white/90 text-sm tracking-wide uppercase">Muhammad Afzal</p>
-                  <p className="text-white text-lg font-semibold">Software Engineer</p>
-                  <p className="text-white/80">Full Stack Developer</p>
-                  <p className="text-white/80 text-sm mt-3 max-w-xs mx-auto text-pretty">
-                    Full‑stack developer building modern web apps and React Native mobile products with Node.js and NestJS.
-                    All Android and iOS apps are built with React Native.
-                  </p>
-                  
-                  <div className="grid grid-cols-3 gap-3 mt-6 text-white/90 text-sm">
-                    <div className="rounded-lg bg-white/10 px-3 py-2 backdrop-blur-sm">
-                      <p className="font-semibold">5+ yrs</p>
-                      <p className="text-xs text-white/70">Experience</p>
-                    </div>
-                    <div className="rounded-lg bg-white/10 px-3 py-2 backdrop-blur-sm">
-                      <p className="font-semibold">Web</p>
-                      <p className="text-xs text-white/70">Next.js</p>
-                    </div>
-                    <div className="rounded-lg bg-white/10 px-3 py-2 backdrop-blur-sm">
-                      <p className="font-semibold">Mobile</p>
-                      <p className="text-xs text-white/70">React Native (Android/iOS)</p>
-                    </div>
-                  </div>
 
-                  {/* Tech chips */}
-                  <div className="flex flex-wrap justify-center gap-2 mt-5">
-                    {["JS", "TS", "React", "Next", "RN", "Node", "Nest"].map((label) => (
-                      <span
-                        key={label}
-                        className="rounded-full bg-white/10 px-3 py-1 text-xs text-white/90 backdrop-blur-sm"
-                      >
-                        {label}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Rotating banner */}
-                  <div className="mt-5 h-6 flex items-center justify-center overflow-hidden">
-                    <p
-                      key={bannerIndex}
-                      className="text-xs text-white/90 tracking-wide animate-fade-in"
-                    >
-                      <span className="inline-block h-1.5 w-1.5 rounded-full bg-white/80 mr-2 animate-pulse" />
-                      {banners[bannerIndex]}
-                    </p>
-                  </div>
-                </div>
-              </div>
+            {/* Social row */}
+            <div className="flex items-center gap-4 mt-2 opacity-0 animate-fade-in-delay-3 text-muted-foreground">
+              <a
+                href="https://github.com/muhammadafzal-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="hover:text-primary transition-colors"
+              >
+                <Github className="h-4 w-4" />
+              </a>
+              <a
+                href="https://linkedin.com/in/muhammadafzal-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="hover:text-primary transition-colors"
+              >
+                <Linkedin className="h-4 w-4" />
+              </a>
+              <a
+                href="mailto:afzalj166@gmail.com"
+                aria-label="Email"
+                className="hover:text-primary transition-colors"
+              >
+                <Mail className="h-4 w-4" />
+              </a>
+              <span className="h-3 w-px bg-border/60" />
+              <span className="font-mono text-[11px] text-muted-foreground/70">
+                afzalj166@gmail.com
+              </span>
             </div>
-            
-            {/* Decorative elements */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-xl"></div>
-            <div className="absolute -top-4 -left-4 w-16 h-16 bg-primary/20 rounded-full blur-lg"></div>
+          </div>
+
+          <div className="flex flex-col items-center lg:items-end gap-4 opacity-0 animate-fade-in-delay-3">
+            {/* Avatar circle */}
+            <div className="relative">
+              <div className="absolute inset-0 rounded-full bg-primary/20 blur-2xl scale-110" aria-hidden />
+              <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border border-border/60 bg-background ring-1 ring-primary/20 animate-float">
+                <Image
+                  src="/avatar.png"
+                  alt="Muhammad Afzal"
+                  width={224}
+                  height={224}
+                  priority
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              {/* Status dot */}
+              <span className="absolute bottom-3 right-3 flex items-center gap-1.5 rounded-full bg-background/90 border border-border/60 backdrop-blur px-2.5 py-1 text-[10px] font-mono uppercase tracking-wider">
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+                <span className="text-foreground/80">Available</span>
+              </span>
+            </div>
+
+            {/* Label chips below avatar */}
+            <div className="flex flex-wrap justify-center lg:justify-end gap-2 max-w-xs">
+              <span className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-normal bg-muted/60 text-foreground/80">
+                <MapPin className="h-3 w-3" />
+                Lahore, PK
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-normal bg-muted/60 text-foreground/80">
+                <CheckCircle2 className="h-3 w-3 text-primary" />
+                Open to work
+              </span>
+              <span className="rounded-full px-2.5 py-1 text-[11px] font-normal bg-muted/60 text-foreground/80">
+                Remote · Full-time
+              </span>
+            </div>
+
+            {/* Rotating status line */}
+            <div className="h-5 flex items-center justify-center lg:justify-end overflow-hidden">
+              <p
+                key={bannerIndex}
+                className="text-[11px] font-mono text-muted-foreground tracking-wide animate-fade-in"
+              >
+                <span className="text-primary mr-1.5">{">"}</span>
+                {banners[bannerIndex]}
+              </p>
+            </div>
           </div>
         </div>
       </div>
