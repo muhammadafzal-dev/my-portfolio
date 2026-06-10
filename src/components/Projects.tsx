@@ -10,6 +10,7 @@ import { ArrowRight } from "lucide-react";
 import { FaAndroid, FaApple, FaGlobe } from "react-icons/fa";
 import useInView from "@/hooks/useInView";
 import { projects } from "@/lib/projects";
+import SectionHeading from "@/components/SectionHeading";
 
 const Projects = () => {
   const { ref, isInView } = useInView({ threshold: 0.1 });
@@ -21,19 +22,19 @@ const Projects = () => {
       ref={ref}
     >
       <div className={`container mx-auto px-4 section-animate ${isInView ? "in-view" : ""}`}>
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4 relative inline-block">
-            <span className="bg-gradient-to-r from-primary to-teal-600 text-transparent bg-clip-text">Featured Projects</span>
-            <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-primary to-teal-600 rounded-full"></span>
-          </h2>
-          <p className="text-muted-foreground text-pretty mt-6">
-            Here are some of the projects I've worked on. Each project represents different skills and technologies.
-          </p>
-        </div>
-        
+        <SectionHeading
+          index="03"
+          label="Projects"
+          title="Featured Projects"
+          description="Here are some of the projects I've worked on. Each project represents different skills and technologies."
+        />
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.slice(0, 3).map((project, index) => (
-            <div className="gradient-border" key={project.name}>
+            <div
+              className={`gradient-border ${index === 0 ? "md:col-span-2 lg:col-span-1" : ""}`}
+              key={project.name}
+            >
               <Card
                 className={`overflow-hidden border-0 h-full flex flex-col card-animate stagger-${index + 1} ${isInView ? "in-view" : ""}`}
               >

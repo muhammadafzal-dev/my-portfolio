@@ -66,15 +66,16 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col gap-6">
-            <p className="text-primary font-medium opacity-0 animate-fade-in relative inline-block w-fit">
+            <p className="font-mono text-xs tracking-[0.2em] text-primary/80 uppercase opacity-0 animate-fade-in flex items-center gap-2">
+              <span className="h-px w-6 bg-primary/40" aria-hidden />
               Hello, I'm a
-              <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary/30"></span>
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] opacity-0 animate-fade-in-delay-1">
               Full-Stack <span className="gradient-text drop-shadow-sm">MERN</span> Developer
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground/80 tracking-wide opacity-0 animate-fade-in-delay-1 font-normal">
-              I am a <span className="text-primary/90 font-normal">{roleText}</span>
+            <p className="text-lg md:text-xl text-muted-foreground/80 tracking-wide opacity-0 animate-fade-in-delay-1 font-normal font-mono">
+              <span className="text-primary/70 mr-1">{">"}</span>
+              <span className="text-primary/90 font-normal">{roleText}</span>
               <span className="typing-caret" aria-hidden="true" />
             </p>
             <p className="text-lg text-muted-foreground max-w-lg opacity-0 animate-fade-in-delay-2 text-pretty">

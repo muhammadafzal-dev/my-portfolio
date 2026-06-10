@@ -4,6 +4,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import useInView from "@/hooks/useInView";
+import SectionHeading from "@/components/SectionHeading";
+import { Code2, Server, Smartphone, Plug, FlaskConical, Cloud, Activity } from "lucide-react";
 
 const Skills = () => {
   const { ref, isInView } = useInView({ threshold: 0.1 });
@@ -95,99 +97,57 @@ const Skills = () => {
       ref={ref}
     >
       <div className={`container mx-auto px-4 section-animate ${isInView ? "in-view" : ""}`}>
-        <h2 className="text-3xl font-bold text-center mb-16">Technical Skills</h2>
+        <SectionHeading
+          index="02"
+          label="Skills"
+          title="Technical Skills"
+        />
         
-        <div className="grid md:grid-cols-2 gap-8">
-          <Card className={`card-hover card-animate stagger-1 ${isInView ? "in-view" : ""}`}>
-            <CardHeader>
-              <CardTitle>Frontend Development</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-wrap gap-2">
-                {frontendSkills.map((skill) => (
-                  <Badge key={skill} variant="secondary" className="px-3 py-1 text-sm">{skill}</Badge>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-          
-          <Card className={`card-hover card-animate stagger-2 ${isInView ? "in-view" : ""}`}>
-            <CardHeader>
-              <CardTitle>Backend Development</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-wrap gap-2">
-                {backendSkills.map((skill) => (
-                  <Badge key={skill} variant="secondary" className="px-3 py-1 text-sm">{skill}</Badge>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-          
-          <Card className={`card-hover card-animate stagger-3 ${isInView ? "in-view" : ""}`}>
-            <CardHeader>
-              <CardTitle>Mobile Development</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-wrap gap-2">
-                {mobileSkills.map((skill) => (
-                  <Badge key={skill} variant="secondary" className="px-3 py-1 text-sm">{skill}</Badge>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-          
-          <Card className={`card-hover card-animate stagger-4 ${isInView ? "in-view" : ""}`}>
-            <CardHeader>
-              <CardTitle>APIs & Integrations</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-wrap gap-2">
-                {apiSkills.map((skill) => (
-                  <Badge key={skill} variant="secondary" className="px-3 py-1 text-sm">{skill}</Badge>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className={`card-hover card-animate stagger-5 ${isInView ? "in-view" : ""}`}>
-            <CardHeader>
-              <CardTitle>Testing & Automation</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-wrap gap-2">
-                {testingSkills.map((skill) => (
-                  <Badge key={skill} variant="secondary" className="px-3 py-1 text-sm">{skill}</Badge>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className={`card-hover card-animate stagger-6 ${isInView ? "in-view" : ""}`}>
-            <CardHeader>
-              <CardTitle>Cloud, DevOps & Monitoring</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-wrap gap-2">
-                {devopsSkills.map((skill) => (
-                  <Badge key={skill} variant="secondary" className="px-3 py-1 text-sm">{skill}</Badge>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className={`card-hover card-animate stagger-7 ${isInView ? "in-view" : ""}`}>
-            <CardHeader>
-              <CardTitle>Observability & AI</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-wrap gap-2">
-                {observabilityAiSkills.map((skill) => (
-                  <Badge key={skill} variant="secondary" className="px-3 py-1 text-sm">{skill}</Badge>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            { icon: Code2, title: "Frontend Development", slug: "frontend", items: frontendSkills },
+            { icon: Server, title: "Backend Development", slug: "backend", items: backendSkills },
+            { icon: Smartphone, title: "Mobile Development", slug: "mobile", items: mobileSkills },
+            { icon: Plug, title: "APIs & Integrations", slug: "apis", items: apiSkills },
+            { icon: FlaskConical, title: "Testing & Automation", slug: "testing", items: testingSkills },
+            { icon: Cloud, title: "Cloud, DevOps & Monitoring", slug: "devops", items: devopsSkills },
+            { icon: Activity, title: "Observability & AI", slug: "ai", items: observabilityAiSkills },
+          ].map(({ icon: Icon, title, slug, items }, idx) => (
+            <Card
+              key={title}
+              className={`card-hover card-animate stagger-${idx + 1} ${isInView ? "in-view" : ""} border-border/60 bg-background/60 backdrop-blur-sm`}
+            >
+              <CardHeader className="pb-3">
+                <div className="flex items-center justify-between gap-3 mb-1">
+                  <span className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground/70 uppercase">
+                    {slug}
+                  </span>
+                  <span className="font-mono text-[10px] text-muted-foreground/60">
+                    {String(items.length).padStart(2, "0")}
+                  </span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="rounded-md bg-primary/10 p-2 text-primary">
+                    <Icon className="h-4 w-4" />
+                  </span>
+                  <CardTitle className="text-lg">{title}</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {items.map((skill) => (
+                    <Badge
+                      key={skill}
+                      variant="secondary"
+                      className="px-3 py-1 text-sm font-normal border border-border/40"
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

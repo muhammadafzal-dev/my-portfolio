@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Copy, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { toast } from "sonner";
 import useInView from "@/hooks/useInView";
+import SectionHeading from "@/components/SectionHeading";
 
 const EMAIL = "afzalj166@gmail.com";
 
@@ -28,13 +29,12 @@ const Contact = () => {
       ref={ref}
     >
       <div className={`container mx-auto px-4 section-animate ${isInView ? "in-view" : ""}`}>
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <p className="text-primary font-medium mb-2">Contact</p>
-          <h2 className="text-3xl font-bold">Get In Touch</h2>
-          <p className="text-muted-foreground mt-4">
-            Interested in working together or have a question about my work? I’m always open to new opportunities.
-          </p>
-        </div>
+        <SectionHeading
+          index="05"
+          label="Contact"
+          title="Get In Touch"
+          description="Interested in working together or have a question about my work? I’m always open to new opportunities."
+        />
         
         <div className="max-w-3xl mx-auto">
           <Card className={`card-animate stagger-1 ${isInView ? "in-view" : ""}`}>
