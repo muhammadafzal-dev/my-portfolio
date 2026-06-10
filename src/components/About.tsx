@@ -16,7 +16,7 @@ const About = () => {
       <div className={`container mx-auto px-4 section-animate ${isInView ? "in-view" : ""}`}>
         <div className="max-w-5xl mx-auto">
           <SectionHeading
-            index="01"
+            index="02"
             label="About"
             title="About Me"
             align="left"

@@ -65,7 +65,7 @@ const Stats = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <p className="font-mono text-xs tracking-[0.2em] text-primary uppercase mb-5 flex items-center gap-2">
-            <span className="text-primary">00</span>
+            <span className="text-primary">01</span>
             <span className="text-primary/60">/</span>
             <span>Snapshot</span>
           </p>

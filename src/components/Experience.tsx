@@ -63,7 +63,7 @@ const Experience = () => {
       <div className={`container mx-auto px-4 section-animate ${isInView ? "in-view" : ""}`}>
         <div className="max-w-5xl mx-auto">
           <SectionHeading
-            index="04"
+            index="05"
             label="Experience"
             title="Where I've shipped."
             description="Full‑stack experience across SaaS platforms and cross‑platform mobile apps, covering frontend, backend, and integrations."

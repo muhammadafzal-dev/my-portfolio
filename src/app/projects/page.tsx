@@ -14,7 +14,7 @@ export default function ProjectsPage() {
         <div className="max-w-6xl mx-auto">
           <div className="max-w-3xl">
             <p className="font-mono text-xs tracking-[0.2em] text-primary uppercase mb-4 flex items-center gap-2">
-              <span className="text-primary">03</span>
+              <span className="text-primary">04</span>
               <span className="text-primary/60">/</span>
               <span>Projects</span>
             </p>
