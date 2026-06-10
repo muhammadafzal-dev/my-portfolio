@@ -1,10 +1,14 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { ArrowUpRight } from "lucide-react";
 import { FaAndroid, FaApple, FaGlobe } from "react-icons/fa";
 import type { Project } from "@/lib/projects";
 
@@ -16,6 +20,13 @@ const FILTERS: { key: Filter; label: string }[] = [
   { key: "mobile", label: "Mobile" },
   { key: "ai", label: "AI" },
 ];
+
+const platformIcon = (label: string) => {
+  const l = label.toLowerCase();
+  if (l.includes("ios")) return FaApple;
+  if (l.includes("android")) return FaAndroid;
+  return FaGlobe;
+};
 
 function matchesFilter(project: Project, filter: Filter): boolean {
   if (filter === "all") return true;
@@ -32,6 +43,7 @@ function matchesFilter(project: Project, filter: Filter): boolean {
 
 const ProjectsList = ({ projects }: { projects: Project[] }) => {
   const [filter, setFilter] = useState<Filter>("all");
+  const [active, setActive] = useState<Project | null>(null);
 
   const filtered = useMemo(
     () => projects.filter((p) => matchesFilter(p, filter)),
@@ -40,52 +52,63 @@ const ProjectsList = ({ projects }: { projects: Project[] }) => {
 
   return (
     <>
-      <div className="mt-8 flex flex-wrap gap-2">
-        {FILTERS.map((f) => (
-          <button
-            key={f.key}
-            type="button"
-            onClick={() => setFilter(f.key)}
-            className={`rounded-full px-4 py-1.5 text-sm border transition-colors ${
-              filter === f.key
-                ? "border-primary bg-primary text-primary-foreground"
-                : "border-border/60 text-foreground hover:bg-muted/50"
-            }`}
-          >
-            {f.label}
-          </button>
-        ))}
+      <div className="mt-8 flex items-center gap-3 flex-wrap">
+        <span className="font-mono text-[10px] tracking-[0.25em] text-muted-foreground/60 uppercase">
+          Filter
+        </span>
+        <div className="flex flex-wrap gap-2">
+          {FILTERS.map((f) => (
+            <button
+              key={f.key}
+              type="button"
+              onClick={() => setFilter(f.key)}
+              className={`rounded-full px-3.5 py-1 text-xs border transition-colors ${
+                filter === f.key
+                  ? "border-primary/60 bg-primary/15 text-primary"
+                  : "border-border/50 text-muted-foreground hover:text-foreground hover:bg-muted/40"
+              }`}
+            >
+              {f.label}
+            </button>
+          ))}
+        </div>
+        <span className="ml-auto font-mono text-[10px] tracking-[0.25em] text-muted-foreground/60 uppercase">
+          {String(filtered.length).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
+        </span>
       </div>
 
-      <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filtered.length === 0 && (
           <p className="col-span-full text-muted-foreground text-center py-12">
             No projects match this filter.
           </p>
         )}
         {filtered.map((project) => (
-          <Card
+          <div
             key={`${project.name}-${project.link.href}`}
-            className="overflow-hidden border-0 h-full flex flex-col"
+            className="group flex flex-col rounded-xl border border-border/40 bg-background/40 hover:border-primary/50 hover:bg-background/60 transition-colors overflow-hidden"
           >
-            <div className="h-40 bg-background/50 flex items-center justify-center">
-              <Image
-                src={project.image}
-                alt={project.name}
-                width={64}
-                height={64}
-                loading="lazy"
-                className="h-16 w-16 object-contain"
-              />
+            <div className="h-40 flex flex-col items-center justify-center px-6 border-b border-border/40 bg-secondary/30">
+              <p className="text-xl md:text-2xl font-semibold tracking-tight text-foreground/90 text-center line-clamp-2">
+                {project.name.split("—")[0].trim()}
+              </p>
+              <p className="font-mono text-[10px] tracking-[0.25em] text-muted-foreground/60 uppercase mt-3">
+                Thumbnail placeholder
+              </p>
             </div>
-            <CardHeader>
-              <CardTitle>{project.name}</CardTitle>
-            </CardHeader>
-            <CardContent className="flex-grow">
-              <p className="text-muted-foreground text-pretty">{project.description}</p>
+
+            <div className="flex flex-col flex-grow p-5">
+              <h3 className="text-base font-semibold tracking-tight text-foreground line-clamp-2 mb-2">
+                {project.name}
+              </h3>
+
+              <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
+                {project.description}
+              </p>
+
               {project.technologies && (
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {project.technologies.map((tech) => (
+                <div className="flex flex-wrap gap-1.5 mb-5">
+                  {project.technologies.slice(0, 4).map((tech) => (
                     <Badge
                       key={tech}
                       variant="secondary"
@@ -94,78 +117,148 @@ const ProjectsList = ({ projects }: { projects: Project[] }) => {
                       {tech}
                     </Badge>
                   ))}
+                  {project.technologies.length > 4 && (
+                    <span className="font-mono text-[11px] text-muted-foreground/60 self-center">
+                      +{project.technologies.length - 4}
+                    </span>
+                  )}
                 </div>
               )}
-            </CardContent>
-            <CardFooter className="flex flex-wrap gap-3 border-t border-border/40 pt-4">
-              {project.ios && (
-                <Button
-                  variant="outline"
-                  size="sm"
-                  asChild
-                  className="rounded-full px-3 border-primary/40 bg-primary/10 text-foreground hover:bg-primary/20 hover:border-primary/60"
-                >
-                  <a
-                    href={project.ios.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={project.ios.label}
-                    className="flex items-center gap-2"
-                  >
-                    <FaApple className="h-4 w-4" />
-                    <span className="text-xs">iOS</span>
-                  </a>
-                </Button>
-              )}
-              <Button
-                variant="outline"
-                size="sm"
-                asChild
-                className="rounded-full px-3 border-border/60 bg-muted/40 text-foreground hover:bg-muted/60 hover:border-border"
-              >
-                <a
-                  href={project.link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={project.link.label}
-                  className="flex items-center gap-2"
-                >
-                  {project.link.label.toLowerCase().includes("web") ? (
-                    <>
-                      <FaGlobe className="h-4 w-4" />
-                      <span className="text-xs">Web</span>
-                    </>
-                  ) : (
-                    <>
-                      <FaAndroid className="h-4 w-4" />
-                      <span className="text-xs">Android</span>
-                    </>
+
+              <div className="mt-auto pt-4 flex items-center justify-between gap-3 border-t border-border/40 flex-wrap">
+                <div className="flex items-center gap-2 flex-wrap">
+                  {project.ios && (
+                    <a
+                      href={project.ios.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={project.ios.label}
+                      className="flex items-center gap-1.5 rounded-full px-3 py-1 text-xs border border-primary/40 bg-primary/10 text-foreground hover:bg-primary/20 hover:border-primary/60 transition-colors"
+                    >
+                      <FaApple className="h-3.5 w-3.5" />
+                      <span>iOS</span>
+                    </a>
                   )}
-                </a>
-              </Button>
-              {project.website && (
-                <Button
-                  variant="outline"
-                  size="sm"
-                  asChild
-                  className="rounded-full px-3 border-primary/40 bg-primary/10 text-foreground hover:bg-primary/20 hover:border-primary/60"
-                >
                   <a
-                    href={project.website.href}
+                    href={project.link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={project.website.label}
-                    className="flex items-center gap-2"
+                    aria-label={project.link.label}
+                    className="flex items-center gap-1.5 rounded-full px-3 py-1 text-xs border border-border/60 bg-muted/40 text-foreground hover:bg-muted/60 hover:border-border transition-colors"
                   >
-                    <FaGlobe className="h-4 w-4" />
-                    <span className="text-xs">Web</span>
+                    {(() => {
+                      const Icon = platformIcon(project.link.label);
+                      return <Icon className="h-3.5 w-3.5" />;
+                    })()}
+                    <span>{project.link.label}</span>
                   </a>
-                </Button>
-              )}
-            </CardFooter>
-          </Card>
+                  {project.website && (
+                    <a
+                      href={project.website.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={project.website.label}
+                      className="flex items-center gap-1.5 rounded-full px-3 py-1 text-xs border border-primary/40 bg-primary/10 text-foreground hover:bg-primary/20 hover:border-primary/60 transition-colors"
+                    >
+                      <FaGlobe className="h-3.5 w-3.5" />
+                      <span>{project.website.label}</span>
+                    </a>
+                  )}
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setActive(project)}
+                  className="font-mono text-xs text-primary hover:text-primary/80 flex items-center gap-1 transition-colors"
+                >
+                  Details
+                  <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </button>
+              </div>
+            </div>
+          </div>
         ))}
       </div>
+
+      <Dialog open={active !== null} onOpenChange={(open) => !open && setActive(null)}>
+        <DialogContent>
+          {active && (
+            <>
+              <DialogHeader>
+                <p className="font-mono text-[10px] tracking-[0.25em] text-primary uppercase">
+                  Project
+                </p>
+                <DialogTitle>{active.name}</DialogTitle>
+              </DialogHeader>
+
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                {active.description}
+              </p>
+
+              {active.technologies && (
+                <div>
+                  <p className="font-mono text-[10px] tracking-[0.25em] text-muted-foreground/70 uppercase mb-2">
+                    Stack
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {active.technologies.map((tech) => (
+                      <Badge
+                        key={tech}
+                        variant="secondary"
+                        className="rounded-full px-2.5 py-0.5 text-[11px] font-normal border-0 bg-muted/60 text-foreground/80"
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div className="pt-2">
+                <p className="font-mono text-[10px] tracking-[0.25em] text-muted-foreground/70 uppercase mb-2">
+                  Links
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {active.ios && (
+                    <a
+                      href={active.ios.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs border border-primary/40 bg-primary/10 text-foreground hover:bg-primary/20 transition-colors"
+                    >
+                      <FaApple className="h-3.5 w-3.5" />
+                      <span>iOS</span>
+                    </a>
+                  )}
+                  <a
+                    href={active.link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs border border-border/60 bg-muted/40 text-foreground hover:bg-muted/60 transition-colors"
+                  >
+                    {(() => {
+                      const Icon = platformIcon(active.link.label);
+                      return <Icon className="h-3.5 w-3.5" />;
+                    })()}
+                    <span>{active.link.label}</span>
+                  </a>
+                  {active.website && (
+                    <a
+                      href={active.website.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs border border-primary/40 bg-primary/10 text-foreground hover:bg-primary/20 transition-colors"
+                    >
+                      <FaGlobe className="h-3.5 w-3.5" />
+                      <span>{active.website.label}</span>
+                    </a>
+                  )}
+                </div>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </>
   );
 };
