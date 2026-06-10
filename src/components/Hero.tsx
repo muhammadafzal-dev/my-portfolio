@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, CheckCircle2, Github, Linkedin, Mail } from "lucide-react";
+import SectionBackdrop from "@/components/SectionBackdrop";
 
 const Hero = () => {
   const roles = useMemo(
@@ -73,6 +74,7 @@ const Hero = () => {
       />
       <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none" aria-hidden />
       <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none" aria-hidden />
+      <SectionBackdrop />
 
       <div className="container mx-auto px-4 relative z-10 max-w-6xl">
         <div className="grid lg:grid-cols-[1fr_auto] gap-10 lg:gap-12 items-center">
