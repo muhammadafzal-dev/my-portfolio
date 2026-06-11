@@ -72,9 +72,7 @@ const Hero = () => {
             "radial-gradient(1000px 600px at 80% 10%, hsl(var(--primary) / 0.10), transparent 60%), radial-gradient(800px 500px at 10% 90%, hsl(var(--primary) / 0.06), transparent 60%), radial-gradient(1200px 800px at 50% 0%, hsl(var(--background)) 0%, transparent 70%)",
         }}
       />
-      <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none" aria-hidden />
-      <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none" aria-hidden />
-      <SectionBackdrop />
+      <SectionBackdrop aurora />
 
       <div className="container mx-auto px-4 relative z-10 max-w-6xl">
         <div className="grid lg:grid-cols-[1fr_auto] gap-10 lg:gap-12 items-center">

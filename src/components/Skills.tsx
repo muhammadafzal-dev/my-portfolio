@@ -119,10 +119,10 @@ const Skills = () => {
             >
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between gap-3 mb-1">
-                  <span className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground/70 uppercase">
+                  <span className="font-mono text-[11px] tracking-[0.2em] text-muted-foreground/70 uppercase">
                     {slug}
                   </span>
-                  <span className="font-mono text-[10px] text-muted-foreground/60">
+                  <span className="font-mono text-[11px] text-muted-foreground/60">
                     {String(items.length).padStart(2, "0")}
                   </span>
                 </div>
@@ -139,7 +139,7 @@ const Skills = () => {
                     <Badge
                       key={skill}
                       variant="secondary"
-                      className="rounded-full px-2.5 py-0.5 text-[11px] font-normal border-0 bg-muted/60 hover:bg-muted text-foreground/80"
+                      className="rounded-full px-3 py-1 text-xs font-normal border-0 bg-muted/60 hover:bg-muted text-foreground/80"
                     >
                       {skill}
                     </Badge>
