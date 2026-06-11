@@ -280,20 +280,43 @@ const CodeCard = () => (
         </CodeLine>
         <CodeLine n={5}>
           <Indent />
+          <span className="text-rose-300">experience</span>
+          <span className="text-muted-foreground">:</span>{" "}
+          <span className="text-emerald-300">{'"5+ years"'}</span>
+          <span className="text-muted-foreground">,</span>
+        </CodeLine>
+        <CodeLine n={6}>
+          <Indent />
+          <span className="text-rose-300">focus</span>
+          <span className="text-muted-foreground">:</span>{" "}
+          <span className="text-foreground">[</span>
+          <span className="text-emerald-300">{'"AI"'}</span>
+          <span className="text-muted-foreground">,</span>{" "}
+          <span className="text-emerald-300">{'"performance"'}</span>
+          <span className="text-muted-foreground">,</span>{" "}
+          <span className="text-emerald-300">{'"DX"'}</span>
+          <span className="text-foreground">]</span>
+          <span className="text-muted-foreground">,</span>
+        </CodeLine>
+        <CodeLine n={7}>
+          <Indent />
           <span className="text-rose-300">status</span>
           <span className="text-muted-foreground">:</span>{" "}
           <span className="text-emerald-300">{'"available"'}</span>
           <span className="text-muted-foreground">,</span>
         </CodeLine>
-        <CodeLine n={6}>
+        <CodeLine n={8}>
           <Indent />
-          <span className="text-rose-300">shipping</span>
+          <span className="text-rose-300">hire</span>
           <span className="text-muted-foreground">:</span>{" "}
-          <span className="text-amber-300">true</span>
+          <span className="text-foreground">{"() =>"}</span>{" "}
+          <span className="text-emerald-300">{'"afzalj166@gmail.com"'}</span>
           <span className="text-muted-foreground">,</span>
         </CodeLine>
-        <CodeLine n={7}>
-          <span className="text-foreground">{"}"}</span>
+        <CodeLine n={9}>
+          <span className="text-foreground">{"}"}</span>{" "}
+          <span className="text-violet-400">as</span>{" "}
+          <span className="text-violet-400">const</span>
           <span className="text-muted-foreground">;</span>
         </CodeLine>
       </div>
@@ -303,7 +326,7 @@ const CodeCard = () => (
         <span>typescript · utf-8</span>
         <span className="flex items-center gap-1.5">
           <span className="text-primary">●</span>
-          ln 7 · col 3
+          ln 9 · col 3
         </span>
       </div>
     </div>
