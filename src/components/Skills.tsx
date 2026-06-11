@@ -97,13 +97,15 @@ const Skills = () => {
       ref={ref}
     >
       <div className={`container mx-auto px-4 section-animate ${isInView ? "in-view" : ""}`}>
-        <SectionHeading
-          index="03"
-          label="Skills"
-          title="Technical Skills"
-        />
-        
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="max-w-6xl mx-auto">
+          <SectionHeading
+            index="03"
+            label="Skills"
+            title="Technical Skills"
+            align="left"
+          />
+
+          <div className="grid md:grid-cols-2 gap-6">
           {[
             { icon: Code2, title: "Frontend Development", slug: "frontend", items: frontendSkills },
             { icon: Server, title: "Backend Development", slug: "backend", items: backendSkills },
@@ -148,6 +150,7 @@ const Skills = () => {
               </CardContent>
             </Card>
           ))}
+          </div>
         </div>
       </div>
     </section>
