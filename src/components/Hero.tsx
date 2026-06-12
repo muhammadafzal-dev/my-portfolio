@@ -107,6 +107,16 @@ const Hero = () => {
               ))}
             </div>
 
+            {/* Worked with */}
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 opacity-0 animate-fade-in-delay-2 font-mono text-[11px]">
+              <span className="tracking-[0.2em] text-muted-foreground/60 uppercase">
+                Worked with
+              </span>
+              <span className="text-foreground/80">Obenan</span>
+              <span className="text-muted-foreground/40">·</span>
+              <span className="text-foreground/80">Global Software Consulting</span>
+            </div>
+
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mt-2 opacity-0 animate-fade-in-delay-3">
               <Button size="lg" asChild className="rounded-full shadow-lg shadow-primary/25 w-full sm:w-auto">
                 <a href="#projects">View My Work</a>
