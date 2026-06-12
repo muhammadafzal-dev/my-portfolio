@@ -15,11 +15,11 @@ const Experience = () => {
       duration: "Mar 2024 – Present",
       location: "Lahore, Pakistan",
       bullets: [
-        "Led frontend across Landing Platform (Next.js), SaaS Dashboard (React.js), and Omnipulse — architecture and production releases.",
+        "Led frontend across 6+ production platforms including Landing Platform (Next.js), SaaS Dashboard (React.js), and Omnipulse — architecture and production releases.",
         "Architected the Landing Platform and built Omnipulse from scratch while contributing to backend features.",
         "Shipped multi-language translation system and referral / affiliation tracking.",
         "Optimized with SSR, image strategy, and caching for 90–95+ Lighthouse scores.",
-        "Integrated AI voice agent workflows (OpenAI, Hume AI, ElevenLabs, Pipecat) and Stripe payments.",
+        "Integrated 4+ AI voice agent providers (OpenAI, Hume AI, ElevenLabs, Pipecat) and Stripe payments.",
         "Established observability with Sentry, Grafana, and Microsoft Clarity; managed CI/CD, Docker, and AWS.",
       ],
       technologies: [
@@ -45,7 +45,7 @@ const Experience = () => {
       duration: "Sep 2022 – Feb 2024",
       location: "Lahore, Pakistan",
       bullets: [
-        "Developed cross-platform mobile apps with React Native for iOS and Android across real estate, e-commerce, news, and healthcare.",
+        "Built 10+ cross-platform mobile apps with React Native for iOS and Android across 4 verticals — real estate, e-commerce, news, and healthcare.",
         "Built responsive, reusable UI components for scalable mobile architecture.",
         "Integrated REST APIs for authentication, data fetching, and user interactions.",
         "Contributed to feature development, bug fixing, and performance improvements in production applications.",
@@ -74,20 +74,26 @@ const Experience = () => {
             {/* Timeline rail */}
             <div
               aria-hidden
-              className="absolute left-[5px] top-3 bottom-3 w-px bg-border/50"
+              className="absolute left-[17px] top-5 bottom-5 w-px bg-border/50"
             />
 
             <div className="space-y-14">
               {experiences.map((exp, index) => (
                 <div
                   key={`${exp.company}-${exp.position}`}
-                  className={`relative pl-10 card-animate stagger-${index + 1} ${isInView ? "in-view" : ""}`}
+                  className={`relative pl-14 card-animate stagger-${index + 1} ${isInView ? "in-view" : ""}`}
                 >
-                  {/* Dot */}
-                  <span
+                  {/* Monogram badge */}
+                  <div
                     aria-hidden
-                    className="absolute left-0 top-[7px] h-[11px] w-[11px] rounded-full bg-primary ring-4 ring-background"
-                  />
+                    className="absolute left-0 top-0 z-10 flex h-9 w-9 items-center justify-center rounded-md border border-primary/40 bg-background text-primary font-mono text-xs font-semibold tracking-tight shadow-sm shadow-primary/10"
+                  >
+                    {exp.company
+                      .split(" ")
+                      .map((w) => w.charAt(0))
+                      .join("")
+                      .toUpperCase()}
+                  </div>
 
                   <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 mb-4">
                     <h3 className="text-[15px] md:text-base font-semibold tracking-tight">

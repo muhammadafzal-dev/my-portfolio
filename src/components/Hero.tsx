@@ -310,12 +310,19 @@ const CodeCard = () => (
         </CodeLine>
         <CodeLine n={7}>
           <Indent />
+          <span className="text-rose-300">recent</span>
+          <span className="text-muted-foreground">:</span>{" "}
+          <span className="text-emerald-300">{'"AI voice agents — OpenAI · Hume · ElevenLabs"'}</span>
+          <span className="text-muted-foreground">,</span>
+        </CodeLine>
+        <CodeLine n={8}>
+          <Indent />
           <span className="text-rose-300">status</span>
           <span className="text-muted-foreground">:</span>{" "}
           <span className="text-emerald-300">{'"available"'}</span>
           <span className="text-muted-foreground">,</span>
         </CodeLine>
-        <CodeLine n={8}>
+        <CodeLine n={9}>
           <Indent />
           <span className="text-rose-300">hire</span>
           <span className="text-muted-foreground">:</span>{" "}
@@ -323,7 +330,7 @@ const CodeCard = () => (
           <span className="text-emerald-300">{'"afzalj166@gmail.com"'}</span>
           <span className="text-muted-foreground">,</span>
         </CodeLine>
-        <CodeLine n={9}>
+        <CodeLine n={10}>
           <span className="text-foreground">{"}"}</span>{" "}
           <span className="text-violet-400">as</span>{" "}
           <span className="text-violet-400">const</span>
@@ -336,7 +343,7 @@ const CodeCard = () => (
         <span>typescript · utf-8</span>
         <span className="flex items-center gap-1.5">
           <span className="text-primary">●</span>
-          ln 9 · col 3
+          ln 10 · col 3
         </span>
       </div>
     </div>
