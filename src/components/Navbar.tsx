@@ -29,12 +29,12 @@ const Navbar = () => {
           <span className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 border border-primary/40 group-hover:bg-primary/20 transition-colors">
             <span className="font-mono text-[13px] font-semibold text-primary tracking-tight">ma</span>
           </span>
-          <span className="font-mono text-sm font-semibold text-foreground hidden sm:inline">
+          <span className="font-mono text-xs sm:text-sm font-semibold text-foreground truncate">
             Muhammad Afzal
           </span>
         </a>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 sm:gap-2 -mr-2 lg:mr-0">
           {/* Mobile theme toggle */}
           <Button
             variant="ghost"

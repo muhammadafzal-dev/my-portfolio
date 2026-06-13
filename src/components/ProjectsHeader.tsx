@@ -24,25 +24,25 @@ const ProjectsHeader = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
           <Button
             asChild
             variant="ghost"
             size="icon"
             aria-label="Back to home"
-            className="rounded-md"
+            className="rounded-md shrink-0 -ml-2"
           >
             <Link href="/">
               <ArrowLeft className="h-4 w-4" />
             </Link>
           </Button>
-          <Link href="/" className="flex items-center gap-2.5 group" aria-label="Muhammad Afzal">
-            <span className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 border border-primary/40 group-hover:bg-primary/20 transition-colors">
+          <Link href="/" className="flex items-center gap-2 sm:gap-2.5 group min-w-0" aria-label="Muhammad Afzal">
+            <span className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 border border-primary/40 group-hover:bg-primary/20 transition-colors shrink-0">
               <span className="font-mono text-[13px] font-semibold text-primary tracking-tight">
                 ma
               </span>
             </span>
-            <span className="font-mono text-sm font-semibold text-foreground hidden sm:inline">
+            <span className="font-mono text-xs sm:text-sm font-semibold text-foreground truncate">
               Muhammad Afzal
             </span>
           </Link>
@@ -61,7 +61,7 @@ const ProjectsHeader = () => {
             variant="ghost"
             size="icon"
             onClick={toggleTheme}
-            className="rounded-full"
+            className="rounded-full -mr-2 sm:mr-0"
             aria-label="Toggle theme"
           >
             {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}

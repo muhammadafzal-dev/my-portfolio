@@ -16,6 +16,7 @@ import { FaAndroid, FaApple, FaGlobe } from "react-icons/fa";
 import useInView from "@/hooks/useInView";
 import { projects, type Project } from "@/lib/projects";
 import SectionHeading from "@/components/SectionHeading";
+import ProjectThumb from "@/components/ProjectThumb";
 
 const platformIcon = (label: string) => {
   const l = label.toLowerCase();
@@ -47,16 +48,9 @@ const Projects = () => {
             {projects.slice(0, 4).map((project, index) => (
               <div
                 key={project.name}
-                className={`group flex flex-col rounded-xl border border-border/40 bg-background/40 hover:border-primary/50 hover:bg-background/60 transition-colors overflow-hidden card-animate stagger-${(index % 3) + 1} ${isInView ? "in-view" : ""}`}
+                className={`group flex flex-col rounded-xl border border-border/40 bg-background/40 hover:border-primary/50 hover:bg-background/60 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden card-animate stagger-${(index % 3) + 1} ${isInView ? "in-view" : ""}`}
               >
-                <div className="h-44 flex flex-col items-center justify-center px-6 border-b border-border/40 bg-secondary/30">
-                  <p className="text-2xl md:text-[28px] font-semibold tracking-tight text-foreground/90 text-center line-clamp-2">
-                    {project.name.split("—")[0].trim()}
-                  </p>
-                  <p className="font-mono text-[10px] tracking-[0.25em] text-muted-foreground/60 uppercase mt-3">
-                    Thumbnail placeholder
-                  </p>
-                </div>
+                <ProjectThumb project={project} heightClass="h-44" />
 
                 <div className="flex flex-col flex-grow p-5">
                   <h3 className="text-base font-semibold tracking-tight text-foreground line-clamp-1 mb-2">

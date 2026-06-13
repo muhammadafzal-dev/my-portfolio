@@ -256,84 +256,84 @@ const CodeCard = () => (
       {/* Body */}
       <div className="font-mono text-[12px] md:text-[13px] leading-relaxed py-4 px-4 md:px-5">
         <CodeLine n={1}>
-          <span className="text-violet-400">const</span>{" "}
-          <span className="text-sky-300">developer</span>{" "}
+          <span className="text-violet-700 dark:text-violet-400">const</span>{" "}
+          <span className="text-sky-700 dark:text-sky-300">developer</span>{" "}
           <span className="text-muted-foreground">=</span>{" "}
           <span className="text-foreground">{"{"}</span>
         </CodeLine>
         <CodeLine n={2}>
           <Indent />
-          <span className="text-rose-300">name</span>
+          <span className="text-rose-700 dark:text-rose-300">name</span>
           <span className="text-muted-foreground">:</span>{" "}
-          <span className="text-emerald-300">{'"Muhammad Afzal"'}</span>
+          <span className="text-emerald-700 dark:text-emerald-300">{'"Muhammad Afzal"'}</span>
           <span className="text-muted-foreground">,</span>
         </CodeLine>
         <CodeLine n={3}>
           <Indent />
-          <span className="text-rose-300">role</span>
+          <span className="text-rose-700 dark:text-rose-300">role</span>
           <span className="text-muted-foreground">:</span>{" "}
-          <span className="text-emerald-300">{'"Full-Stack MERN Developer"'}</span>
+          <span className="text-emerald-700 dark:text-emerald-300">{'"Full-Stack MERN Developer"'}</span>
           <span className="text-muted-foreground">,</span>
         </CodeLine>
         <CodeLine n={4}>
           <Indent />
-          <span className="text-rose-300">stack</span>
+          <span className="text-rose-700 dark:text-rose-300">stack</span>
           <span className="text-muted-foreground">:</span>{" "}
           <span className="text-foreground">[</span>
-          <span className="text-emerald-300">{'"Next.js"'}</span>
+          <span className="text-emerald-700 dark:text-emerald-300">{'"Next.js"'}</span>
           <span className="text-muted-foreground">,</span>{" "}
-          <span className="text-emerald-300">{'"React Native"'}</span>
+          <span className="text-emerald-700 dark:text-emerald-300">{'"React Native"'}</span>
           <span className="text-muted-foreground">,</span>{" "}
-          <span className="text-emerald-300">{'"NestJS"'}</span>
+          <span className="text-emerald-700 dark:text-emerald-300">{'"NestJS"'}</span>
           <span className="text-foreground">]</span>
           <span className="text-muted-foreground">,</span>
         </CodeLine>
         <CodeLine n={5}>
           <Indent />
-          <span className="text-rose-300">experience</span>
+          <span className="text-rose-700 dark:text-rose-300">experience</span>
           <span className="text-muted-foreground">:</span>{" "}
-          <span className="text-emerald-300">{'"5+ years"'}</span>
+          <span className="text-emerald-700 dark:text-emerald-300">{'"5+ years"'}</span>
           <span className="text-muted-foreground">,</span>
         </CodeLine>
         <CodeLine n={6}>
           <Indent />
-          <span className="text-rose-300">focus</span>
+          <span className="text-rose-700 dark:text-rose-300">focus</span>
           <span className="text-muted-foreground">:</span>{" "}
           <span className="text-foreground">[</span>
-          <span className="text-emerald-300">{'"AI"'}</span>
+          <span className="text-emerald-700 dark:text-emerald-300">{'"AI"'}</span>
           <span className="text-muted-foreground">,</span>{" "}
-          <span className="text-emerald-300">{'"performance"'}</span>
+          <span className="text-emerald-700 dark:text-emerald-300">{'"performance"'}</span>
           <span className="text-muted-foreground">,</span>{" "}
-          <span className="text-emerald-300">{'"DX"'}</span>
+          <span className="text-emerald-700 dark:text-emerald-300">{'"DX"'}</span>
           <span className="text-foreground">]</span>
           <span className="text-muted-foreground">,</span>
         </CodeLine>
         <CodeLine n={7}>
           <Indent />
-          <span className="text-rose-300">recent</span>
+          <span className="text-rose-700 dark:text-rose-300">recent</span>
           <span className="text-muted-foreground">:</span>{" "}
-          <span className="text-emerald-300">{'"AI voice agents — OpenAI · Hume · ElevenLabs"'}</span>
+          <span className="text-emerald-700 dark:text-emerald-300">{'"AI voice agents — OpenAI · Hume · ElevenLabs"'}</span>
           <span className="text-muted-foreground">,</span>
         </CodeLine>
         <CodeLine n={8}>
           <Indent />
-          <span className="text-rose-300">status</span>
+          <span className="text-rose-700 dark:text-rose-300">status</span>
           <span className="text-muted-foreground">:</span>{" "}
-          <span className="text-emerald-300">{'"available"'}</span>
+          <span className="text-emerald-700 dark:text-emerald-300">{'"available"'}</span>
           <span className="text-muted-foreground">,</span>
         </CodeLine>
         <CodeLine n={9}>
           <Indent />
-          <span className="text-rose-300">hire</span>
+          <span className="text-rose-700 dark:text-rose-300">hire</span>
           <span className="text-muted-foreground">:</span>{" "}
           <span className="text-foreground">{"() =>"}</span>{" "}
-          <span className="text-emerald-300">{'"afzalj166@gmail.com"'}</span>
+          <span className="text-emerald-700 dark:text-emerald-300">{'"afzalj166@gmail.com"'}</span>
           <span className="text-muted-foreground">,</span>
         </CodeLine>
         <CodeLine n={10}>
           <span className="text-foreground">{"}"}</span>{" "}
-          <span className="text-violet-400">as</span>{" "}
-          <span className="text-violet-400">const</span>
+          <span className="text-violet-700 dark:text-violet-400">as</span>{" "}
+          <span className="text-violet-700 dark:text-violet-400">const</span>
           <span className="text-muted-foreground">;</span>
         </CodeLine>
       </div>
