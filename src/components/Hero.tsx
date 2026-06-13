@@ -75,7 +75,7 @@ const Hero = () => {
       <SectionBackdrop aurora />
 
       <div className="container mx-auto px-4 relative z-10 max-w-6xl">
-        <div className="grid lg:grid-cols-[1fr_auto] gap-10 lg:gap-12 items-center">
+        <div className="flex flex-col-reverse gap-10 lg:grid lg:grid-cols-[1fr_auto] lg:gap-12 items-center">
           <div className="flex flex-col gap-5">
             <p className="font-mono text-xs tracking-[0.2em] text-primary uppercase opacity-0 animate-fade-in flex items-center gap-2">
               <span className="text-primary">00</span>
