@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://muhammadafzal.vercel.app">
-    <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&pause=900&color=14B8A6&center=true&vCenter=true&width=620&lines=React.js+Developer;Next.js+Engineer;React+Native+Developer;Node.js+Developer;NestJS+Developer;AI+Voice+Agents+%E2%80%94+OpenAI+%C2%B7+Hume+%C2%B7+ElevenLabs" alt="typing animation" />
+    <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&pause=900&color=14B8A6&center=true&vCenter=true&width=820&height=40&lines=React.js+Developer;Next.js+Engineer;React+Native+Developer;Node.js+Developer;NestJS+Developer;AI+Voice+Agents+%E2%80%94+OpenAI+%C2%B7+Hume+%C2%B7+ElevenLabs" alt="typing animation" />
   </a>
 </p>
 
