@@ -24,7 +24,7 @@ export const projects: Project[] = [
       label: "Web",
     },
     image: "/projects/obenan.png",
-    imageKind: "screenshot-blur",
+    imageKind: "screenshot",
     technologies: [
       "Next.js",
       "React.js",
@@ -46,7 +46,7 @@ export const projects: Project[] = [
       label: "Web",
     },
     image: "/projects/mymindbestie.png",
-    imageKind: "screenshot-blur",
+    imageKind: "screenshot",
     technologies: [
       "React Native",
       "Next.js",

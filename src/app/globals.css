@@ -316,3 +316,22 @@
     transparent
   );
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-twinkle,
+  .animate-aurora-1,
+  .animate-aurora-2,
+  .animate-aurora-3,
+  .animate-marquee,
+  .animate-float,
+  .animate-fade-in {
+    animation: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
