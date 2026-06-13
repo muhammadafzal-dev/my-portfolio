@@ -14,15 +14,17 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <Hero />
-      <Stats />
-      <About />
-      <TechMarquee />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Testimonials />
-      <Contact />
+      <main>
+        <Hero />
+        <Stats />
+        <About />
+        <TechMarquee />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Testimonials />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );

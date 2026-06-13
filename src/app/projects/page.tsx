@@ -10,7 +10,7 @@ export default function ProjectsPage() {
   return (
     <div className="min-h-screen pt-28 pb-20">
       <ProjectsHeader />
-      <div className="container mx-auto px-4">
+      <main className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="max-w-3xl">
             <p className="font-mono text-xs tracking-[0.2em] text-primary uppercase mb-4 flex items-center gap-2">
@@ -36,7 +36,7 @@ export default function ProjectsPage() {
             </Button>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 }

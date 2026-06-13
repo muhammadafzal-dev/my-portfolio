@@ -130,7 +130,7 @@ const Skills = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="rounded-md bg-primary/10 p-2 text-primary">
-                    <Icon className="h-4 w-4" />
+                    <Icon className="h-4 w-4" aria-hidden="true" />
                   </span>
                   <CardTitle className="text-lg">{title}</CardTitle>
                 </div>

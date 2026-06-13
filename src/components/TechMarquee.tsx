@@ -42,7 +42,9 @@ const techs: Tech[] = [
 
 const TechItem = ({ tech }: { tech: Tech }) => (
   <div className="flex items-center gap-3 px-6 py-3 mx-2 rounded-full border border-border/50 bg-background/60 backdrop-blur-sm shrink-0">
-    <tech.Icon className="h-5 w-5 text-primary" />
+    <span aria-hidden="true" className="inline-flex">
+      <tech.Icon className="h-5 w-5 text-primary" />
+    </span>
     <span className="text-sm font-medium text-foreground whitespace-nowrap">{tech.name}</span>
   </div>
 );
