@@ -109,7 +109,7 @@ const Hero = () => {
 
             {/* Worked with */}
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1 opacity-0 animate-fade-in-delay-2 font-mono text-[11px]">
-              <span className="tracking-[0.2em] text-muted-foreground/60 uppercase">
+              <span className="tracking-[0.2em] text-muted-foreground uppercase">
                 Worked with
               </span>
               <span className="text-foreground/80">Obenan</span>
@@ -164,7 +164,7 @@ const Hero = () => {
                 <Mail className="h-4 w-4" />
               </a>
               <span className="h-3 w-px bg-border/60" />
-              <span className="font-mono text-[11px] text-muted-foreground/70">
+              <span className="font-mono text-[11px] text-muted-foreground">
                 afzalj166@gmail.com
               </span>
             </div>
@@ -250,7 +250,7 @@ const CodeCard = () => (
             </span>
           </div>
         </div>
-        <span className="font-mono text-[11px] text-muted-foreground/60">01</span>
+        <span className="font-mono text-[11px] text-muted-foreground">01</span>
       </div>
 
       {/* Body */}
@@ -339,7 +339,7 @@ const CodeCard = () => (
       </div>
 
       {/* Statusbar */}
-      <div className="flex items-center justify-between px-4 py-2 border-t border-border/50 bg-muted/30 font-mono text-[10px] tracking-wider text-muted-foreground/70 uppercase">
+      <div className="flex items-center justify-between px-4 py-2 border-t border-border/50 bg-muted/30 font-mono text-[10px] tracking-wider text-muted-foreground uppercase">
         <span>typescript · utf-8</span>
         <span className="flex items-center gap-1.5">
           <span className="text-primary">●</span>

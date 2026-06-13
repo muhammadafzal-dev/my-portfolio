@@ -33,7 +33,7 @@ const Footer = () => {
               <p className="text-sm text-muted-foreground">
                 Full-stack developer · building modern web & mobile products.
               </p>
-              <p className="font-mono text-[11px] text-muted-foreground/70 flex items-center gap-1.5 mt-1">
+              <p className="font-mono text-[11px] text-muted-foreground flex items-center gap-1.5 mt-1">
                 <MapPin className="h-3 w-3" />
                 Lahore, Pakistan
               </p>
@@ -83,10 +83,10 @@ const Footer = () => {
           </div>
 
           <div className="border-t border-border/40 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
-            <p className="font-mono text-[11px] text-muted-foreground/70">
+            <p className="font-mono text-[11px] text-muted-foreground">
               © {currentYear} Muhammad Afzal · All rights reserved.
             </p>
-            <p className="font-mono text-[11px] text-muted-foreground/70 flex items-center gap-1">
+            <p className="font-mono text-[11px] text-muted-foreground flex items-center gap-1">
               Built with
               <Heart className="h-3 w-3 fill-primary text-primary" aria-hidden />
               by Muhammad Afzal

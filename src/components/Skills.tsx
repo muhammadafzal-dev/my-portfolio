@@ -121,10 +121,10 @@ const Skills = () => {
             >
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between gap-3 mb-1">
-                  <span className="font-mono text-[11px] tracking-[0.2em] text-muted-foreground/70 uppercase">
+                  <span className="font-mono text-[11px] tracking-[0.2em] text-muted-foreground uppercase">
                     {slug}
                   </span>
-                  <span className="font-mono text-[11px] text-muted-foreground/60">
+                  <span className="font-mono text-[11px] text-muted-foreground">
                     {String(items.length).padStart(2, "0")}
                   </span>
                 </div>

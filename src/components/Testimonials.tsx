@@ -131,7 +131,7 @@ const Testimonials = () => {
                       {t.title}
                     </p>
                   </div>
-                  <p className="font-mono text-[10px] text-muted-foreground/60 tracking-wider uppercase shrink-0 hidden sm:block">
+                  <p className="font-mono text-[10px] text-muted-foreground tracking-wider uppercase shrink-0 hidden sm:block">
                     {t.date}
                   </p>
                 </div>

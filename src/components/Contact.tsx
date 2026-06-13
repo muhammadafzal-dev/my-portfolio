@@ -47,7 +47,7 @@ const Contact = () => {
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
                 Available for
               </p>
-              <p className="font-mono text-[10px] tracking-wider text-muted-foreground/70 uppercase">
+              <p className="font-mono text-[10px] tracking-wider text-muted-foreground uppercase">
                 Open to opportunities
               </p>
             </div>
@@ -112,7 +112,7 @@ const Contact = () => {
               >
                 <Icon className="h-4 w-4 text-primary flex-shrink-0" />
                 <div className="flex-1 min-w-0">
-                  <p className="font-mono text-[10px] tracking-[0.15em] text-muted-foreground/70 uppercase">
+                  <p className="font-mono text-[10px] tracking-[0.15em] text-muted-foreground uppercase">
                     {label}
                   </p>
                   {href ? (

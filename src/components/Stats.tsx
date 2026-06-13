@@ -61,7 +61,7 @@ const Stats = () => {
   const { ref, isInView } = useInView({ threshold: 0.3 });
 
   return (
-    <section ref={ref} className="py-12 border-y border-border/40 bg-secondary/30">
+    <section ref={ref} className="py-12 border-y border-border/40">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <p className="font-mono text-xs tracking-[0.2em] text-primary uppercase mb-5 flex items-center gap-2">

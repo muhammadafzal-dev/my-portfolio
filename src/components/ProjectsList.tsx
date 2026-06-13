@@ -61,7 +61,7 @@ const ProjectsList = ({ projects }: { projects: Project[] }) => {
   return (
     <>
       <div className="mt-8 flex items-center gap-3 flex-wrap">
-        <span className="font-mono text-[10px] tracking-[0.25em] text-muted-foreground/60 uppercase">
+        <span className="font-mono text-[10px] tracking-[0.25em] text-muted-foreground uppercase">
           Filter
         </span>
         <div className="flex flex-wrap gap-2">
@@ -80,7 +80,7 @@ const ProjectsList = ({ projects }: { projects: Project[] }) => {
             </button>
           ))}
         </div>
-        <span className="ml-auto font-mono text-[10px] tracking-[0.25em] text-muted-foreground/60 uppercase">
+        <span className="ml-auto font-mono text-[10px] tracking-[0.25em] text-muted-foreground uppercase">
           {String(filtered.length).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}
         </span>
       </div>
@@ -119,7 +119,7 @@ const ProjectsList = ({ projects }: { projects: Project[] }) => {
                     </Badge>
                   ))}
                   {project.technologies.length > 4 && (
-                    <span className="font-mono text-[11px] text-muted-foreground/60 self-center">
+                    <span className="font-mono text-[11px] text-muted-foreground self-center">
                       +{project.technologies.length - 4}
                     </span>
                   )}
@@ -198,7 +198,7 @@ const ProjectsList = ({ projects }: { projects: Project[] }) => {
 
               {active.technologies && (
                 <div>
-                  <p className="font-mono text-[10px] tracking-[0.25em] text-muted-foreground/70 uppercase mb-2">
+                  <p className="font-mono text-[10px] tracking-[0.25em] text-muted-foreground uppercase mb-2">
                     Stack
                   </p>
                   <div className="flex flex-wrap gap-1.5">
@@ -216,7 +216,7 @@ const ProjectsList = ({ projects }: { projects: Project[] }) => {
               )}
 
               <div className="pt-2">
-                <p className="font-mono text-[10px] tracking-[0.25em] text-muted-foreground/70 uppercase mb-2">
+                <p className="font-mono text-[10px] tracking-[0.25em] text-muted-foreground uppercase mb-2">
                   Links
                 </p>
                 <div className="flex flex-wrap gap-2">

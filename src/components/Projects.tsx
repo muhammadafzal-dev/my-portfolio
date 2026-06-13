@@ -80,7 +80,7 @@ const Projects = () => {
                         </Badge>
                       ))}
                       {project.technologies.length > 4 && (
-                        <span className="font-mono text-[11px] text-muted-foreground/60 self-center">
+                        <span className="font-mono text-[11px] text-muted-foreground self-center">
                           +{project.technologies.length - 4}
                         </span>
                       )}
@@ -169,7 +169,7 @@ const Projects = () => {
 
               {active.technologies && (
                 <div>
-                  <p className="font-mono text-[10px] tracking-[0.25em] text-muted-foreground/70 uppercase mb-2">
+                  <p className="font-mono text-[10px] tracking-[0.25em] text-muted-foreground uppercase mb-2">
                     Stack
                   </p>
                   <div className="flex flex-wrap gap-1.5">
@@ -187,7 +187,7 @@ const Projects = () => {
               )}
 
               <div className="pt-2">
-                <p className="font-mono text-[10px] tracking-[0.25em] text-muted-foreground/70 uppercase mb-2">
+                <p className="font-mono text-[10px] tracking-[0.25em] text-muted-foreground uppercase mb-2">
                   Links
                 </p>
                 <div className="flex flex-wrap gap-2">
