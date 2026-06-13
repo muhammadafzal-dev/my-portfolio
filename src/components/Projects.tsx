@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dialog";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { FaAndroid, FaApple, FaGlobe } from "react-icons/fa";
+import { FaPlay, FaApple, FaGlobe } from "react-icons/fa";
 import useInView from "@/hooks/useInView";
 import { projects, type Project } from "@/lib/projects";
 import SectionHeading from "@/components/SectionHeading";
@@ -21,8 +21,15 @@ import ProjectThumb from "@/components/ProjectThumb";
 const platformIcon = (label: string) => {
   const l = label.toLowerCase();
   if (l.includes("ios")) return FaApple;
-  if (l.includes("android")) return FaAndroid;
+  if (l.includes("android")) return FaPlay;
   return FaGlobe;
+};
+
+const storeLabel = (label: string) => {
+  const l = label.toLowerCase();
+  if (l.includes("ios")) return "App Store";
+  if (l.includes("android")) return "Google Play";
+  return label;
 };
 
 const Projects = () => {
@@ -91,7 +98,7 @@ const Projects = () => {
                           className="flex items-center gap-1.5 rounded-full px-3 py-1 text-xs border border-primary/40 bg-primary/10 text-foreground hover:bg-primary/20 hover:border-primary/60 transition-colors"
                         >
                           <FaApple className="h-3.5 w-3.5" />
-                          <span>iOS</span>
+                          <span>App Store</span>
                         </a>
                       )}
                       <a
@@ -105,7 +112,7 @@ const Projects = () => {
                           const Icon = platformIcon(project.link.label);
                           return <Icon className="h-3.5 w-3.5" />;
                         })()}
-                        <span>{project.link.label}</span>
+                        <span>{storeLabel(project.link.label)}</span>
                       </a>
                       {project.website && (
                         <a
@@ -192,7 +199,7 @@ const Projects = () => {
                       className="flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs border border-primary/40 bg-primary/10 text-foreground hover:bg-primary/20 transition-colors"
                     >
                       <FaApple className="h-3.5 w-3.5" />
-                      <span>iOS</span>
+                      <span>App Store</span>
                     </a>
                   )}
                   <a
@@ -205,7 +212,7 @@ const Projects = () => {
                       const Icon = platformIcon(active.link.label);
                       return <Icon className="h-3.5 w-3.5" />;
                     })()}
-                    <span>{active.link.label}</span>
+                    <span>{storeLabel(active.link.label)}</span>
                   </a>
                   {active.website && (
                     <a
