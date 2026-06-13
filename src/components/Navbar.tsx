@@ -63,6 +63,7 @@ const Navbar = () => {
           <a href="#skills" className="nav-link">Skills</a>
           <a href="#projects" className="nav-link">Projects</a>
           <a href="#experience" className="nav-link">Experience</a>
+          <a href="#testimonials" className="nav-link">Testimonials</a>
           {/* Theme toggle button */}
           <Button
             variant="ghost"
@@ -85,6 +86,7 @@ const Navbar = () => {
             <a href="#skills" className="text-foreground hover:text-primary transition-colors p-2" onClick={() => setIsMenuOpen(false)}>Skills</a>
             <a href="#projects" className="text-foreground hover:text-primary transition-colors p-2" onClick={() => setIsMenuOpen(false)}>Projects</a>
             <a href="#experience" className="text-foreground hover:text-primary transition-colors p-2" onClick={() => setIsMenuOpen(false)}>Experience</a>
+            <a href="#testimonials" className="text-foreground hover:text-primary transition-colors p-2" onClick={() => setIsMenuOpen(false)}>Testimonials</a>
             <Button asChild className="w-full rounded-full">
               <a href="#contact" onClick={() => setIsMenuOpen(false)}>Hire Me</a>
             </Button>
