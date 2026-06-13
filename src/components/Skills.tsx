@@ -25,6 +25,7 @@ const Skills = () => {
     "TanStack Query",
     "Performance Optimization",
     "Figma",
+    "PWA",
   ];
   const backendSkills = [
     "Node.js",
