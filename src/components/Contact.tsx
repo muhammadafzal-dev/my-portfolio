@@ -2,12 +2,15 @@
 
 
 import { Button } from "@/components/ui/button";
-import { Copy, Github, Linkedin, Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { Copy, Github, Linkedin, Mail, MapPin, ArrowUpRight, CheckCircle2, Clock } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { toast } from "sonner";
 import useInView from "@/hooks/useInView";
 import SectionHeading from "@/components/SectionHeading";
 
 const EMAIL = "afzalj166@gmail.com";
+const WHATSAPP_URL =
+  "https://wa.me/923056129131?text=Hi%20Muhammad%2C%20I%20saw%20your%20portfolio";
 
 const Contact = () => {
   const { ref, isInView } = useInView({ threshold: 0.1 });
@@ -37,6 +40,32 @@ const Contact = () => {
             align="left"
           />
 
+          {/* Availability */}
+          <div className="mb-6 rounded-xl border border-primary/30 bg-primary/5 p-5">
+            <div className="flex items-center justify-between flex-wrap gap-2 mb-3">
+              <p className="font-mono text-[10px] tracking-[0.25em] text-primary uppercase flex items-center gap-2">
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+                Available for
+              </p>
+              <p className="font-mono text-[10px] tracking-wider text-muted-foreground/70 uppercase">
+                Open to opportunities
+              </p>
+            </div>
+            <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+              {[
+                "Remote / Hybrid full-time roles",
+                "React Native contract work",
+                "Next.js + Node.js full-stack builds",
+                "AI integrations & voice agent workflows",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2 text-sm text-foreground/85">
+                  <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <div className="grid sm:grid-cols-2 gap-3">
             {[
               {
@@ -46,6 +75,13 @@ const Contact = () => {
                 value: EMAIL,
                 href: `mailto:${EMAIL}`,
                 copyable: true,
+              },
+              {
+                key: "whatsapp",
+                icon: FaWhatsapp,
+                label: "WhatsApp",
+                value: "+92 305 6129131",
+                href: WHATSAPP_URL,
               },
               {
                 key: "linkedin",
@@ -109,7 +145,7 @@ const Contact = () => {
             ))}
           </div>
 
-          <div className="mt-6 flex items-center gap-3">
+          <div className="mt-6 flex items-center gap-3 flex-wrap">
             <Button asChild className="rounded-full">
               <a href={`mailto:${EMAIL}`}>
                 Send an email
@@ -126,6 +162,11 @@ const Contact = () => {
               </a>
             </Button>
           </div>
+
+          <p className="mt-5 flex items-center gap-2 font-mono text-[11px] text-muted-foreground/80">
+            <Clock className="h-3.5 w-3.5 text-primary/70" />
+            <span>Usually replies within 24h · Lahore (UTC+5)</span>
+          </p>
         </div>
       </div>
     </section>
