@@ -63,10 +63,17 @@ const Stats = () => {
   return (
     <section ref={ref} className="py-12 border-y border-border/40 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
-          {stats.map((stat, i) => (
-            <StatCard key={stat.label} stat={stat} trigger={isInView} delay={i * 100} />
-          ))}
+        <div className="max-w-5xl mx-auto">
+          <p className="font-mono text-xs tracking-[0.2em] text-primary uppercase mb-5 flex items-center gap-2">
+            <span className="text-primary">01</span>
+            <span className="text-primary/60">/</span>
+            <span>Snapshot</span>
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {stats.map((stat, i) => (
+              <StatCard key={stat.label} stat={stat} trigger={isInView} delay={i * 100} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -1,33 +1,67 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Moon, Sun } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
 
 const ProjectsHeader = () => {
   const { theme, toggleTheme } = useTheme();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <nav className="py-4 px-4 lg:px-8 fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md z-50 border-b">
+    <nav
+      className={`py-4 px-4 lg:px-8 fixed top-0 left-0 right-0 bg-background/60 backdrop-blur-xl z-50 border-b transition-colors ${
+        scrolled ? "border-border/40" : "border-transparent"
+      }`}
+    >
       <div className="container mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <Button asChild variant="outline" size="icon" aria-label="Back to home">
+        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+          <Button
+            asChild
+            variant="ghost"
+            size="icon"
+            aria-label="Back to home"
+            className="rounded-md shrink-0 -ml-2"
+          >
             <Link href="/">
-              <ArrowLeft className="h-5 w-5" />
+              <ArrowLeft className="h-4 w-4" />
             </Link>
           </Button>
-          <Link href="/" className="text-xl font-bold gradient-text">
-            Muhammad Afzal
+          <Link href="/" className="flex items-center gap-2 sm:gap-2.5 group min-w-0" aria-label="Muhammad Afzal">
+            <span className="relative flex items-center justify-center w-9 h-9 rounded-lg bg-gradient-to-br from-primary/25 to-primary/5 border border-primary/40 shadow-md shadow-primary/20 group-hover:shadow-primary/30 group-hover:border-primary/60 transition-all ring-1 ring-inset ring-primary/10 shrink-0">
+              <span className="font-mono text-sm font-semibold text-primary tracking-tight drop-shadow-sm">
+                ma
+              </span>
+            </span>
+            <span className="font-mono text-xs sm:text-sm font-semibold text-foreground truncate">
+              Muhammad Afzal
+            </span>
           </Link>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
+          <Link
+            href="/#projects"
+            className="hidden sm:inline-flex font-mono text-xs text-muted-foreground hover:text-primary transition-colors px-3 py-1.5"
+          >
+            <span className="text-primary/70 mr-1">{"<"}</span>
+            back
+            <span className="text-primary/70 ml-1">{" />"}</span>
+          </Link>
           <Button
-            variant="outline"
+            variant="ghost"
             size="icon"
             onClick={toggleTheme}
-            className="rounded-full"
+            className="rounded-full -mr-2 sm:mr-0"
             aria-label="Toggle theme"
           >
             {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}

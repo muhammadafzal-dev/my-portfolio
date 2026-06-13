@@ -11,20 +11,30 @@ export default function ProjectsPage() {
     <div className="min-h-screen pt-28 pb-20">
       <ProjectsHeader />
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl">
-          <p className="text-primary font-medium">Projects</p>
-          <h1 className="text-4xl md:text-5xl font-bold mt-2">Selected Work</h1>
-          <p className="text-muted-foreground mt-4">
-            A curated list of apps and products I have worked on across web, Android, and iOS.
-          </p>
-        </div>
+        <div className="max-w-6xl mx-auto">
+          <div className="max-w-3xl">
+            <p className="font-mono text-xs tracking-[0.2em] text-primary uppercase mb-4 flex items-center gap-2">
+              <span className="text-primary">04</span>
+              <span className="text-primary/60">/</span>
+              <span>Projects</span>
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Selected Work</h1>
+            <p className="text-muted-foreground mt-4 text-pretty">
+              A curated list of apps and products I have worked on across web, Android, and iOS.
+            </p>
+          </div>
 
-        <ProjectsList projects={projects} />
+          <ProjectsList projects={projects} />
 
-        <div className="mt-12">
-          <Button variant="outline" asChild>
-            <Link href="/">Back to Home</Link>
-          </Button>
+          <div className="mt-14 flex justify-start">
+            <Button variant="outline" asChild className="rounded-full border-border/60">
+              <Link href="/" className="font-mono text-xs">
+                <span className="text-primary mr-1">{"<"}</span>
+                back to home
+                <span className="text-primary ml-1">{" />"}</span>
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </div>

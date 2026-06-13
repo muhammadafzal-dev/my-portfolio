@@ -1,55 +1,97 @@
 "use client";
 
 
-import { Github, Linkedin, Mail } from "lucide-react";
+import Link from "next/link";
+import { Github, Linkedin, Mail, MapPin, Heart } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
+  const nav = [
+    { label: "About", href: "#about" },
+    { label: "Skills", href: "#skills" },
+    { label: "Projects", href: "#projects" },
+    { label: "Experience", href: "#experience" },
+    { label: "Contact", href: "#contact" },
+  ];
+
   return (
-    <footer className="bg-card text-foreground py-12 border-t border-border/60">
+    <footer className="bg-background border-t border-border/40 py-12">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-          <div>
-            <p className="text-2xl font-bold mb-2">Muhammad Afzal</p>
-            <p className="text-muted-foreground">Building modern web solutions</p>
-          </div>
-          
-          <div className="mt-6 md:mt-0">
-            <div className="flex justify-center md:justify-start gap-6">
-              <a
-                href="https://github.com/muhammadafzal-dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-[1fr_auto] gap-8 mb-8">
+            {/* Left: brand + tagline */}
+            <div className="flex flex-col gap-2">
+              <Link
+                href="/"
+                className="font-mono text-sm text-foreground hover:text-primary transition-colors w-fit"
               >
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/muhammadafzal-dev/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
-              </a>
-              <a
-                href="mailto:afzalj166@gmail.com"
-                className="hover:text-primary transition-colors"
-              >
-                <Mail className="h-5 w-5" />
-                <span className="sr-only">Email</span>
-              </a>
+                <span className="text-primary">{"<"}</span>
+                muhammadafzal-dev
+                <span className="text-primary">{" />"}</span>
+              </Link>
+              <p className="text-sm text-muted-foreground">
+                Full-stack developer · building modern web & mobile products.
+              </p>
+              <p className="font-mono text-[11px] text-muted-foreground/70 flex items-center gap-1.5 mt-1">
+                <MapPin className="h-3 w-3" />
+                Lahore, Pakistan
+              </p>
+            </div>
+
+            {/* Right: nav + socials */}
+            <div className="flex flex-col gap-4 md:items-end">
+              <nav className="flex flex-wrap gap-x-5 gap-y-2">
+                {nav.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </nav>
+              <div className="flex items-center gap-3 text-muted-foreground">
+                <a
+                  href="https://github.com/muhammadafzal-dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="rounded-md p-1.5 hover:text-primary hover:bg-primary/10 transition-colors"
+                >
+                  <Github className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://linkedin.com/in/muhammadafzal-dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="rounded-md p-1.5 hover:text-primary hover:bg-primary/10 transition-colors"
+                >
+                  <Linkedin className="h-4 w-4" />
+                </a>
+                <a
+                  href="mailto:afzalj166@gmail.com"
+                  aria-label="Email"
+                  className="rounded-md p-1.5 hover:text-primary hover:bg-primary/10 transition-colors"
+                >
+                  <Mail className="h-4 w-4" />
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <div className="border-t border-border/60 mt-8 pt-8 text-center md:text-left">
-          <p className="text-sm text-muted-foreground">
-            © {currentYear} Muhammad Afzal. All rights reserved.
-          </p>
+
+          <div className="border-t border-border/40 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
+            <p className="font-mono text-[11px] text-muted-foreground/70">
+              © {currentYear} Muhammad Afzal · All rights reserved.
+            </p>
+            <p className="font-mono text-[11px] text-muted-foreground/70 flex items-center gap-1">
+              Built with
+              <Heart className="h-3 w-3 fill-primary text-primary" aria-hidden />
+              by Muhammad Afzal
+            </p>
+          </div>
         </div>
       </div>
     </footer>

@@ -10,6 +10,7 @@ export type Project = {
   ios?: ProjectLink;
   website?: ProjectLink;
   image: string;
+  imageKind?: "logo" | "screenshot" | "screenshot-blur" | "mobile-screenshot";
   technologies?: string[];
 };
 
@@ -22,7 +23,8 @@ export const projects: Project[] = [
       href: "https://obenan.ai/",
       label: "Web",
     },
-    image: "/logo_large.png",
+    image: "/projects/obenan.png",
+    imageKind: "screenshot",
     technologies: [
       "Next.js",
       "React.js",
@@ -33,6 +35,28 @@ export const projects: Project[] = [
       "AWS",
       "Docker",
       "MongoDB",
+    ],
+  },
+  {
+    name: "My Mind Bestie — Cross-Platform Wellness SaaS",
+    description:
+      "Full-stack wellness platform spanning Web, Mobile (iOS + Android), and Desktop (Electron) — one user, one account, three surfaces sharing the same backend and design system. Architected a TurboRepo monorepo with shared UI, API client, types, and validation. Built a serverless NestJS backend on AWS Lambda for auth, payments, and content. Stripe handles subscriptions and recurring billing. Mobile supports audio/video streaming, push notifications, and offline-first content. Admin dashboard manages users, content, and subscriptions.",
+    link: {
+      href: "https://mymindbestie.com",
+      label: "Web",
+    },
+    image: "/projects/mymindbestie.png",
+    imageKind: "screenshot",
+    technologies: [
+      "React Native",
+      "Next.js",
+      "NestJS",
+      "AWS Lambda",
+      "Stripe",
+      "Electron",
+      "TurboRepo",
+      "PostgreSQL",
+      "TypeScript",
     ],
   },
   {
@@ -48,6 +72,7 @@ export const projects: Project[] = [
       label: "Android",
     },
     image: "/projects/companyneeds.png",
+    imageKind: "logo",
     technologies: ["React", "Next.js", "React Native", "E-commerce"],
   },
   {
@@ -62,7 +87,8 @@ export const projects: Project[] = [
       href: "https://apps.apple.com/us/app/udress/id1485435709",
       label: "iOS",
     },
-    image: "/projects/udress.ico",
+    image: "/projects/udress.png",
+    imageKind: "mobile-screenshot",
     technologies: ["React Native", "Android", "iOS"],
   },
   {
@@ -78,6 +104,7 @@ export const projects: Project[] = [
       label: "iOS",
     },
     image: "/projects/SenSights.webp",
+    imageKind: "logo",
     technologies: ["React Native", "Android", "iOS", "Healthcare"],
   },
   {
@@ -92,7 +119,8 @@ export const projects: Project[] = [
       href: "https://apps.apple.com/us/developer/etihad-town-pvt-limited/id1690750920",
       label: "iOS",
     },
-    image: "/projects/etihad.webp",
+    image: "/projects/etihad.png",
+    imageKind: "mobile-screenshot",
     technologies: ["React Native", "Android", "iOS", "Real Estate"],
   },
   {
@@ -107,7 +135,8 @@ export const projects: Project[] = [
       href: "https://apps.apple.com/us/app/live-urdu-news/id1565184003",
       label: "iOS",
     },
-    image: "/projects/urdunews.webp",
+    image: "/projects/urdunews.png",
+    imageKind: "mobile-screenshot",
     technologies: ["React Native", "Android", "iOS", "News"],
   },
   {
@@ -123,6 +152,7 @@ export const projects: Project[] = [
       label: "Web",
     },
     image: "/projects/techpulse.png",
+    imageKind: "mobile-screenshot",
     technologies: [
       "React Native",
       "TypeScript",
@@ -140,7 +170,8 @@ export const projects: Project[] = [
       href: "https://resume-gap-analyzer-dev.vercel.app/",
       label: "Web",
     },
-    image: "/projects/resumegap.svg",
+    image: "/projects/resumegap.png",
+    imageKind: "screenshot",
     technologies: [
       "Next.js",
       "TypeScript",
@@ -154,14 +185,11 @@ export const projects: Project[] = [
     description:
       "Embark on a transformative journey towards your aspirations with LifeDesign, the ultimate life goal inspiration app. Crafted to ignite motivation and guide you towards success, this app is your go-to companion for setting, tracking, and achieving life goals.",
     link: {
-      href: "https://play.google.com/store/games?hl=en&gl=US",
-      label: "Android (Link Pending)",
-    },
-    ios: {
       href: "https://apps.apple.com/us/app/life-design/id6477827161",
       label: "iOS",
     },
     image: "/projects/lifeDesign.png",
+    imageKind: "logo",
     technologies: ["React Native", "Android", "iOS", "Lifestyle"],
   },
 ];
