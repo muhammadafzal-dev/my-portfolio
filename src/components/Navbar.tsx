@@ -6,9 +6,18 @@ import { Button } from "@/components/ui/button";
 import { Menu, Moon, Sun } from "lucide-react";
 import { useTheme } from '@/components/ThemeProvider';
 
+const NAV_ITEMS = [
+  { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
+  { id: "projects", label: "Projects" },
+  { id: "experience", label: "Experience" },
+  { id: "testimonials", label: "Testimonials" },
+] as const;
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeId, setActiveId] = useState<string | null>(null);
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -16,6 +25,23 @@ const Navbar = () => {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (visible[0]) setActiveId(visible[0].target.id);
+      },
+      { rootMargin: "-40% 0px -55% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] },
+    );
+    NAV_ITEMS.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -58,36 +84,66 @@ const Navbar = () => {
         </div>
 
         {/* Desktop menu */}
-        <div className="hidden lg:flex items-center gap-6">
-          <a href="#about" className="nav-link">About</a>
-          <a href="#skills" className="nav-link">Skills</a>
-          <a href="#projects" className="nav-link">Projects</a>
-          <a href="#experience" className="nav-link">Experience</a>
-          <a href="#testimonials" className="nav-link">Testimonials</a>
-          {/* Theme toggle button */}
+        <div className="hidden lg:flex items-center gap-5">
+          {NAV_ITEMS.map(({ id, label }) => {
+            const isActive = activeId === id;
+            return (
+              <a
+                key={id}
+                href={`#${id}`}
+                aria-current={isActive ? "page" : undefined}
+                className={`font-mono text-sm transition-colors group flex items-center gap-1 ${
+                  isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                <span
+                  className={`transition-colors ${
+                    isActive ? "text-primary" : "text-primary/50 group-hover:text-primary"
+                  }`}
+                >
+                  /
+                </span>
+                {label}
+              </a>
+            );
+          })}
           <Button
             variant="ghost"
             size="icon"
             onClick={toggleTheme}
-            className="rounded-full"
+            className="rounded-full ml-1"
             aria-label="Toggle theme"
           >
             {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
           </Button>
-          <Button asChild className="rounded-full">
+          <Button asChild className="rounded-full shadow-md shadow-primary/20 hover:shadow-primary/30">
             <a href="#contact">Hire Me</a>
           </Button>
         </div>
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl shadow-lg p-4 lg:hidden flex flex-col gap-4 animate-fade-in">
-            <a href="#about" className="text-foreground hover:text-primary transition-colors p-2" onClick={() => setIsMenuOpen(false)}>About</a>
-            <a href="#skills" className="text-foreground hover:text-primary transition-colors p-2" onClick={() => setIsMenuOpen(false)}>Skills</a>
-            <a href="#projects" className="text-foreground hover:text-primary transition-colors p-2" onClick={() => setIsMenuOpen(false)}>Projects</a>
-            <a href="#experience" className="text-foreground hover:text-primary transition-colors p-2" onClick={() => setIsMenuOpen(false)}>Experience</a>
-            <a href="#testimonials" className="text-foreground hover:text-primary transition-colors p-2" onClick={() => setIsMenuOpen(false)}>Testimonials</a>
-            <Button asChild className="w-full rounded-full">
+          <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl shadow-lg p-4 lg:hidden flex flex-col gap-1 animate-fade-in">
+            {NAV_ITEMS.map(({ id, label }) => {
+              const isActive = activeId === id;
+              return (
+                <a
+                  key={id}
+                  href={`#${id}`}
+                  aria-current={isActive ? "page" : undefined}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`font-mono text-sm flex items-center gap-2 p-2 rounded-md transition-colors ${
+                    isActive
+                      ? "text-foreground bg-muted/40"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted/30"
+                  }`}
+                >
+                  <span className={isActive ? "text-primary" : "text-primary/50"}>/</span>
+                  {label}
+                </a>
+              );
+            })}
+            <Button asChild className="w-full rounded-full mt-2">
               <a href="#contact" onClick={() => setIsMenuOpen(false)}>Hire Me</a>
             </Button>
           </div>
