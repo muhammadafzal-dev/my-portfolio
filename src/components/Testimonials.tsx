@@ -85,15 +85,15 @@ const Testimonials = () => {
             {testimonials.map((t, index) => (
               <article
                 key={t.name}
-                className={`group relative rounded-xl border border-border/40 bg-background/40 hover:border-primary/50 hover:bg-background/60 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-0.5 transition-all duration-300 p-5 md:p-6 card-animate stagger-${(index % 3) + 1} ${isInView ? "in-view" : ""}`}
+                className={`group relative rounded-xl border border-border/40 bg-background/40 hover:border-primary/50 hover:bg-background/60 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-0.5 transition-all duration-300 p-4 sm:p-5 md:p-6 card-animate stagger-${(index % 3) + 1} ${isInView ? "in-view" : ""}`}
               >
-                <Quote className="absolute top-5 right-5 h-5 w-5 text-primary/30" aria-hidden />
+                <Quote className="absolute top-4 right-4 sm:top-5 sm:right-5 h-5 w-5 text-primary/30" aria-hidden />
 
                 <p className="text-sm md:text-[15px] text-foreground/85 leading-relaxed text-pretty pr-8 mb-5">
                   {t.quote}
                 </p>
 
-                <div className="flex items-center gap-3 pt-4 border-t border-border/40">
+                <div className="flex items-start gap-3 pt-4 border-t border-border/40">
                   {t.avatar ? (
                     <div className="relative h-10 w-10 rounded-full overflow-hidden border border-border/60 bg-background ring-1 ring-primary/20 shrink-0">
                       <Image
@@ -127,7 +127,9 @@ const Testimonials = () => {
                     ) : (
                       <p className="text-sm font-semibold text-foreground truncate">{t.name}</p>
                     )}
-                    <p className="text-[11px] text-muted-foreground/80 truncate">{t.title}</p>
+                    <p className="text-[11px] text-muted-foreground/80 leading-snug mt-0.5 line-clamp-2">
+                      {t.title}
+                    </p>
                   </div>
                   <p className="font-mono text-[10px] text-muted-foreground/60 tracking-wider uppercase shrink-0 hidden sm:block">
                     {t.date}

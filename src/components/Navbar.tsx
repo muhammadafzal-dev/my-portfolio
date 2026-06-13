@@ -26,8 +26,8 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex justify-between items-center">
         <a href="#" className="flex items-center gap-2.5 group" aria-label="Muhammad Afzal">
-          <span className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 border border-primary/40 group-hover:bg-primary/20 transition-colors">
-            <span className="font-mono text-[13px] font-semibold text-primary tracking-tight">ma</span>
+          <span className="relative flex items-center justify-center w-9 h-9 rounded-lg bg-gradient-to-br from-primary/25 to-primary/5 border border-primary/40 shadow-md shadow-primary/20 group-hover:shadow-primary/30 group-hover:border-primary/60 transition-all ring-1 ring-inset ring-primary/10">
+            <span className="font-mono text-sm font-semibold text-primary tracking-tight drop-shadow-sm">ma</span>
           </span>
           <span className="font-mono text-xs sm:text-sm font-semibold text-foreground truncate">
             Muhammad Afzal
