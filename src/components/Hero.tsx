@@ -83,7 +83,7 @@ const Hero = () => {
               Hello, I'm a
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] opacity-0 animate-fade-in-delay-1 tracking-tight">
-              Full-Stack <span className="gradient-text drop-shadow-sm">MERN</span> Developer
+              Full-Stack <span className="gradient-text drop-shadow-sm">/ AI</span> Engineer
             </h1>
             <p className="text-base md:text-lg text-muted-foreground/80 tracking-wide opacity-0 animate-fade-in-delay-1 font-normal font-mono h-6">
               <span className="text-primary/70 mr-1">{">"}</span>

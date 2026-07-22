@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:14b8a6,100:0f172a&height=220&section=header&text=Muhammad%20Afzal&fontSize=64&fontColor=ffffff&fontAlignY=38&desc=Full-Stack%20MERN%20Developer%20%C2%B7%20React%20%C2%B7%20Next.js%20%C2%B7%20React%20Native&descSize=18&descAlignY=58&animation=fadeIn" alt="Muhammad Afzal — Full-Stack MERN Developer" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:14b8a6,100:0f172a&height=220&section=header&text=Muhammad%20Afzal&fontSize=64&fontColor=ffffff&fontAlignY=38&desc=Senior%20Full-Stack%20%2F%20AI%20Engineer%20%C2%B7%20React%20%C2%B7%20Next.js%20%C2%B7%20React%20Native&descSize=18&descAlignY=58&animation=fadeIn" alt="Muhammad Afzal — Senior Full-Stack / AI Engineer" width="100%" />
 </p>
 
 <h3 align="center">Hi 👋, welcome to my GitHub</h3>
 
 <p align="center">
   <a href="https://muhammadafzal.vercel.app">
-    <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&pause=900&color=14B8A6&center=true&vCenter=true&width=820&height=40&lines=React.js+Developer;Next.js+Engineer;React+Native+Developer;Node.js+Developer;NestJS+Developer;AI+Voice+Agents+%E2%80%94+OpenAI+%C2%B7+Hume+%C2%B7+ElevenLabs" alt="typing animation" />
+    <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&pause=900&color=14B8A6&center=true&vCenter=true&width=820&height=40&lines=Senior+Full-Stack+%2F+AI+Engineer;React.js+%26+Next.js+Developer;React+Native+Developer;Node.js+%26+NestJS+Developer;AI+Voice+Agents+%E2%80%94+OpenAI+%C2%B7+Hume+%C2%B7+ElevenLabs" alt="typing animation" />
   </a>
 </p>
 
@@ -21,15 +21,18 @@
 
 ### 🚀 About Me
 
-I'm a **Full-Stack MERN Developer** building scalable web and cross-platform mobile products.
-Currently **Frontend Lead at Obenan**, shipping an AI-powered SaaS for reputation management
-across 100+ directories. Previously at **Global Software Consulting**, where I built 10+
-React Native apps across real estate, e-commerce, news, and healthcare.
+I'm a **Senior Full-Stack / AI Engineer** building scalable web and cross-platform mobile products.
+Currently **Senior Full-Stack / AI Engineer (Frontend Lead) at Obenan**, shipping an AI-powered
+multi-tenant SaaS for reputation management across 100+ directories. Previously at **Global Software
+Consulting**, where I built 20+ React Native apps across real estate, e-commerce, news, and healthcare
+— including WebRTC audio/video calling and custom native modules bridging iOS & Android.
 
 - 🔭 Currently building AI voice-agent workflows with **OpenAI · Hume AI · ElevenLabs · Pipecat**
+- 🏗️ Owning **frontend architecture, system design, code reviews & technical mentoring**
 - 🌱 Going deeper on **MCP servers**, agentic workflows, and edge runtimes
 - 🧪 Side projects: **TechPulse** (AI tech news feed) · **ResumeGap** (AI resume analyzer)
 - 📍 **Lahore, Pakistan** — open to remote / hybrid
+- 🎓 **BS Information Technology** — University of Sialkot (2018–2022)
 - 💬 Ask me about **Next.js · React Native · NestJS · AI agents**
 
 ---
@@ -37,7 +40,7 @@ React Native apps across real estate, e-commerce, news, and healthcare.
 ### 🛠️ Tech Stack & Tools
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,tailwind,nodejs,nestjs,express,mongodb,supabase,graphql,docker,aws,vercel,github,git,figma&perline=8" alt="tech stack" />
+  <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,tailwind,nodejs,nestjs,express,mongodb,supabase,postgres,prisma,graphql,docker,aws,vercel,github,git,figma&perline=9" alt="tech stack" />
 </p>
 
 #### Frontend
@@ -47,26 +50,34 @@ React Native apps across real estate, e-commerce, news, and healthcare.
 
 #### Backend
 - Node.js, NestJS, Express.js
-- MongoDB, Supabase, REST APIs, GraphQL (Apollo), Socket.IO
-- Strapi (Headless CMS)
+- MongoDB, Supabase, PostgreSQL, Prisma
+- REST APIs, GraphQL (Apollo), Socket.IO, Strapi (Headless CMS)
 
 #### Mobile
 - React Native, Redux Toolkit, Reanimated
+- Deep Linking, Push Notifications, Offline Storage
 - RevenueCat, App Center, App Store & Play Store deployment
 
-#### AI & Automation
-- OpenAI, Hume AI, ElevenLabs, Pipecat
+#### AI & Voice Agents
+- OpenAI, Hume AI, ElevenLabs, Pipecat, Voice Agents
 - n8n Automation, MCP Workflows
 - Cursor, Windsurf, Claude Code, OpenAI Codex
 
+#### APIs & Integrations
+- Stripe, RevenueCat, Didit SDK, Agora
+- Google/Apple Maps, Geolocation & Real-Time Location Tracking
+- OAuth 2.0, Firebase Authentication
+
 #### Cloud & DevOps
-- Docker, Vercel, AWS Amplify, AWS Lambda
-- GitHub Actions, CI/CD Pipelines
+- Docker, Vercel, Render, AWS Amplify, AWS Lambda
+- Git, GitHub, GitHub Actions, CI/CD Pipelines
 
-#### Testing & Automation
+#### Architecture & Leadership
+- Frontend Architecture, System Design, Scalable SaaS Architecture
+- Component Design, Code Reviews, Technical Mentoring, Agile/Scrum
+
+#### Testing & Observability
 - Playwright, Appium, Detox, E2E Testing, Browser Automation
-
-#### Observability
 - Sentry, Grafana, Microsoft Clarity
 
 ---
@@ -138,5 +149,5 @@ Always exploring the next way AI can make development faster without sacrificing
 ---
 
 <p align="center">
-  <sub>MERN Stack Developer · Full Stack Developer · React.js Developer · Next.js Developer · React Native Developer · Node.js Developer · NestJS Developer · TypeScript Developer · AI Workflow Engineer</sub>
+  <sub>Senior Full-Stack Engineer · AI Engineer · Full Stack Developer · React.js Developer · Next.js Developer · React Native Developer · Node.js Developer · NestJS Developer · TypeScript Developer · AI Workflow Engineer · MERN Stack Developer</sub>
 </p>

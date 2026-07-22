@@ -60,6 +60,43 @@ export const projects: Project[] = [
     ],
   },
   {
+    name: "OmidLife — Spiritual Wellness & Learning Platform",
+    description:
+      "Online spiritual wellness platform connecting users with instructors through yoga, meditation, breathwork, live masterclasses, and on-demand courses. Contributed to the web platform, subscription workflows, and scalable full-stack features supporting the Omid TV streaming experience.",
+    link: {
+      href: "https://omidlife.com/",
+      label: "Web",
+    },
+    image: "/projects/omidlife.png",
+    imageKind: "screenshot",
+    technologies: [
+      "Next.js",
+      "React.js",
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Stripe",
+    ],
+  },
+  {
+    name: "Cohart — Social Marketplace for Art",
+    description:
+      "Social platform and marketplace enabling artists, galleries, collectors, and art enthusiasts to discover, connect, chat, and buy or sell artwork. Built cross-platform React Native features, real-time interactions, and marketplace functionality for iOS and Android.",
+    link: {
+      href: "https://www.cohart.com/",
+      label: "Web",
+    },
+    image: "/projects/cohart.png",
+    imageKind: "screenshot",
+    technologies: [
+      "React Native",
+      "iOS",
+      "Android",
+      "Real-time",
+      "Marketplace",
+    ],
+  },
+  {
     name: "Company Needs",
     description:
       "At CompanyNeeds, we know that a well-equipped office is the cornerstone of productivity and success. That's why we're committed to providing you with the highest quality office products and solutions to help you create a workspace that fosters innovation and efficiency.",

@@ -40,12 +40,12 @@ const Experience = () => {
       ],
     },
     {
-      position: "React Native, React.js & Next.js Developer",
+      position: "Software Engineer — React Native & Web",
       company: "Global Software Consulting",
-      duration: "Sep 2022 – Feb 2024",
+      duration: "Sep 2021 – Feb 2024",
       location: "Lahore, Pakistan",
       bullets: [
-        "Built 10+ cross-platform mobile apps with React Native for iOS and Android across 4 verticals — real estate, e-commerce, news, and healthcare.",
+        "Built 20+ cross-platform mobile apps with React Native for iOS and Android across 4 verticals — real estate, e-commerce, news, and healthcare.",
         "Built responsive, reusable UI components for scalable mobile architecture.",
         "Integrated REST APIs for authentication, data fetching, and user interactions.",
         "Contributed to feature development, bug fixing, and performance improvements in production applications.",
