@@ -44,6 +44,7 @@ const Skills = () => {
   ];
   const mobileSkills = [
     "React Native",
+    "Electron",
     "Redux Toolkit",
     "Reanimated",
     "Deep Linking",
