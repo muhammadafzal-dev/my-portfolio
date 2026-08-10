@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import useInView from "@/hooks/useInView";
 import SectionHeading from "@/components/SectionHeading";
-import { Code2, Server, Smartphone, Plug, FlaskConical, Cloud, Activity } from "lucide-react";
+import { Code2, Server, Smartphone, Plug, FlaskConical, Cloud, Activity, Network } from "lucide-react";
 
 const Skills = () => {
   const { ref, isInView } = useInView({ threshold: 0.1 });
@@ -32,9 +32,13 @@ const Skills = () => {
     "NestJS",
     "Express.js",
     "MongoDB",
+    "PostgreSQL",
     "Supabase",
+    "Redis",
+    "Prisma",
     "REST APIs",
     "GraphQL (Apollo)",
+    "WebSockets",
     "Socket.IO",
     "Strapi",
   ];
@@ -42,6 +46,10 @@ const Skills = () => {
     "React Native",
     "Redux Toolkit",
     "Reanimated",
+    "Deep Linking",
+    "Push Notifications",
+    "Offline Storage",
+    "CodePush",
     "Firebase",
     "RevenueCat",
     "App Center",
@@ -52,27 +60,48 @@ const Skills = () => {
     "Axios",
     "SWR",
     "Google Maps API",
+    "Apple Maps",
     "Geolocation APIs",
     "OAuth 2.0",
     "Firebase Auth",
     "Real-time Tracking",
     "Stripe",
-    "Didit SDK",
+    "RevenueCat",
+    "Subscription Billing",
+    "Binance",
+    "Didit / KYC SDK",
+    "Agora",
   ];
   const testingSkills = [
     "Playwright",
     "Appium",
     "Detox",
+    "Maestro",
     "E2E Testing",
     "Browser Automation",
   ];
   const devopsSkills = [
+    "AWS",
     "AWS Amplify",
     "AWS Lambda",
+    "DigitalOcean",
     "Docker",
+    "Nginx",
     "Vercel",
+    "Render",
     "GitHub Actions",
     "CI/CD Pipelines",
+    "Load Balancing",
+  ];
+  const architectureSkills = [
+    "Frontend & Backend Architecture",
+    "System Design",
+    "Scalable SaaS Architecture",
+    "Component Design",
+    "Code Reviews",
+    "Performance Optimization",
+    "Technical Mentoring",
+    "Agile/Scrum",
   ];
   const observabilityAiSkills = [
     "Sentry",
@@ -82,6 +111,8 @@ const Skills = () => {
     "Hume AI",
     "ElevenLabs",
     "Pipecat",
+    "AI Agents",
+    "Voice Agents",
     "n8n Automation",
     "Cursor",
     "Windsurf",
@@ -115,6 +146,7 @@ const Skills = () => {
             { icon: FlaskConical, title: "Testing & Automation", slug: "testing", items: testingSkills },
             { icon: Cloud, title: "Cloud, DevOps & Monitoring", slug: "devops", items: devopsSkills },
             { icon: Activity, title: "Observability & AI", slug: "ai", items: observabilityAiSkills },
+            { icon: Network, title: "Architecture & Leadership", slug: "architecture", items: architectureSkills },
           ].map(({ icon: Icon, title, slug, items }, idx) => (
             <Card
               key={title}

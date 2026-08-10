@@ -22,7 +22,7 @@
 ### 🚀 About Me
 
 I'm a **Senior Full-Stack / AI Engineer** building scalable web and cross-platform mobile products.
-Currently **Senior Full-Stack / AI Engineer (Frontend Lead) at Obenan**, shipping an AI-powered
+Currently **Senior Full-Stack / AI Engineer (Full-Stack Lead) at Obenan**, shipping an AI-powered
 multi-tenant SaaS for reputation management across 100+ directories. Previously at **Global Software
 Consulting**, where I built 20+ React Native apps across real estate, e-commerce, news, and healthcare
 — including WebRTC audio/video calling and custom native modules bridging iOS & Android.
@@ -32,7 +32,7 @@ Consulting**, where I built 20+ React Native apps across real estate, e-commerce
 - 🌱 Going deeper on **MCP servers**, agentic workflows, and edge runtimes
 - 🧪 Side projects: **TechPulse** (AI tech news feed) · **ResumeGap** (AI resume analyzer)
 - 📍 **Lahore, Pakistan** — open to remote / hybrid
-- 🎓 **BS Information Technology** — University of Sialkot (2018–2022)
+- 🎓 **BS Information Technology** — University of Sialkot
 - 💬 Ask me about **Next.js · React Native · NestJS · AI agents**
 
 ---
@@ -50,12 +50,12 @@ Consulting**, where I built 20+ React Native apps across real estate, e-commerce
 
 #### Backend
 - Node.js, NestJS, Express.js
-- MongoDB, Supabase, PostgreSQL, Prisma
-- REST APIs, GraphQL (Apollo), Socket.IO, Strapi (Headless CMS)
+- MongoDB, PostgreSQL, Supabase, Redis, Prisma
+- REST APIs, GraphQL (Apollo), WebSockets, Socket.IO, Strapi (Headless CMS)
 
 #### Mobile
 - React Native, Redux Toolkit, Reanimated
-- Deep Linking, Push Notifications, Offline Storage
+- Deep Linking, Push Notifications, Offline Storage, CodePush
 - RevenueCat, App Center, App Store & Play Store deployment
 
 #### AI & Voice Agents
@@ -64,20 +64,20 @@ Consulting**, where I built 20+ React Native apps across real estate, e-commerce
 - Cursor, Windsurf, Claude Code, OpenAI Codex
 
 #### APIs & Integrations
-- Stripe, RevenueCat, Didit SDK, Agora
+- Stripe, RevenueCat, Subscription Billing, Binance
+- Didit / KYC SDK, Agora, OAuth 2.0, Firebase Authentication
 - Google/Apple Maps, Geolocation & Real-Time Location Tracking
-- OAuth 2.0, Firebase Authentication
 
 #### Cloud & DevOps
-- Docker, Vercel, Render, AWS Amplify, AWS Lambda
-- Git, GitHub, GitHub Actions, CI/CD Pipelines
+- AWS, DigitalOcean, Docker, Nginx, Vercel, Render
+- Git, GitHub, GitHub Actions, CI/CD, Load Balancing
 
 #### Architecture & Leadership
 - Frontend Architecture, System Design, Scalable SaaS Architecture
 - Component Design, Code Reviews, Technical Mentoring, Agile/Scrum
 
 #### Testing & Observability
-- Playwright, Appium, Detox, E2E Testing, Browser Automation
+- Playwright, Appium, Detox, Maestro, E2E Testing, Browser Automation
 - Sentry, Grafana, Microsoft Clarity
 
 ---

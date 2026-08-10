@@ -10,8 +10,8 @@ type Stat = {
 };
 
 const stats: Stat[] = [
-  { value: 5, suffix: "+ yrs", label: "Experience" },
-  { value: 25, suffix: "+", label: "Projects Shipped" },
+  { value: 6, suffix: "+ yrs", label: "Experience" },
+  { value: 30, suffix: "+", label: "Projects Shipped" },
   { value: 20, suffix: "+", label: "Mobile Apps" },
   { value: 2, suffix: "", label: "Companies" },
 ];

@@ -25,7 +25,7 @@ const About = () => {
           <div className="grid lg:grid-cols-[1fr_300px] gap-10 items-start">
             <div className={`space-y-5 text-pretty leading-relaxed text-muted-foreground card-animate stagger-1 ${isInView ? "in-view" : ""}`}>
               <p>
-                Full‑stack developer with <span className="text-foreground">5+ years</span> building scalable web and
+                Full‑stack developer with <span className="text-foreground">6+ years</span> building scalable web and
                 cross‑platform mobile applications. Strong experience across React.js, Next.js, React Native, and
                 Node/NestJS with hands‑on backend delivery.
               </p>
@@ -50,7 +50,7 @@ const About = () => {
                 <dl className="space-y-3 text-sm">
                   <div className="flex items-baseline justify-between gap-3 border-b border-border/40 pb-3">
                     <dt className="text-muted-foreground">Experience</dt>
-                    <dd className="font-mono text-foreground">5+ years</dd>
+                    <dd className="font-mono text-foreground">6+ years</dd>
                   </div>
                   <div className="flex items-baseline justify-between gap-3 border-b border-border/40 pb-3">
                     <dt className="text-muted-foreground">Focus</dt>

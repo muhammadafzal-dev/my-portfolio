@@ -10,12 +10,12 @@ const Experience = () => {
 
   const experiences = [
     {
-      position: "Software Engineer — Frontend Lead",
+      position: "Senior Full-Stack / AI Engineer (Full-Stack Lead)",
       company: "Obenan",
       duration: "Mar 2024 – Present",
       location: "Lahore, Pakistan",
       bullets: [
-        "Led frontend across 6+ production platforms including Landing Platform (Next.js), SaaS Dashboard (React.js), and Omnipulse — architecture and production releases.",
+        "Progressed from Frontend Developer to Full-Stack Lead — now leading both frontend and full-stack across 6+ production platforms including Landing Platform (Next.js), SaaS Dashboard (React.js), and Omnipulse, owning architecture, code reviews, mentoring, and production releases.",
         "Architected the Landing Platform and built Omnipulse from scratch while contributing to backend features.",
         "Shipped multi-language translation system and referral / affiliation tracking.",
         "Optimized with SSR, image strategy, and caching for 90–95+ Lighthouse scores.",
@@ -42,7 +42,7 @@ const Experience = () => {
     {
       position: "Software Engineer — React Native & Web",
       company: "Global Software Consulting",
-      duration: "Sep 2021 – Feb 2024",
+      duration: "Sep 2020 – Feb 2024",
       location: "Lahore, Pakistan",
       bullets: [
         "Built 20+ cross-platform mobile apps with React Native for iOS and Android across 4 verticals — real estate, e-commerce, news, and healthcare.",

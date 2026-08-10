@@ -20,7 +20,7 @@ const siteUrl = "https://muhammadafzal.vercel.app";
 
 export const metadata: Metadata = {
   title: {
-    default: 'Muhammad Afzal — Full-Stack MERN Developer',
+    default: 'Muhammad Afzal — Senior Full-Stack / AI Engineer',
     template: '%s — Muhammad Afzal',
   },
   verification: {
@@ -29,6 +29,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   keywords: [
     'muhammad afzal',
+    'senior full-stack engineer',
+    'full-stack ai engineer',
     'full-stack mern developer',
     'react.js developer',
     'next.js developer',
@@ -52,9 +54,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: siteUrl,
-    title: 'Muhammad Afzal — Full-Stack MERN Developer',
+    title: 'Muhammad Afzal — Senior Full-Stack / AI Engineer',
     description:
-      'Full-Stack MERN Developer with 5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
+      'Senior Full-Stack / AI Engineer with 6+ years of experience building scalable multi-tenant SaaS platforms, web, and cross-platform mobile applications using React.js, Next.js, React Native, Node.js, and NestJS.',
     siteName: 'Muhammad Afzal',
     images: [
       {
@@ -69,13 +71,13 @@ export const metadata: Metadata = {
     card: 'summary',
     site: siteUrl,
     description:
-      'Full-Stack MERN Developer with 5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
-    title: 'Muhammad Afzal — Full-Stack MERN Developer',
+      'Senior Full-Stack / AI Engineer with 6+ years of experience building scalable multi-tenant SaaS platforms, web, and cross-platform mobile applications using React.js, Next.js, React Native, Node.js, and NestJS.',
+    title: 'Muhammad Afzal — Senior Full-Stack / AI Engineer',
     images: [`${siteUrl}/avatar.png`],
   },
 
   description:
-    'Full-Stack MERN Developer with 5+ years of experience building scalable web and cross-platform mobile applications using React.js, Next.js, and React Native.',
+    'Senior Full-Stack / AI Engineer with 6+ years of experience building scalable multi-tenant SaaS platforms, web, and cross-platform mobile applications using React.js, Next.js, React Native, Node.js, and NestJS.',
 
   alternates: {
     canonical: siteUrl,
@@ -95,7 +97,7 @@ export default function RootLayout({
     name: "Muhammad Afzal",
     url: siteUrl,
     image: `${siteUrl}/avatar.png`,
-    jobTitle: "Full-Stack MERN Developer",
+    jobTitle: "Senior Full-Stack / AI Engineer",
     worksFor: { "@type": "Organization", name: "Obenan" },
     address: {
       "@type": "PostalAddress",

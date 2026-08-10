@@ -91,7 +91,7 @@ const Hero = () => {
               <span className="typing-caret" aria-hidden="true" />
             </p>
             <p className="text-base md:text-lg text-muted-foreground max-w-xl opacity-0 animate-fade-in-delay-2 text-pretty leading-relaxed">
-              5+ years building full‑stack web and cross‑platform mobile applications with clean UX, solid architecture,
+              6+ years building full‑stack web and cross‑platform mobile applications with clean UX, solid architecture,
               and performance in mind.
             </p>
 
@@ -272,7 +272,7 @@ const CodeCard = () => (
           <Indent />
           <span className="text-rose-700 dark:text-rose-300">role</span>
           <span className="text-muted-foreground">:</span>{" "}
-          <span className="text-emerald-700 dark:text-emerald-300">{'"Full-Stack MERN Developer"'}</span>
+          <span className="text-emerald-700 dark:text-emerald-300">{'"Full-Stack / AI Engineer"'}</span>
           <span className="text-muted-foreground">,</span>
         </CodeLine>
         <CodeLine n={4}>
@@ -292,7 +292,7 @@ const CodeCard = () => (
           <Indent />
           <span className="text-rose-700 dark:text-rose-300">experience</span>
           <span className="text-muted-foreground">:</span>{" "}
-          <span className="text-emerald-700 dark:text-emerald-300">{'"5+ years"'}</span>
+          <span className="text-emerald-700 dark:text-emerald-300">{'"6+ years"'}</span>
           <span className="text-muted-foreground">,</span>
         </CodeLine>
         <CodeLine n={6}>
