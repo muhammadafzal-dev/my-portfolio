@@ -1,8 +1,29 @@
+<h1 align="center">Hi, I'm Muhammad Afzal 👋</h1>
+
+<h3 align="center">Senior Full-Stack / AI Engineer</h3>
+
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:14b8a6,100:0f172a&height=220&section=header&text=Muhammad%20Afzal&fontSize=64&fontColor=ffffff&fontAlignY=38&desc=Senior%20Full-Stack%20%2F%20AI%20Engineer%20%C2%B7%20React%20%C2%B7%20Next.js%20%C2%B7%20React%20Native&descSize=18&descAlignY=58&animation=fadeIn" alt="Muhammad Afzal — Senior Full-Stack / AI Engineer" width="100%" />
+  Building production-ready products across full-stack web, cross-platform mobile, and AI.
 </p>
 
-<h3 align="center">Hi 👋, welcome to my GitHub</h3>
+<p align="center">
+  React · Next.js · React Native · Node.js · NestJS · OpenAI · AWS — shipping AI-powered features, multi-tenant SaaS platforms, and cross-platform apps to production.
+</p>
+
+<p align="center">
+  <a href="https://muhammadafzal.vercel.app"><img src="https://img.shields.io/badge/Portfolio-muhammadafzal.vercel.app-0A66C2?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
+  <a href="https://github.com/muhammadafzal-dev"><img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://linkedin.com/in/muhammadafzal-dev"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="mailto:afzalj166@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+</p>
+
+<p align="center">
+  <b>6+ years</b> · <b>30+ products shipped</b> · <b>20+ App Store / Google Play listings</b> · <b>4 platforms</b> (Web · iOS · Android · Desktop)
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=muhammadafzal-dev&label=Profile%20views&color=0e7c66&style=flat" alt="profile views" />
+</p>
 
 <p align="center">
   <a href="https://muhammadafzal.vercel.app">
@@ -10,43 +31,41 @@
   </a>
 </p>
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=muhammadafzal-dev&label=Profile%20views&color=0e7c66&style=flat" alt="profile views" />
-  <a href="https://muhammadafzal.vercel.app"><img src="https://img.shields.io/badge/Portfolio-live-0ea5a4?style=flat&logo=vercel&logoColor=white" alt="portfolio" /></a>
-  <a href="https://linkedin.com/in/muhammadafzal-dev"><img src="https://img.shields.io/badge/LinkedIn-connect-0a66c2?style=flat&logo=linkedin&logoColor=white" alt="linkedin" /></a>
-  <a href="mailto:afzalj166@gmail.com"><img src="https://img.shields.io/badge/Email-afzalj166%40gmail.com-d44638?style=flat&logo=gmail&logoColor=white" alt="email" /></a>
-</p>
+---
+
+## 🚀 About Me
+
+I'm a **Senior Full-Stack / AI Engineer** building production-ready products across **full-stack web, cross-platform mobile, and AI**. Currently **Full-Stack Lead at Obenan**, architecting Next.js + NestJS platforms and shipping React Native apps to the App Store and Google Play — with payments, subscriptions, AI/voice-agent workflows, and scalable infrastructure across SaaS, healthcare, real estate, e-commerce, and wellness.
+
+- 🤖 Integrate **AI — OpenAI, Hume AI, ElevenLabs, Pipecat** — into real product workflows: voice agents, AI-powered features, and secure server-side integrations.
+- 🧩 Strong full-stack expertise in **Next.js, NestJS, Node.js, React, MongoDB, and PostgreSQL**, across serverless and container-based architectures with CI/CD.
+- 📱 Ship cross-platform **React Native** apps to **App Store, Google Play, Vercel, and AWS** across 4 platforms — Web · iOS · Android · Desktop (Electron).
+- 🏗️ Owning **frontend & backend architecture, system design, code reviews, and technical mentoring** — raising delivery speed and code quality.
+- 📍 Based in **Lahore, Pakistan** — working with clients and teams worldwide.
 
 ---
 
-### 🚀 About Me
+## 💡 What I Build
 
-I'm a **Senior Full-Stack / AI Engineer** building scalable web and cross-platform mobile products.
-Currently **Senior Full-Stack / AI Engineer (Full-Stack Lead) at Obenan**, shipping an AI-powered
-multi-tenant SaaS for reputation management across 100+ directories. Previously at **Global Software
-Consulting**, where I built 20+ React Native apps across real estate, e-commerce, news, and healthcare
-— including WebRTC audio/video calling and custom native modules bridging iOS & Android.
-
-- 🔭 Currently building AI voice-agent workflows with **OpenAI · Hume AI · ElevenLabs · Pipecat**
-- 🏗️ Owning **frontend architecture, system design, code reviews & technical mentoring**
-- 🌱 Going deeper on **MCP servers**, agentic workflows, and edge runtimes
-- 🧪 Side projects: **TechPulse** (AI tech news feed) · **ResumeGap** (AI resume analyzer)
-- 📍 **Lahore, Pakistan** — open to remote / hybrid
-- 🎓 **BS Information Technology** — University of Sialkot
-- 💬 Ask me about **Next.js · React Native · NestJS · AI agents**
+- **AI-powered product features** — OpenAI, Hume AI, ElevenLabs, and Pipecat integrated into real workflows: voice agents, AI-assisted features, and secure server-side integrations.
+- **Full-stack web products** — end-to-end platforms on Next.js + NestJS/Node, MongoDB & PostgreSQL, and Prisma, with auth and multi-tenancy.
+- **Cross-platform mobile apps** — production-grade iOS & Android from a single React Native codebase, deployed to the App Store and Google Play.
+- **Cross-platform SaaS** — one account across **Web · Mobile · Desktop (Electron)** sharing a backend, API client, and design system (TurboRepo monorepos).
+- **Payments & subscriptions** — Stripe subscriptions and RevenueCat in-app purchases, production-grade with webhook handling.
+- **Performance-first delivery** — SSR, caching, and image optimization to consistent **90–95+ Lighthouse** scores.
 
 ---
 
-### 🛠️ Tech Stack & Tools
+## 🛠️ Tech Stack & Tools
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,tailwind,nodejs,nestjs,express,mongodb,supabase,postgres,prisma,graphql,docker,aws,vercel,github,git,figma&perline=9" alt="tech stack" />
+  <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,tailwind,nodejs,nestjs,express,mongodb,supabase,postgres,redis,prisma,graphql,docker,aws,vercel,github,git,figma&perline=10" alt="tech stack" />
 </p>
 
 #### Frontend
 - React.js, Next.js, TypeScript, JavaScript (ES6+), React Hooks
 - Tailwind CSS, MUI, Hero UI (Next UI), Framer Motion, GSAP
-- TanStack Query, PWA, Performance Optimization, Figma
+- TanStack Query, SWR, PWA, Performance Optimization, Figma
 
 #### Backend
 - Node.js, NestJS, Express.js
@@ -73,7 +92,7 @@ Consulting**, where I built 20+ React Native apps across real estate, e-commerce
 - Git, GitHub, GitHub Actions, CI/CD, Load Balancing
 
 #### Architecture & Leadership
-- Frontend Architecture, System Design, Scalable SaaS Architecture
+- Frontend & Backend Architecture, System Design, Scalable SaaS Architecture
 - Component Design, Code Reviews, Technical Mentoring, Agile/Scrum
 
 #### Testing & Observability
@@ -82,7 +101,54 @@ Consulting**, where I built 20+ React Native apps across real estate, e-commerce
 
 ---
 
-### 📈 Contribution Activity
+## 📌 Featured Projects
+
+| Project | What it is | Stack | Links |
+| ------- | ---------- | ----- | ----- |
+| **Obenan** | AI-powered reputation-management SaaS — listings, reviews, and local SEO across 100+ directories | Next.js · React · Node.js · Strapi · GraphQL · Stripe · AWS · MongoDB | [Web](https://obenan.ai/) |
+| **My Mind Bestie** | Cross-platform wellness SaaS — one account across Web · Mobile · Desktop | React Native · Next.js · NestJS · AWS Lambda · Stripe · Electron · TurboRepo · PostgreSQL | [Web](https://mymindbestie.com) |
+| **OmidLife** | Spiritual wellness & learning platform with Omid TV streaming | Next.js · React · Node.js · TypeScript · PostgreSQL · Stripe | [Web](https://omidlife.com/) |
+| **Cohart** | Social marketplace for art — discover, connect, chat, buy & sell | React Native · Real-time · Marketplace | [Web](https://www.cohart.com/) |
+| **Etihad Town** | Real estate & community app for residents | React Native · Strapi · GraphQL · Push Notifications | [iOS](https://apps.apple.com/us/developer/etihad-town-pvt-limited/id1690750920) · [Android](https://play.google.com/store/apps/details?id=com.etihadtown.app) |
+| **SenSights** | Telehealth & senior remote-monitoring platform | React Native · REST · Push Notifications | [iOS](https://apps.apple.com/us/app/sensights/id1522446657) · [Android](https://play.google.com/store/apps/details?id=com.sensights) |
+| **Life Design** | Personal goal-tracking app | React Native · REST | [iOS](https://apps.apple.com/us/app/life-design/id6477827161) |
+
+> 📂 Full project list on my [portfolio »](https://muhammadafzal.vercel.app/projects)
+
+---
+
+## 🧰 Services
+
+| Service | What you get |
+| ------- | ------------ |
+| **Full-Stack Development** | Next.js App Router + RSC, NestJS/Express APIs, MongoDB & PostgreSQL + Prisma, auth, multi-tenancy |
+| **SaaS Product Engineering** | Multi-tenant architecture, subscription billing, admin dashboards, referral/affiliate systems |
+| **React Native App Development** | Production iOS + Android from one codebase, push & deep links, offline storage, CI/CD to both stores |
+| **App Store & Play Deployment** | App Store Connect & Play Console setup, release management, store listings |
+| **AI & Voice Agent Integration** | OpenAI, Hume AI, ElevenLabs, Pipecat — voice agents and AI-powered workflows, secure server-side |
+| **Payments & Subscriptions** | Stripe subscriptions, RevenueCat, in-app purchases, webhook handling |
+| **API Integration & Design** | REST + GraphQL design, OAuth 2.0, webhooks, third-party integrations |
+| **Performance Optimization** | Core Web Vitals, 90–95+ Lighthouse, image/bundle optimization, caching strategies |
+
+---
+
+## 🏢 Industries
+
+`SaaS` · `Healthcare / Telehealth` · `Real Estate` · `eCommerce` · `News / Media` · `Wellness` · `AI` · `Mobile Apps`
+
+---
+
+## 💼 Currently Open To
+
+- **Senior engineering roles** (Full-Stack · AI · React Native)
+- **Freelance & contract projects** — AI-powered features, SaaS platforms, full-stack builds, mobile apps
+- **Long-term collaborations** with product teams shipping to web & mobile
+
+📍 Lahore, Pakistan — available for remote work worldwide.
+
+---
+
+## 📈 Contribution Activity
 
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=muhammadafzal-dev&theme=tokyo-night&hide_border=true&area=true&bg_color=1a1b27&line=14b8a6&color=14b8a6&point=f8fafc" alt="contribution graph" />
@@ -90,46 +156,7 @@ Consulting**, where I built 20+ React Native apps across real estate, e-commerce
 
 ---
 
-### 💼 Currently Working On
-
-- 🎙️ Building AI voice-agent products at **Obenan** with OpenAI · Hume · ElevenLabs · Pipecat
-- 📰 Shipping **TechPulse** — Android AI tech news app on $0 free tiers
-- 📄 Shipping **ResumeGap** — Next.js BYOK AI resume gap analyzer
-- 🧠 Diving deeper into **MCP servers** and agentic workflows
-- 🎯 Optimizing **Core Web Vitals** to 90–95+ Lighthouse on production SaaS
-
----
-
-### 🎯 Featured Projects
-
-- 🏢 **Obenan — AI Reputation Management Platform** — AI-powered multi-tenant SaaS for listings, reviews, and local SEO across 100+ directories. [Website](https://obenan.ai/)
-- 🧘 **OmidLife — Spiritual Wellness & Learning Platform** — Yoga, meditation, breathwork, live masterclasses, on-demand courses + Omid TV streaming. [Website](https://omidlife.com/)
-- 🎨 **Cohart — Social Marketplace for Art** — Social platform and marketplace for artists, galleries, and collectors to connect, chat, and trade artwork. [Website](https://www.cohart.com/)
-- 🏘️ **Etihad Town — Real Estate Resident App** — Residents access property info, financial records, community updates, and notifications. [Android](https://play.google.com/store/apps/details?id=com.etihadtown.app) · [iOS](https://apps.apple.com/us/developer/etihad-town-pvt-limited/id1690750920)
-- 🩺 **SenSights — Remote Healthcare Platform** — Telemedicine and senior-care monitoring with emergency response. [Android](https://play.google.com/store/apps/details?id=com.sensights&hl=en&gl=US) · [iOS](https://apps.apple.com/us/app/sensights/id1522446657)
-- 🎯 **Life Design — Personal Goal Tracking App** — Set, track, and achieve personal life goals with an interactive UI. [iOS](https://apps.apple.com/us/app/life-design/id6477827161)
-
-More on my [portfolio »](https://muhammadafzal.vercel.app/projects)
-
----
-
-### 🤝 Let's Connect
-
-- 🌐 **Portfolio:** [muhammadafzal.vercel.app](https://muhammadafzal.vercel.app)
-- 💼 **LinkedIn:** [linkedin.com/in/muhammadafzal-dev](https://linkedin.com/in/muhammadafzal-dev)
-- 📧 **Email:** afzalj166@gmail.com
-
-<p>
-  <a href="https://linkedin.com/in/muhammadafzal-dev"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" width="22" alt="linkedin" /></a>
-  &nbsp;
-  <a href="https://github.com/muhammadafzal-dev"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" width="22" alt="github" /></a>
-  &nbsp;
-  <a href="mailto:afzalj166@gmail.com"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gmail.svg" width="22" alt="gmail" /></a>
-</p>
-
----
-
-### 📊 GitHub Stats
+## 📊 GitHub Stats
 
 <p align="center">
   <img height="170" src="https://github-readme-stats.vercel.app/api?username=muhammadafzal-dev&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" alt="github stats" />
@@ -142,12 +169,18 @@ More on my [portfolio »](https://muhammadafzal.vercel.app/projects)
 
 ---
 
-### ⚡ Fun Fact
+## 📫 Contact
 
-I enjoy turning messy ideas into shipped products — from MVP to multi-tenant SaaS.
-Always exploring the next way AI can make development faster without sacrificing craft.
+- 🌐 **Portfolio:** [muhammadafzal.vercel.app](https://muhammadafzal.vercel.app)
+- 💼 **LinkedIn:** [linkedin.com/in/muhammadafzal-dev](https://linkedin.com/in/muhammadafzal-dev)
+- 🐙 **GitHub:** [github.com/muhammadafzal-dev](https://github.com/muhammadafzal-dev)
+- 📧 **Email:** afzalj166@gmail.com
 
 ---
+
+<p align="center">
+  <em>Building production-ready products across full-stack, mobile, and AI — let's build something that ships.</em>
+</p>
 
 <p align="center">
   <sub>Senior Full-Stack Engineer · AI Engineer · Full Stack Developer · React.js Developer · Next.js Developer · React Native Developer · Node.js Developer · NestJS Developer · TypeScript Developer · AI Workflow Engineer · MERN Stack Developer</sub>
