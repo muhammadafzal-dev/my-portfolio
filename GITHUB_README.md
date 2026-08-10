@@ -102,10 +102,14 @@ Consulting**, where I built 20+ React Native apps across real estate, e-commerce
 
 ### 🎯 Featured Projects
 
-- 🔥 **[techpulse-web](https://github.com/muhammadafzal-dev/techpulse-web)** — AI-powered tech news aggregator. 15 curated sources, Gemini 2.5 Flash summaries, $0/month on free tiers. [Live demo](https://techpulse-web.vercel.app)
-- 📄 **[resume-gap-analyzer](https://github.com/muhammadafzal-dev/resume-gap-analyzer)** — AI resume gap analyzer. Compares resume against any JD and returns missing skills, ATS keywords, and rewrites. BYOK Gemini, $0 hosting. [Live demo](https://resume-gap-analyzer-dev.vercel.app/)
-- 🌐 **[my-portfolio](https://github.com/muhammadafzal-dev/my-portfolio)** — This portfolio. Next.js 16 + React 19 + Tailwind v4, static export to Vercel.
-- 💳 **[revenucat-app](https://github.com/muhammadafzal-dev/revenucat-app)** — React Native demo integrating RevenueCat for subscription management.
+- 🏢 **Obenan — AI Reputation Management Platform** — AI-powered multi-tenant SaaS for listings, reviews, and local SEO across 100+ directories. [Website](https://obenan.ai/)
+- 🧘 **OmidLife — Spiritual Wellness & Learning Platform** — Yoga, meditation, breathwork, live masterclasses, on-demand courses + Omid TV streaming. [Website](https://omidlife.com/)
+- 🎨 **Cohart — Social Marketplace for Art** — Social platform and marketplace for artists, galleries, and collectors to connect, chat, and trade artwork. [Website](https://www.cohart.com/)
+- 🏘️ **Etihad Town — Real Estate Resident App** — Residents access property info, financial records, community updates, and notifications. [Android](https://play.google.com/store/apps/details?id=com.etihadtown.app) · [iOS](https://apps.apple.com/us/developer/etihad-town-pvt-limited/id1690750920)
+- 🩺 **SenSights — Remote Healthcare Platform** — Telemedicine and senior-care monitoring with emergency response. [Android](https://play.google.com/store/apps/details?id=com.sensights&hl=en&gl=US) · [iOS](https://apps.apple.com/us/app/sensights/id1522446657)
+- 🎯 **Life Design — Personal Goal Tracking App** — Set, track, and achieve personal life goals with an interactive UI. [iOS](https://apps.apple.com/us/app/life-design/id6477827161)
+
+More on my [portfolio »](https://muhammadafzal.vercel.app/projects)
 
 ---
 
