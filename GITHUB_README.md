@@ -114,7 +114,6 @@ Consulting**, where I built 20+ React Native apps across real estate, e-commerce
 - 🌐 **Portfolio:** [muhammadafzal.vercel.app](https://muhammadafzal.vercel.app)
 - 💼 **LinkedIn:** [linkedin.com/in/muhammadafzal-dev](https://linkedin.com/in/muhammadafzal-dev)
 - 📧 **Email:** afzalj166@gmail.com
-- 💬 **WhatsApp:** [+92 305 6129131](https://wa.me/923056129131)
 
 <p>
   <a href="https://linkedin.com/in/muhammadafzal-dev"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" width="22" alt="linkedin" /></a>
@@ -122,8 +121,6 @@ Consulting**, where I built 20+ React Native apps across real estate, e-commerce
   <a href="https://github.com/muhammadafzal-dev"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" width="22" alt="github" /></a>
   &nbsp;
   <a href="mailto:afzalj166@gmail.com"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gmail.svg" width="22" alt="gmail" /></a>
-  &nbsp;
-  <a href="https://wa.me/923056129131"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/whatsapp.svg" width="22" alt="whatsapp" /></a>
 </p>
 
 ---
