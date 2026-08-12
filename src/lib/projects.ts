@@ -82,6 +82,28 @@ export const projects: Project[] = [
     ],
   },
   {
+    name: "CheapStreamTV — IPTV Subscription Platform",
+    description:
+      "Full-stack IPTV subscription platform for Sweden, the Nordics, and worldwide — HD/4K live TV, movies, and series with instant key activation. Built with Next.js 15 on a custom Node server: multi-gateway payments (Stripe, PayPal, and crypto via Cryptomus, NOWPayments, Plisio, PayGate, ChangeNOW), coupons and reseller bulk pricing, 14-language i18n with RTL, real-time updates over Socket.IO, and a full admin panel. MongoDB/Mongoose, Firebase, AWS S3, and TanStack Query/Table.",
+    link: {
+      href: "https://cheapstreamtv.com/",
+      label: "Web",
+    },
+    image: "/projects/cheapstreamtv.png",
+    imageKind: "screenshot",
+    technologies: [
+      "Next.js",
+      "React.js",
+      "MongoDB",
+      "Node.js",
+      "Socket.IO",
+      "Stripe",
+      "Firebase",
+      "AWS",
+      "TanStack Query",
+    ],
+  },
+  {
     name: "OmidLife — Spiritual Wellness & Learning Platform",
     description:
       "Online spiritual wellness platform connecting users with instructors through yoga, meditation, breathwork, live masterclasses, and on-demand courses. Contributed to the web platform, subscription workflows, and scalable full-stack features supporting the Omid TV streaming experience.",
