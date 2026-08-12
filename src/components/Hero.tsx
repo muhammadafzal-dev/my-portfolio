@@ -185,10 +185,6 @@ const Hero = () => {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <span className="absolute bottom-2 right-2 flex items-center gap-1.5 rounded-full bg-background/95 border border-border/60 backdrop-blur px-2.5 py-1 text-[10px] font-mono uppercase tracking-wider shadow-md">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-                <span className="text-foreground/80">Available</span>
-              </span>
             </div>
 
             <ProfileCard />
@@ -263,7 +259,7 @@ const ProfileCard = () => (
             <dt className="font-mono text-[10px] tracking-[0.2em] uppercase text-primary/80 mb-1">
               {row.label}
             </dt>
-            <dd className="text-sm text-foreground/90 leading-snug">{row.value}</dd>
+            <dd className="text-sm font-medium text-foreground leading-snug">{row.value}</dd>
           </div>
         ))}
       </dl>
