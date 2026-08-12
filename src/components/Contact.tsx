@@ -33,7 +33,7 @@ const Contact = () => {
       <div className={`container mx-auto px-4 section-animate ${isInView ? "in-view" : ""}`}>
         <div className="max-w-4xl mx-auto">
           <SectionHeading
-            index="07"
+            index="08"
             label="Contact"
             title="Let's build something."
             description="Interested in working together or have a question about my work? I'm always open to new opportunities."

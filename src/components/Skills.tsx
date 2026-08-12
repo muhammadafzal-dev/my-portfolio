@@ -132,7 +132,7 @@ const Skills = () => {
       <div className={`container mx-auto px-4 section-animate ${isInView ? "in-view" : ""}`}>
         <div className="max-w-6xl mx-auto">
           <SectionHeading
-            index="03"
+            index="04"
             label="Skills"
             title="Technical Skills"
             align="left"

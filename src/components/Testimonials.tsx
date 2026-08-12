@@ -74,7 +74,7 @@ const Testimonials = () => {
       <div className={`container mx-auto px-4 section-animate ${isInView ? "in-view" : ""}`}>
         <div className="max-w-6xl mx-auto">
           <SectionHeading
-            index="06"
+            index="07"
             label="Testimonials"
             title="What colleagues say."
             description="Recommendations from engineers and collaborators I've shipped with."

@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
+import WhatIDeliver from "@/components/WhatIDeliver";
 import TechMarquee from "@/components/TechMarquee";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
@@ -17,6 +18,7 @@ export default function HomePage() {
       <main>
         <Hero />
         <Stats />
+        <WhatIDeliver />
         <About />
         <TechMarquee />
         <Skills />
