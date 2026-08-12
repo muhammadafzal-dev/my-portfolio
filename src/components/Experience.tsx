@@ -71,28 +71,31 @@ const Experience = () => {
           />
 
           <div className="relative">
-            {/* Timeline rail */}
-            <div
-              aria-hidden
-              className="absolute left-[17px] top-5 bottom-5 w-px bg-border/50"
-            />
-
             <div className="space-y-14">
               {experiences.map((exp, index) => (
                 <div
                   key={`${exp.company}-${exp.position}`}
                   className={`relative pl-14 card-animate stagger-${index + 1} ${isInView ? "in-view" : ""}`}
                 >
+                  {/* Timeline connector — links this role down to the next */}
+                  {index < experiences.length - 1 && (
+                    <span
+                      aria-hidden
+                      className="absolute left-[17px] top-10 -bottom-14 w-px bg-border/50"
+                    />
+                  )}
+
                   {/* Monogram badge */}
                   <div
                     aria-hidden
                     className="absolute left-0 top-0 z-10 flex h-9 w-9 items-center justify-center rounded-md border border-primary/40 bg-background text-primary font-mono text-xs font-semibold tracking-tight shadow-sm shadow-primary/10"
                   >
-                    {exp.company
-                      .split(" ")
-                      .map((w) => w.charAt(0))
-                      .join("")
-                      .toUpperCase()}
+                    {(() => {
+                      const words = exp.company.split(" ").filter(Boolean);
+                      return words.length === 1
+                        ? exp.company.slice(0, 2).toUpperCase()
+                        : words.map((w) => w.charAt(0)).join("").toUpperCase();
+                    })()}
                   </div>
 
                   <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 mb-4">
