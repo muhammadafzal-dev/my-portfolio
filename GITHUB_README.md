@@ -59,17 +59,17 @@ I'm a **Senior Full-Stack / AI Engineer** building production-ready products acr
 ## 🛠️ Tech Stack & Tools
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,tailwind,nodejs,nestjs,express,mongodb,supabase,postgres,redis,prisma,graphql,docker,aws,vercel,github,git,figma&perline=10" alt="tech stack" />
+  <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,tailwind,nodejs,nestjs,express,electron,mongodb,supabase,postgres,redis,prisma,graphql,docker,aws,vercel,github,git,figma&perline=10" alt="tech stack" />
 </p>
 
-#### Frontend
+#### Frontend, Web & Desktop
 - React.js, Next.js, TypeScript, JavaScript (ES6+), React Hooks
 - Tailwind CSS, MUI, Hero UI (Next UI), Framer Motion, GSAP
-- TanStack Query, SWR, PWA, Performance Optimization, Figma
+- TanStack Query, SWR, PWA, Electron, Performance Optimization, Figma
 
-#### Backend
+#### Backend & Databases
 - Node.js, NestJS, Express.js
-- MongoDB, PostgreSQL, Supabase, Redis, Prisma
+- MongoDB, PostgreSQL, Supabase, Redis, Prisma, SQL / NoSQL, Caching
 - REST APIs, GraphQL (Apollo), WebSockets, Socket.IO, Strapi (Headless CMS)
 
 #### Mobile
@@ -79,7 +79,7 @@ I'm a **Senior Full-Stack / AI Engineer** building production-ready products acr
 
 #### AI & Voice Agents
 - OpenAI, Hume AI, ElevenLabs, Pipecat, Voice Agents
-- n8n Automation, MCP Workflows
+- n8n Automation, MCP Workflows, Prompt Engineering
 - Cursor, Windsurf, Claude Code, OpenAI Codex
 
 #### APIs & Integrations

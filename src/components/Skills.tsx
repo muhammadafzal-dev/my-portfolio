@@ -26,6 +26,7 @@ const Skills = () => {
     "Performance Optimization",
     "Figma",
     "PWA",
+    "Electron",
   ];
   const backendSkills = [
     "Node.js",
@@ -39,12 +40,13 @@ const Skills = () => {
     "REST APIs",
     "GraphQL (Apollo)",
     "WebSockets",
+    "SQL / NoSQL",
+    "Caching",
     "Socket.IO",
     "Strapi",
   ];
   const mobileSkills = [
     "React Native",
-    "Electron",
     "Redux Toolkit",
     "Reanimated",
     "Deep Linking",
@@ -121,6 +123,7 @@ const Skills = () => {
     "OpenAI Codex",
     "ChatGPT",
     "MCP Workflows",
+    "Prompt Engineering",
   ];
   
   return (
@@ -140,13 +143,13 @@ const Skills = () => {
 
           <div className="grid md:grid-cols-2 gap-6">
           {[
-            { icon: Code2, title: "Frontend Development", slug: "frontend", items: frontendSkills },
-            { icon: Server, title: "Backend Development", slug: "backend", items: backendSkills },
+            { icon: Code2, title: "Frontend, Web & Desktop", slug: "frontend", items: frontendSkills },
+            { icon: Server, title: "Backend & Databases", slug: "backend", items: backendSkills },
             { icon: Smartphone, title: "Mobile Development", slug: "mobile", items: mobileSkills },
-            { icon: Plug, title: "APIs & Integrations", slug: "apis", items: apiSkills },
+            { icon: Plug, title: "APIs, Integrations & Auth", slug: "apis", items: apiSkills },
             { icon: FlaskConical, title: "Testing & Automation", slug: "testing", items: testingSkills },
-            { icon: Cloud, title: "Cloud, DevOps & Monitoring", slug: "devops", items: devopsSkills },
-            { icon: Activity, title: "Observability & AI", slug: "ai", items: observabilityAiSkills },
+            { icon: Cloud, title: "Cloud, DevOps & Infrastructure", slug: "devops", items: devopsSkills },
+            { icon: Activity, title: "AI & Voice Agents", slug: "ai", items: observabilityAiSkills },
             { icon: Network, title: "Architecture & Leadership", slug: "architecture", items: architectureSkills },
           ].map(({ icon: Icon, title, slug, items }, idx) => (
             <Card
