@@ -60,6 +60,43 @@ export const projects: Project[] = [
     ],
   },
   {
+    name: "OmidLife — Spiritual Wellness & Learning Platform",
+    description:
+      "Online spiritual wellness platform connecting users with instructors through yoga, meditation, breathwork, live masterclasses, and on-demand courses. Contributed to the web platform, subscription workflows, and scalable full-stack features supporting the Omid TV streaming experience.",
+    link: {
+      href: "https://omidlife.com/",
+      label: "Web",
+    },
+    image: "/projects/omidlife.png",
+    imageKind: "screenshot",
+    technologies: [
+      "Next.js",
+      "React.js",
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Stripe",
+    ],
+  },
+  {
+    name: "Cohart — Social Marketplace for Art",
+    description:
+      "Social platform and marketplace enabling artists, galleries, collectors, and art enthusiasts to discover, connect, chat, and buy or sell artwork. Built cross-platform React Native features, real-time interactions, and marketplace functionality for iOS and Android.",
+    link: {
+      href: "https://www.cohart.com/",
+      label: "Web",
+    },
+    image: "/projects/cohart.png",
+    imageKind: "screenshot",
+    technologies: [
+      "React Native",
+      "iOS",
+      "Android",
+      "Real-time",
+      "Marketplace",
+    ],
+  },
+  {
     name: "BestSMSHQ — SMS Activation & Number Rentals SaaS",
     description:
       "Full-stack SaaS for SMS verification and virtual-number rentals across 180+ countries. Built the Next.js dashboard and a scalable NestJS backend: wallet with Stripe + crypto gateways (PayGate, Plisio, Cryptomus, NOWPayments), subscription tiers, per-tier API keys, rank system, favorites, real-time order updates over WebSockets, and an admin panel. Horizontally scalable with Redis-backed throttling, Socket.IO Redis adapter, and Bull job queues; Prisma + PostgreSQL, multi-provider SMS aggregation, and OAuth (Google/GitHub/Facebook).",
@@ -101,43 +138,6 @@ export const projects: Project[] = [
       "Firebase",
       "AWS",
       "TanStack Query",
-    ],
-  },
-  {
-    name: "OmidLife — Spiritual Wellness & Learning Platform",
-    description:
-      "Online spiritual wellness platform connecting users with instructors through yoga, meditation, breathwork, live masterclasses, and on-demand courses. Contributed to the web platform, subscription workflows, and scalable full-stack features supporting the Omid TV streaming experience.",
-    link: {
-      href: "https://omidlife.com/",
-      label: "Web",
-    },
-    image: "/projects/omidlife.png",
-    imageKind: "screenshot",
-    technologies: [
-      "Next.js",
-      "React.js",
-      "Node.js",
-      "TypeScript",
-      "PostgreSQL",
-      "Stripe",
-    ],
-  },
-  {
-    name: "Cohart — Social Marketplace for Art",
-    description:
-      "Social platform and marketplace enabling artists, galleries, collectors, and art enthusiasts to discover, connect, chat, and buy or sell artwork. Built cross-platform React Native features, real-time interactions, and marketplace functionality for iOS and Android.",
-    link: {
-      href: "https://www.cohart.com/",
-      label: "Web",
-    },
-    image: "/projects/cohart.png",
-    imageKind: "screenshot",
-    technologies: [
-      "React Native",
-      "iOS",
-      "Android",
-      "Real-time",
-      "Marketplace",
     ],
   },
   {

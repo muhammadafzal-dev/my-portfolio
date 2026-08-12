@@ -7,6 +7,8 @@ import { FaApple, FaGlobe, FaPlay } from "react-icons/fa";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import ProjectThumb from "@/components/ProjectThumb";
+import ProjectsHeader from "@/components/ProjectsHeader";
+import Footer from "@/components/Footer";
 import {
   allProjectSlugs,
   getAdjacentProjects,
@@ -183,7 +185,7 @@ export default async function ProjectDetailPage({
   };
 
   return (
-    <div className="min-h-screen pt-28 pb-20">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
@@ -193,7 +195,9 @@ export default async function ProjectDetailPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <main className="container mx-auto px-4">
+      <ProjectsHeader />
+
+      <main className="min-h-screen pt-28 pb-20 container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <Link
             href="/projects"
@@ -269,6 +273,8 @@ export default async function ProjectDetailPage({
           </nav>
         </div>
       </main>
-    </div>
+
+      <Footer />
+    </>
   );
 }
