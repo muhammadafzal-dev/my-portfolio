@@ -91,8 +91,8 @@ const Hero = () => {
               <span className="typing-caret" aria-hidden="true" />
             </p>
             <p className="text-base md:text-lg text-muted-foreground max-w-xl opacity-0 animate-fade-in-delay-2 text-pretty leading-relaxed">
-              6+ years building full‑stack web and cross‑platform mobile applications with clean UX, solid architecture,
-              and performance in mind.
+              6+ years shipping production AI voice agents, multi‑tenant SaaS, and cross‑platform apps across
+              web, mobile &amp; desktop — from architecture to release.
             </p>
 
             {/* Tech stack inline */}
