@@ -10,7 +10,7 @@ const Experience = () => {
 
   const experiences = [
     {
-      position: "Senior Full-Stack / AI Engineer (Full-Stack Lead)",
+      position: "Senior Full-Stack / React Native / AI Engineer (Full-Stack Lead)",
       company: "Obenan",
       duration: "Mar 2024 – Present",
       location: "Lahore, Pakistan",
