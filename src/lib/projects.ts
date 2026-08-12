@@ -60,6 +60,28 @@ export const projects: Project[] = [
     ],
   },
   {
+    name: "BestSMSHQ — SMS Activation & Number Rentals SaaS",
+    description:
+      "Full-stack SaaS for SMS verification and virtual-number rentals across 180+ countries. Built the Next.js dashboard and a scalable NestJS backend: wallet with Stripe + crypto gateways (PayGate, Plisio, Cryptomus, NOWPayments), subscription tiers, per-tier API keys, rank system, favorites, real-time order updates over WebSockets, and an admin panel. Horizontally scalable with Redis-backed throttling, Socket.IO Redis adapter, and Bull job queues; Prisma + PostgreSQL, multi-provider SMS aggregation, and OAuth (Google/GitHub/Facebook).",
+    link: {
+      href: "https://bestsmshq.com/",
+      label: "Web",
+    },
+    image: "/projects/bestsmshq.png",
+    imageKind: "screenshot",
+    technologies: [
+      "Next.js",
+      "React.js",
+      "NestJS",
+      "PostgreSQL",
+      "Prisma",
+      "Redis",
+      "WebSockets",
+      "Stripe",
+      "AWS",
+    ],
+  },
+  {
     name: "OmidLife — Spiritual Wellness & Learning Platform",
     description:
       "Online spiritual wellness platform connecting users with instructors through yoga, meditation, breathwork, live masterclasses, and on-demand courses. Contributed to the web platform, subscription workflows, and scalable full-stack features supporting the Omid TV streaming experience.",
