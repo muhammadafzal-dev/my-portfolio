@@ -191,7 +191,7 @@ const Hero = () => {
               </span>
             </div>
 
-            <CodeCard />
+            <ProfileCard />
 
             <div className="flex flex-wrap items-center gap-2 justify-center lg:justify-start">
               <span className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-normal bg-muted/60 text-foreground/80">
@@ -223,139 +223,65 @@ const Hero = () => {
   );
 };
 
-const CodeCard = () => (
+const PROFILE_ROWS = [
+  { label: "Currently", value: "Full-Stack / AI Lead · Obenan" },
+  { label: "Building", value: "AI voice agents — OpenAI · Hume · ElevenLabs" },
+  { label: "Focus", value: "Next.js · NestJS · Node.js · PostgreSQL · React Native" },
+] as const;
+
+const PROFILE_METRICS = [
+  { value: "6+", label: "Years" },
+  { value: "30+", label: "Shipped" },
+  { value: "4", label: "Platforms" },
+] as const;
+
+const ProfileCard = () => (
   <div className="relative">
-    <div className="absolute -inset-px rounded-xl bg-gradient-to-br from-primary/30 via-primary/10 to-transparent blur-md opacity-60 pointer-events-none" aria-hidden />
+    <div
+      className="absolute -inset-px rounded-xl bg-gradient-to-br from-primary/25 via-primary/8 to-transparent blur-md opacity-60 pointer-events-none"
+      aria-hidden
+    />
     <div className="relative rounded-xl border border-border/60 bg-background/80 backdrop-blur-xl shadow-2xl overflow-hidden">
-      {/* Titlebar */}
-      <div className="flex items-center justify-between px-4 py-2.5 border-b border-border/50 bg-muted/30">
-        <div className="flex items-center gap-2.5">
-          <div className="flex items-center gap-1.5">
-            <span className="h-2.5 w-2.5 rounded-full bg-red-400/70" />
-            <span className="h-2.5 w-2.5 rounded-full bg-amber-400/70" />
-            <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/70" />
-          </div>
-          <div className="hidden sm:flex items-center gap-2 ml-2">
-            <Image
-              src="/avatar.png"
-              alt="Muhammad Afzal"
-              width={20}
-              height={20}
-              priority
-              className="h-5 w-5 rounded-full object-cover ring-1 ring-border/60"
-            />
-            <span className="font-mono text-[11px] tracking-wider text-muted-foreground uppercase">
-              <span className="text-primary mr-1">●</span>
-              developer.ts
-            </span>
-          </div>
-        </div>
-        <span className="font-mono text-[11px] text-muted-foreground">01</span>
-      </div>
-
-      {/* Body */}
-      <div className="font-mono text-[12px] md:text-[13px] leading-relaxed py-4 px-4 md:px-5">
-        <CodeLine n={1}>
-          <span className="text-violet-700 dark:text-violet-400">const</span>{" "}
-          <span className="text-sky-700 dark:text-sky-300">developer</span>{" "}
-          <span className="text-muted-foreground">=</span>{" "}
-          <span className="text-foreground">{"{"}</span>
-        </CodeLine>
-        <CodeLine n={2}>
-          <Indent />
-          <span className="text-rose-700 dark:text-rose-300">name</span>
-          <span className="text-muted-foreground">:</span>{" "}
-          <span className="text-emerald-700 dark:text-emerald-300">{'"Muhammad Afzal"'}</span>
-          <span className="text-muted-foreground">,</span>
-        </CodeLine>
-        <CodeLine n={3}>
-          <Indent />
-          <span className="text-rose-700 dark:text-rose-300">role</span>
-          <span className="text-muted-foreground">:</span>{" "}
-          <span className="text-emerald-700 dark:text-emerald-300">{'"Full-Stack / AI Engineer"'}</span>
-          <span className="text-muted-foreground">,</span>
-        </CodeLine>
-        <CodeLine n={4}>
-          <Indent />
-          <span className="text-rose-700 dark:text-rose-300">stack</span>
-          <span className="text-muted-foreground">:</span>{" "}
-          <span className="text-foreground">[</span>
-          <span className="text-emerald-700 dark:text-emerald-300">{'"Next.js"'}</span>
-          <span className="text-muted-foreground">,</span>{" "}
-          <span className="text-emerald-700 dark:text-emerald-300">{'"React Native"'}</span>
-          <span className="text-muted-foreground">,</span>{" "}
-          <span className="text-emerald-700 dark:text-emerald-300">{'"NestJS"'}</span>
-          <span className="text-foreground">]</span>
-          <span className="text-muted-foreground">,</span>
-        </CodeLine>
-        <CodeLine n={5}>
-          <Indent />
-          <span className="text-rose-700 dark:text-rose-300">experience</span>
-          <span className="text-muted-foreground">:</span>{" "}
-          <span className="text-emerald-700 dark:text-emerald-300">{'"6+ years"'}</span>
-          <span className="text-muted-foreground">,</span>
-        </CodeLine>
-        <CodeLine n={6}>
-          <Indent />
-          <span className="text-rose-700 dark:text-rose-300">focus</span>
-          <span className="text-muted-foreground">:</span>{" "}
-          <span className="text-foreground">[</span>
-          <span className="text-emerald-700 dark:text-emerald-300">{'"AI"'}</span>
-          <span className="text-muted-foreground">,</span>{" "}
-          <span className="text-emerald-700 dark:text-emerald-300">{'"performance"'}</span>
-          <span className="text-muted-foreground">,</span>{" "}
-          <span className="text-emerald-700 dark:text-emerald-300">{'"DX"'}</span>
-          <span className="text-foreground">]</span>
-          <span className="text-muted-foreground">,</span>
-        </CodeLine>
-        <CodeLine n={7}>
-          <Indent />
-          <span className="text-rose-700 dark:text-rose-300">recent</span>
-          <span className="text-muted-foreground">:</span>{" "}
-          <span className="text-emerald-700 dark:text-emerald-300">{'"AI voice agents — OpenAI · Hume · ElevenLabs"'}</span>
-          <span className="text-muted-foreground">,</span>
-        </CodeLine>
-        <CodeLine n={8}>
-          <Indent />
-          <span className="text-rose-700 dark:text-rose-300">status</span>
-          <span className="text-muted-foreground">:</span>{" "}
-          <span className="text-emerald-700 dark:text-emerald-300">{'"available"'}</span>
-          <span className="text-muted-foreground">,</span>
-        </CodeLine>
-        <CodeLine n={9}>
-          <Indent />
-          <span className="text-rose-700 dark:text-rose-300">hire</span>
-          <span className="text-muted-foreground">:</span>{" "}
-          <span className="text-foreground">{"() =>"}</span>{" "}
-          <span className="text-emerald-700 dark:text-emerald-300">{'"afzalj166@gmail.com"'}</span>
-          <span className="text-muted-foreground">,</span>
-        </CodeLine>
-        <CodeLine n={10}>
-          <span className="text-foreground">{"}"}</span>{" "}
-          <span className="text-violet-700 dark:text-violet-400">as</span>{" "}
-          <span className="text-violet-700 dark:text-violet-400">const</span>
-          <span className="text-muted-foreground">;</span>
-        </CodeLine>
-      </div>
-
-      {/* Statusbar */}
-      <div className="flex items-center justify-between px-4 py-2 border-t border-border/50 bg-muted/30 font-mono text-[10px] tracking-wider text-muted-foreground uppercase">
-        <span>typescript · utf-8</span>
-        <span className="flex items-center gap-1.5">
-          <span className="text-primary">●</span>
-          ln 10 · col 3
+      {/* Header — live status */}
+      <div className="flex items-center justify-between px-5 py-3 border-b border-border/50 bg-muted/20">
+        <span className="flex items-center gap-2 font-mono text-[11px] tracking-wider uppercase text-foreground/80">
+          <span className="relative flex h-2 w-2" aria-hidden>
+            <span className="absolute inline-flex h-full w-full rounded-full bg-primary/50 animate-ping" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+          </span>
+          Available for work
+        </span>
+        <span className="font-mono text-[10px] tracking-wider uppercase text-muted-foreground">
+          ~24h reply
         </span>
       </div>
+
+      {/* Spec rows */}
+      <dl className="px-5 py-4 space-y-4">
+        {PROFILE_ROWS.map((row) => (
+          <div key={row.label}>
+            <dt className="font-mono text-[10px] tracking-[0.2em] uppercase text-primary/80 mb-1">
+              {row.label}
+            </dt>
+            <dd className="text-sm text-foreground/90 leading-snug">{row.value}</dd>
+          </div>
+        ))}
+      </dl>
+
+      {/* Metrics */}
+      <div className="grid grid-cols-3 divide-x divide-border/50 border-t border-border/50 bg-muted/10">
+        {PROFILE_METRICS.map((metric) => (
+          <div key={metric.label} className="px-3 py-3.5 text-center">
+            <p className="text-lg font-bold text-primary tracking-tight tabular-nums">
+              {metric.value}
+            </p>
+            <p className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted-foreground mt-0.5">
+              {metric.label}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
-);
-
-const Indent = () => <span className="inline-block w-4" />;
-
-const CodeLine = ({ n, children }: { n: number; children: React.ReactNode }) => (
-  <div className="flex items-start gap-3">
-    <span className="select-none text-muted-foreground/40 w-4 text-right tabular-nums">{n}</span>
-    <span className="whitespace-pre-wrap break-words">{children}</span>
   </div>
 );
 
