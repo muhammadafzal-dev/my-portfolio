@@ -4,7 +4,9 @@ Project context for Claude. Read first every session.
 
 ## Project
 
-Personal portfolio for Muhammad Afzal — Full-Stack MERN Developer. Single-page landing with `/projects` detail route. Deployed to Vercel at https://muhammadafzal.vercel.app.
+Personal portfolio for Muhammad Afzal — **Senior Full-Stack / AI Engineer**. Single-page landing plus a `/projects` listing and per-project SEO detail pages at `/projects/[slug]`. Deployed to Vercel at https://muhammadafzal.vercel.app.
+
+`GITHUB_README.md` is the source for the GitHub profile README — it is mirrored to the `muhammadafzal-dev/muhammadafzal-dev` repo (root `README.md`) whenever it changes. Keep the two in sync.
 
 ## Stack
 
@@ -30,24 +32,26 @@ yarn lint        # eslint
 ```
 src/
   app/
-    layout.tsx           root metadata + theme init script
-    page.tsx             home (Hero → Stats → About → TechMarquee → Skills → Projects → Experience → Contact → Footer)
-    providers.tsx        Theme + Tooltip + Toaster
-    projects/page.tsx    full projects listing
+    layout.tsx              root metadata + theme init script + Person JSON-LD
+    page.tsx                home (Hero → Stats → WhatIDeliver → About → TechMarquee → Skills → Projects → Experience → Testimonials → Contact → Footer)
+    providers.tsx           Theme + Tooltip + Toaster
+    projects/page.tsx       full projects listing
+    projects/[slug]/page.tsx  per-project SEO detail page (SSG, generateMetadata, JSON-LD, prev/next)
     sitemap.ts, robots.ts, not-found.tsx
   components/
-    Navbar, Hero, Stats, TechMarquee, About, Skills, Projects,
-    Experience, Contact, Footer, ThemeProvider, ProjectsHeader
-    ui/                  shadcn primitives (button, card, badge, input, textarea, toast, sonner, tooltip)
+    Navbar, Hero, Stats, WhatIDeliver, TechMarquee, About, Skills, Projects,
+    Experience, Testimonials, Contact, Footer, ThemeProvider, ProjectsHeader,
+    ProjectsList, ProjectThumb, SectionHeading, SectionBackdrop, WhatsAppFloat
+    ui/                     shadcn primitives (button, card, badge, input, textarea, toast, sonner, tooltip)
   hooks/
-    useInView.tsx        IntersectionObserver hook (ref-stable options)
+    useInView.tsx           IntersectionObserver hook (ref-stable options)
     use-toast.ts, use-mobile.tsx
   lib/
-    projects.ts          project data (hard-coded, source of truth)
-    utils.ts             cn() helper
+    projects.ts             project data + slug helpers (projectSlug, allProjectSlugs, getProjectBySlug, getAdjacentProjects) — source of truth
+    utils.ts                cn() helper
 public/
   avatar.png, favicon.ico, muhammad_afzal_resume.pdf
-  projects/*             project thumbnails
+  projects/*                project thumbnails
 ```
 
 ## Conventions
@@ -55,7 +59,8 @@ public/
 - **Theme** — class-based dark mode (`darkMode: 'class'`). `ThemeProvider` syncs `<html>` class + localStorage. FOUC prevented by sync script in `layout.tsx` head.
 - **Colors** — HSL CSS vars in `globals.css` (`--background`, `--primary`, `--accent` etc.); Tailwind maps via `hsl(var(--token))`. Zinc + teal palette.
 - **Animations** — IntersectionObserver-triggered classes (`section-animate`, `card-animate`, `stagger-N`) + keyframes (`fade-in`, `float`, `marquee`, `blink`).
-- **Data** — Projects live in `src/lib/projects.ts`. Adding project = append to array. No MDX (evaluated and skipped — see `feat/blog-mdx` branch for WIP if reviving).
+- **Data** — Projects live in `src/lib/projects.ts`. Adding project = append to array + drop a thumbnail in `public/projects/`. The detail page, sitemap entry, and prev/next nav are generated automatically from the slug (segment before the em dash in `name`). No MDX (evaluated and skipped — see `feat/blog-mdx` branch for WIP if reviving).
+- **Project detail SEO** — `/projects/[slug]` sets per-project canonical, OG/Twitter (absolute image), keywords, and JSON-LD (`SoftwareApplication` + `BreadcrumbList`). All slugs are added to `sitemap.ts`.
 - **Default exports** — all components use default exports (existing pattern, keep consistent).
 - **Client components** — sections with state/effects use `"use client"`. Server components by default elsewhere.
 - **Metadata** — root defined in `layout.tsx`; per-route override via `metadata` export. Template: `%s — Muhammad Afzal`.
@@ -64,8 +69,11 @@ public/
 
 | File | Purpose |
 |------|---------|
-| `src/app/layout.tsx` | Site metadata + theme init script |
-| `src/lib/projects.ts` | Project data — update to add projects |
+| `src/app/layout.tsx` | Site metadata + theme init script + Person JSON-LD |
+| `src/lib/projects.ts` | Project data + slug helpers — update to add projects |
+| `src/app/projects/[slug]/page.tsx` | Per-project SEO detail page (metadata, JSON-LD, prev/next) |
+| `src/components/Hero.tsx` | Hero + `ProfileCard` (status / currently / building / focus / metrics) |
+| `GITHUB_README.md` | GitHub profile README source — mirror to `muhammadafzal-dev/muhammadafzal-dev` |
 | `src/components/ThemeProvider.tsx` | Dark/light toggle + mount sync |
 | `src/app/globals.css` | HSL tokens + component layer + keyframes |
 | `tailwind.config.js` | Legacy v3 config still picked up by v4 via `@config` |
@@ -92,9 +100,12 @@ Vercel. Site URL and canonical hardcoded to `https://muhammadafzal.vercel.app` i
 
 ## Recent substantive changes
 
-- SEO metadata cleanup (dropped `absolute` title, correct domain in canonical/authors, trailing-slash fixes in sitemap/robots)
-- Render stability: `useInView` options stabilized via ref, `Hero.roles` memoized
-- Stable React keys (project name / company+position, not array index)
-- Theme FOUC eliminated via sync head script + mount-gated `ThemeProvider`
-- Contact "Location" icon: `Mail` → `MapPin`
-- Added `Stats` (animated count-up) + `TechMarquee` (infinite horizontal scroll)
+- **Repositioned** from "Full-Stack MERN Developer" → **Senior Full-Stack / AI Engineer** across hero, metadata (title/OG/Twitter/schema), and keywords.
+- **Hero** — replaced the fake `developer.ts` code card with a professional `ProfileCard` (live status, Currently, Building, Focus, and 6+/30+/4 metric tiles). Description leads with the AI + multi-tenant SaaS differentiator.
+- **What I Deliver** section added after Stats (Full-Stack Engineering / Mobile / Performance & Reliability); section indices renumbered `02`–`08`.
+- **Project detail pages** — new `/projects/[slug]` route (SSG) with full SEO (canonical, OG/Twitter, JSON-LD, keywords) + prev/next nav and a `ProjectsHeader`/`Footer`. "Details" links now route here (old modal removed). Footer nav uses absolute `/#…` anchors so it works from sub-pages.
+- **New projects** — BestSMSHQ (SMS-activation SaaS), CheapStreamTV (IPTV), OmidLife, Cohart added with live screenshots.
+- **Skills** — bucket titles aligned to the resume (Frontend/Web/Desktop, Backend & Databases, APIs/Integrations/Auth, Cloud/DevOps/Infrastructure, AI & Voice Agents); added Electron, Redis, Prisma, SQL/NoSQL, Caching, Prompt Engineering, DigitalOcean, Nginx, Maestro, Agora, etc.; new Architecture & Leadership bucket.
+- **Experience** — Obenan role "Senior Full-Stack / React Native / AI Engineer (Full-Stack Lead)"; GSC dates `Sep 2020 – Feb 2024`; timeline rail now connects badge-to-badge (no dangling stub).
+- **Stats** — 6+ yrs · 30+ projects · 20+ mobile apps · 2 companies.
+- Earlier: SEO metadata cleanup, `useInView` ref-stable options, memoized `Hero.roles`, theme FOUC fix, `Stats` count-up + `TechMarquee`.
