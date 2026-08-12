@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { execSync } from "node:child_process";
 import path from "node:path";
+import { allProjectSlugs } from "@/lib/projects";
 
 function getLastModified(filePath: string): Date {
   try {
@@ -18,6 +19,17 @@ function getLastModified(filePath: string): Date {
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://muhammadafzal.vercel.app";
 
+  const projectsLastModified = getLastModified("src/lib/projects.ts");
+
+  const projectDetailRoutes: MetadataRoute.Sitemap = allProjectSlugs().map(
+    (slug) => ({
+      url: `${baseUrl}/projects/${slug}`,
+      lastModified: projectsLastModified,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    }),
+  );
+
   return [
     {
       url: `${baseUrl}/`,
@@ -31,5 +43,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    ...projectDetailRoutes,
   ];
 }

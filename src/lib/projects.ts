@@ -274,3 +274,35 @@ export const projects: Project[] = [
     technologies: ["React Native", "Android", "iOS", "Lifestyle"],
   },
 ];
+
+/** URL-safe slug derived from a project's name (segment before an em dash). */
+export function projectSlug(project: Project): string {
+  const base = project.name.split("—")[0]?.trim() || project.name;
+  return base
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+/** All project slugs (used by generateStaticParams and the sitemap). */
+export function allProjectSlugs(): string[] {
+  return projects.map(projectSlug);
+}
+
+/** Find a project by its slug. */
+export function getProjectBySlug(slug: string): Project | undefined {
+  return projects.find((project) => projectSlug(project) === slug);
+}
+
+/** Previous/next projects for detail-page navigation (no wrap-around). */
+export function getAdjacentProjects(slug: string): {
+  prev: Project | null;
+  next: Project | null;
+} {
+  const index = projects.findIndex((project) => projectSlug(project) === slug);
+  if (index === -1) return { prev: null, next: null };
+  return {
+    prev: index > 0 ? (projects[index - 1] ?? null) : null,
+    next: index < projects.length - 1 ? (projects[index + 1] ?? null) : null,
+  };
+}
