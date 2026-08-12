@@ -226,7 +226,7 @@ const Hero = () => {
 const PROFILE_ROWS = [
   { label: "Currently", value: "Full-Stack / AI Lead · Obenan" },
   { label: "Building", value: "AI voice agents — OpenAI · Hume · ElevenLabs" },
-  { label: "Focus", value: "Next.js · NestJS · Node.js · PostgreSQL · React Native" },
+  { label: "Focus", value: "Next.js · NestJS · Node.js · React Native" },
 ] as const;
 
 const PROFILE_METRICS = [
