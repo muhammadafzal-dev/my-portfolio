@@ -38,30 +38,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "Multi-Tenant Admin Portal — Micro-Frontend Demo",
-    description:
-      "A production-style micro-frontend architecture: a shell/host app plus auth, dashboard, and settings zones, each independently built and deployed, stitched together on one origin via Next.js Multi-Zones (path-based routing). Authentication is a stateless, HMAC-signed HttpOnly cookie that every zone verifies on its own — no shared backend, database, or global store. Built with a Turborepo + Yarn-workspaces monorepo, TypeScript (strict), Vitest, and ESLint. 4 independent apps · 3 shared packages · 23 passing tests · zero backend.",
-    link: {
-      href: "https://mfe-demo-admin.vercel.app",
-      label: "Web",
-    },
-    website: {
-      href: "https://github.com/muhammadafzal-dev/micro-frontend-admin-portal",
-      label: "GitHub",
-    },
-    image: "/projects/mfe-admin.png",
-    imageKind: "screenshot",
-    technologies: [
-      "Micro-frontends",
-      "Next.js",
-      "TypeScript",
-      "Turborepo",
-      "Monorepo",
-      "Vitest",
-      "Architecture",
-    ],
-  },
-  {
     name: "My Mind Bestie — Cross-Platform Wellness SaaS",
     description:
       "Full-stack wellness platform spanning Web, Mobile (iOS + Android), and Desktop (Electron) — one user, one account, three surfaces sharing the same backend and design system. Architected a TurboRepo monorepo with shared UI, API client, types, and validation. Built a serverless NestJS backend on AWS Lambda for auth, payments, and content. Stripe handles subscriptions and recurring billing. Mobile supports audio/video streaming, push notifications, and offline-first content. Admin dashboard manages users, content, and subscriptions.",
@@ -162,6 +138,30 @@ export const projects: Project[] = [
       "Firebase",
       "AWS",
       "TanStack Query",
+    ],
+  },
+  {
+    name: "Multi-Tenant Admin Portal — Micro-Frontend Demo",
+    description:
+      "A production-style micro-frontend architecture: a shell/host app plus auth, dashboard, and settings zones, each independently built and deployed, stitched together on one origin via Next.js Multi-Zones (path-based routing). Authentication is a stateless, HMAC-signed HttpOnly cookie that every zone verifies on its own — no shared backend, database, or global store. Built with a Turborepo + Yarn-workspaces monorepo, TypeScript (strict), Vitest, and ESLint. 4 independent apps · 3 shared packages · 23 passing tests · zero backend.",
+    link: {
+      href: "https://mfe-demo-admin.vercel.app",
+      label: "Web",
+    },
+    website: {
+      href: "https://github.com/muhammadafzal-dev/micro-frontend-admin-portal",
+      label: "GitHub",
+    },
+    image: "/projects/mfe-admin.png",
+    imageKind: "screenshot",
+    technologies: [
+      "Micro-frontends",
+      "Next.js",
+      "TypeScript",
+      "Turborepo",
+      "Monorepo",
+      "Vitest",
+      "Architecture",
     ],
   },
   {
