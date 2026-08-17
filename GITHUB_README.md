@@ -105,6 +105,7 @@ I'm a **Senior Full-Stack / AI Engineer** building production-ready products acr
 
 | Project | What it is | Stack | Links |
 | ------- | ---------- | ----- | ----- |
+| **Multi-Tenant Admin Portal** ⭐ | Micro-frontend architecture demo — four independently deployable Next.js apps composed into one product on a single domain via Next.js Multi-Zones (path-based), with stateless cookie auth and no backend | Next.js 16 · React 19 · TypeScript · Turborepo · Vitest | [Live](https://mfe-demo-admin.vercel.app) · [Code](https://github.com/muhammadafzal-dev/micro-frontend-admin-portal) |
 | **Obenan** | AI-powered reputation-management SaaS — listings, reviews, and local SEO across 100+ directories | Next.js · React · Node.js · Strapi · GraphQL · Stripe · AWS · MongoDB | [Web](https://obenan.ai/) |
 | **My Mind Bestie** | Cross-platform wellness SaaS — one account across Web · Mobile · Desktop | React Native · Next.js · NestJS · AWS Lambda · Stripe · Electron · TurboRepo · PostgreSQL | [Web](https://mymindbestie.com) |
 | **BestSMSHQ** | SMS activation & virtual-number rentals SaaS — 180+ countries, wallet, crypto + Stripe payments, real-time updates | Next.js · React · NestJS · PostgreSQL · Prisma · Redis · WebSockets · Stripe · AWS | [Web](https://bestsmshq.com/) |
@@ -116,6 +117,17 @@ I'm a **Senior Full-Stack / AI Engineer** building production-ready products acr
 | **Life Design** | Personal goal-tracking app | React Native · REST | [iOS](https://apps.apple.com/us/app/life-design/id6477827161) |
 
 > 📂 Full project list on my [portfolio »](https://muhammadafzal.vercel.app/projects)
+
+### 🏗️ Architecture Spotlight — Multi-Tenant Admin Portal
+
+Four independently deployable Next.js apps composed into one product on a single domain using **Next.js Multi-Zones** (path-based micro-frontends), with cookie-based auth and no backend.
+
+- **Micro-frontend composition** — each app owns a `basePath` (`/auth`, `/dashboard`, `/settings`); the shell rewrites paths to each zone.
+- **Stateless cross-app auth** — a signed **HttpOnly** cookie verified independently by each zone with a shared secret (demonstrates why *not* to share a Redux store across independently deployed apps).
+- **Clean domain boundaries** — related pages live inside one zone (bounded context), not one micro-frontend per page — a deliberate, documented decision.
+- **Monorepo tooling** — Turborepo + Yarn workspaces with 3 shared packages (types, config, UI) so 4 apps look and behave as one product.
+
+`4 independent apps · 3 shared packages · 23 passing tests · zero backend` — [Live demo](https://mfe-demo-admin.vercel.app) · [Code](https://github.com/muhammadafzal-dev/micro-frontend-admin-portal)
 
 ---
 
