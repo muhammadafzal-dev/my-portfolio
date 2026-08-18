@@ -113,6 +113,7 @@ I'm a **Senior Full-Stack / AI Engineer** building production-ready products acr
 | **OmidLife** | Spiritual wellness & learning platform with Omid TV streaming | Next.js · React · Node.js · TypeScript · PostgreSQL · Stripe | [Web](https://omidlife.com/) |
 | **Cohart** | Social marketplace for art — discover, connect, chat, buy & sell | React Native · Real-time · Marketplace | [Web](https://www.cohart.com/) |
 | **FoodSwitch** | Digital health & nutrition platform — barcode scanning, traffic-light ratings, 17 jurisdictions (400k+ downloads; WHO / Woolworths partners) | React Native · TypeScript · Node.js · PostgreSQL · Barcode SDK | [Web](https://www.foodswitch.com/) |
+| **Prism** | Habit & goal-tracking web app — set goals, plan, track progress & coaching; contributed dashboard features | Next.js · React · Node.js · TypeScript · PostgreSQL · Recharts | [Web](https://prism.creamyproducts.com/) |
 | **Etihad Town** | Real estate & community app for residents | React Native · Strapi · GraphQL · Push Notifications | [iOS](https://apps.apple.com/us/developer/etihad-town-pvt-limited/id1690750920) · [Android](https://play.google.com/store/apps/details?id=com.etihadtown.app) |
 | **SenSights** | Telehealth & senior remote-monitoring platform | React Native · REST · Push Notifications | [iOS](https://apps.apple.com/us/app/sensights/id1522446657) · [Android](https://play.google.com/store/apps/details?id=com.sensights) |
 | **Life Design** | Personal goal-tracking app | React Native · REST | [iOS](https://apps.apple.com/us/app/life-design/id6477827161) |

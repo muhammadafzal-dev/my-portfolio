@@ -62,7 +62,7 @@ export const projects: Project[] = [
   {
     name: "OmidLife — Spiritual Wellness & Learning Platform",
     description:
-      "Online spiritual wellness platform connecting users with instructors through yoga, meditation, breathwork, live masterclasses, and on-demand courses. Contributed to the web platform, subscription workflows, and scalable full-stack features supporting the Omid TV streaming experience.",
+      "Online spiritual wellness & e-learning platform connecting students worldwide with teachers across yoga, meditation, breathwork, and conscious living — 30+ on-demand courses, live masterclasses, 30-day guided challenges, and the Omid TV subscription streaming service. Contributed to the web platform, subscription and teacher-monetization workflows, and scalable full-stack features.",
     link: {
       href: "https://omidlife.com/",
       label: "Web",
@@ -113,6 +113,26 @@ export const projects: Project[] = [
       "PostgreSQL",
       "Barcode Scanning",
       "Healthcare",
+    ],
+  },
+  {
+    name: "Prism — Habit & Goal Tracking Platform",
+    description:
+      "All-in-one habit-forming and personal-growth web app that turns big life goals into small daily steps across physical, relational, intellectual, spiritual, and mission areas — set goals, build a plan, track progress, stay motivated, and get coaching. Contributed to the dashboard features: goal/habit tracking, progress visualization, and reporting.",
+    link: {
+      href: "https://prism.creamyproducts.com/",
+      label: "Web",
+    },
+    image: "/projects/prism.png",
+    imageKind: "screenshot",
+    technologies: [
+      "Next.js",
+      "React.js",
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Recharts",
+      "Dashboard",
     ],
   },
   {
@@ -202,7 +222,7 @@ export const projects: Project[] = [
   {
     name: "uDress",
     description:
-      "Finding a special dress for your special occasion has never been easier or more affordable!",
+      "Peer-to-peer mobile marketplace for dresses — buy, sell, or rent occasion wear locally with no commission on standard listings. Advanced filtering by style, colour, size, and occasion, in-app private messaging, and proximity-based inventory. Built cross-platform for iOS and Android.",
     link: {
       href: "https://play.google.com/store/apps/details?id=com.app.udress",
       label: "Android",
@@ -213,7 +233,7 @@ export const projects: Project[] = [
     },
     image: "/projects/udress.png",
     imageKind: "mobile-screenshot",
-    technologies: ["React Native", "Android", "iOS"],
+    technologies: ["React Native", "TypeScript", "Node.js", "Firebase", "iOS", "Android", "Marketplace"],
   },
   {
     name: "SenSights",
