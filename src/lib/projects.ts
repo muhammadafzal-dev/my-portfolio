@@ -18,7 +18,7 @@ export const projects: Project[] = [
   {
     name: "Obenan — AI Reputation Management Platform",
     description:
-      "AI-powered SaaS for reputation management — helps businesses manage listings, reviews, and local SEO across 100+ directories and platforms. Led full-stack development of the Landing Platform and frontend of the Dashboard and Omnipulse. Integrated AI-driven features, Stripe payments, and third-party services; optimized performance for 90–95+ Lighthouse scores.",
+      "AI-powered reputation-management SaaS — helps businesses manage listings, reviews, and local SEO across 100+ online directories. Built the Landing Platform and Omnipulse from scratch, translating Figma designs into scalable production UI with reusable component architecture; led full-stack development of the Landing Platform and contributed Dashboard features, AI integrations, Stripe payments, and 90–95+ Lighthouse performance.",
     link: {
       href: "https://obenan.ai/",
       label: "Web",
@@ -81,7 +81,7 @@ export const projects: Project[] = [
   {
     name: "Cohart — Social Marketplace for Art",
     description:
-      "Social platform and marketplace enabling artists, galleries, collectors, and art enthusiasts to discover, connect, chat, and buy or sell artwork. Built cross-platform React Native features, real-time interactions, and marketplace functionality for iOS and Android.",
+      "Social platform and marketplace for artists, galleries, collectors, and art enthusiasts. Architected and built the React Native app from scratch — translating Figma designs into responsive production UI across iOS and Android — with social discovery, real-time interactions, chat, and marketplace functionality.",
     link: {
       href: "https://www.cohart.com/",
       label: "Web",
@@ -94,6 +94,25 @@ export const projects: Project[] = [
       "Android",
       "Real-time",
       "Marketplace",
+    ],
+  },
+  {
+    name: "FoodSwitch — Digital Health & Nutrition Platform",
+    description:
+      "Digital health & nutrition platform helping consumers make healthier food choices — high-speed barcode scanning, a traffic-light health rating (salt, sugar, saturated fat, energy), and healthier-alternative suggestions across localized food databases in 17 jurisdictions. Contributed to the React Native mobile apps (iOS + Android) and built core features of the React/Node.js web dashboard for managing product data across markets. 400k+ downloads; partners include the WHO, Woolworths, and ALDI.",
+    link: {
+      href: "https://www.foodswitch.com/",
+      label: "Web",
+    },
+    image: "/projects/foodswitch.png",
+    imageKind: "screenshot",
+    technologies: [
+      "React Native",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Barcode Scanning",
+      "Healthcare",
     ],
   },
   {
@@ -199,7 +218,7 @@ export const projects: Project[] = [
   {
     name: "SenSights",
     description:
-      "SenSights is a cloud-based platform that delivers remote monitoring, personal emergency response & telehealth services for seniors along with risk monitoring and screening for seniorcare workers.",
+      "Remote healthcare and telemedicine platform for senior care. Contributed to the React Native mobile app — features supporting health monitoring, personal emergency response, and remote senior-care monitoring.",
     link: {
       href: "https://play.google.com/store/apps/details?id=com.sensights&hl=en&gl=US&pli=1",
       label: "Android",
@@ -215,7 +234,7 @@ export const projects: Project[] = [
   {
     name: "Etihad Town",
     description:
-      "Etihad Town has played a phenomenal role in developing a lifestyle for its residents where they can enjoy a luxurious life with serenity and security.",
+      "Real-estate resident app, built cross-platform from scratch — translating Figma designs into production-ready React Native UI across iOS and Android. Residents access property information, financial records, community updates, and notifications.",
     link: {
       href: "https://play.google.com/store/apps/details?id=com.etihadtown.app",
       label: "Android",
