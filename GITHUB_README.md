@@ -59,7 +59,7 @@ I'm a **Senior Full-Stack / AI Engineer** building production-ready products acr
 ## 🛠️ Tech Stack & Tools
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,tailwind,nodejs,nestjs,express,electron,mongodb,supabase,postgres,redis,prisma,graphql,docker,aws,vercel,github,git,figma&perline=10" alt="tech stack" />
+  <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,tailwind,nodejs,nestjs,express,electron,mongodb,supabase,postgres,redis,prisma,graphql,docker,kubernetes,aws,vercel,github,git,figma&perline=11" alt="tech stack" />
 </p>
 
 #### Frontend, Web & Desktop
@@ -70,7 +70,7 @@ I'm a **Senior Full-Stack / AI Engineer** building production-ready products acr
 #### Backend & Databases
 - Node.js, NestJS, Express.js
 - MongoDB, PostgreSQL, Supabase, Redis, Prisma, SQL / NoSQL, Caching
-- REST APIs, GraphQL (Apollo), WebSockets, Socket.IO, Strapi (Headless CMS)
+- REST APIs, GraphQL (Apollo), WebSockets, Socket.IO, BullMQ / Queue Processing, Strapi (Headless CMS)
 
 #### Mobile
 - React Native, Redux Toolkit, Reanimated
@@ -88,12 +88,12 @@ I'm a **Senior Full-Stack / AI Engineer** building production-ready products acr
 - Google/Apple Maps, Geolocation & Real-Time Location Tracking
 
 #### Cloud & DevOps
-- AWS, DigitalOcean, Docker, Nginx, Vercel, Render
-- Git, GitHub, GitHub Actions, CI/CD, Load Balancing
+- AWS, DigitalOcean, Docker, Kubernetes, Nginx, Vercel, Render
+- Git, GitHub, GitHub Actions, CI/CD, Load Balancing, Monitoring, Logging
 
 #### Architecture & Leadership
-- Frontend & Backend Architecture, System Design, Scalable SaaS Architecture
-- Component Design, Code Reviews, Technical Mentoring, Agile/Scrum
+- Frontend & Backend Architecture, System Design, Microservices, Micro-frontend Architecture
+- Scalable SaaS Architecture, Component Design, Code Reviews, Technical Mentoring, Agile/Scrum
 
 #### Testing & Observability
 - Playwright, Appium, Detox, Maestro, E2E Testing, Browser Automation
