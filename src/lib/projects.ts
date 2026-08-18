@@ -40,7 +40,7 @@ export const projects: Project[] = [
   {
     name: "My Mind Bestie — Cross-Platform Wellness SaaS",
     description:
-      "Full-stack wellness platform spanning Web, Mobile (iOS + Android), and Desktop (Electron) — one user, one account, three surfaces sharing the same backend and design system. Architected a TurboRepo monorepo with shared UI, API client, types, and validation. Built a serverless NestJS backend on AWS Lambda for auth, payments, and content. Stripe handles subscriptions and recurring billing. Mobile supports audio/video streaming, push notifications, and offline-first content. Admin dashboard manages users, content, and subscriptions.",
+      "Full-stack wellness platform spanning Web, Mobile (iOS + Android), and Desktop (Electron) — one user, one account, three surfaces sharing the same backend and design system. Architected a TurboRepo monorepo with shared UI, API client, types, and validation. Built a NestJS backend for auth and content. Mobile supports audio/video streaming, push notifications, and offline-first content. Admin dashboard manages users and content.",
     link: {
       href: "https://mymindbestie.com",
       label: "Web",
@@ -51,8 +51,6 @@ export const projects: Project[] = [
       "React Native",
       "Next.js",
       "NestJS",
-      "AWS Lambda",
-      "Stripe",
       "Electron",
       "TurboRepo",
       "PostgreSQL",
