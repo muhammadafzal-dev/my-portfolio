@@ -8,7 +8,7 @@ const METRICS = [
   { v: "4", l: "Platforms" },
 ];
 
-const TECH = ["Next.js", "React", "TypeScript", "React Native", "Node.js", "NestJS", "AI"];
+const TECH = ["Next.js", "React", "TypeScript", "React Native", "Flutter", "Node.js", "NestJS", "AI"];
 
 const Hero = () => {
   return (
