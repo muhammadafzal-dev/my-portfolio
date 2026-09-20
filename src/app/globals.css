@@ -128,13 +128,17 @@
   .liquid-glass {
     position: relative;
     isolation: isolate;
-    border: 1px solid hsl(0 0% 100% / 0.09);
-    background: linear-gradient(
-      180deg,
-      hsl(205 40% 52% / 0.09) 0%,
-      hsl(205 38% 38% / 0.04) 45%,
-      hsl(205 45% 28% / 0.06) 100%
-    );
+    border: 1px solid hsl(0 0% 100% / 0.1);
+    /* sheen gradient on top of a semi-opaque base fill so the panel stays
+       visible even when backdrop-filter isn't rendered */
+    background:
+      linear-gradient(
+        180deg,
+        hsl(205 45% 55% / 0.08) 0%,
+        hsl(205 40% 40% / 0.03) 45%,
+        hsl(205 45% 30% / 0.05) 100%
+      ),
+      linear-gradient(0deg, hsl(204 30% 15% / 0.55), hsl(204 30% 15% / 0.55));
     backdrop-filter: blur(20px) saturate(135%);
     -webkit-backdrop-filter: blur(20px) saturate(135%);
     box-shadow:

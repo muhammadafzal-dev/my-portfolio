@@ -4,8 +4,6 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { FaApple, FaGlobe, FaPlay } from "react-icons/fa";
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import ProjectThumb from "@/components/ProjectThumb";
 import ProjectsHeader from "@/components/ProjectsHeader";
 import Footer from "@/components/Footer";
@@ -117,7 +115,7 @@ function NavCard({
   return (
     <Link
       href={`/projects/${projectSlug(project)}`}
-      className={`group flex flex-col gap-1 rounded-xl border border-border/50 bg-background/40 p-4 hover:border-primary/50 hover:bg-background/60 transition-colors ${
+      className={`group flex flex-col gap-1 liquid-glass rounded-xl p-4 hover:-translate-y-0.5 transition-transform ${
         isPrev ? "items-start" : "items-end text-right"
       }`}
     >
@@ -222,7 +220,7 @@ export default async function ProjectDetailPage({
             {project.website && <LinkButton link={project.website} />}
           </div>
 
-          <div className="mt-8 rounded-2xl border border-border/50 overflow-hidden bg-background/40 shadow-2xl shadow-primary/5">
+          <div className="mt-8 liquid-glass rounded-2xl overflow-hidden">
             <div className="group">
               <ProjectThumb project={project} heightClass="h-64 md:h-96" />
             </div>
@@ -245,13 +243,12 @@ export default async function ProjectDetailPage({
                 </p>
                 <div className="flex flex-wrap gap-1.5">
                   {project.technologies.map((tech) => (
-                    <Badge
+                    <span
                       key={tech}
-                      variant="secondary"
-                      className="rounded-full px-2.5 py-0.5 text-[11px] font-normal border-0 bg-muted/60 text-foreground/80"
+                      className="rounded-md border border-border/60 px-2 py-0.5 text-[11px] font-mono text-muted-foreground"
                     >
                       {tech}
-                    </Badge>
+                    </span>
                   ))}
                 </div>
               </aside>
@@ -259,12 +256,15 @@ export default async function ProjectDetailPage({
           </div>
 
           <div className="mt-10">
-            <Button variant="outline" asChild className="rounded-full border-border/60">
-              <a href={project.link.href} target="_blank" rel="noopener noreferrer">
-                Visit live project
-                <ArrowUpRight className="h-4 w-4 ml-1" />
-              </a>
-            </Button>
+            <a
+              href={project.link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground glow-primary hover:brightness-110 transition"
+            >
+              Visit live project
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
           </div>
 
           <nav className="mt-14 grid grid-cols-2 gap-4 border-t border-border/40 pt-8">

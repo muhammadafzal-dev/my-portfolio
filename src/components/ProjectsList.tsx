@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
 import { ArrowUpRight } from "lucide-react";
 import { FaPlay, FaApple, FaGlobe } from "react-icons/fa";
 import { projectSlug, type Project } from "@/lib/projects";
@@ -30,6 +29,18 @@ const platformIcon = (label: string) => {
   if (l.includes("ios")) return FaApple;
   if (l.includes("android")) return FaPlay;
   return FaGlobe;
+};
+
+const categoryLabel = (project: Project): string => {
+  const techs = project.technologies ?? [];
+  const primary = techs[0] ?? "Software";
+  const hasMobile = techs.some((t) => /react native|flutter|ios|android/i.test(t));
+  const hasWeb =
+    !!project.website ||
+    project.link.label.toLowerCase() === "web" ||
+    techs.some((t) => /next|react\.js|node|nest|graphql|mongo|postgres/i.test(t));
+  const kind = hasMobile && hasWeb ? "Cross-platform" : hasMobile ? "Mobile app" : "Web app";
+  return `${kind} · ${primary}`;
 };
 
 function matchesFilter(project: Project, filter: Filter): boolean {
@@ -86,15 +97,24 @@ const ProjectsList = ({ projects }: { projects: Project[] }) => {
             No projects match this filter.
           </p>
         )}
-        {filtered.map((project) => (
+        {filtered.map((project, index) => (
           <div
             key={`${project.name}-${project.link.href}`}
             onMouseMove={onSpotlightMove}
-            className="spotlight group flex flex-col rounded-xl border border-border/40 bg-background/40 hover:border-primary/50 hover:bg-background/60 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden"
+            className="spotlight liquid-glass group relative flex flex-col rounded-2xl overflow-hidden hover:-translate-y-1 transition-transform duration-300"
           >
-            <ProjectThumb project={project} heightClass="h-40" />
+            <div className="relative">
+              <ProjectThumb project={project} heightClass="h-44" />
+              <span className="absolute top-3 left-3 grid place-items-center h-8 w-8 rounded-lg glass-pill font-mono text-[11px] font-semibold text-foreground">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+            </div>
 
             <div className="flex flex-col flex-grow p-5">
+              <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-primary/75 mb-2">
+                {categoryLabel(project)}
+              </p>
+
               <h3 className="text-base font-semibold tracking-tight text-foreground line-clamp-2 mb-2">
                 {project.name}
               </h3>
@@ -106,13 +126,12 @@ const ProjectsList = ({ projects }: { projects: Project[] }) => {
               {project.technologies && (
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   {project.technologies.slice(0, 4).map((tech) => (
-                    <Badge
+                    <span
                       key={tech}
-                      variant="secondary"
-                      className="rounded-full px-2.5 py-0.5 text-[11px] font-normal border-0 bg-muted/60 hover:bg-muted text-foreground/80"
+                      className="rounded-md border border-border/60 px-2 py-0.5 text-[11px] font-mono text-muted-foreground"
                     >
                       {tech}
-                    </Badge>
+                    </span>
                   ))}
                   {project.technologies.length > 4 && (
                     <span className="font-mono text-[11px] text-muted-foreground self-center">
@@ -122,7 +141,7 @@ const ProjectsList = ({ projects }: { projects: Project[] }) => {
                 </div>
               )}
 
-              <div className="mt-auto pt-4 flex items-center justify-between gap-3 border-t border-border/40 flex-wrap">
+              <div className="mt-auto pt-4 flex items-center justify-between gap-3 border-t border-white/10 flex-wrap">
                 <div className="flex items-center gap-2 flex-wrap">
                   {project.ios && (() => {
                     const Icon = platformIcon(project.ios.label);
