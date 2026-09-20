@@ -4,6 +4,7 @@ import { Geist, Geist_Mono, Instrument_Serif } from 'next/font/google'
 import Providers from '@/app/providers'
 import SiteBackground from '@/components/SiteBackground'
 import CursorFX from '@/components/CursorFX'
+import ScrollProgress from '@/components/ScrollProgress'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
 
 import './globals.css'
@@ -40,15 +41,17 @@ export const metadata: Metadata = {
     'muhammad afzal',
     'senior full-stack engineer',
     'full-stack ai engineer',
-    'full-stack mern developer',
+    'ai voice agents',
+    'multi-tenant saas',
     'react.js developer',
     'next.js developer',
     'react native developer',
+    'flutter developer',
     'mobile app development',
+    'cross-platform apps',
     'frontend developer',
     'node.js',
-    'express.js',
-    'mongodb',
+    'nestjs',
     'graphql',
     'rest api',
     'lahore pakistan',
@@ -65,14 +68,14 @@ export const metadata: Metadata = {
     url: siteUrl,
     title: 'Muhammad Afzal — Senior Full-Stack / AI Engineer',
     description:
-      'Senior Full-Stack / AI Engineer with 6+ years of experience building scalable multi-tenant SaaS platforms, web, and cross-platform mobile applications using React.js, Next.js, React Native, Node.js, and NestJS.',
+      'Senior Full-Stack / AI Engineer with 6+ years of experience building scalable multi-tenant SaaS platforms, web, and cross-platform mobile applications using React.js, Next.js, React Native, Flutter, Node.js, and NestJS.',
     siteName: 'Muhammad Afzal',
     images: [
       {
-        url: `${siteUrl}/avatar.png`,
-        width: 400,
-        height: 400,
-        alt: 'Muhammad Afzal',
+        url: `${siteUrl}/about.png`,
+        width: 1122,
+        height: 1402,
+        alt: 'Muhammad Afzal — Senior Full-Stack / AI Engineer',
       },
     ],
   },
@@ -80,13 +83,13 @@ export const metadata: Metadata = {
     card: 'summary',
     site: siteUrl,
     description:
-      'Senior Full-Stack / AI Engineer with 6+ years of experience building scalable multi-tenant SaaS platforms, web, and cross-platform mobile applications using React.js, Next.js, React Native, Node.js, and NestJS.',
+      'Senior Full-Stack / AI Engineer with 6+ years of experience building scalable multi-tenant SaaS platforms, web, and cross-platform mobile applications using React.js, Next.js, React Native, Flutter, Node.js, and NestJS.',
     title: 'Muhammad Afzal — Senior Full-Stack / AI Engineer',
-    images: [`${siteUrl}/avatar.png`],
+    images: [`${siteUrl}/about.png`],
   },
 
   description:
-    'Senior Full-Stack / AI Engineer with 6+ years of experience building scalable multi-tenant SaaS platforms, web, and cross-platform mobile applications using React.js, Next.js, React Native, Node.js, and NestJS.',
+    'Senior Full-Stack / AI Engineer with 6+ years of experience building scalable multi-tenant SaaS platforms, web, and cross-platform mobile applications using React.js, Next.js, React Native, Flutter, Node.js, and NestJS.',
 
   alternates: {
     canonical: siteUrl,
@@ -103,7 +106,7 @@ export default function RootLayout({
     "@type": "Person",
     name: "Muhammad Afzal",
     url: siteUrl,
-    image: `${siteUrl}/avatar.png`,
+    image: `${siteUrl}/about.png`,
     jobTitle: "Senior Full-Stack / AI Engineer",
     worksFor: { "@type": "Organization", name: "Obenan" },
     address: {
@@ -120,11 +123,14 @@ export default function RootLayout({
       "React.js",
       "Next.js",
       "React Native",
+      "Flutter",
       "Node.js",
       "NestJS",
       "TypeScript",
       "MongoDB",
       "GraphQL",
+      "AI voice agents",
+      "Multi-tenant SaaS",
       "AI-assisted development",
     ],
   };
@@ -142,6 +148,7 @@ export default function RootLayout({
       >
         <SiteBackground />
         <CursorFX />
+        <ScrollProgress />
         <Providers>
           {children}
           <WhatsAppFloat />
