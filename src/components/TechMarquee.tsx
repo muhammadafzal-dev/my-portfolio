@@ -16,6 +16,7 @@ import {
   SiDocker,
   SiVercel,
   SiGithubactions,
+  SiFlutter,
 } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 
@@ -27,6 +28,7 @@ const techs: Tech[] = [
   { name: "TypeScript", Icon: SiTypescript },
   { name: "JavaScript", Icon: SiJavascript },
   { name: "React Native", Icon: TbBrandReactNative },
+  { name: "Flutter", Icon: SiFlutter },
   { name: "Node.js", Icon: SiNodedotjs },
   { name: "NestJS", Icon: SiNestjs },
   { name: "Express", Icon: SiExpress },
