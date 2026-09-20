@@ -15,7 +15,7 @@ export default function ProjectsPage() {
             <div className="flex items-center gap-3 mb-5">
               <span className="h-px w-8 bg-primary/50" aria-hidden />
               <p className="font-mono text-[11px] tracking-[0.28em] uppercase text-primary/85">
-                04 — Selected Work
+                03 — Selected Work
               </p>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.05] text-balance">

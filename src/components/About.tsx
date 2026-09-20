@@ -38,7 +38,7 @@ const About = () => {
 
           {/* Copy */}
           <div>
-            <span className="section-index">01 — About</span>
+            <span className="section-index">02 — About</span>
 
             <h2 className="mt-6 text-4xl sm:text-5xl font-bold tracking-tight leading-[1.05] text-balance">
               {[
