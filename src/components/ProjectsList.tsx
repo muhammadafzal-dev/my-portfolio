@@ -122,18 +122,21 @@ const ProjectsList = ({ projects }: { projects: Project[] }) => {
 
               <div className="mt-auto pt-4 flex items-center justify-between gap-3 border-t border-border/40 flex-wrap">
                 <div className="flex items-center gap-2 flex-wrap">
-                  {project.ios && (
-                    <a
-                      href={project.ios.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={project.ios.label}
-                      className="flex items-center gap-1.5 rounded-full px-3 py-1 text-xs border border-primary/40 bg-primary/10 text-foreground hover:bg-primary/20 hover:border-primary/60 transition-colors"
-                    >
-                      <FaApple className="h-3.5 w-3.5" />
-                      <span>App Store</span>
-                    </a>
-                  )}
+                  {project.ios && (() => {
+                    const Icon = platformIcon(project.ios.label);
+                    return (
+                      <a
+                        href={project.ios.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={storeLabel(project.ios.label)}
+                        className="flex items-center gap-1.5 rounded-full px-3 py-1 text-xs border border-primary/40 bg-primary/10 text-foreground hover:bg-primary/20 hover:border-primary/60 transition-colors"
+                      >
+                        <Icon className="h-3.5 w-3.5" />
+                        <span>{storeLabel(project.ios.label)}</span>
+                      </a>
+                    );
+                  })()}
                   <a
                     href={project.link.href}
                     target="_blank"

@@ -270,7 +270,7 @@ export const projects: Project[] = [
     description:
       "Live Urdu News aggregates news from leading Pakistani and international newspapers and other sources and presents them in an easy-to-read format.",
     link: {
-      href: "https://apps.apple.com/us/developer/etihad-town-pvt-limited/id1690750920",
+      href: "https://play.google.com/store/apps/details?id=com.gsoft.urdushort&hl=en",
       label: "Android",
     },
     ios: {
