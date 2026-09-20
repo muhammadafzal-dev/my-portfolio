@@ -21,8 +21,8 @@ export default function HomePage() {
         <WhatIDeliver />
         <About />
         <TechMarquee />
-        <Skills />
         <Projects />
+        <Skills />
         <Experience />
         <Testimonials />
         <Contact />

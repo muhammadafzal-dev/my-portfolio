@@ -33,7 +33,7 @@ const WhatIDeliver = () => {
           <SectionHeading
             index="02"
             label="What I Deliver"
-            title="What I Deliver"
+            title="Built, shipped, maintained."
             align="left"
           />
 
@@ -42,9 +42,9 @@ const WhatIDeliver = () => {
               <div
                 key={title}
                 onMouseMove={onSpotlightMove}
-                className={`spotlight card-hover card-animate stagger-${idx + 1} ${isInView ? "in-view" : ""} rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm p-6`}
+                className={`spotlight liquid-glass card-hover card-animate stagger-${idx + 1} ${isInView ? "in-view" : ""} rounded-xl p-6`}
               >
-                <span className="inline-flex rounded-md bg-primary/10 p-2.5 text-primary mb-4">
+                <span className="inline-flex rounded-xl border border-white/10 bg-white/[0.05] ring-1 ring-primary/20 p-2.5 text-primary mb-4 shadow-[inset_0_1px_0_0_hsl(0_0%_100%/0.12)]">
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <h3 className="text-base font-semibold tracking-tight mb-2">{title}</h3>

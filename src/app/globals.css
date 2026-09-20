@@ -123,6 +123,40 @@
       0 8px 30px -12px hsl(0 0% 0% / 0.6);
   }
 
+  /* Premium "liquid glass" surface — layered translucency, top sheen,
+     bright edge highlight, depth shadow */
+  .liquid-glass {
+    position: relative;
+    isolation: isolate;
+    border: 1px solid hsl(0 0% 100% / 0.09);
+    background: linear-gradient(
+      180deg,
+      hsl(205 40% 52% / 0.09) 0%,
+      hsl(205 38% 38% / 0.04) 45%,
+      hsl(205 45% 28% / 0.06) 100%
+    );
+    backdrop-filter: blur(20px) saturate(135%);
+    -webkit-backdrop-filter: blur(20px) saturate(135%);
+    box-shadow:
+      inset 0 1px 0 0 hsl(0 0% 100% / 0.13),
+      inset 0 -1px 0 0 hsl(205 40% 8% / 0.32),
+      0 18px 44px -22px hsl(205 60% 5% / 0.68);
+  }
+  /* specular top sheen */
+  .liquid-glass::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: -1;
+    background: radial-gradient(
+      130% 75% at 50% -18%,
+      hsl(205 90% 85% / 0.07),
+      transparent 60%
+    );
+  }
+
   /* Blue glow around primary CTAs */
   .glow-primary {
     box-shadow:
@@ -419,6 +453,14 @@
 
 .animate-marquee {
   animation: marquee 30s linear infinite;
+}
+
+/* left-to-right (reversed) marquee for the reviews row */
+.animate-marquee-reverse {
+  animation: marquee 48s linear infinite reverse;
+}
+.marquee-paused:hover {
+  animation-play-state: paused;
 }
 
 .marquee-mask {

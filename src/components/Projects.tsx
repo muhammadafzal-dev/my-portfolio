@@ -1,8 +1,6 @@
 "use client";
 
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { FaPlay, FaApple, FaGlobe } from "react-icons/fa";
@@ -26,21 +24,34 @@ const storeLabel = (label: string) => {
   return label;
 };
 
+const categoryLabel = (project: (typeof projects)[number]): string => {
+  const techs = project.technologies ?? [];
+  const primary = techs[0] ?? "Software";
+  const hasMobile = techs.some((t) => /react native|flutter|ios|android/i.test(t));
+  const hasWeb =
+    !!project.website ||
+    project.link.label.toLowerCase() === "web" ||
+    techs.some((t) => /next|react\.js|node|nest|graphql|mongo|postgres/i.test(t));
+  const kind = hasMobile && hasWeb ? "Cross-platform" : hasMobile ? "Mobile app" : "Web app";
+  return `${kind} · ${primary}`;
+};
+
 const Projects = () => {
   const { ref, isInView } = useInView({ threshold: 0.1 });
 
   return (
     <section
       id="projects"
-      className="py-20 bg-secondary/30"
+      className="py-20"
       ref={ref}
     >
       <div className={`container mx-auto px-4 section-animate ${isInView ? "in-view" : ""}`}>
         <div className="max-w-6xl mx-auto">
           <SectionHeading
-            index="05"
-            label="Projects"
-            title="Featured Projects"
+            index="03"
+            label="Selected Work"
+            title="Shipped to production,"
+            accent="not the shelf."
             align="left"
           />
 
@@ -49,12 +60,21 @@ const Projects = () => {
               <div
                 key={project.name}
                 onMouseMove={onSpotlightMove}
-                className={`spotlight group flex flex-col rounded-xl border border-border/40 bg-background/40 hover:border-primary/50 hover:bg-background/60 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden card-animate stagger-${(index % 3) + 1} ${isInView ? "in-view" : ""}`}
+                className={`spotlight liquid-glass group relative flex flex-col rounded-2xl overflow-hidden hover:-translate-y-1 transition-transform duration-300 card-animate stagger-${(index % 3) + 1} ${isInView ? "in-view" : ""}`}
               >
-                <ProjectThumb project={project} heightClass="h-44" />
+                <div className="relative">
+                  <ProjectThumb project={project} heightClass="h-52 md:h-56" />
+                  <span className="absolute top-3 left-3 grid place-items-center h-8 w-8 rounded-lg glass-pill font-mono text-[11px] font-semibold text-foreground">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                </div>
 
                 <div className="flex flex-col flex-grow p-5">
-                  <h3 className="text-base font-semibold tracking-tight text-foreground line-clamp-1 mb-2">
+                  <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-primary/75 mb-2">
+                    {categoryLabel(project)}
+                  </p>
+
+                  <h3 className="text-lg font-semibold tracking-tight text-foreground line-clamp-1 mb-2">
                     {project.name}
                   </h3>
 
@@ -65,13 +85,12 @@ const Projects = () => {
                   {project.technologies && (
                     <div className="flex flex-wrap gap-1.5 mb-5">
                       {project.technologies.slice(0, 4).map((tech) => (
-                        <Badge
+                        <span
                           key={tech}
-                          variant="secondary"
-                          className="rounded-full px-2.5 py-0.5 text-[11px] font-normal border-0 bg-muted/60 hover:bg-muted text-foreground/80"
+                          className="rounded-md border border-border/60 px-2 py-0.5 text-[11px] font-mono text-muted-foreground"
                         >
                           {tech}
-                        </Badge>
+                        </span>
                       ))}
                       {project.technologies.length > 4 && (
                         <span className="font-mono text-[11px] text-muted-foreground self-center">
@@ -81,7 +100,7 @@ const Projects = () => {
                     </div>
                   )}
 
-                  <div className="mt-auto pt-4 flex items-center justify-between gap-3 border-t border-border/40 flex-wrap">
+                  <div className="mt-auto pt-4 flex items-center justify-between gap-3 border-t border-white/10 flex-wrap">
                     <div className="flex items-center gap-2 flex-wrap">
                       {project.ios && (
                         <a
@@ -136,11 +155,13 @@ const Projects = () => {
           </div>
 
           <div className="mt-10 flex justify-start">
-            <Button variant="outline" asChild className="rounded-full border-border/60">
-              <Link href="/projects" className="flex items-center gap-2">
-                View all projects <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
+            <Link
+              href="/projects"
+              className="group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-foreground glass-pill hover:bg-white/[0.07] hover:border-primary/30 transition"
+            >
+              View all projects
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </Link>
           </div>
         </div>
       </div>

@@ -60,7 +60,7 @@ const Stats = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div
-            className={`rounded-3xl glass-pill px-2 sm:px-6 section-animate ${
+            className={`rounded-3xl liquid-glass px-2 sm:px-6 section-animate ${
               isInView ? "in-view" : ""
             }`}
           >

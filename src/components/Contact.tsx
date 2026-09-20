@@ -1,172 +1,99 @@
 "use client";
 
-
-import { Button } from "@/components/ui/button";
-import { Copy, Github, Linkedin, Mail, MapPin, ArrowUpRight, CheckCircle2, Clock } from "lucide-react";
+import { Github, Linkedin, Mail, Clock, MapPin, FileText } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
-import { toast } from "sonner";
 import useInView from "@/hooks/useInView";
 import SectionHeading from "@/components/SectionHeading";
+import { onSpotlightMove } from "@/lib/spotlight";
 
 const EMAIL = "afzalj166@gmail.com";
 const WHATSAPP_URL =
   "https://wa.me/923056129131?text=Hi%20Muhammad%2C%20I%20saw%20your%20portfolio";
 
+const SOCIALS = [
+  { label: "LinkedIn", href: "https://linkedin.com/in/muhammadafzal-dev", Icon: Linkedin },
+  { label: "GitHub", href: "https://github.com/muhammadafzal-dev", Icon: Github },
+];
+
 const Contact = () => {
   const { ref, isInView } = useInView({ threshold: 0.1 });
 
-  const copyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText(EMAIL);
-      toast.success("Email copied to clipboard");
-    } catch {
-      toast.error("Failed to copy");
-    }
-  };
-  
   return (
-    <section
-      id="contact"
-      className="py-20 bg-secondary/40"
-      ref={ref}
-    >
+    <section id="contact" className="py-20 sm:py-28" ref={ref}>
       <div className={`container mx-auto px-4 section-animate ${isInView ? "in-view" : ""}`}>
-        <div className="max-w-4xl mx-auto">
+        <div
+          onMouseMove={onSpotlightMove}
+          className="spotlight liquid-glass max-w-4xl mx-auto rounded-3xl px-6 sm:px-10 md:px-14 py-14 md:py-16 text-center"
+        >
           <SectionHeading
-            index="08"
+            index="07"
             label="Contact"
-            title="Let's build something."
-            description="Interested in working together or have a question about my work? I'm always open to new opportunities."
-            align="left"
+            title="Got a project worth"
+            accent="building well?"
+            description="An app idea, an AI feature you want done properly, or a half-built codebase that needs finishing — send it over and you'll get an honest read on scope and timeline before you commit to anything."
+            align="center"
           />
 
-          {/* Availability */}
-          <div className="mb-6 rounded-xl border border-primary/30 bg-primary/5 p-5">
-            <div className="flex items-center justify-between flex-wrap gap-2 mb-3">
-              <p className="font-mono text-[10px] tracking-[0.25em] text-primary uppercase flex items-center gap-2">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-                Available for
-              </p>
-              <p className="font-mono text-[10px] tracking-wider text-muted-foreground uppercase">
-                Open to opportunities
-              </p>
-            </div>
-            <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
-              {[
-                "Remote / Hybrid full-time roles",
-                "React Native contract work",
-                "Next.js + Node.js full-stack builds",
-                "AI integrations & voice agent workflows",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm text-foreground/85">
-                  <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2.5 rounded-full px-6 py-3 text-sm font-medium text-white glow-success hover:brightness-110 transition w-full sm:w-auto"
+              style={{ background: "linear-gradient(180deg, hsl(152 62% 46%), hsl(150 64% 38%))" }}
+            >
+              <FaWhatsapp className="h-4 w-4" />
+              Message on WhatsApp
+            </a>
+            <a
+              href={`mailto:${EMAIL}`}
+              className="group inline-flex items-center justify-center gap-2.5 rounded-full px-6 py-3 text-sm font-medium text-foreground glass-pill hover:bg-white/[0.07] hover:border-primary/30 transition w-full sm:w-auto"
+            >
+              <Mail className="h-4 w-4 text-primary" />
+              {EMAIL}
+            </a>
+            <a
+              href="/muhammad_afzal_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2.5 rounded-full px-6 py-3 text-sm font-medium text-foreground glass-pill hover:bg-white/[0.07] hover:border-primary/30 transition w-full sm:w-auto"
+            >
+              <FileText className="h-4 w-4 text-primary" />
+              Resume (PDF)
+            </a>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-3">
-            {[
-              {
-                key: "email",
-                icon: Mail,
-                label: "Email",
-                value: EMAIL,
-                href: `mailto:${EMAIL}`,
-                copyable: true,
-              },
-              {
-                key: "whatsapp",
-                icon: FaWhatsapp,
-                label: "WhatsApp",
-                value: "+92 305 6129131",
-                href: WHATSAPP_URL,
-              },
-              {
-                key: "linkedin",
-                icon: Linkedin,
-                label: "LinkedIn",
-                value: "linkedin.com/in/muhammadafzal-dev",
-                href: "https://linkedin.com/in/muhammadafzal-dev",
-              },
-              {
-                key: "github",
-                icon: Github,
-                label: "GitHub",
-                value: "github.com/muhammadafzal-dev",
-                href: "https://github.com/muhammadafzal-dev",
-              },
-              {
-                key: "location",
-                icon: MapPin,
-                label: "Location",
-                value: "Lahore, Pakistan",
-              },
-            ].map(({ key, icon: Icon, label, value, href, copyable }) => (
-              <div
-                key={key}
-                className={`group flex items-center gap-3 rounded-lg border border-border/40 bg-background/40 hover:bg-background/60 hover:border-border/70 px-4 py-3 transition-colors ${
-                  href ? "cursor-pointer" : ""
-                }`}
+          {/* Divider */}
+          <div className="mt-12 mb-8 h-px w-full bg-white/10" />
+
+          {/* Socials */}
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {SOCIALS.map(({ label, href, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm text-foreground glass-pill hover:bg-white/[0.07] hover:border-primary/30 transition"
               >
-                <Icon className="h-4 w-4 text-primary flex-shrink-0" />
-                <div className="flex-1 min-w-0">
-                  <p className="font-mono text-[10px] tracking-[0.15em] text-muted-foreground uppercase">
-                    {label}
-                  </p>
-                  {href ? (
-                    <a
-                      href={href}
-                      target={href.startsWith("http") ? "_blank" : undefined}
-                      rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className="text-sm text-foreground/90 group-hover:text-primary transition-colors truncate block"
-                    >
-                      {value}
-                    </a>
-                  ) : (
-                    <p className="text-sm text-foreground/90 truncate">{value}</p>
-                  )}
-                </div>
-                {copyable && (
-                  <button
-                    type="button"
-                    onClick={copyEmail}
-                    aria-label="Copy email"
-                    className="rounded-md p-1.5 text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors opacity-0 group-hover:opacity-100"
-                  >
-                    <Copy className="h-3.5 w-3.5" />
-                  </button>
-                )}
-                {href && !copyable && (
-                  <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground/50 group-hover:text-primary opacity-0 group-hover:opacity-100 transition-all" />
-                )}
-              </div>
+                <Icon className="h-4 w-4 text-primary" />
+                {label}
+              </a>
             ))}
           </div>
 
-          <div className="mt-6 flex items-center gap-3 flex-wrap">
-            <Button asChild className="rounded-full">
-              <a href={`mailto:${EMAIL}`}>
-                Send an email
-                <ArrowUpRight className="h-4 w-4 ml-1" />
-              </a>
-            </Button>
-            <Button asChild variant="outline" className="rounded-full border-border/60">
-              <a
-                href="/muhammad_afzal_resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Resume (PDF)
-              </a>
-            </Button>
+          {/* Footnote */}
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 font-mono text-[11px] text-muted-foreground/80">
+            <span className="flex items-center gap-1.5">
+              <Clock className="h-3.5 w-3.5 text-primary/70" />
+              Usually replies within 24h
+            </span>
+            <span className="flex items-center gap-1.5">
+              <MapPin className="h-3.5 w-3.5 text-primary/70" />
+              Lahore · UTC+5
+            </span>
           </div>
-
-          <p className="mt-5 flex items-center gap-2 font-mono text-[11px] text-muted-foreground/80">
-            <Clock className="h-3.5 w-3.5 text-primary/70" />
-            <span>Usually replies within 24h · Lahore (UTC+5)</span>
-          </p>
         </div>
       </div>
     </section>

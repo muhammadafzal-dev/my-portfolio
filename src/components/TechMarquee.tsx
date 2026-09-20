@@ -41,21 +41,23 @@ const techs: Tech[] = [
 ];
 
 const TechItem = ({ tech }: { tech: Tech }) => (
-  <div className="flex items-center gap-3 px-6 py-3 mx-2 rounded-full border border-border/50 bg-background/60 backdrop-blur-sm shrink-0">
+  <div className="group flex items-center gap-2.5 px-5 py-2.5 mx-2 rounded-full liquid-glass shrink-0 transition-transform duration-300 hover:-translate-y-0.5">
     <span aria-hidden="true" className="inline-flex">
-      <tech.Icon className="h-5 w-5 text-primary" />
+      <tech.Icon className="h-[18px] w-[18px] text-primary transition-transform duration-300 group-hover:scale-110" />
     </span>
-    <span className="text-sm font-medium text-foreground whitespace-nowrap">{tech.name}</span>
+    <span className="text-sm font-medium text-foreground/90 whitespace-nowrap">{tech.name}</span>
   </div>
 );
 
 const TechMarquee = () => {
   return (
-    <section className="py-10 border-y border-border/40 bg-background overflow-hidden">
-      <div className="container mx-auto px-4 mb-6">
-        <p className="text-center text-xs uppercase tracking-widest text-muted-foreground">
+    <section className="py-12 overflow-hidden border-y border-white/[0.06]">
+      <div className="container mx-auto px-4 mb-7 flex items-center justify-center gap-3">
+        <span className="h-px w-8 bg-primary/40" aria-hidden />
+        <p className="font-mono text-[11px] tracking-[0.28em] uppercase text-primary/80">
           Tech I build with
         </p>
+        <span className="h-px w-8 bg-primary/40" aria-hidden />
       </div>
       <div className="marquee-mask overflow-hidden">
         <div className="flex animate-marquee w-max">

@@ -41,7 +41,24 @@ const About = () => {
             <span className="section-index">01 — About</span>
 
             <h2 className="mt-6 text-4xl sm:text-5xl font-bold tracking-tight leading-[1.05] text-balance">
-              I take products from <span className="serif-accent">idea to release.</span>
+              {[
+                ...["I", "take", "products", "from"].map((w) => ({ w, accent: false })),
+                ...["idea", "to", "release."].map((w) => ({ w, accent: true })),
+              ].map((tok, i) => (
+                <span
+                  key={`${tok.w}-${i}`}
+                  className={`inline-block mr-[0.25em] transition-all duration-500 ease-out will-change-transform ${
+                    tok.accent ? "serif-accent" : ""
+                  } ${
+                    isInView
+                      ? "opacity-100 translate-y-0 blur-0"
+                      : "opacity-0 translate-y-[0.5em] blur-[2px]"
+                  }`}
+                  style={{ transitionDelay: `${120 + i * 65}ms` }}
+                >
+                  {tok.w}
+                </span>
+              ))}
             </h2>
 
             <div className="mt-7 space-y-5 text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl">
