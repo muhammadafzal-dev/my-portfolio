@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Quote, Linkedin } from "lucide-react";
 import useInView from "@/hooks/useInView";
 import SectionHeading from "@/components/SectionHeading";
+import { onSpotlightMove } from "@/lib/spotlight";
 
 type Testimonial = {
   name: string;
@@ -85,7 +86,8 @@ const Testimonials = () => {
             {testimonials.map((t, index) => (
               <article
                 key={t.name}
-                className={`group relative rounded-xl border border-border/40 bg-background/40 hover:border-primary/50 hover:bg-background/60 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-0.5 transition-all duration-300 p-4 sm:p-5 md:p-6 card-animate stagger-${(index % 3) + 1} ${isInView ? "in-view" : ""}`}
+                onMouseMove={onSpotlightMove}
+                className={`spotlight group relative rounded-xl border border-border/40 bg-background/40 hover:border-primary/50 hover:bg-background/60 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-0.5 transition-all duration-300 p-4 sm:p-5 md:p-6 card-animate stagger-${(index % 3) + 1} ${isInView ? "in-view" : ""}`}
               >
                 <Quote className="absolute top-4 right-4 sm:top-5 sm:right-5 h-5 w-5 text-primary/30" aria-hidden />
 

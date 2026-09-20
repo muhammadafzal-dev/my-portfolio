@@ -3,6 +3,7 @@
 import { Code2, Smartphone, Gauge } from "lucide-react";
 import useInView from "@/hooks/useInView";
 import SectionHeading from "@/components/SectionHeading";
+import { onSpotlightMove } from "@/lib/spotlight";
 
 const deliverables = [
   {
@@ -40,7 +41,8 @@ const WhatIDeliver = () => {
             {deliverables.map(({ icon: Icon, title, body }, idx) => (
               <div
                 key={title}
-                className={`card-hover card-animate stagger-${idx + 1} ${isInView ? "in-view" : ""} rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm p-6`}
+                onMouseMove={onSpotlightMove}
+                className={`spotlight card-hover card-animate stagger-${idx + 1} ${isInView ? "in-view" : ""} rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm p-6`}
               >
                 <span className="inline-flex rounded-md bg-primary/10 p-2.5 text-primary mb-4">
                   <Icon className="h-5 w-5" aria-hidden="true" />

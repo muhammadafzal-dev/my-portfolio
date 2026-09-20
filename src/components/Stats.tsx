@@ -10,7 +10,7 @@ type Stat = {
 };
 
 const stats: Stat[] = [
-  { value: 6, suffix: "+ yrs", label: "Experience" },
+  { value: 6, suffix: "+", label: "Years Building" },
   { value: 30, suffix: "+", label: "Projects Shipped" },
   { value: 20, suffix: "+", label: "Mobile Apps" },
   { value: 2, suffix: "", label: "Companies" },
@@ -25,34 +25,29 @@ function useCountUp(target: number, trigger: boolean, duration = 1400) {
     startedRef.current = true;
 
     const start = performance.now();
-    const isFloat = target % 1 !== 0;
-
     const tick = (now: number) => {
       const progress = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
-      const current = target * eased;
-      setValue(isFloat ? Math.round(current * 10) / 10 : Math.round(current));
+      setValue(Math.round(target * eased));
       if (progress < 1) requestAnimationFrame(tick);
     };
-
     requestAnimationFrame(tick);
   }, [target, trigger, duration]);
 
   return value;
 }
 
-const StatCard = ({ stat, trigger, delay }: { stat: Stat; trigger: boolean; delay: number }) => {
+const StatItem = ({ stat, trigger }: { stat: Stat; trigger: boolean }) => {
   const value = useCountUp(stat.value, trigger);
   return (
-    <div
-      className="rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm p-6 text-center opacity-0 animate-fade-in"
-      style={{ animationDelay: `${delay}ms`, animationFillMode: "forwards" }}
-    >
-      <p className="text-4xl md:text-5xl font-bold text-primary tracking-tight">
+    <div className="px-4 py-6 sm:py-8 text-center">
+      <p className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground tabular-nums">
         {value}
-        <span className="text-3xl md:text-4xl">{stat.suffix}</span>
+        <span className="text-primary">{stat.suffix}</span>
       </p>
-      <p className="text-sm text-muted-foreground mt-2">{stat.label}</p>
+      <p className="mt-2 font-mono text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-muted-foreground">
+        {stat.label}
+      </p>
     </div>
   );
 };
@@ -61,18 +56,19 @@ const Stats = () => {
   const { ref, isInView } = useInView({ threshold: 0.3 });
 
   return (
-    <section ref={ref} className="py-12 border-y border-border/40">
+    <section ref={ref} id="snapshot" className="py-16 sm:py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <p className="font-mono text-xs tracking-[0.2em] text-primary uppercase mb-5 flex items-center gap-2">
-            <span className="text-primary">01</span>
-            <span className="text-primary/60">/</span>
-            <span>Snapshot</span>
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {stats.map((stat, i) => (
-              <StatCard key={stat.label} stat={stat} trigger={isInView} delay={i * 100} />
-            ))}
+          <div
+            className={`rounded-3xl glass-pill px-2 sm:px-6 section-animate ${
+              isInView ? "in-view" : ""
+            }`}
+          >
+            <div className="grid grid-cols-2 sm:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-border/50">
+              {stats.map((stat) => (
+                <StatItem key={stat.label} stat={stat} trigger={isInView} />
+              ))}
+            </div>
           </div>
         </div>
       </div>

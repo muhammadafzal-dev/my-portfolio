@@ -1,7 +1,9 @@
 import { type Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist, Geist_Mono, Instrument_Serif } from 'next/font/google'
 
 import Providers from '@/app/providers'
+import SiteBackground from '@/components/SiteBackground'
+import CursorFX from '@/components/CursorFX'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
 
 import './globals.css'
@@ -14,6 +16,13 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
+})
+
+const instrumentSerif = Instrument_Serif({
+  variable: '--font-instrument-serif',
+  subsets: ['latin'],
+  weight: '400',
+  style: ['normal', 'italic'],
 })
 
 const siteUrl = "https://muhammadafzal.vercel.app";
@@ -89,8 +98,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const themeInitScript = `(function(){try{var s=localStorage.getItem('theme');var t=(s==='dark'||s==='light')?s:(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.classList.add(t);}catch(e){}})();`;
-
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -123,17 +130,18 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+    <html lang="en" className="dark h-full antialiased" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} bg-background text-foreground`}
       >
+        <SiteBackground />
+        <CursorFX />
         <Providers>
           {children}
           <WhatsAppFloat />

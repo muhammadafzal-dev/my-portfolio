@@ -55,6 +55,8 @@ module.exports = {
         'popover-foreground': 'hsl(var(--popover-foreground))',
         card: 'hsl(var(--card))',
         'card-foreground': 'hsl(var(--card-foreground))',
+        success: 'hsl(var(--success))',
+        'success-foreground': 'hsl(var(--success-foreground))',
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -64,6 +66,7 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-geist-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         mono: ['var(--font-geist-mono)', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'monospace'],
+        serif: ['var(--font-instrument-serif)', 'Georgia', 'ui-serif', 'serif'],
       },
       keyframes: {
         'accordion-down': {

@@ -10,6 +10,7 @@ import useInView from "@/hooks/useInView";
 import { projects, projectSlug } from "@/lib/projects";
 import SectionHeading from "@/components/SectionHeading";
 import ProjectThumb from "@/components/ProjectThumb";
+import { onSpotlightMove } from "@/lib/spotlight";
 
 const platformIcon = (label: string) => {
   const l = label.toLowerCase();
@@ -47,7 +48,8 @@ const Projects = () => {
             {projects.slice(0, 4).map((project, index) => (
               <div
                 key={project.name}
-                className={`group flex flex-col rounded-xl border border-border/40 bg-background/40 hover:border-primary/50 hover:bg-background/60 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden card-animate stagger-${(index % 3) + 1} ${isInView ? "in-view" : ""}`}
+                onMouseMove={onSpotlightMove}
+                className={`spotlight group flex flex-col rounded-xl border border-border/40 bg-background/40 hover:border-primary/50 hover:bg-background/60 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden card-animate stagger-${(index % 3) + 1} ${isInView ? "in-view" : ""}`}
               >
                 <ProjectThumb project={project} heightClass="h-44" />
 

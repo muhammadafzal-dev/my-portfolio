@@ -31,40 +31,50 @@
     --input: 240 5.9% 90%;
     --ring: 173 80.4% 40%;
 
+    --success: 152 55% 42%;
+    --success-foreground: 0 0% 100%;
+
     --radius: 0.5rem;
 
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
+    --font-serif: var(--font-instrument-serif);
   }
 
   .dark {
-    --background: 0 0% 0%;
-    --foreground: 240 5.9% 90%;
+    /* Rebrand v3 — lighter blue-navy base, soft blue accent, green status */
+    --background: 205 33% 13%;
+    --foreground: 200 24% 96%;
 
-    --card: 240 5.9% 10%;
-    --card-foreground: 240 4.8% 95.9%;
+    --card: 205 30% 16%;
+    --card-foreground: 200 24% 96%;
 
-    --popover: 240 5.9% 10%;
-    --popover-foreground: 240 4.8% 95.9%;
+    --popover: 205 32% 14%;
+    --popover-foreground: 200 24% 96%;
 
-    --primary: 172 66% 50.4%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 205 66% 66%;
+    --primary-foreground: 205 45% 10%;
 
-    --secondary: 240 5.3% 26.1%;
-    --secondary-foreground: 240 4.8% 95.9%;
+    --secondary: 204 26% 20%;
+    --secondary-foreground: 200 24% 96%;
 
-    --muted: 240 5.3% 26.1%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 204 22% 23%;
+    --muted-foreground: 205 17% 72%;
 
-    --accent: 176 60.8% 19%;
-    --accent-foreground: 240 4.8% 95.9%;
+    --accent: 205 50% 30%;
+    --accent-foreground: 200 24% 96%;
 
-    --destructive: 0 62.8% 30.6%;
+    --success: 152 60% 50%;
+    --success-foreground: 152 60% 8%;
+
+    --destructive: 0 62.8% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 5.3% 26.1%;
-    --input: 240 5.3% 26.1%;
-    --ring: 172 66% 50.4%;
+    --border: 204 20% 30%;
+    --input: 204 20% 30%;
+    --ring: 205 66% 66%;
+
+    --font-serif: var(--font-instrument-serif);
   }
 
   * {
@@ -85,6 +95,100 @@
 @layer components {
   .gradient-text {
     @apply bg-gradient-to-r from-primary to-teal-700 text-transparent bg-clip-text;
+  }
+
+  /* --- Rebrand v3 utilities --- */
+
+  /* Serif italic accent word inside a headline */
+  .serif-accent {
+    font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    background: linear-gradient(
+      180deg,
+      hsl(var(--primary)) 0%,
+      hsl(205 62% 74%) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Floating frosted pill (nav, badges) */
+  .glass-pill {
+    @apply border border-white/10 bg-white/[0.04] backdrop-blur-xl;
+    box-shadow:
+      0 1px 0 0 hsl(0 0% 100% / 0.06) inset,
+      0 8px 30px -12px hsl(0 0% 0% / 0.6);
+  }
+
+  /* Blue glow around primary CTAs */
+  .glow-primary {
+    box-shadow:
+      0 0 0 1px hsl(var(--primary) / 0.5),
+      0 8px 30px -6px hsl(var(--primary) / 0.55),
+      0 0 24px -2px hsl(var(--primary) / 0.4);
+  }
+
+  .glow-success {
+    box-shadow:
+      0 0 0 1px hsl(var(--success) / 0.5),
+      0 10px 34px -8px hsl(var(--success) / 0.6),
+      0 0 22px -2px hsl(var(--success) / 0.45);
+  }
+
+  /* Cursor-follow spotlight on cards */
+  .spotlight {
+    position: relative;
+  }
+  .spotlight::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 0;
+    background: radial-gradient(
+      260px circle at var(--mx, 50%) var(--my, 0%),
+      hsl(var(--primary) / 0.16),
+      transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+  .spotlight:hover::before {
+    opacity: 1;
+  }
+  /* keep real content above the glow */
+  .spotlight > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Mono section index — "01 — WORK" */
+  .section-index {
+    @apply inline-flex items-center gap-3 font-mono text-[11px] tracking-[0.28em] uppercase text-primary/80;
+  }
+  .section-index::before {
+    content: "";
+    @apply h-px w-8 bg-primary/50;
+  }
+
+  /* Live status dot */
+  .status-dot {
+    @apply relative inline-flex h-2 w-2;
+  }
+  .status-dot::before {
+    content: "";
+    @apply absolute inline-flex h-full w-full rounded-full;
+    background: hsl(var(--success) / 0.55);
+    animation: ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+  .status-dot::after {
+    content: "";
+    @apply relative inline-flex h-2 w-2 rounded-full;
+    background: hsl(var(--success));
   }
 
   .card-hover {
@@ -284,6 +388,23 @@
 @keyframes blink {
   50% {
     border-color: transparent;
+  }
+}
+
+@keyframes ping {
+  75%,
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-40px, -60px, 0);
   }
 }
 

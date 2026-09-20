@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import useInView from "@/hooks/useInView";
 import SectionHeading from "@/components/SectionHeading";
 import { Code2, Server, Smartphone, Plug, FlaskConical, Cloud, Activity, Network } from "lucide-react";
+import { onSpotlightMove } from "@/lib/spotlight";
 
 const Skills = () => {
   const { ref, isInView } = useInView({ threshold: 0.1 });
@@ -49,6 +50,9 @@ const Skills = () => {
   ];
   const mobileSkills = [
     "React Native",
+    "Flutter",
+    "Dart",
+    "Expo",
     "Redux Toolkit",
     "Reanimated",
     "Deep Linking",
@@ -161,7 +165,8 @@ const Skills = () => {
           ].map(({ icon: Icon, title, slug, items }, idx) => (
             <Card
               key={title}
-              className={`card-hover card-animate stagger-${idx + 1} ${isInView ? "in-view" : ""} border-border/60 bg-background/60 backdrop-blur-sm`}
+              onMouseMove={onSpotlightMove}
+              className={`spotlight card-hover card-animate stagger-${idx + 1} ${isInView ? "in-view" : ""} border-border/60 bg-background/60 backdrop-blur-sm`}
             >
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between gap-3 mb-1">

@@ -1,79 +1,75 @@
 "use client";
 
-
+import Image from "next/image";
 import useInView from "@/hooks/useInView";
-import SectionHeading from "@/components/SectionHeading";
+
+const META = [
+  { label: "Based in", value: "Lahore, Pakistan" },
+  { label: "Working", value: "Remote · Europe, US, MENA" },
+  { label: "Focus", value: "Full-Stack · AI · Mobile" },
+] as const;
 
 const About = () => {
-  const { ref, isInView } = useInView({ threshold: 0.1 });
+  const { ref, isInView } = useInView({ threshold: 0.15 });
 
   return (
-    <section
-      id="about"
-      className="py-20 bg-secondary/30"
-      ref={ref}
-    >
-      <div className={`container mx-auto px-4 section-animate ${isInView ? "in-view" : ""}`}>
-        <div className="max-w-5xl mx-auto">
-          <SectionHeading
-            index="03"
-            label="About"
-            title="About Me"
-            align="left"
-          />
+    <section id="about" className="py-20 sm:py-28" ref={ref}>
+      <div
+        className={`container mx-auto px-4 section-animate ${isInView ? "in-view" : ""}`}
+      >
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-[minmax(0,460px)_1fr] gap-10 lg:gap-16 items-start">
+          {/* Portrait */}
+          <div className="relative">
+            <div
+              aria-hidden
+              className="absolute -inset-4 rounded-[2rem] bg-primary/10 blur-3xl"
+            />
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.75rem] border border-white/10 bg-secondary shadow-2xl ring-1 ring-primary/15">
+              <Image
+                src="/about.png"
+                alt="Muhammad Afzal"
+                fill
+                sizes="(min-width: 1024px) 460px, 100vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
 
-          <div className="grid lg:grid-cols-[1fr_300px] gap-10 items-start">
-            <div className={`space-y-5 text-pretty leading-relaxed text-muted-foreground card-animate stagger-1 ${isInView ? "in-view" : ""}`}>
+          {/* Copy */}
+          <div>
+            <span className="section-index">01 — About</span>
+
+            <h2 className="mt-6 text-4xl sm:text-5xl font-bold tracking-tight leading-[1.05] text-balance">
+              I take products from <span className="serif-accent">idea to release.</span>
+            </h2>
+
+            <div className="mt-7 space-y-5 text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl">
               <p>
-                Full‑stack developer with <span className="text-foreground">6+ years</span> building scalable web and
-                cross‑platform mobile applications. Strong experience across React.js, Next.js, React Native, and
-                Node/NestJS with hands‑on backend delivery.
+                <span className="font-semibold text-foreground">6+ years</span> building web,
+                mobile &amp; desktop products — now focused on the layer where AI earns its place:
+                voice agents that call real tools, retrieval that returns the right context, and
+                generative features that survive contact with real users.
               </p>
               <p>
-                Currently <span className="text-foreground">leading frontend at Obenan</span> — architected the
-                Landing Platform (Next.js + Strapi), shipped a multi-language translation system, and integrated
-                AI voice agent workflows with OpenAI, Hume AI, ElevenLabs, and Pipecat. Maintain 90–95+ Lighthouse,
-                Stripe payments, and observability via Sentry, Grafana, and Microsoft Clarity.
-              </p>
-              <p>
-                I care about performance budgets, accessible UI, and ownership across frontend, mobile, and backend.
-                If it ships and stays fast under load, I'm happy.
+                <span className="font-semibold text-foreground">30+ projects</span> delivered
+                across SaaS, healthcare, fintech, real estate, and e-commerce. Currently
+                Full-Stack / AI lead at <span className="font-semibold text-foreground">Obenan</span>{" "}
+                — every build finished and shipped.
               </p>
             </div>
 
-            <aside className={`card-animate stagger-2 ${isInView ? "in-view" : ""}`}>
-              <div className="rounded-xl border border-border/60 bg-background/60 backdrop-blur-sm p-5">
-                <p className="font-mono text-[10px] tracking-[0.2em] text-primary uppercase mb-4 flex items-center gap-2">
-                  <span className="text-primary">—</span>
-                  At a glance
-                </p>
-                <dl className="space-y-3 text-sm">
-                  <div className="flex items-baseline justify-between gap-3 border-b border-border/40 pb-3">
-                    <dt className="text-muted-foreground">Experience</dt>
-                    <dd className="font-mono text-foreground">6+ years</dd>
-                  </div>
-                  <div className="flex items-baseline justify-between gap-3 border-b border-border/40 pb-3">
-                    <dt className="text-muted-foreground">Focus</dt>
-                    <dd className="font-mono text-foreground text-right">Full-stack · AI</dd>
-                  </div>
-                  <div className="flex items-baseline justify-between gap-3 border-b border-border/40 pb-3">
-                    <dt className="text-muted-foreground">Based in</dt>
-                    <dd className="font-mono text-foreground">Lahore, PK</dd>
-                  </div>
-                  <div className="flex items-baseline justify-between gap-3 border-b border-border/40 pb-3">
-                    <dt className="text-muted-foreground">Open to</dt>
-                    <dd className="font-mono text-foreground text-right">Remote · Full-time</dd>
-                  </div>
-                  <div className="flex items-baseline justify-between gap-3">
-                    <dt className="text-muted-foreground">Status</dt>
-                    <dd className="font-mono text-primary flex items-center gap-1.5">
-                      <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-                      Available
-                    </dd>
-                  </div>
-                </dl>
-              </div>
-            </aside>
+            {/* Meta row */}
+            <dl className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-border/50 pt-6">
+              {META.map((m) => (
+                <div key={m.label}>
+                  <dt className="font-mono text-[10px] tracking-[0.25em] uppercase text-muted-foreground">
+                    {m.label}
+                  </dt>
+                  <dd className="mt-1.5 text-sm font-medium text-foreground">{m.value}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </div>
       </div>

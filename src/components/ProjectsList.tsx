@@ -7,6 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 import { FaPlay, FaApple, FaGlobe } from "react-icons/fa";
 import { projectSlug, type Project } from "@/lib/projects";
 import ProjectThumb from "@/components/ProjectThumb";
+import { onSpotlightMove } from "@/lib/spotlight";
 
 type Filter = "all" | "web" | "mobile" | "ai";
 
@@ -88,7 +89,8 @@ const ProjectsList = ({ projects }: { projects: Project[] }) => {
         {filtered.map((project) => (
           <div
             key={`${project.name}-${project.link.href}`}
-            className="group flex flex-col rounded-xl border border-border/40 bg-background/40 hover:border-primary/50 hover:bg-background/60 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden"
+            onMouseMove={onSpotlightMove}
+            className="spotlight group flex flex-col rounded-xl border border-border/40 bg-background/40 hover:border-primary/50 hover:bg-background/60 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden"
           >
             <ProjectThumb project={project} heightClass="h-40" />
 
