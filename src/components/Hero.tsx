@@ -15,12 +15,12 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden px-4 pt-28 pb-16"
+      className="relative min-h-screen flex items-start lg:items-center overflow-hidden px-4 pt-24 sm:pt-28 pb-16"
     >
       <div className="relative z-10 mx-auto w-full max-w-6xl">
-        <div className="grid lg:grid-cols-[minmax(0,420px)_1fr] gap-10 lg:gap-14 items-center">
+        <div className="grid lg:grid-cols-[minmax(0,420px)_1fr] gap-6 lg:gap-14 items-center">
           {/* Portrait */}
-          <div className="relative order-1 lg:order-none mx-auto lg:mx-0 w-full max-w-[300px] lg:max-w-none animate-fade-in">
+          <div className="relative mx-auto lg:mx-0 w-full max-w-[190px] sm:max-w-[230px] lg:max-w-none animate-fade-in">
             {/* glow behind */}
             <div
               aria-hidden
@@ -55,8 +55,8 @@ const Hero = () => {
             </h1>
 
             {/* Name · role */}
-            <p className="flex items-center gap-3 font-mono text-sm animate-fade-in-delay-1">
-              <span className="font-semibold text-foreground">Muhammad Afzal</span>
+            <p className="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3 font-mono text-sm animate-fade-in-delay-1">
+              <span className="font-semibold text-foreground whitespace-nowrap">Muhammad Afzal</span>
               <span className="hidden sm:block h-px w-8 bg-border" aria-hidden />
               <HeroTyping />
             </p>
