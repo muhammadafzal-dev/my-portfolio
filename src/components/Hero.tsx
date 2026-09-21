@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import HeroTyping from "@/components/HeroTyping";
 
 const METRICS = [
   { v: "6+", l: "Years" },
@@ -57,7 +58,7 @@ const Hero = () => {
             <p className="flex items-center gap-3 font-mono text-sm animate-fade-in-delay-1">
               <span className="font-semibold text-foreground">Muhammad Afzal</span>
               <span className="hidden sm:block h-px w-8 bg-border" aria-hidden />
-              <span className="text-primary/90">Senior Full-Stack / AI Engineer</span>
+              <HeroTyping />
             </p>
 
             {/* Body */}

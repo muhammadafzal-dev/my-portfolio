@@ -1,10 +1,5 @@
-"use client";
-
-import { useEffect, useRef } from "react";
-
-// Full-page ambient background — deep navy-teal base, blueprint grid,
-// radial glows, and a layered bokeh starfield. Subtle scroll parallax gives
-// the field depth (far layers drift slower than near ones). Decorative only.
+// Full-page ambient background — deep navy-teal base, blueprint grid, radial
+// glows, and a faint star/bokeh field. Static: fixed in place, no scroll motion.
 
 type Dot = {
   top: string;
@@ -61,127 +56,91 @@ for (let r = 0; r < ROWS; r++) {
   }
 }
 
-const SiteBackground = () => {
-  const gridRef = useRef<HTMLDivElement>(null);
-  const glowRef = useRef<HTMLDivElement>(null);
-  const fieldRef = useRef<HTMLDivElement>(null);
+const SiteBackground = () => (
+  <div aria-hidden className="fixed inset-0 -z-10 overflow-hidden bg-background">
+    {/* Base vertical gradient */}
+    <div
+      className="absolute inset-0"
+      style={{
+        background:
+          "linear-gradient(180deg, hsl(206 34% 16%) 0%, hsl(205 33% 13%) 45%, hsl(207 36% 10%) 100%)",
+      }}
+    />
 
-  useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    {/* Blueprint grid */}
+    <div
+      className="absolute inset-0 opacity-[0.55]"
+      style={{
+        backgroundImage:
+          "linear-gradient(hsl(205 45% 58% / 0.09) 1px, transparent 1px), linear-gradient(90deg, hsl(205 45% 58% / 0.09) 1px, transparent 1px)",
+        backgroundSize: "56px 56px",
+        maskImage: "radial-gradient(120% 90% at 50% 0%, black 30%, transparent 80%)",
+        WebkitMaskImage: "radial-gradient(120% 90% at 50% 0%, black 30%, transparent 80%)",
+      }}
+    />
 
-    let raf = 0;
-    const update = () => {
-      raf = 0;
-      const y = window.scrollY;
-      if (gridRef.current)
-        gridRef.current.style.transform = `translate3d(0, ${-Math.min(y * 0.02, 60)}px, 0) scale(1.15)`;
-      if (glowRef.current)
-        glowRef.current.style.transform = `translate3d(0, ${-Math.min(y * 0.04, 110)}px, 0) scale(1.25)`;
-      if (fieldRef.current)
-        fieldRef.current.style.transform = `translate3d(0, ${-Math.min(y * 0.06, 170)}px, 0) scale(1.4)`;
-    };
-    const onScroll = () => {
-      if (!raf) raf = requestAnimationFrame(update);
-    };
+    {/* Radial accent glows */}
+    <div
+      className="absolute inset-0"
+      style={{
+        background:
+          "radial-gradient(900px 520px at 78% 6%, hsl(205 70% 60% / 0.14), transparent 60%), radial-gradient(760px 480px at 8% 30%, hsl(200 65% 55% / 0.10), transparent 60%), radial-gradient(700px 500px at 50% 100%, hsl(205 66% 58% / 0.08), transparent 65%)",
+      }}
+    />
 
-    update();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      if (raf) cancelAnimationFrame(raf);
-    };
-  }, []);
+    {/* Soft top edge highlight */}
+    <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-success/30 to-transparent" />
 
-  return (
-    <div aria-hidden className="fixed inset-0 -z-10 overflow-hidden bg-background">
-      {/* Base vertical gradient (static, full cover) */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(180deg, hsl(206 34% 16%) 0%, hsl(205 33% 13%) 45%, hsl(207 36% 10%) 100%)",
-        }}
-      />
-
-      {/* Blueprint grid — slowest parallax layer */}
-      <div
-        ref={gridRef}
-        className="absolute inset-0 opacity-[0.4] will-change-transform"
-        style={{
-          backgroundImage:
-            "linear-gradient(hsl(205 40% 50% / 0.06) 1px, transparent 1px), linear-gradient(90deg, hsl(205 40% 50% / 0.06) 1px, transparent 1px)",
-          backgroundSize: "56px 56px",
-          maskImage: "radial-gradient(120% 90% at 50% 0%, black 30%, transparent 80%)",
-          WebkitMaskImage: "radial-gradient(120% 90% at 50% 0%, black 30%, transparent 80%)",
-        }}
-      />
-
-      {/* Radial accent glows — mid parallax */}
-      <div
-        ref={glowRef}
-        className="absolute inset-0 will-change-transform"
-        style={{
-          background:
-            "radial-gradient(900px 520px at 78% 6%, hsl(205 70% 60% / 0.14), transparent 60%), radial-gradient(760px 480px at 8% 30%, hsl(200 65% 55% / 0.10), transparent 60%), radial-gradient(700px 500px at 50% 100%, hsl(205 66% 58% / 0.08), transparent 65%)",
-        }}
-      />
-
-      {/* Soft top edge highlight */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-success/30 to-transparent" />
-
-      {/* Starfield — nearest parallax layer (constellation + bokeh + sharp stars) */}
-      <div ref={fieldRef} className="absolute inset-0 will-change-transform">
-        {/* Faint scattered star dots (no connecting lines) */}
-        <svg
-          className="absolute inset-0 h-full w-full"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="xMidYMid slice"
-        >
-          <g fill="hsl(205 65% 74% / 0.38)">
-            {NODES.map(([x, y], i) => (
-              <circle key={i} cx={x} cy={y} r="0.1" />
-            ))}
-          </g>
-        </svg>
-
-        {BOKEH.map((d, i) => (
-          <span
-            key={`b-${i}`}
-            className="absolute rounded-full"
-            style={{
-              top: d.top,
-              left: d.left,
-              width: `${d.size}px`,
-              height: `${d.size}px`,
-              opacity: d.opacity,
-              filter: `blur(${d.blur ?? 4}px)`,
-              background:
-                "radial-gradient(circle, hsl(205 70% 70% / 0.9) 0%, hsl(205 70% 60% / 0) 70%)",
-            }}
-          />
+    {/* Star field — faint dots + bokeh + twinkling stars */}
+    <svg
+      className="absolute inset-0 h-full w-full"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="xMidYMid slice"
+    >
+      <g fill="hsl(205 65% 74% / 0.38)">
+        {NODES.map(([x, y], i) => (
+          <circle key={i} cx={x} cy={y} r="0.1" />
         ))}
-        {STARS.map((d, i) => (
-          <span
-            key={`s-${i}`}
-            className="absolute rounded-full bg-white animate-twinkle"
-            style={{
-              top: d.top,
-              left: d.left,
-              width: `${d.size}px`,
-              height: `${d.size}px`,
-              opacity: d.opacity,
-              animationDuration: d.duration,
-              animationDelay: d.delay,
-              boxShadow: `0 0 ${d.size * 3}px hsl(205 70% 75% / 0.7)`,
-            }}
-          />
-        ))}
-      </div>
+      </g>
+    </svg>
 
-      {/* Bottom fade into base */}
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
-    </div>
-  );
-};
+    {BOKEH.map((d, i) => (
+      <span
+        key={`b-${i}`}
+        className="absolute rounded-full"
+        style={{
+          top: d.top,
+          left: d.left,
+          width: `${d.size}px`,
+          height: `${d.size}px`,
+          opacity: d.opacity,
+          filter: `blur(${d.blur ?? 4}px)`,
+          background:
+            "radial-gradient(circle, hsl(205 70% 70% / 0.9) 0%, hsl(205 70% 60% / 0) 70%)",
+        }}
+      />
+    ))}
+
+    {STARS.map((d, i) => (
+      <span
+        key={`s-${i}`}
+        className="absolute rounded-full bg-white animate-twinkle"
+        style={{
+          top: d.top,
+          left: d.left,
+          width: `${d.size}px`,
+          height: `${d.size}px`,
+          opacity: d.opacity,
+          animationDuration: d.duration,
+          animationDelay: d.delay,
+          boxShadow: `0 0 ${d.size * 3}px hsl(205 70% 75% / 0.7)`,
+        }}
+      />
+    ))}
+
+    {/* Bottom fade into base */}
+    <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
+  </div>
+);
 
 export default SiteBackground;
