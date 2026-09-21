@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  React · Next.js · React Native · Node.js · NestJS · OpenAI · AWS — shipping AI-powered features, multi-tenant SaaS platforms, and cross-platform apps to production.
+  React · Next.js · React Native · Flutter · Node.js · NestJS · OpenAI · AWS — shipping AI-powered features, multi-tenant SaaS platforms, and cross-platform apps to production.
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@
 
 <p align="center">
   <a href="https://muhammadafzal.vercel.app">
-    <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&pause=900&color=14B8A6&center=true&vCenter=true&width=820&height=40&lines=Senior+Full-Stack+%2F+AI+Engineer;React.js+%26+Next.js+Developer;React+Native+Developer;Node.js+%26+NestJS+Developer;AI+Voice+Agents+%E2%80%94+OpenAI+%C2%B7+Hume+%C2%B7+ElevenLabs" alt="typing animation" />
+    <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&pause=900&color=5BA3D6&center=true&vCenter=true&width=820&height=40&lines=Senior+Full-Stack+%2F+AI+Engineer;React.js+%26+Next.js+Developer;React+Native+%26+Flutter+Developer;Node.js+%26+NestJS+Developer;AI+Voice+Agents+%E2%80%94+OpenAI+%C2%B7+Hume+%C2%B7+ElevenLabs" alt="typing animation" />
   </a>
 </p>
 
@@ -39,7 +39,7 @@ I'm a **Senior Full-Stack / AI Engineer** building production-ready products acr
 
 - 🤖 Integrate **AI — OpenAI, Hume AI, ElevenLabs, Pipecat** — into real product workflows: voice agents, AI-powered features, and secure server-side integrations.
 - 🧩 Strong full-stack expertise in **Next.js, NestJS, Node.js, React, MongoDB, and PostgreSQL**, across serverless and container-based architectures with CI/CD.
-- 📱 Ship cross-platform **React Native** apps to **App Store, Google Play, Vercel, and AWS** across 4 platforms — Web · iOS · Android · Desktop (Electron).
+- 📱 Ship cross-platform **React Native & Flutter** apps to **App Store, Google Play, Vercel, and AWS** across 4 platforms — Web · iOS · Android · Desktop (Electron).
 - 🏗️ Owning **frontend & backend architecture, system design, code reviews, and technical mentoring** — raising delivery speed and code quality.
 - 📍 Based in **Lahore, Pakistan** — working with clients and teams worldwide.
 
@@ -49,7 +49,7 @@ I'm a **Senior Full-Stack / AI Engineer** building production-ready products acr
 
 - **AI-powered product features** — OpenAI, Hume AI, ElevenLabs, and Pipecat integrated into real workflows: voice agents, AI-assisted features, and secure server-side integrations.
 - **Full-stack web products** — end-to-end platforms on Next.js + NestJS/Node, MongoDB & PostgreSQL, and Prisma, with auth and multi-tenancy.
-- **Cross-platform mobile apps** — production-grade iOS & Android from a single React Native codebase, deployed to the App Store and Google Play.
+- **Cross-platform mobile apps** — production-grade iOS & Android with **React Native & Flutter**, deployed to the App Store and Google Play.
 - **Cross-platform SaaS** — one account across **Web · Mobile · Desktop (Electron)** sharing a backend, API client, and design system (TurboRepo monorepos).
 - **Payments & subscriptions** — Stripe subscriptions and RevenueCat in-app purchases, production-grade with webhook handling.
 - **Performance-first delivery** — SSR, caching, and image optimization to consistent **90–95+ Lighthouse** scores.
@@ -73,7 +73,7 @@ I'm a **Senior Full-Stack / AI Engineer** building production-ready products acr
 - REST APIs, GraphQL (Apollo), WebSockets, Socket.IO, BullMQ / Queue Processing, Strapi (Headless CMS)
 
 #### Mobile
-- React Native, Redux Toolkit, Reanimated
+- React Native, Flutter, Dart, Expo, Redux Toolkit, Reanimated
 - Deep Linking, Push Notifications, Offline Storage, CodePush
 - RevenueCat, App Center, App Store & Play Store deployment
 
@@ -139,7 +139,7 @@ Four independently deployable Next.js apps composed into one product on a single
 | ------- | ------------ |
 | **Full-Stack Development** | Next.js App Router + RSC, NestJS/Express APIs, MongoDB & PostgreSQL + Prisma, auth, multi-tenancy |
 | **SaaS Product Engineering** | Multi-tenant architecture, subscription billing, admin dashboards, referral/affiliate systems |
-| **React Native App Development** | Production iOS + Android from one codebase, push & deep links, offline storage, CI/CD to both stores |
+| **Mobile App Development** | Production iOS + Android with **React Native & Flutter**, push & deep links, offline storage, CI/CD to both stores |
 | **App Store & Play Deployment** | App Store Connect & Play Console setup, release management, store listings |
 | **AI & Voice Agent Integration** | OpenAI, Hume AI, ElevenLabs, Pipecat — voice agents and AI-powered workflows, secure server-side |
 | **Payments & Subscriptions** | Stripe subscriptions, RevenueCat, in-app purchases, webhook handling |
@@ -156,7 +156,7 @@ Four independently deployable Next.js apps composed into one product on a single
 
 ## 💼 Currently Open To
 
-- **Senior engineering roles** (Full-Stack · AI · React Native)
+- **Senior engineering roles** (Full-Stack · AI · React Native · Flutter)
 - **Freelance & contract projects** — AI-powered features, SaaS platforms, full-stack builds, mobile apps
 - **Long-term collaborations** with product teams shipping to web & mobile
 
@@ -194,5 +194,5 @@ Four independently deployable Next.js apps composed into one product on a single
 </p>
 
 <p align="center">
-  <sub>Senior Full-Stack Engineer · AI Engineer · Full Stack Developer · React.js Developer · Next.js Developer · React Native Developer · Node.js Developer · NestJS Developer · TypeScript Developer · AI Workflow Engineer · MERN Stack Developer</sub>
+  <sub>Senior Full-Stack Engineer · AI Engineer · Full Stack Developer · React.js Developer · Next.js Developer · React Native Developer · Flutter Developer · Node.js Developer · NestJS Developer · TypeScript Developer · AI Workflow Engineer · MERN Stack Developer</sub>
 </p>
