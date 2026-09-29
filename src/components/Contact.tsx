@@ -4,11 +4,13 @@ import { Github, Linkedin, Mail, Clock, MapPin, FileText } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import useInView from "@/hooks/useInView";
 import SectionHeading from "@/components/SectionHeading";
+import BookCallButton from "@/components/BookCallButton";
 import { onSpotlightMove } from "@/lib/spotlight";
 
 const EMAIL = "afzalj166@gmail.com";
 const WHATSAPP_URL =
   "https://wa.me/923056129131?text=Hi%20Muhammad%2C%20I%20saw%20your%20portfolio";
+const CAL_LINK = "muhammadafzal-dev/30min";
 
 const SOCIALS = [
   { label: "LinkedIn", href: "https://linkedin.com/in/muhammadafzal-dev", Icon: Linkedin },
@@ -35,7 +37,8 @@ const Contact = () => {
           />
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <div className="flex flex-col sm:flex-row items-center justify-center flex-wrap gap-3">
+            <BookCallButton calLink={CAL_LINK} />
             <a
               href={WHATSAPP_URL}
               target="_blank"
