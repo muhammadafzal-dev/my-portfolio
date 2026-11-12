@@ -74,7 +74,7 @@ const ProjectThumb = ({ project, heightClass = "h-44" }: Props) => {
     >
       <Image
         src={project.image}
-        alt={`${project.name} screenshot`}
+        alt={`${project.name} ${kind === "illustration" ? "illustration" : "screenshot"}`}
         fill
         sizes="(min-width: 768px) 50vw, 100vw"
         className={`object-cover object-top transition-transform duration-500 group-hover:scale-105 ${

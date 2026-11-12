@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Reddr personal safety</title>
+  <desc id="desc">Illustration of an SOS alert connecting a person with their trusted circle on a map.</desc>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#111827"/>
+      <stop offset="1" stop-color="#1f2937"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#ef4444" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#ef4444" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#background)"/>
+  <g fill="none" stroke="#6b7280" stroke-opacity=".18" stroke-width="2">
+    <path d="M0 140H1200M0 280H1200M0 420H1200M0 560H1200M130 0V675M340 0V675M550 0V675M760 0V675M970 0V675"/>
+    <path d="M0 80L1200 470M0 490L1200 110"/>
+  </g>
+  <circle cx="660" cy="335" r="290" fill="url(#glow)"/>
+  <g fill="none" stroke="#fb7185" stroke-opacity=".45" stroke-width="4" stroke-dasharray="12 12">
+    <path d="M660 338L406 215M660 338L894 234M660 338L890 495"/>
+  </g>
+  <g fill="#1f2937" stroke="#fda4af" stroke-width="5">
+    <circle cx="406" cy="215" r="26"/><circle cx="894" cy="234" r="26"/><circle cx="890" cy="495" r="26"/>
+  </g>
+  <circle cx="660" cy="338" r="112" fill="#ef4444" fill-opacity=".12" stroke="#ef4444" stroke-opacity=".5" stroke-width="3"/>
+  <circle cx="660" cy="338" r="79" fill="#ef4444"/>
+  <text x="660" y="353" fill="#fff" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="48">SOS</text>
+  <text x="80" y="104" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="62">Reddr</text>
+  <text x="84" y="151" fill="#fca5a5" font-family="Arial,sans-serif" font-size="25" letter-spacing="3">NEVER ALONE</text>
+  <text x="82" y="615" fill="#d1d5db" font-family="Arial,sans-serif" font-size="27">One alert. Your trusted circle.</text>
+</svg>

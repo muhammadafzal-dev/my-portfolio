@@ -72,7 +72,7 @@ export async function generateMetadata({
 
 const platformIcon = (label: string) => {
   const l = label.toLowerCase();
-  if (l.includes("ios")) return FaApple;
+  if (l.includes("ios") || l.includes("testflight")) return FaApple;
   if (l.includes("android")) return FaPlay;
   return FaGlobe;
 };

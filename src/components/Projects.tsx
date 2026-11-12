@@ -12,7 +12,7 @@ import { onSpotlightMove } from "@/lib/spotlight";
 
 const platformIcon = (label: string) => {
   const l = label.toLowerCase();
-  if (l.includes("ios")) return FaApple;
+  if (l.includes("ios") || l.includes("testflight")) return FaApple;
   if (l.includes("android")) return FaPlay;
   return FaGlobe;
 };
@@ -111,7 +111,7 @@ const Projects = () => {
                           className="flex items-center gap-1.5 rounded-full px-3 py-1 text-xs border border-primary/40 bg-primary/10 text-foreground hover:bg-primary/20 hover:border-primary/60 transition-colors"
                         >
                           <FaApple className="h-3.5 w-3.5" />
-                          <span>App Store</span>
+                          <span>{storeLabel(project.ios.label)}</span>
                         </a>
                       )}
                       <a

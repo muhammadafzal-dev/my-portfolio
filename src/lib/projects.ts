@@ -10,7 +10,7 @@ export type Project = {
   ios?: ProjectLink;
   website?: ProjectLink;
   image: string;
-  imageKind?: "logo" | "screenshot" | "screenshot-blur" | "mobile-screenshot";
+  imageKind?: "logo" | "screenshot" | "screenshot-blur" | "mobile-screenshot" | "illustration";
   technologies?: string[];
 };
 
@@ -35,6 +35,33 @@ export const projects: Project[] = [
       "AWS",
       "Docker",
       "MongoDB",
+    ],
+  },
+  {
+    name: "Reddr — Personal Safety Platform",
+    description:
+      "Built this personal safety product from scratch across the React Native app, NestJS backend, Next.js admin portal, and marketing site. I continue to lead development and mobile release work. Implemented cable-triggered and one-tap emergency alerts, trusted-circle notifications, and live responder maps, with authentication and verification flows designed for European users.",
+    link: {
+      href: "https://play.google.com/store/apps/details?id=nl.reddr.app",
+      label: "Android",
+    },
+    ios: {
+      href: "https://testflight.apple.com/join/KNB6UXkj",
+      label: "TestFlight",
+    },
+    website: {
+      href: "https://www.reddr.app/",
+      label: "Website",
+    },
+    image: "/projects/reddr.svg",
+    imageKind: "illustration",
+    technologies: [
+      "React Native",
+      "TypeScript",
+      "NestJS",
+      "Next.js",
+      "PostgreSQL/PostGIS",
+      "Twilio",
     ],
   },
   {
@@ -97,7 +124,7 @@ export const projects: Project[] = [
   {
     name: "FoodSwitch — Digital Health & Nutrition Platform",
     description:
-      "Digital health & nutrition platform helping consumers make healthier food choices — high-speed barcode scanning, a traffic-light health rating (salt, sugar, saturated fat, energy), and healthier-alternative suggestions across localized food databases in 17 jurisdictions. Contributed to the React Native mobile apps (iOS + Android) and built core features of the React/Node.js web dashboard for managing product data across markets. 400k+ downloads; partners include the WHO, Woolworths, and ALDI.",
+      "Digital health and nutrition platform with localized product data across 17 jurisdictions. Helped architect and build its web dashboard from scratch, including dynamic UI mappings for complex product and nutrition data, dashboard features, and frontend/API integrations.",
     link: {
       href: "https://www.foodswitch.com/",
       label: "Web",
@@ -105,12 +132,11 @@ export const projects: Project[] = [
     image: "/projects/foodswitch.png",
     imageKind: "screenshot",
     technologies: [
-      "React Native",
+      "Next.js",
       "TypeScript",
       "Node.js",
       "PostgreSQL",
-      "Barcode Scanning",
-      "Healthcare",
+      "Data visualization",
     ],
   },
   {
