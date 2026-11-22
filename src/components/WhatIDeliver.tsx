@@ -14,7 +14,7 @@ const deliverables = [
   {
     icon: Smartphone,
     title: "Mobile",
-    body: "React Native apps for iOS and Android across real estate, e-commerce, news, and healthcare, including native integrations and store releases.",
+    body: "Build mobile apps with React Native and Flutter. Shipped React Native apps across real estate, e-commerce, news, and healthcare, with native integrations and store releases.",
   },
   {
     icon: Gauge,

@@ -44,7 +44,7 @@
 ## 3. What I Deliver
 
 1. **Full-Stack Product Engineering** — React and Next.js frontends on Node.js / NestJS backends, using MongoDB, PostgreSQL, and Supabase, with REST / GraphQL APIs and real-time features over Socket.IO.
-2. **Mobile** — React Native apps for iOS and Android across real estate, e-commerce, news, and healthcare, including native integrations and store releases. Flutter is a separate skill; do not claim Flutter store releases without a confirmed example.
+2. **Mobile** — Build mobile apps with React Native and Flutter. Shipped React Native apps across real estate, e-commerce, news, and healthcare, with native integrations and store releases. Do not claim Flutter store releases without a confirmed example.
 3. **Performance & Reliability** — SSR, image optimization, and caching for 90–95+ Lighthouse scores, with monitoring through Sentry, Grafana, and Microsoft Clarity.
 
 ---
@@ -216,7 +216,7 @@ Draft service cards (matched to Muhammad's skillset):
 |--------------|-------|-------------|------|
 | AI & AUTOMATION | Agentic AI & Voice Agents | Production AI voice agents (OpenAI, Hume, ElevenLabs, Pipecat), RAG/retrieval, tool-calling agents, n8n & MCP workflows. | TBD |
 | WEB & SAAS | Full-Stack Product Development | Multi-tenant SaaS and web apps — Next.js/React on Node.js/NestJS, REST/GraphQL, real-time over Socket.IO, Stripe & crypto payments. | TBD |
-| MOBILE | Cross-Platform Mobile Apps | iOS and Android with React Native, from Figma to store release, including push notifications, offline support, and in-app purchases. | TBD |
+| MOBILE | Cross-Platform Mobile Apps | Build with React Native and Flutter; deliver React Native apps from Figma to store release, including push notifications, offline support, and in-app purchases. | TBD |
 | PERFORMANCE | Performance & Web Vitals | SSR, image strategy, caching for 90–95+ Lighthouse; observability via Sentry, Grafana, Microsoft Clarity. | TBD |
 | ARCHITECTURE | Architecture & Micro-Frontends | Scalable SaaS architecture, micro-frontends, Turborepo monorepos, system design, code reviews, technical mentoring. | TBD |
 | DEVOPS | DevOps & CI/CD | Docker, Kubernetes, Nginx, AWS/DigitalOcean/Vercel, GitHub Actions pipelines, load balancing, monitoring & logging. | TBD |
