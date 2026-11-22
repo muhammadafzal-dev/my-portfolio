@@ -14,7 +14,7 @@ const deliverables = [
   {
     icon: Smartphone,
     title: "Mobile",
-    body: "React Native & Flutter apps shipped to the App Store and Google Play across real estate, e-commerce, news, and healthcare.",
+    body: "React Native apps for iOS and Android across real estate, e-commerce, news, and healthcare, including native integrations and store releases.",
   },
   {
     icon: Gauge,
