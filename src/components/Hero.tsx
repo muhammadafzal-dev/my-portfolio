@@ -4,9 +4,9 @@ import HeroTyping from "@/components/HeroTyping";
 
 const METRICS = [
   { v: "6+", l: "Years" },
-  { v: "30+", l: "Shipped" },
-  { v: "20+", l: "Mobile apps" },
-  { v: "4", l: "Platforms" },
+  { v: "180+", l: "SMS markets" },
+  { v: "100+", l: "Directories" },
+  { v: "4", l: "Product types" },
 ];
 
 const TECH = ["Next.js", "React", "TypeScript", "React Native", "Flutter", "Node.js", "NestJS", "AI"];
@@ -50,7 +50,7 @@ const Hero = () => {
 
             {/* Headline */}
             <h1 className="text-[2.5rem] leading-[1.02] sm:text-6xl lg:text-[4.25rem] font-bold tracking-tight text-foreground animate-fade-in-delay-1 text-balance">
-              I build <span className="serif-accent">intelligent</span> products,
+              I turn <span className="serif-accent">ideas</span> into products,
               <br className="hidden sm:block" /> and ship them.
             </h1>
 
@@ -63,11 +63,12 @@ const Hero = () => {
 
             {/* Body */}
             <p className="max-w-2xl text-base sm:text-lg leading-relaxed text-muted-foreground animate-fade-in-delay-2 text-pretty">
-              6+ years shipping production{" "}
-              <span className="font-semibold text-foreground/90">AI voice agents</span>,{" "}
-              <span className="font-semibold text-foreground/90">multi-tenant SaaS</span>, and{" "}
-              <span className="font-semibold text-foreground/90">cross-platform apps</span> across web,
-              mobile &amp; desktop — from architecture to release.
+              Senior Full-Stack Engineer leading{" "}
+              <span className="font-semibold text-foreground/90">client products</span> from
+              requirements and system design through development, release, and improvement.
+              Hands-on across <span className="font-semibold text-foreground/90">backend systems</span>,{" "}
+              <span className="font-semibold text-foreground/90">web</span>, and{" "}
+              <span className="font-semibold text-foreground/90">mobile</span>.
             </p>
 
             {/* Inline metrics */}
@@ -102,9 +103,9 @@ const Hero = () => {
 
             {/* Worked with */}
             <p className="mt-1 font-mono text-[11px] tracking-[0.18em] uppercase text-muted-foreground/70 animate-fade-in-delay-3">
-              Worked with <span className="text-foreground/85">Obenan</span>
+              Currently at <span className="text-foreground/85">Global Software Consulting</span>
               <span className="mx-2 text-muted-foreground/40">·</span>
-              <span className="text-foreground/85">Global Software Consulting</span>
+              Previously at <span className="text-foreground/85">Obenan</span>
             </p>
 
             {/* Tech row */}

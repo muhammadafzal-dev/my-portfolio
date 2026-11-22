@@ -2,7 +2,7 @@
 
 > Single source of truth for **all portfolio content**: identity, skills, projects, experience, testimonials, contact.
 > Keep this in sync with `src/lib/projects.ts` and the section components. If something is missing from the site, add it here first, then wire it in.
-> Last updated: 2026-09-20 · Branch: `rebrand-v3`
+> Last updated: 2026-11-22. The v3 core resumes and `resume/linkedin.txt` govern current positioning and dates.
 
 ---
 
@@ -11,22 +11,22 @@
 | Field | Value |
 |-------|-------|
 | Name | Muhammad Afzal |
-| Title | Senior Full-Stack / AI Engineer |
+| Title | Senior Full-Stack Engineer / Senior Software Engineer |
 | Based in | Lahore, Pakistan |
 | Working | Remote · Europe, US, MENA |
 | Availability | Available for work · Remote / Hybrid full-time |
-| Current role | Full-Stack / AI Lead @ Obenan |
-| Experience | 6+ years |
+| Current role | Senior Software Engineer @ Global Software Consulting (04/2026 - Present) |
+| Experience | 6+ years displayed on the portfolio, per Muhammad's preference; v3 resumes use 5+ |
 | Reply time | ~24h (Lahore, UTC+5) |
 
-**Hero headline:** *I build **intelligent** products, and ship them.* (accent word: "intelligent", serif italic)
-**Hero sub:** Muhammad Afzal —— Senior Full-Stack / AI Engineer
-**Hero body:** 6+ years shipping production **AI voice agents**, **multi-tenant SaaS**, and **cross-platform apps** across web, mobile & desktop — from architecture to release.
+**Hero headline:** *I turn **ideas** into products, and ship them.* (accent word: "ideas", serif italic)
+**Hero sub:** Muhammad Afzal, Senior Full-Stack Engineer
+**Hero body:** Senior Full-Stack Engineer leading client products from requirements and system design through development, release, and improvement. Hands-on across backend systems, web, and mobile.
 
 **About headline:** *I take products from **idea to release.***
 **About body:**
-- **6+ years** building web, mobile & desktop products — now focused on the layer where AI earns its place: voice agents that call real tools, retrieval that returns the right context, and generative features that survive contact with real users.
-- **30+ projects** delivered across SaaS, healthcare, fintech, real estate, and e-commerce. Currently Full-Stack / AI lead at **Obenan** — every build finished and shipped.
+- Senior Full-Stack Engineer with a product engineering mindset. Turns business needs into software people can use, from requirements and system design through release and improvement.
+- Currently leads client product development at **Global Software Consulting** across personal safety, SMS services, travel, and construction management. Work spans backend services, web platforms, and mobile apps, with direct client communication and developer guidance.
 
 ---
 
@@ -35,9 +35,9 @@
 | Value | Label |
 |-------|-------|
 | 6+ | Years Building |
-| 30+ | Projects Shipped |
-| 20+ | Mobile Apps |
-| 2 | Companies |
+| 180+ | SMS Markets Supported |
+| 100+ | Business Directories Supported |
+| 4 | Product Types (Landing Pages, Dashboards, Mobile Apps, Desktop Apps) |
 
 ---
 
@@ -78,9 +78,12 @@ Frontend & Backend Architecture · System Design · Microservices · Micro-front
 
 ---
 
-## 5. Projects (17)
+## 5. Projects (18)
 
 > Source of truth: `src/lib/projects.ts`. Order = display order.
+
+### Current lead product
+**Reddr - Personal Safety Platform** - https://www.reddr.app/ (web), https://play.google.com/store/apps/details?id=nl.reddr.app (Android), https://testflight.apple.com/join/KNB6UXkj (iOS beta). Led work from scratch across React Native, NestJS, Next.js, PostgreSQL/PostGIS, and mobile releases. Implemented cable-triggered and one-tap emergency alerts, trusted-circle notifications, and live responder maps. Do not describe the iOS TestFlight build as a public App Store release.
 
 ### Web / SaaS
 1. **Obenan — AI Reputation Management Platform** — https://obenan.ai/ (Web)
@@ -96,8 +99,8 @@ Frontend & Backend Architecture · System Design · Microservices · Micro-front
    Social platform + marketplace for artists, galleries, collectors. Built RN app from scratch (iOS/Android) — social discovery, real-time, chat, marketplace.
    Tech: React Native, iOS, Android, Real-time, Marketplace
 5. **FoodSwitch — Digital Health & Nutrition Platform** — https://www.foodswitch.com/ (Web)
-   Barcode scanning, traffic-light health rating, healthier-alternative suggestions across 17 jurisdictions. RN apps + React/Node web dashboard. 400k+ downloads; WHO, Woolworths, ALDI.
-   Tech: React Native, TypeScript, Node.js, PostgreSQL, Barcode Scanning, Healthcare
+   Nutrition product with localized data across 17 jurisdictions. Muhammad helped architect and build the web dashboard and dynamic mappings for complex product and nutrition data. Do not claim mobile app development for this project.
+   Tech: Next.js, TypeScript, Node.js, PostgreSQL
 6. **Prism — Habit & Goal Tracking Platform** — https://prism.creamyproducts.com/ (Web)
    Habit-forming / personal-growth web app. Contributed dashboard: goal/habit tracking, progress visualization, reporting.
    Tech: Next.js, React.js, Node.js, TypeScript, PostgreSQL, Recharts, Dashboard
@@ -141,23 +144,28 @@ Frontend & Backend Architecture · System Design · Microservices · Micro-front
 
 ## 6. Experience
 
-### Senior Full-Stack / React Native / AI Engineer (Full-Stack Lead) — Obenan
-Mar 2024 – Present · Lahore, Pakistan
-- Progressed from Frontend Developer to Full-Stack Lead — leading frontend + full-stack across 6+ production platforms (Landing Platform Next.js, SaaS Dashboard React.js, Omnipulse); architecture, code reviews, mentoring, releases.
-- Architected the Landing Platform and built Omnipulse from scratch while contributing backend features.
-- Shipped multi-language translation system and referral / affiliation tracking.
-- Optimized with SSR, image strategy, caching for 90–95+ Lighthouse.
-- Integrated 4+ AI voice agent providers (OpenAI, Hume AI, ElevenLabs, Pipecat) and Stripe.
-- Observability with Sentry, Grafana, Microsoft Clarity; CI/CD, Docker, AWS.
-- Tech: Next.js, React.js, Node.js, NestJS, MongoDB, GraphQL, Stripe, OpenAI, Hume AI, ElevenLabs, Pipecat, Sentry, AWS, Docker
+### Senior Software Engineer - Global Software Consulting
+Apr 2026 - Present · Lahore, Pakistan
+- Lead product development across client projects in personal safety, SMS services, travel, and construction management, taking ideas from requirements and system design through production release.
+- Own technical decisions and hands-on delivery across backend services, web platforms, and mobile apps using NestJS, Next.js, React Native, and PostgreSQL.
+- Design APIs, data models, background jobs, real-time features, and third-party integrations, with a focus on performance and reliability in production.
+- Manage Docker-based deployments, AWS infrastructure, monitoring, and mobile store submissions and releases; investigate and resolve production issues.
+- Work directly with clients to shape product requirements, document technical plans, and guide developers through implementation, testing, deployment, and ongoing improvements.
 
-### Software Engineer — React Native & Web — Global Software Consulting
-Sep 2020 – Feb 2024 · Lahore, Pakistan
-- Built 20+ cross-platform RN apps (iOS/Android) across real estate, e-commerce, news, healthcare.
-- Built responsive reusable UI for scalable mobile architecture.
-- Integrated REST APIs (auth, data fetching, interactions).
-- Feature dev, bug fixing, performance in production.
-- Tech: React Native, React.js, Next.js, Redux Toolkit, REST APIs
+### Senior Full-Stack / AI Engineer (Full-Stack Lead) - Obenan
+Mar 2024 - Mar 2026 · Lahore, Pakistan
+- Progressed from Frontend Developer to Frontend Lead, then led frontend and full-stack projects, owning architecture, technical decisions, code quality, and production releases.
+- Led development across Next.js, React, React Native, Node.js, and NestJS; mentored developers, reviewed code, built reusable component architecture, and led React Native applications from scratch for iOS and Android.
+- Architected new Obenan products, including the Landing Platform and Omnipulse, from scratch. Built multi-tenant SaaS features using Node.js, NestJS, REST/GraphQL, MongoDB, and PostgreSQL.
+- Delivered affiliate and referral, subscription, and translation systems with Stripe, Google and Facebook APIs, and other third-party integrations, supporting businesses across 100+ directories.
+- Built production AI and voice-agent workflows using OpenAI, Hume AI, ElevenLabs, and Pipecat.
+- Improved Lighthouse scores to 90-95+ through server-side rendering, image optimization, and caching; managed AWS, Docker, CI/CD, Sentry, and Grafana for production delivery.
+
+### Software Engineer, React Native & Web - Global Software Consulting
+Sep 2022 - Feb 2024 · Lahore, Pakistan
+- Developed React Native apps for iOS and Android across real estate, e-commerce, news, and healthcare.
+- Built reusable UI components and advanced native features including WebRTC audio/video calling, background and foreground location tracking, and custom iOS and Android native modules.
+- Integrated REST APIs and fixed production defects while improving app performance and stability across mobile releases.
 
 ---
 
@@ -219,7 +227,7 @@ Draft service cards (matched to Muhammad's skillset):
 
 ## 11. TODO / gaps to confirm later
 
-- [ ] Confirm exact **years / project counts** (6+ / 30+ / 20+) stay accurate.
+- [x] Kept 6+ years on the portfolio at Muhammad's request; replaced the older 30+ / 20+ counters with documented product-scale figures.
 - [ ] **Flutter** now added to skills — add a Flutter project if one exists.
 - [ ] Split **Observability** (Sentry/Grafana/Clarity) out of the AI bucket.
 - [ ] Add any **missing projects** not yet listed here.

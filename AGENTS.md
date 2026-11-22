@@ -4,7 +4,7 @@ Project context for Codex. Read first every session.
 
 ## Project
 
-Personal portfolio for Muhammad Afzal — Full-Stack MERN Developer. Single-page landing with `/projects` detail route. Deployed to Vercel at https://muhammadafzal.vercel.app.
+Personal portfolio for Muhammad Afzal, Senior Software Engineer and Full-Stack Product Engineer. Single-page landing with `/projects` detail route. Deployed to Vercel at https://muhammadafzal.vercel.app. Current career dates and positioning come from the v3 core resumes and `/Users/gsoft/Desktop/personal/resume/applications/MASTER-PROFILE.md`.
 
 ## Stack
 

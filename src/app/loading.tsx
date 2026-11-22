@@ -16,7 +16,7 @@ export default function Loading() {
         <div className="text-center">
           <p className="font-semibold text-foreground">Muhammad Afzal</p>
           <p className="mt-1.5 font-mono text-[10px] tracking-[0.28em] uppercase text-muted-foreground">
-            Senior Full-Stack / AI Engineer
+            Senior Full-Stack Engineer
           </p>
         </div>
       </div>

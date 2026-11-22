@@ -1,13 +1,13 @@
 <h1 align="center">Hi, I'm Muhammad Afzal 👋</h1>
 
-<h3 align="center">Senior Full-Stack / AI Engineer</h3>
+<h3 align="center">Senior Software Engineer · Full-Stack Product Engineer</h3>
 
 <p align="center">
-  Building production-ready products across full-stack web, cross-platform mobile, and AI.
+  Turning product ideas into working software across backend, web, and mobile.
 </p>
 
 <p align="center">
-  React · Next.js · React Native · Flutter · Node.js · NestJS · OpenAI · AWS — shipping AI-powered features, multi-tenant SaaS platforms, and cross-platform apps to production.
+  React · Next.js · React Native · TypeScript · Node.js · NestJS · PostgreSQL · AWS
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@
 </p>
 
 <p align="center">
-  <b>6+ years</b> · <b>30+ products shipped</b> · <b>20+ App Store / Google Play listings</b> · <b>4 platforms</b> (Web · iOS · Android · Desktop)
+  <b>5+ years building</b> · <b>180+ SMS markets supported</b> · <b>100+ business directories</b> · <b>4 product types</b> (Landing · Dashboard · Mobile · Desktop)
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@
 
 <p align="center">
   <a href="https://muhammadafzal.vercel.app">
-    <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&pause=900&color=5BA3D6&center=true&vCenter=true&width=820&height=40&lines=Senior+Full-Stack+%2F+AI+Engineer;React.js+%26+Next.js+Developer;React+Native+%26+Flutter+Developer;Node.js+%26+NestJS+Developer;AI+Voice+Agents+%E2%80%94+OpenAI+%C2%B7+Hume+%C2%B7+ElevenLabs" alt="typing animation" />
+    <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&pause=900&color=5BA3D6&center=true&vCenter=true&width=820&height=40&lines=Senior+Full-Stack+Engineer;Product+Engineer;React+Native+Engineer;Next.js+%26+NestJS+Engineer" alt="typing animation" />
   </a>
 </p>
 
@@ -35,12 +35,12 @@
 
 ## 🚀 About Me
 
-I'm a **Senior Full-Stack / AI Engineer** building production-ready products across **full-stack web, cross-platform mobile, and AI**. Currently **Full-Stack Lead at Obenan**, architecting Next.js + NestJS platforms and shipping React Native apps to the App Store and Google Play — with payments, subscriptions, AI/voice-agent workflows, and scalable infrastructure across SaaS, healthcare, real estate, e-commerce, and wellness.
+I'm a **Senior Software Engineer** with a product engineering mindset. At **Global Software Consulting**, I lead client products in personal safety, SMS services, travel, and construction management from requirements and system design through development, release, and improvement. My work spans backend services, web platforms, and mobile apps. Previously at Obenan, I progressed into a full-stack lead role and built new products including the Landing Platform and Omnipulse.
 
 - 🤖 Integrate **AI — OpenAI, Hume AI, ElevenLabs, Pipecat** — into real product workflows: voice agents, AI-powered features, and secure server-side integrations.
 - 🧩 Strong full-stack expertise in **Next.js, NestJS, Node.js, React, MongoDB, and PostgreSQL**, across serverless and container-based architectures with CI/CD.
-- 📱 Ship cross-platform **React Native & Flutter** apps to **App Store, Google Play, Vercel, and AWS** across 4 platforms — Web · iOS · Android · Desktop (Electron).
-- 🏗️ Owning **frontend & backend architecture, system design, code reviews, and technical mentoring** — raising delivery speed and code quality.
+- 📱 Build cross-platform **React Native** apps for iOS and Android, with native integrations, location tracking, and mobile release work; also work across web and desktop (Electron).
+- 🏗️ Own **frontend and backend architecture, system design, code reviews, and technical mentoring** across client products.
 - 📍 Based in **Lahore, Pakistan** — working with clients and teams worldwide.
 
 ---
@@ -49,7 +49,7 @@ I'm a **Senior Full-Stack / AI Engineer** building production-ready products acr
 
 - **AI-powered product features** — OpenAI, Hume AI, ElevenLabs, and Pipecat integrated into real workflows: voice agents, AI-assisted features, and secure server-side integrations.
 - **Full-stack web products** — end-to-end platforms on Next.js + NestJS/Node, MongoDB & PostgreSQL, and Prisma, with auth and multi-tenancy.
-- **Cross-platform mobile apps** — production-grade iOS & Android with **React Native & Flutter**, deployed to the App Store and Google Play.
+- **Cross-platform mobile apps** — iOS and Android with **React Native**, including native features, store submissions, and production releases.
 - **Cross-platform SaaS** — one account across **Web · Mobile · Desktop (Electron)** sharing a backend, API client, and design system (TurboRepo monorepos).
 - **Payments & subscriptions** — Stripe subscriptions and RevenueCat in-app purchases, production-grade with webhook handling.
 - **Performance-first delivery** — SSR, caching, and image optimization to consistent **90–95+ Lighthouse** scores.
@@ -105,6 +105,7 @@ I'm a **Senior Full-Stack / AI Engineer** building production-ready products acr
 
 | Project | What it is | Stack | Links |
 | ------- | ---------- | ----- | ----- |
+| **Reddr** | Personal safety product with panic alerts, trusted-circle notifications, and live responder maps; led mobile, backend, admin, and release work | React Native · NestJS · Next.js · PostgreSQL/PostGIS · Twilio | [Web](https://www.reddr.app/) · [Android](https://play.google.com/store/apps/details?id=nl.reddr.app) · [iOS beta](https://testflight.apple.com/join/KNB6UXkj) |
 | **Multi-Tenant Admin Portal** ⭐ | Micro-frontend architecture demo — four independently deployable Next.js apps composed into one product on a single domain via Next.js Multi-Zones (path-based), with stateless cookie auth and no backend | Next.js 16 · React 19 · TypeScript · Turborepo · Vitest | [Live](https://mfe-demo-admin.vercel.app) · [Code](https://github.com/muhammadafzal-dev/micro-frontend-admin-portal) |
 | **Splitwise Clone** ⭐ | Splitwise-style expense-sharing app in Flutter — split bills EQUAL/EXACT/PERCENT with a pure, unit-tested money engine (integer cents), offline-first optimistic sync, and a backend-swappable (mock ↔ Firebase) clean architecture | Flutter · Dart · Riverpod · Firebase · go_router · Material 3 | [Code](https://github.com/muhammadafzal-dev/splitwise_clone) |
 | **Obenan** | AI-powered reputation-management SaaS — listings, reviews, and local SEO across 100+ directories | Next.js · React · Node.js · Strapi · GraphQL · Stripe · AWS · MongoDB | [Web](https://obenan.ai/) |
@@ -113,7 +114,7 @@ I'm a **Senior Full-Stack / AI Engineer** building production-ready products acr
 | **CheapStreamTV** | IPTV subscription platform — HD/4K live TV, movies & series, instant activation, crypto + Stripe payments, 14-language i18n | Next.js · React · MongoDB · Node.js · Socket.IO · Stripe · Firebase · AWS | [Web](https://cheapstreamtv.com/) |
 | **OmidLife** | Spiritual wellness & learning platform with Omid TV streaming | Next.js · React · Node.js · TypeScript · PostgreSQL · Stripe | [Web](https://omidlife.com/) |
 | **Cohart** | Social marketplace for art — discover, connect, chat, buy & sell | React Native · Real-time · Marketplace | [Web](https://www.cohart.com/) |
-| **FoodSwitch** | Digital health & nutrition platform — barcode scanning, traffic-light ratings, 17 jurisdictions (400k+ downloads; WHO / Woolworths partners) | React Native · TypeScript · Node.js · PostgreSQL · Barcode SDK | [Web](https://www.foodswitch.com/) |
+| **FoodSwitch** | Helped architect the nutrition web dashboard and built dynamic views for complex product data across 17 jurisdictions | Next.js · TypeScript · Node.js · PostgreSQL | [Web](https://www.foodswitch.com/) |
 | **Prism** | Habit & goal-tracking web app — set goals, plan, track progress & coaching; contributed dashboard features | Next.js · React · Node.js · TypeScript · PostgreSQL · Recharts | [Web](https://prism.creamyproducts.com/) |
 | **Etihad Town** | Real estate & community app for residents | React Native · Strapi · GraphQL · Push Notifications | [iOS](https://apps.apple.com/us/developer/etihad-town-pvt-limited/id1690750920) · [Android](https://play.google.com/store/apps/details?id=com.etihadtown.app) |
 | **SenSights** | Telehealth & senior remote-monitoring platform | React Native · REST · Push Notifications | [iOS](https://apps.apple.com/us/app/sensights/id1522446657) · [Android](https://play.google.com/store/apps/details?id=com.sensights) |
@@ -140,7 +141,7 @@ Four independently deployable Next.js apps composed into one product on a single
 | ------- | ------------ |
 | **Full-Stack Development** | Next.js App Router + RSC, NestJS/Express APIs, MongoDB & PostgreSQL + Prisma, auth, multi-tenancy |
 | **SaaS Product Engineering** | Multi-tenant architecture, subscription billing, admin dashboards, referral/affiliate systems |
-| **Mobile App Development** | Production iOS + Android with **React Native & Flutter**, push & deep links, offline storage, CI/CD to both stores |
+| **Mobile App Development** | Production iOS and Android with **React Native**, push notifications, deep links, offline support, and release management |
 | **App Store & Play Deployment** | App Store Connect & Play Console setup, release management, store listings |
 | **AI & Voice Agent Integration** | OpenAI, Hume AI, ElevenLabs, Pipecat — voice agents and AI-powered workflows, secure server-side |
 | **Payments & Subscriptions** | Stripe subscriptions, RevenueCat, in-app purchases, webhook handling |

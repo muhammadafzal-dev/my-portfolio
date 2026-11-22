@@ -36,6 +36,18 @@ const categoryLabel = (project: (typeof projects)[number]): string => {
   return `${kind} · ${primary}`;
 };
 
+const featuredNames = [
+  "Reddr — Personal Safety Platform",
+  "Obenan — AI Reputation Management Platform",
+  "My Mind Bestie — Cross-Platform Wellness SaaS",
+  "BestSMSHQ — SMS Activation & Number Rentals SaaS",
+];
+
+const featuredProjects = featuredNames.flatMap((name) => {
+  const project = projects.find((item) => item.name === name);
+  return project ? [project] : [];
+});
+
 const Projects = () => {
   const { ref, isInView } = useInView({ threshold: 0.1 });
 
@@ -56,7 +68,7 @@ const Projects = () => {
           />
 
           <div className="grid md:grid-cols-2 gap-6">
-            {projects.slice(0, 4).map((project, index) => (
+            {featuredProjects.map((project, index) => (
               <div
                 key={project.name}
                 onMouseMove={onSpotlightMove}

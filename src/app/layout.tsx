@@ -27,10 +27,12 @@ const instrumentSerif = Instrument_Serif({
 })
 
 const siteUrl = "https://muhammadafzal.vercel.app";
+const profileDescription =
+  'Senior Full-Stack Engineer and product engineer in Lahore, Pakistan. Leading client products from requirements and system design through backend, web, mobile, and production release with React, Next.js, React Native, Node.js, and NestJS.';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Muhammad Afzal — Senior Full-Stack / AI Engineer',
+    default: 'Muhammad Afzal — Senior Full-Stack Engineer',
     template: '%s — Muhammad Afzal',
   },
   verification: {
@@ -66,30 +68,27 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: siteUrl,
-    title: 'Muhammad Afzal — Senior Full-Stack / AI Engineer',
-    description:
-      'Senior Full-Stack / AI Engineer with 6+ years of experience building scalable multi-tenant SaaS platforms, web, and cross-platform mobile applications using React.js, Next.js, React Native, Flutter, Node.js, and NestJS.',
+    title: 'Muhammad Afzal — Senior Full-Stack Engineer',
+    description: profileDescription,
     siteName: 'Muhammad Afzal',
     images: [
       {
         url: `${siteUrl}/about.png`,
         width: 1122,
         height: 1402,
-        alt: 'Muhammad Afzal — Senior Full-Stack / AI Engineer',
+        alt: 'Muhammad Afzal — Senior Full-Stack Engineer',
       },
     ],
   },
   twitter: {
     card: 'summary',
     site: siteUrl,
-    description:
-      'Senior Full-Stack / AI Engineer with 6+ years of experience building scalable multi-tenant SaaS platforms, web, and cross-platform mobile applications using React.js, Next.js, React Native, Flutter, Node.js, and NestJS.',
-    title: 'Muhammad Afzal — Senior Full-Stack / AI Engineer',
+    description: profileDescription,
+    title: 'Muhammad Afzal — Senior Full-Stack Engineer',
     images: [`${siteUrl}/about.png`],
   },
 
-  description:
-    'Senior Full-Stack / AI Engineer with 6+ years of experience building scalable multi-tenant SaaS platforms, web, and cross-platform mobile applications using React.js, Next.js, React Native, Flutter, Node.js, and NestJS.',
+  description: profileDescription,
 
   alternates: {
     canonical: siteUrl,
@@ -107,8 +106,8 @@ export default function RootLayout({
     name: "Muhammad Afzal",
     url: siteUrl,
     image: `${siteUrl}/about.png`,
-    jobTitle: "Senior Full-Stack / AI Engineer",
-    worksFor: { "@type": "Organization", name: "Obenan" },
+    jobTitle: "Senior Software Engineer",
+    worksFor: { "@type": "Organization", name: "Global Software Consulting" },
     address: {
       "@type": "PostalAddress",
       addressLocality: "Lahore",

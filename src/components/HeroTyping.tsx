@@ -4,12 +4,11 @@ import { useEffect, useState } from "react";
 
 // Short skill/role labels typed after the name.
 const LABELS = [
-  "Senior Full-Stack / AI Engineer",
-  "AI Voice Agent Engineer",
-  "Multi-tenant SaaS Builder",
-  "React Native & Flutter Dev",
+  "Senior Full-Stack Engineer",
+  "Product Engineer",
+  "Backend & Systems Lead",
+  "React Native Engineer",
   "Next.js / NestJS Engineer",
-  "Micro-frontend Architect",
 ];
 
 const HeroTyping = () => {

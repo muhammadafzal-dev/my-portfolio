@@ -63,16 +63,15 @@ const About = () => {
 
             <div className="mt-7 space-y-5 text-base sm:text-lg leading-relaxed text-muted-foreground max-w-2xl">
               <p>
-                <span className="font-semibold text-foreground">6+ years</span> building web,
-                mobile &amp; desktop products — now focused on the layer where AI earns its place:
-                voice agents that call real tools, retrieval that returns the right context, and
-                generative features that survive contact with real users.
+                I’m a <span className="font-semibold text-foreground">Senior Full-Stack Engineer</span> with
+                a product engineering mindset. I turn business needs into software people can use,
+                taking ownership from requirements and system design through release and improvement.
               </p>
               <p>
-                <span className="font-semibold text-foreground">30+ projects</span> delivered
-                across SaaS, healthcare, fintech, real estate, and e-commerce. Currently
-                Full-Stack / AI lead at <span className="font-semibold text-foreground">Obenan</span>{" "}
-                — every build finished and shipped.
+                At <span className="font-semibold text-foreground">Global Software Consulting</span>, I
+                lead development across personal safety, SMS services, travel, and construction
+                management products. My work spans backend services, web platforms, and mobile apps.
+                I work directly with clients, guide developers, and stay responsible for what ships.
               </p>
             </div>
 

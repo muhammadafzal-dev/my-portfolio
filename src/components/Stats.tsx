@@ -11,9 +11,9 @@ type Stat = {
 
 const stats: Stat[] = [
   { value: 6, suffix: "+", label: "Years Building" },
-  { value: 30, suffix: "+", label: "Projects Shipped" },
-  { value: 20, suffix: "+", label: "Mobile Apps" },
-  { value: 2, suffix: "", label: "Companies" },
+  { value: 180, suffix: "+", label: "SMS Markets" },
+  { value: 100, suffix: "+", label: "Directories" },
+  { value: 4, label: "Product Types" },
 ];
 
 function useCountUp(target: number, trigger: boolean, duration = 1400) {
